@@ -1,0 +1,64 @@
+# ── Compiled output ───────────────────────────────────────────
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# ── Node ──────────────────────────────────────────────────────
+/node_modules
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Angular build cache & CLI state ──────────────────────────
+/.angular/
+.angular.json.analytics
+
+# ── Environment / secrets ─────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.local
+
+# ── SASS cache ────────────────────────────────────────────────
+.sass-cache/
+
+# ── Test & coverage ───────────────────────────────────────────
+/coverage
+__screenshots__/
+testem.log
+
+# ── IDEs & editors ────────────────────────────────────────────
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ── IDEs / editors ───────────────────────────────────────────
+.vscode/
+.editorconfig
+.history/
+
+# ── OS artefacts ──────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Misc ──────────────────────────────────────────────────────
+/connect.lock
+/libpeerconnection.log
+/typings
+*.tgz
+*.gz
