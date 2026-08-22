@@ -1,0 +1,971 @@
+/* ─────────────────────────────────────────────────────────────
+   KALAKRITI — handmade-paper ground, Madhubani base theme.
+
+   Every colour below is a *theme slot*. The landing page rewrites
+   these slots on the container element as the selected state
+   changes; because the colour slots are registered with @property,
+   the whole page cross-fades between regional palettes instead of
+   snapping. Fonts are self-hosted via next/font (see app/layout.tsx).
+───────────────────────────────────────────────────────────── */
+
+@property --kk-paper      { syntax: '<color>'; inherits: true; initial-value: #FFFBF2; }
+@property --kk-paper-deep { syntax: '<color>'; inherits: true; initial-value: #F7EEDD; }
+@property --kk-ink        { syntax: '<color>'; inherits: true; initial-value: #3A1F0E; }
+@property --kk-accent     { syntax: '<color>'; inherits: true; initial-value: #C4361B; }
+@property --kk-secondary  { syntax: '<color>'; inherits: true; initial-value: #D9A21B; }
+@property --kk-tertiary   { syntax: '<color>'; inherits: true; initial-value: #1F5C6E; }
+
+:root {
+  /* ── Active theme (Madhubani defaults) ── */
+  --kk-paper:      #FFFBF2;   /* unbleached handmade paper */
+  --kk-paper-deep: #F7EEDD;   /* the same sheet, one wash deeper */
+  --kk-ink:        #3A1F0E;   /* kajal — the lamp-black outline */
+  --kk-ink-soft:   rgba(58, 31, 14, 0.62);
+  --kk-accent:     #C4361B;   /* sindoor red */
+  --kk-secondary:  #D9A21B;   /* haldi yellow */
+  --kk-tertiary:   #1F5C6E;   /* indigo-teal */
+  --kk-line:       rgba(160, 90, 40, 0.20);
+
+  /* ── Typography ──
+     Four display registers; --kk-font-display points at whichever the
+     active state's tradition calls for. */
+  --font-classic-stack: var(--font-classic), 'Cormorant Garamond', Georgia, serif;
+  --font-royal-stack:   var(--font-royal),   'Rozha One', Georgia, serif;
+  --font-temple-stack:  var(--font-temple),  'Marcellus', Georgia, serif;
+  --font-folk-stack:    var(--font-folk),    'Yatra One', Georgia, serif;
+  --font-deva-stack:    var(--font-deva), 'Tiro Devanagari Hindi',
+                        'Noto Serif Devanagari', 'Noto Sans Devanagari', serif;
+  --font-sans-stack:    var(--font-sans), 'Inter', system-ui, sans-serif;
+  /* Indic scripts beyond Devanagari fall through to the platform's Noto set. */
+  --font-indic-stack:   var(--font-deva), 'Noto Serif', 'Noto Sans',
+                        system-ui, sans-serif;
+
+  --kk-font-display: var(--font-classic-stack);
+
+  /* ── Legacy tokens, kept so older components keep resolving ── */
+  --bg:            var(--kk-paper);
+  --bg-paper:      var(--kk-paper);
+  --bg-cream:      var(--kk-paper-deep);
+  --bg-ochre:      #F0E2C6;
+  --text:          var(--kk-ink);
+  --text-primary:  var(--kk-ink);
+  --text-secondary: var(--kk-ink-soft);
+  --text-muted:    rgba(58, 31, 14, 0.42);
+  --text-dim:      rgba(58, 31, 14, 0.42);
+  --text-on-indigo: #FFFBF2;
+  --accent:        var(--kk-accent);
+  --indigo:        var(--kk-tertiary);
+  --border:        var(--kk-line);
+  --border-medium: rgba(160, 90, 40, 0.34);
+
+  --shadow-md: 0 4px 24px rgba(120, 60, 20, 0.08);
+  --shadow-lg: 0 12px 48px rgba(120, 60, 20, 0.12);
+
+  --pad: clamp(1.25rem, 5vw, 4.5rem);
+  --container-pad: var(--pad);
+  --max: 1320px;
+  --container-max: var(--max);
+
+  --ease:     cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --theme-swap: 700ms;
+
+  /* Entrance pacing for the state panel. */
+  --stagger: 0.06s;
+  --settle:  0.5s;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RESET
+───────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* The map writes the active theme's slots here; because they are registered
+     with @property, the whole document cross-fades between regional palettes. */
+  transition:
+    --kk-paper var(--theme-swap) var(--ease),
+    --kk-paper-deep var(--theme-swap) var(--ease),
+    --kk-ink var(--theme-swap) var(--ease),
+    --kk-accent var(--theme-swap) var(--ease),
+    --kk-secondary var(--theme-swap) var(--ease),
+    --kk-tertiary var(--theme-swap) var(--ease);
+}
+
+body {
+  background: var(--kk-paper);
+  color: var(--kk-ink);
+  font-family: var(--font-sans-stack);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background var(--theme-swap) var(--ease);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────────────────────────── */
+.display {
+  font-family: var(--kk-font-display);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.heading {
+  font-family: var(--kk-font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  font-family: var(--font-sans-stack);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kk-ink-soft);
+}
+
+.mono {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+}
+
+/* Devanagari / Sanskrit lines — set a touch larger, since Indic scripts
+   carry more vertical detail than Latin at the same nominal size. */
+.kk-deva {
+  font-family: var(--font-deva-stack);
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Non-Devanagari Indic scripts (Tamil, Telugu, Bengali, Gurmukhi, …). */
+.kk-indic {
+  font-family: var(--font-indic-stack);
+  line-height: 1.6;
+}
+
+.kk-display {
+  font-family: var(--kk-font-display);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.kk-label {
+  font-family: var(--font-sans-stack);
+  font-weight: 500;
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.kk-roman {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   NAV
+───────────────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 62px;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  pointer-events: none;
+}
+
+.nav > * { pointer-events: auto; }
+
+.nav-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-family: var(--kk-font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--kk-ink);
+  text-decoration: none;
+  transition: color var(--theme-swap) var(--ease);
+}
+
+.nav-logo-deva {
+  font-family: var(--font-deva-stack);
+  font-size: 1.05rem;
+  color: var(--kk-accent);
+  transition: color var(--theme-swap) var(--ease);
+}
+
+.nav-tagline {
+  font-family: var(--font-deva-stack);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--kk-ink-soft);
+  opacity: 0.75;
+}
+
+.nav-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* The region currently open, named in the bar itself. */
+.nav-current {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--kk-accent);
+  transition: color var(--theme-swap) var(--ease);
+}
+
+.nav-current-name {
+  font-family: var(--kk-font-display);
+  font-size: 1rem;
+  color: var(--kk-ink);
+}
+
+.nav-current-art {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--kk-accent);
+}
+
+.nav-menu-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kk-ink);
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--kk-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--kk-paper) 80%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 0.22s var(--ease), border-color 0.22s var(--ease);
+}
+
+.nav-menu-btn:hover,
+.nav-menu-btn:focus-visible {
+  color: var(--kk-accent);
+  border-color: color-mix(in srgb, var(--kk-accent) 45%, transparent);
+}
+
+.nav-menu-btn:focus-visible { outline: 2px solid var(--kk-accent); outline-offset: 3px; }
+
+.nav-caret { transition: transform 0.25s var(--ease); }
+.nav-caret[data-open='true'] { transform: rotate(180deg); }
+
+/* ── State menu ─────────────────────────────────────────────────────────── */
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  right: 0;
+  z-index: 210;
+  width: min(52rem, calc(100vw - 2rem));
+  max-height: min(72vh, 34rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.1rem 1.3rem 1.4rem;
+  background: color-mix(in srgb, var(--kk-paper) 97%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--kk-line);
+  border-top: 2px solid color-mix(in srgb, var(--kk-accent) 45%, transparent);
+  box-shadow: 0 18px 60px rgba(90, 45, 10, 0.16);
+  animation: kk-drift-up 0.2s var(--ease-out) both;
+}
+
+.nav-menu-all {
+  all: unset;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.7rem;
+  width: 100%;
+  border-bottom: 1px solid var(--kk-line);
+  font-family: var(--font-sans-stack);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--kk-ink-soft);
+  transition: color 0.2s var(--ease);
+}
+
+.nav-menu-all:hover, .nav-menu-all:focus-visible { color: var(--kk-accent); }
+
+.nav-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.2rem 1.8rem;
+}
+
+.nav-menu-label {
+  color: var(--kk-accent);
+  margin-bottom: 0.4rem;
+  opacity: 0.8;
+}
+
+.nav-menu-list { list-style: none; }
+
+.nav-menu-item {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  width: 100%;
+  /* Without this the nowrap craft label pushes the row past its column. */
+  min-width: 0;
+  padding: 0.32rem 0.45rem;
+  border-radius: 3px;
+  border-left: 2px solid transparent;
+  transition: background 0.18s var(--ease), border-color 0.18s var(--ease);
+}
+
+.nav-menu-item:hover,
+.nav-menu-item:focus-visible,
+.nav-menu-item[data-active='true'] {
+  background: color-mix(in srgb, var(--row) 9%, transparent);
+  border-left-color: var(--row);
+}
+
+.nav-menu-item:focus-visible { outline: 2px solid var(--row); outline-offset: 1px; }
+
+/* The motif sits on the baseline with the name, so give it its own alignment. */
+.nav-menu-motif {
+  align-self: center;
+  flex-shrink: 0;
+  color: var(--row);
+  opacity: 0.75;
+}
+
+.nav-menu-name {
+  font-family: var(--font-classic-stack);
+  font-size: 1rem;
+  color: var(--kk-ink);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-menu-art {
+  font-family: var(--font-sans-stack);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--kk-ink-soft);
+  opacity: 0.75;
+  margin-left: auto;
+  padding-left: 0.5rem;
+  /* Long craft names give way rather than spilling into the next column. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .nav-tagline, .nav-current-art { display: none; }
+  .nav-menu {
+    position: fixed;
+    top: 62px; right: 0; left: 0;
+    width: auto;
+    max-height: calc(100dvh - 62px);
+  }
+  .nav-menu-art { display: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LANDING — theme surface
+───────────────────────────────────────────────────────────── */
+.kk-stage {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--kk-paper);
+  color: var(--kk-ink);
+  transition: background var(--theme-swap) var(--ease),
+              color var(--theme-swap) var(--ease);
+}
+
+/* Pigment washes + paper grain. Sits under the map, over the canvas. */
+.kk-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 108%, color-mix(in srgb, var(--kk-accent) 12%, transparent) 0%, transparent 68%),
+    radial-gradient(ellipse 55% 45% at 12% 8%,  color-mix(in srgb, var(--kk-secondary) 11%, transparent) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 45% at 92% 22%, color-mix(in srgb, var(--kk-tertiary) 10%, transparent) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, transparent 0, transparent 100%);
+  transition: background var(--theme-swap) var(--ease);
+}
+
+/* Fibre texture of handmade paper — two offset dot fields. */
+.kk-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(120, 70, 30, 0.055) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(120, 70, 30, 0.035) 1px, transparent 0);
+  background-size: 7px 7px, 13px 13px;
+  background-position: 0 0, 4px 6px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LANDING — hero
+───────────────────────────────────────────────────────────── */
+.kk-hero {
+  position: absolute;
+  top: clamp(72px, 11vh, 118px);
+  left: var(--pad);
+  z-index: 4;
+  max-width: min(30rem, 72vw);
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.kk-hero[data-hidden='true'] {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.kk-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--kk-accent);
+  margin-bottom: 0.85rem;
+}
+
+.kk-hero-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, currentColor, transparent);
+  opacity: 0.45;
+}
+
+.kk-hero-title {
+  font-family: var(--kk-font-display);
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  font-weight: 300;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  color: var(--kk-ink);
+  transition: color var(--theme-swap) var(--ease), font-family var(--theme-swap) step-end;
+}
+
+.kk-hero-deva {
+  font-family: var(--font-deva-stack);
+  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  color: var(--kk-accent);
+  margin-top: 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+.kk-hero-lede {
+  margin-top: 1.1rem;
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: clamp(0.8rem, 1.5vw, 0.92rem);
+  line-height: 1.85;
+  color: var(--kk-ink-soft);
+  max-width: 26rem;
+}
+
+.kk-hero-hint {
+  margin-top: 1.4rem;
+  color: var(--kk-ink-soft);
+  opacity: 0.7;
+}
+
+@media (max-width: 780px) {
+  .kk-hero { max-width: none; right: var(--pad); }
+  .kk-hero-lede { display: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LANDING — corner ornaments
+───────────────────────────────────────────────────────────── */
+.kk-corner {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  color: var(--kk-accent);
+  opacity: 0.14;
+  transition: color var(--theme-swap) var(--ease), opacity 0.6s var(--ease);
+}
+
+.kk-corner--tr { top: 4.5rem;  right: 2.5rem; }
+.kk-corner--bl { bottom: 3rem; left: 2.5rem; }
+.kk-corner--br { bottom: 4rem; right: 3.5rem; color: var(--kk-tertiary); opacity: 0.12; }
+
+.kk-spin-slow { animation: kk-spin 70s linear infinite; }
+.kk-breathe   { animation: kk-breathe 7s ease-in-out infinite; }
+
+@media (max-width: 900px) {
+  .kk-corner--bl, .kk-corner--br { display: none; }
+  .kk-corner--tr { top: 4rem; right: 1rem; opacity: 0.1; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LANDING — controls
+───────────────────────────────────────────────────────────── */
+.kk-btn {
+  all: unset;
+  cursor: pointer;
+  font-family: var(--font-sans-stack);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kk-ink-soft);
+  padding: 0.55rem 0.95rem;
+  background: color-mix(in srgb, var(--kk-paper) 82%, transparent);
+  border: 1px solid var(--kk-line);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 0.22s var(--ease), border-color 0.22s var(--ease),
+              background 0.22s var(--ease);
+}
+
+.kk-btn:hover,
+.kk-btn:focus-visible {
+  color: var(--kk-accent);
+  border-color: color-mix(in srgb, var(--kk-accent) 45%, transparent);
+  background: color-mix(in srgb, var(--kk-paper) 95%, transparent);
+}
+
+.kk-btn:focus-visible { outline: 2px solid var(--kk-accent); outline-offset: 3px; }
+
+.kk-back {
+  position: absolute;
+  top: 4.6rem;
+  left: var(--pad);
+  z-index: 6;
+}
+
+/* While the showcase is running the panel has ~2.5s per state, so the text
+   settles in faster and the palette cross-fade shortens to match. */
+.kk-stage[data-tour='true'] {
+  --stagger: 0.032s;
+  --settle:  0.34s;
+  --theme-swap: 420ms;
+}
+
+/* Showcase readout, mirroring the back button on the opposite side. */
+.kk-tour {
+  position: absolute;
+  top: 4.6rem;
+  right: var(--pad);
+  z-index: 6;
+}
+
+.kk-tour-btn {
+  border-radius: 999px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .kk-tour { top: auto; bottom: 1rem; right: 1rem; }
+}
+
+.kk-hoverlabel {
+  position: absolute;
+  bottom: 2.4rem;
+  left: var(--pad);
+  z-index: 4;
+  pointer-events: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  animation: kk-drift-up 0.22s var(--ease-out) both;
+}
+
+.kk-hoverlabel-name {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
+  color: var(--kk-ink);
+}
+
+.kk-hoverlabel-art {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--kk-accent);
+}
+
+@media (max-width: 640px) {
+  .kk-hoverlabel { display: none; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LANDING — state panel
+───────────────────────────────────────────────────────────── */
+.kk-panel {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 5;
+  transform: translateY(100%);
+  transition: transform 0.55s cubic-bezier(0.32, 0.72, 0, 1);
+  background: color-mix(in srgb, var(--kk-paper) 94%, transparent);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 -8px 48px rgba(90, 45, 10, 0.10);
+  max-height: min(54vh, 30rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+
+.kk-panel[data-open='true'] { transform: translateY(0); }
+
+.kk-panel-patti {
+  display: block;
+  opacity: 0.55;
+  border-top: 1.5px solid color-mix(in srgb, var(--kk-accent) 40%, transparent);
+}
+
+/* `currentColor` inside an SVG <pattern> does not re-resolve when the theme
+   changes, so the patti's strokes are bound to the variable directly. */
+.kk-panel-patti path {
+  stroke: var(--kk-accent);
+  transition: stroke var(--theme-swap) var(--ease);
+}
+
+.kk-panel-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(11rem, 15rem) 1fr minmax(12rem, 18rem);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  padding: 1.6rem var(--pad) 2rem;
+  max-width: 100%;
+}
+
+/* The state's own motif, ghosted behind the panel content. */
+.kk-panel-watermark {
+  position: absolute;
+  top: 50%;
+  right: clamp(1rem, 6vw, 5rem);
+  transform: translateY(-50%);
+  color: var(--kk-accent);
+  opacity: 0.11;
+  pointer-events: none;
+}
+
+.kk-panel-col { min-width: 0; }
+
+.kk-panel-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--kk-accent);
+  margin-bottom: 0.5rem;
+}
+
+.kk-panel-name {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--kk-ink);
+}
+
+.kk-panel-script {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--kk-accent);
+}
+
+.kk-panel-translit {
+  margin-top: 0.15rem;
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--kk-ink-soft);
+}
+
+.kk-panel-desc {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.82rem;
+  line-height: 1.9;
+  color: var(--kk-ink-soft);
+}
+
+/* ── Shloka ─────────────────────────────────────────────────────────────
+   Set as a quotation: the Sanskrit line leads, with transliteration,
+   sense, and source stepping down in weight beneath it. */
+.kk-shloka {
+  margin-top: 1rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid color-mix(in srgb, var(--kk-accent) 35%, transparent);
+  transition: border-color var(--theme-swap) var(--ease);
+}
+
+.kk-shloka-line {
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: var(--kk-accent);
+  transition: color var(--theme-swap) var(--ease);
+}
+
+.kk-shloka-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.2rem 0.6rem;
+  margin-top: 0.25rem;
+}
+
+.kk-shloka-roman {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--kk-ink-soft);
+}
+
+.kk-shloka-meaning {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.76rem;
+  color: var(--kk-ink-soft);
+}
+
+.kk-shloka-source {
+  font-family: var(--font-sans-stack);
+  font-style: normal;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kk-ink-soft);
+  opacity: 0.65;
+}
+
+.kk-panel-art {
+  margin-bottom: 0.7rem;
+  font-family: var(--kk-font-display);
+  font-size: 1.15rem;
+  color: var(--kk-ink);
+}
+
+.kk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kk-chip {
+  font-family: var(--font-classic-stack);
+  font-size: 0.92rem;
+  color: var(--kk-ink-soft);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--kk-line);
+  border-radius: 999px;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.kk-chip--lead {
+  color: var(--kk-accent);
+  font-weight: 500;
+  border-color: color-mix(in srgb, var(--kk-accent) 42%, transparent);
+  background: color-mix(in srgb, var(--kk-accent) 6%, transparent);
+}
+
+.kk-panel-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
+.kk-rule {
+  align-self: stretch;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--kk-line), transparent);
+}
+
+@media (max-width: 900px) {
+  .kk-panel-body {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding-bottom: 1.5rem;
+  }
+  .kk-panel-watermark { display: none; }
+  .kk-panel { max-height: 62vh; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ISLAND WATER
+   Rings spreading out from the Andamans and Lakshadweep. Kept to
+   a hairline and a whisper of opacity — the islands are small,
+   and the water should read as movement, not decoration.
+───────────────────────────────────────────────────────────── */
+.kk-ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: kk-ripple 7.2s var(--ease-out) infinite;
+}
+
+/* When the territory itself is open, the water comes up a little. */
+.kk-ripples[data-island].is-open .kk-ripple {
+  animation-duration: 5.4s;
+}
+
+.kk-ripples.is-open { --ripple-peak: 0.42; }
+
+@keyframes kk-ripple {
+  0%   { transform: scale(1);   opacity: 0; }
+  15%  { opacity: var(--ripple-peak, 0.24); }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PANEL TEXT ENTRANCE
+   The panel slides up as one surface; its contents then settle in
+   sequence — identity, story, shloka, crafts — so a state arrives
+   as a small reveal rather than a block of text appearing at once.
+───────────────────────────────────────────────────────────── */
+/* Only the leaf elements animate — animating the columns too would
+   compound the fades and muddy the timing.
+
+   Every delay is a multiple of --stagger, so the whole sequence tightens
+   when the showcase is running and each state is held only briefly. */
+.kk-panel-body > .kk-panel-col > * {
+  animation: kk-settle var(--settle, 0.5s) var(--ease-out) both;
+}
+
+/* The lines step down in turn. */
+.kk-panel-col > .kk-panel-kicker   { animation-delay: calc(var(--stagger) * 1.7); }
+.kk-panel-col > .kk-panel-name     { animation-delay: calc(var(--stagger) * 2.7); }
+.kk-panel-col > .kk-panel-script   { animation-delay: calc(var(--stagger) * 4); }
+.kk-panel-col > .kk-panel-translit { animation-delay: calc(var(--stagger) * 5); }
+.kk-panel-col > .kk-panel-desc     { animation-delay: calc(var(--stagger) * 3); }
+.kk-panel-col > .kk-shloka         { animation-delay: calc(var(--stagger) * 5); }
+.kk-panel-col > .kk-panel-art      { animation-delay: calc(var(--stagger) * 3.7); }
+.kk-panel-col > .kk-chips          { animation-delay: calc(var(--stagger) * 4.7); }
+
+/* Craft chips arrive one after another, left to right. */
+.kk-chip {
+  animation: kk-settle calc(var(--settle, 0.5s) * 0.84) var(--ease-out) both;
+}
+
+.kk-chip:nth-child(1) { animation-delay: calc(var(--stagger) * 5.7); }
+.kk-chip:nth-child(2) { animation-delay: calc(var(--stagger) * 6.7); }
+.kk-chip:nth-child(3) { animation-delay: calc(var(--stagger) * 7.7); }
+.kk-chip:nth-child(4) { animation-delay: calc(var(--stagger) * 8.7); }
+.kk-chip:nth-child(5) { animation-delay: calc(var(--stagger) * 9.7); }
+
+/* The motif behind the panel fades up last. */
+.kk-panel-watermark {
+  animation: kk-watermark 0.9s var(--ease-out) both;
+  animation-delay: 0.24s;
+}
+
+@keyframes kk-settle {
+  from { opacity: 0; transform: translateY(9px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kk-watermark {
+  from { opacity: 0; transform: translateY(-50%) scale(0.94); }
+  to   { opacity: 0.11; transform: translateY(-50%) scale(1); }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────────────────────────── */
+@keyframes kk-drift-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kk-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes kk-breathe {
+  0%, 100% { opacity: 0.10; transform: scale(1); }
+  50%      { opacity: 0.20; transform: scale(1.04); }
+}
+
+@keyframes drift-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+
+@keyframes holo-pulse {
+  0%, 100% { opacity: 0.78; }
+  40%      { opacity: 1; }
+  70%      { opacity: 0.88; }
+}
+
+.state-holo { animation: holo-pulse 1.4s ease-in-out infinite; }
+
+@keyframes drop-line {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MOTION PREFERENCES
+───────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

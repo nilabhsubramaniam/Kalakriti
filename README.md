@@ -1,39 +1,28 @@
-# Kalakriti — UI Layer
+# Kalakriti — UI
 
 E-commerce platform for authentic Mithila/Bihar artisan and farmer products.
 
----
-
-## Surfaces
-
-| Surface | Framework | Audience |
-|---|---|---|
-| `apps/web` | Next.js 14 (App Router, SSR + ISR) | Customers |
-| `apps/admin` | React + Vite (SPA) | Internal ops |
-| `apps/mobile` | Flutter (Phase B — after web is stable) | Customers |
-| `packages/tokens` | Design token source of truth | All surfaces |
-| `packages/ui` | Storybook-documented shared component library | web + admin |
+This is a single Next.js application — no monorepo, no workspaces. The admin panel and mobile app are separate future repositories; only the customer-facing storefront lives here.
 
 ---
 
-## Monorepo layout
+## Project layout
 
 ```
 kalakriti/
-├── apps/
-│   ├── web/                        # customer-facing storefront
-│   ├── admin/                      # internal ops panel
-│   └── mobile/                     # Flutter app (Phase B)
-├── packages/
-│   ├── tokens/                     # design tokens — colors, spacing, type, radii, motion
-│   └── ui/                         # shared React component library (web + admin)
-├── package.json                    # workspace root (pnpm workspaces)
-└── turbo.json                      # Turborepo pipeline config
+├── app/                            # Next.js App Router pages
+├── components/                     # React components
+├── tokens/                         # Design tokens (JSON — source of truth)
+├── public/                         # Static assets
+├── package.json
+├── next.config.ts
+├── tailwind.config.ts
+└── tsconfig.json
 ```
 
 ---
 
-## apps/web — Customer Storefront
+## Customer Storefront
 
 ### Stack
 
@@ -54,10 +43,10 @@ kalakriti/
 ### Folder structure
 
 ```
-apps/web/
+kalakriti/
 ├── app/
 │   ├── layout.tsx                  # root layout — TopNav, Footer, Toast provider
-│   ├── page.tsx                    # / Home
+│   ├── page.tsx                    # / Landing page — composes all landing/ sections
 │   ├── [category]/
 │   │   ├── page.tsx                # /[category] — Category Browse
 │   │   └── [slug]/
@@ -82,11 +71,16 @@ apps/web/
 │   │   ├── TopNav.tsx
 │   │   ├── Footer.tsx
 │   │   └── AccountSidebar.tsx
-│   ├── home/
-│   │   ├── HeroBannerCarousel.tsx  # framer-motion PageView + auto-scroll
-│   │   ├── CategoryTileGrid.tsx
-│   │   ├── FeaturedProductsRow.tsx
-│   │   └── GiftBoxCallout.tsx      # static promo block for MITH-BUN-001
+│   ├── landing/                    # all sections of the / landing page
+│   │   ├── HeroBannerCarousel.tsx  # framer-motion PageView, auto-scrolls every 5s, pauses on hover/touch
+│   │   ├── BannerSlide.tsx         # single slide — image, headline, sub-copy, CTA button + href
+│   │   ├── CarouselDotIndicator.tsx
+│   │   ├── CategoryTileGrid.tsx    # 2-col mobile / 4-col desktop grid of category entry points
+│   │   ├── CategoryTile.tsx        # image + label + href → /[category]
+│   │   ├── FeaturedProductsRow.tsx # horizontal scroll row, admin-curated (not algorithmic)
+│   │   ├── GiftBoxCallout.tsx      # full-width promo block for MITH-BUN-001 (Mithila Culture Gift Box)
+│   │   ├── TrustSignalsBar.tsx     # GI-tag badge / Artisan Sourced / Sustainably Packed
+│   │   └── NewsletterStrip.tsx     # email capture — POST to /notifications/subscribe
 │   ├── browse/
 │   │   ├── FilterSidebar.tsx       # state synced to URL search params
 │   │   ├── FilterGroup.tsx
@@ -162,9 +156,11 @@ apps/web/
 
 ---
 
-## apps/admin — Internal Ops Panel
+## Admin Panel — separate repo (future)
 
-### Stack
+> Not built here. The admin panel (React + Vite) will live in its own repository when that phase begins. Specs documented in Confluence.
+
+### Stack (reference)
 
 | Concern | Library / Service |
 |---|---|
@@ -274,9 +270,9 @@ pending → paid → processing → shipped → delivered
 
 ---
 
-## apps/mobile — Flutter App (Phase B)
+## Mobile App — separate repo (Phase B)
 
-> Build begins after `apps/web` is stable. Screens mirror the web user panel 1:1. No mobile-only feature set in Phase 1.
+> Not built here. Flutter app will live in its own repository after web is stable. Screens mirror the web user panel 1:1. No mobile-only feature set in Phase 1.
 
 ### Stack
 
@@ -379,53 +375,21 @@ BottomNavigationBar
 
 ---
 
-## packages/tokens — Design Tokens
+## tokens/ — Design Tokens
 
-Single source of truth for all visual decisions. All surfaces consume from here.
-
-```
-packages/tokens/
-├── src/
-│   ├── color.json          # brand palette + semantic (success, error, warning, info, surface)
-│   ├── spacing.json        # 4px base grid — 4, 8, 12, 16, 24, 32, 48, 64
-│   ├── typography.json     # font family, size scale, weight, line-height
-│   ├── radius.json         # card, button, badge, modal, pill
-│   ├── shadow.json         # elevation levels 1–4
-│   └── motion.json         # duration (fast: 150ms, base: 250ms, slow: 400ms) + easing curves
-│
-├── dist/
-│   ├── tokens.css          # CSS custom properties — consumed by web + admin via Tailwind
-│   └── tokens.dart         # generated ThemeData constants — consumed by Flutter
-│
-└── build.js                # Style Dictionary transform — JSON → CSS + Dart
-```
-
-Build tool: [`style-dictionary`](https://amzn.github.io/style-dictionary) — runs on token change, outputs both `dist/` targets.
-
----
-
-## packages/ui — Shared Component Library
-
-Shared between `apps/web` and `apps/admin`. Documented in Storybook.
+Source of truth for visual decisions. Lives at the root, consumed directly by Tailwind.
 
 ```
-packages/ui/
-├── src/
-│   ├── ProductCard/
-│   ├── GIBadge/
-│   ├── SkeletonCard/
-│   ├── EmptyState/
-│   ├── Toast/
-│   ├── Modal/
-│   ├── Breadcrumb/
-│   ├── StatusBadge/
-│   └── index.ts
-│
-├── .storybook/
-└── package.json
+tokens/
+├── typography.json     # font family, size scale, weight, line-height, letter-spacing
+├── color.json          # brand palette + semantic colors          (to be created)
+├── spacing.json        # 4px base grid — 4, 8, 12, 16, 24, 32, 48, 64  (to be created)
+├── radius.json         # card, button, badge, modal               (to be created)
+├── shadow.json         # elevation levels 1–4                     (to be created)
+└── motion.json         # duration + easing curves                 (to be created)
 ```
 
-Components here must be surface-agnostic — no Next.js-specific imports, no admin-specific logic.
+Token values are hand-imported into `tailwind.config.ts` in Phase 1. A `style-dictionary` build step can be added later if a separate Flutter/admin repo needs to consume the same tokens.
 
 ---
 
@@ -433,12 +397,8 @@ Components here must be surface-agnostic — no Next.js-specific imports, no adm
 
 | Tool | Purpose |
 |---|---|
-| `turbo` | Monorepo task pipeline — build, lint, test in dependency order |
-| `pnpm` workspaces | Package manager |
-| `eslint` + `prettier` | Lint + format (web + admin) |
-| `typescript` | Strict mode across web + admin |
-| `vitest` | Unit tests (web + admin) |
+| `npm` | Package manager |
+| `eslint` + `prettier` | Lint + format |
+| `typescript` | Strict mode |
+| `vitest` | Unit tests |
 | `playwright` | E2E tests — critical paths: browse → PDP → cart → checkout |
-| `storybook` | Component docs + visual regression (packages/ui) |
-| `style-dictionary` | Token build pipeline |
-| `dart analyze` + `flutter test` | Mobile lint + unit tests |
