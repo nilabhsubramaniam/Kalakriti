@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import {
   Cormorant_Garamond,
   Rozha_One,
@@ -64,6 +64,15 @@ const sans = Inter({
   variable: '--font-sans',
   display: 'swap',
 });
+
+/* `viewportFit: 'cover'` lets the page paint into the notch area, which is
+   what makes env(safe-area-inset-*) resolve to anything but zero. */
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: '#FFFBF2',
+};
 
 export const metadata: Metadata = {
   title: 'Kalakriti — Authentic Art & Craft from Mithila, Bihar',

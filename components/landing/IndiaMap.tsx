@@ -139,7 +139,10 @@ export default function IndiaMap() {
     let dead = false;
     let raf  = 0;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    /* A phone repaints this field every frame on battery, so scale the work
+       down with the screen. Desktop keeps the full density. */
+    const small = window.innerWidth < 640;
+    const dpr = Math.min(window.devicePixelRatio || 1, small ? 1.5 : 2);
     let W = window.innerWidth;
     let H = window.innerHeight;
 
@@ -161,7 +164,7 @@ export default function IndiaMap() {
 
     /* Mandalas — slow-turning rangoli wheels. */
     type Mandala = { x: number; y: number; r: number; rot: number; speed: number; hue: keyof Pigments; petals: number };
-    const mandalas: Mandala[] = Array.from({ length: 7 }, (_, i) => ({
+    const mandalas: Mandala[] = Array.from({ length: small ? 4 : 7 }, (_, i) => ({
       x:      Math.random() * W,
       y:      Math.random() * H,
       r:      80 + Math.random() * 140,
@@ -209,7 +212,7 @@ export default function IndiaMap() {
     };
 
     /* Kolam dot lattice — the threshold grid, pulsing. */
-    const COLS = 18, ROWS = 11;
+    const COLS = small ? 11 : 18, ROWS = small ? 7 : 11;
     const dotGrid = Array.from({ length: ROWS * COLS }, (_, i) => ({
       cx: ((i % COLS) + 0.5) / COLS,
       cy: (Math.floor(i / COLS) + 0.5) / ROWS,
@@ -786,6 +789,7 @@ export default function IndiaMap() {
       {/* The map */}
       <svg
         ref={svgRef}
+        className="kk-map"
         role="img"
         aria-label="Map of India — select a state to see its craft traditions"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1 }}
