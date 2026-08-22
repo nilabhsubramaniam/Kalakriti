@@ -20,11 +20,20 @@
     "@types/d3": "^7.4.3",
     "d3": "^7.9.0",
     "ky": "^1.4.0",
-    "next": "14.2.5",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "zod": "^3.23.8",
     "zustand": "^4.5.4"
+  },
+  "pnpm": {
+    "//": "Duplicated in pnpm-workspace.yaml: pnpm 9 (Vercel) reads them here, pnpm 10+ reads them there.",
+    "overrides": {
+      "postcss": ">=8.5.23",
+      "nanoid": ">=3.3.18",
+      "minimatch": ">=9.0.7",
+      "glob": ">=10.5.0"
+    }
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -35,7 +44,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8",
+    "postcss": "^8.5.18",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
