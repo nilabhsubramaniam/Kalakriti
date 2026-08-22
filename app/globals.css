@@ -393,7 +393,9 @@ body {
 }
 
 @media (max-width: 640px) {
-  .nav-tagline, .nav-current-art { display: none; }
+  /* The open region's name would push the States button off-screen, and the
+     panel already announces it far more prominently. */
+  .nav-tagline, .nav-current { display: none; }
   .nav-menu {
     position: fixed;
     top: 62px; right: 0; left: 0;
@@ -600,10 +602,6 @@ body {
 .kk-tour-btn {
   border-radius: 999px;
   font-variant-numeric: tabular-nums;
-}
-
-@media (max-width: 640px) {
-  .kk-tour { top: auto; bottom: 1rem; right: 1rem; }
 }
 
 .kk-hoverlabel {
@@ -833,6 +831,18 @@ body {
   }
   .kk-panel-watermark { display: none; }
   .kk-panel { max-height: 62vh; }
+}
+
+/* Landscape phones: 62vh of a 390px-tall screen leaves the map no room.
+   Declared after the block above so it wins the cascade. */
+@media (max-height: 520px) {
+  .kk-panel { max-height: 46vh; }
+}
+
+@media (max-width: 640px) {
+  /* Redundant on a phone: the panel carries its own close control, and the
+     two buttons crowd each other on a narrow row. */
+  .kk-back { display: none; }
 }
 
 /* ─────────────────────────────────────────────────────────────

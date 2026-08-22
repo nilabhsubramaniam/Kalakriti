@@ -302,6 +302,7 @@ export default function IndiaMap() {
   useEffect(() => {
     if (!svgRef.current) return;
     let dead = false;
+    let removeResize = () => {};
 
     (async () => {
       const d3 = await import('d3');
@@ -309,8 +310,8 @@ export default function IndiaMap() {
       if (dead) return;
 
       const svg = svgRef.current!;
-      const W   = svg.clientWidth  || window.innerWidth;
-      const H   = svg.clientHeight || window.innerHeight;
+      let W = svg.clientWidth  || window.innerWidth;
+      let H = svg.clientHeight || window.innerHeight;
 
       const d3svg = select(svg);
       d3svg.selectAll('*').remove();
@@ -368,14 +369,21 @@ export default function IndiaMap() {
       if (dead) return;
       setLoading(false);
 
-      /* On wide screens the hero occupies the left third, so the map is fitted
-         to the remaining space rather than dead-centre. */
-      const leftInset = W >= 1024 ? 0.28 : 0.04;
-      const proj = geoMercator().fitExtent(
-        [[W * leftInset, H * 0.05], [W * 0.97, H * 0.96]],
-        statesData,
-      );
+      /* Fit the projection to the element's current size. Called again on
+         resize and orientation change — geoPath holds a reference to the
+         projection, so refitting in place keeps `path` valid. */
+      const proj = geoMercator();
       const path = geoPath(proj);
+
+      const fitProjection = () => {
+        W = svg.clientWidth  || window.innerWidth;
+        H = svg.clientHeight || window.innerHeight;
+        /* On wide screens the hero occupies the left third, so the map is
+           fitted to the remaining space rather than dead-centre. */
+        const leftInset = W >= 1024 ? 0.28 : 0.04;
+        proj.fitExtent([[W * leftInset, H * 0.05], [W * 0.97, H * 0.96]], statesData);
+      };
+      fitProjection();
 
       const sName = (d: any): string => d?.properties?.ST_NM ?? '';
 
@@ -463,6 +471,9 @@ export default function IndiaMap() {
         .style('transition', 'fill 0.45s ease')
         .text((d: any) => LABEL_ABBR[sName(d)] ?? sName(d));
 
+      /* Ring radius for an island cluster, in projected pixels. */
+      const rippleRadius = (geom: any) => Math.max(3.5, Math.sqrt(path.area(geom)) * 1.5);
+
       /* ── Island water ──────────────────────────────────────────────────
          Rings spreading out from the Andamans and Lakshadweep, so the two
          island territories sit in moving water rather than on blank paper.
@@ -493,9 +504,12 @@ export default function IndiaMap() {
           const [cx, cy] = path.centroid(c.geom as any);
           if (!Number.isFinite(cx) || !Number.isFinite(cy)) return;
           /* Start just outside the island itself. */
-          const r0 = Math.max(3.5, Math.sqrt(c.area) * 1.5);
+          const r0 = rippleRadius(c.geom);
 
-          const set = g.append('g').attr('transform', `translate(${cx}, ${cy})`);
+          const set = g.append('g')
+            .attr('class', 'kk-ripple-set')
+            .datum(c.geom)
+            .attr('transform', `translate(${cx}, ${cy})`);
           for (let i = 0; i < 3; i++) {
             set.append('circle')
               .attr('r', r0)
@@ -548,9 +562,21 @@ export default function IndiaMap() {
         const feat = statesData.features.find((f: any) => sName(f) === name);
         if (!feat) return;
         const [[x0, y0], [x1, y1]] = path.bounds(feat);
-        const k  = 0.78 / Math.max((x1 - x0) / W, (y1 - y0) / H);
+        /* On a narrow screen the nav sits above the map and the panel covers
+           the lower part of it, so frame the state in the band between them
+           rather than dead-centre — otherwise it opens behind the panel. */
+        const narrow = W < 900;
+        const topChrome = narrow ? 108 : 0;           /* nav + control row */
+        const panelH = narrow
+          ? Math.min(H * (H < 520 ? 0.46 : 0.62), 480) /* mirrors the CSS caps */
+          : 0;
+        const bandTop = topChrome;
+        const bandBot = H - panelH;
+        const bandH   = Math.max(bandBot - bandTop, 120);
+        const cy      = narrow ? (bandTop + bandBot) / 2 : H / 2;
+        const k  = 0.78 / Math.max((x1 - x0) / W, (y1 - y0) / bandH);
         const tx = W / 2 - k * (x0 + x1) / 2;
-        const ty = H / 2 - k * (y0 + y1) / 2;
+        const ty = cy    - k * (y0 + y1) / 2;
         d3svg.transition().duration(ms).ease(easeCubicInOut)
           .call(zb.transform, zoomIdentity.translate(tx, ty).scale(k));
       };
@@ -558,6 +584,41 @@ export default function IndiaMap() {
       const toIndia = (ms = 680) => {
         d3svg.transition().duration(ms).ease(easeCubicInOut)
           .call(zb.transform, zoomIdentity);
+      };
+
+      /* Re-fit on resize and orientation change. Without this the map keeps
+         the geometry it was built with and runs off-screen once the viewport
+         changes — most visibly when a phone is rotated. */
+      const relayout = () => {
+        fitProjection();
+        paths.attr('d', (d: any) => path(d) ?? '');
+        labels
+          .attr('x', (d: any) => path.centroid(d)[0])
+          .attr('y', (d: any) => path.centroid(d)[1]);
+        rippleG.selectAll<SVGGElement, any>('g.kk-ripple-set').each(function (geom: any) {
+          const [cx, cy] = path.centroid(geom);
+          if (!Number.isFinite(cx) || !Number.isFinite(cy)) return;
+          select(this)
+            .attr('transform', `translate(${cx}, ${cy})`)
+            .selectAll('circle').attr('r', rippleRadius(geom));
+        });
+        /* Put the camera back where it was, at the new size. */
+        const sel = selectedRef.current;
+        if (sel) toState(sel, 0);
+        else     toIndia(0);
+      };
+
+      let resizeTimer: ReturnType<typeof setTimeout>;
+      const onResize = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(relayout, 150);
+      };
+      window.addEventListener('resize', onResize);
+      window.addEventListener('orientationchange', onResize);
+      removeResize = () => {
+        clearTimeout(resizeTimer);
+        window.removeEventListener('resize', onResize);
+        window.removeEventListener('orientationchange', onResize);
       };
 
       zoomRef.current = { toIndia, toState };
@@ -569,7 +630,7 @@ export default function IndiaMap() {
       if (fromHash && STATE_THEMES[fromHash]) selectRef.current(fromHash);
     })();
 
-    return () => { dead = true; restyleRef.current = null; };
+    return () => { dead = true; restyleRef.current = null; removeResize(); };
   }, []);
 
   const close = useCallback(() => select(null), [select]);
