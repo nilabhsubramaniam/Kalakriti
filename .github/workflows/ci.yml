@@ -1,4 +1,4 @@
-name: CI / Deploy
+name: CI
 
 on:
   push:
@@ -6,7 +6,9 @@ on:
   pull_request:
     branches: [main]
 
-# Least privilege: nothing here writes back to the repository.
+# Least privilege: this workflow only validates — it never writes to the
+# repository, and holds no deployment credentials. Production deploys are
+# owned by Vercel's Git integration, so no Vercel token exists in GitHub.
 permissions:
   contents: read
 
@@ -58,42 +60,3 @@ jobs:
           # Production values live in Vercel environment settings, not here.
           NEXT_PUBLIC_SITE_URL: https://kalakriti.in
           NEXT_PUBLIC_APP_NAME: Kalakriti
-
-  # ── Deploy to Vercel (main branch only, after validate passes) ─────────────
-  deploy:
-    name: Deploy → Vercel
-    runs-on: ubuntu-latest
-    needs: validate
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-
-    environment:
-      name: production
-      url: ${{ steps.deploy.outputs.url }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
-      - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Deploy
-        id: deploy
-        run: |
-          URL=$(pnpm dlx vercel --prod --yes --token "$VERCEL_TOKEN" 2>&1 | tail -1)
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-        env:
-          VERCEL_TOKEN:      ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID:     ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
