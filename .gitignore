@@ -17,6 +17,11 @@ yarn-error.log*
 # ── TypeScript ────────────────────────────────────────────────
 *.tsbuildinfo
 
+# ── Tool caches ───────────────────────────────────────────────
+.eslintcache
+.turbo/
+.swc/
+
 # ── Environment / secrets ─────────────────────────────────────
 .env
 .env.*
@@ -25,6 +30,16 @@ yarn-error.log*
 
 # ── Vercel ────────────────────────────────────────────────────
 .vercel
+.vercel/
+
+# ── Keys & certificates (belt and braces — these must never ship) ─
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa*
+*.keystore
 
 # ── Test & coverage ───────────────────────────────────────────
 /coverage
@@ -49,8 +64,16 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# ── Claude / AI ───────────────────────────────────────────────
+# ── AI assistants & agents (local tooling state, never shared) ─
 .claude/
+.cursor/
+.cursorrules
+.aider*
+.continue/
+.windsurf/
+.codeium/
+CLAUDE.md
+AGENTS.md
 
 # ── Misc ──────────────────────────────────────────────────────
 *.tgz
