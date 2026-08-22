@@ -11,6 +11,17 @@ const config = {
   async headers() {
     return [
       {
+        // Map geometry is large and changes rarely. Without this it is served
+        // with `max-age=0, must-revalidate`, so every visit re-fetches it.
+        source: '/(.*).geojson',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           { key: 'X-Frame-Options',        value: 'SAMEORIGIN' },
