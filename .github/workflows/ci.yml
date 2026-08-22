@@ -6,9 +6,20 @@ on:
   pull_request:
     branches: [main]
 
+# Least privilege: nothing here writes back to the repository.
+permissions:
+  contents: read
+
 env:
-  PNPM_VERSION: 9
-  NODE_VERSION: 20
+  # Must match the pnpm that writes pnpm-lock.yaml and pnpm-workspace.yaml
+  # locally. pnpm 9 rejects a workspace manifest that has no `packages` field,
+  # which breaks `pnpm store path` — the command setup-node runs to find the
+  # cache. pnpm 11 also ships bin/pnpm.mjs instead of bin/pnpm.cjs, so it
+  # needs pnpm/action-setup v6+ to install at all.
+  PNPM_VERSION: 11
+  # Node 20 reached end-of-life in April 2026; 24 is the current LTS and the
+  # runner default.
+  NODE_VERSION: 24
 
 jobs:
   # ── Validation gate (runs on every push + PR) ──────────────────────────────
@@ -18,15 +29,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
@@ -61,15 +72,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         with:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: pnpm
