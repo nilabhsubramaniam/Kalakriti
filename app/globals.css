@@ -983,6 +983,985 @@ button, a { -webkit-tap-highlight-color: transparent; }
   to   { opacity: 0.11; transform: translateY(-50%) scale(1); }
 }
 
+/* Call to action into a state's own page, shown only for states that have one. */
+.kk-panel-explore {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 40px;
+  margin-top: 0.9rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  background: var(--kk-accent);
+  color: var(--kk-paper);
+  font-family: var(--font-sans-stack);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: filter 0.2s var(--ease);
+}
+.kk-panel-explore:hover { filter: brightness(0.92); }
+
+/* ─────────────────────────────────────────────────────────────
+   STATE PAGE  (/state/<slug>)
+   Mobile-first: these are the phone rules; min-width queries
+   below widen them. Colour comes only from theme slots, which the
+   page sets on its own wrapper.
+───────────────────────────────────────────────────────────── */
+.kk-st {
+  position: relative;
+  background: var(--kk-paper);
+  color: var(--kk-ink);
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Paper grain, as on the landing stage. */
+.kk-st::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(120, 70, 30, 0.05) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(120, 70, 30, 0.03) 1px, transparent 0);
+  background-size: 7px 7px, 13px 13px;
+  background-position: 0 0, 4px 6px;
+}
+
+.kk-st > * { position: relative; }
+
+/* The bar is transparent by design over the landing map. A state page
+   scrolls text underneath it, so there it needs a ground. Scoped with :has so
+   the landing is untouched; browsers without :has simply keep the old bar. */
+body:has(.kk-st) .nav {
+  background: color-mix(in srgb, var(--kk-paper) 90%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--kk-line);
+}
+
+/* ── Scroll reveal ────────────────────────────────────────────────
+   One observer sets [data-in] on the container; the children ride in
+   on a stagger ladder. Only transform and opacity, so this never
+   touches layout and never reaches the main thread.
+   The <noscript> block at the end of this section is the safety net:
+   with JS off the containers never receive [data-in], so the page
+   would otherwise stay blank.
+───────────────────────────────────────────────────────────────── */
+[data-reveal] > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.55s var(--ease-out),
+    transform 0.55s var(--ease-out);
+}
+[data-reveal][data-in] > * { opacity: 1; transform: none; }
+
+[data-reveal][data-in] > *:nth-child(1)  { transition-delay: calc(var(--stagger) * 0); }
+[data-reveal][data-in] > *:nth-child(2)  { transition-delay: calc(var(--stagger) * 1); }
+[data-reveal][data-in] > *:nth-child(3)  { transition-delay: calc(var(--stagger) * 2); }
+[data-reveal][data-in] > *:nth-child(4)  { transition-delay: calc(var(--stagger) * 3); }
+[data-reveal][data-in] > *:nth-child(5)  { transition-delay: calc(var(--stagger) * 4); }
+[data-reveal][data-in] > *:nth-child(6)  { transition-delay: calc(var(--stagger) * 5); }
+[data-reveal][data-in] > *:nth-child(7)  { transition-delay: calc(var(--stagger) * 6); }
+[data-reveal][data-in] > *:nth-child(8)  { transition-delay: calc(var(--stagger) * 7); }
+[data-reveal][data-in] > *:nth-child(9)  { transition-delay: calc(var(--stagger) * 8); }
+[data-reveal][data-in] > *:nth-child(n+10) { transition-delay: calc(var(--stagger) * 9); }
+
+/* ── Picture-or-motif frame ───────────────────────────────────────
+   Both branches produce the same box, so a slot can gain a photograph
+   later without moving any layout.
+───────────────────────────────────────────────────────────────── */
+.kk-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  background:
+    radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--kk-secondary) 16%, transparent), transparent 60%),
+    color-mix(in srgb, var(--kk-accent) 6%, transparent);
+}
+
+.kk-frame-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.kk-frame-motif {
+  position: absolute;
+  inset: 14%;
+  display: block;
+  color: var(--kk-accent);
+  opacity: 0.85;
+}
+
+.kk-frame-credit {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.3rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--kk-paper);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  opacity: 0.75;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+.kk-st-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 82svh;
+  padding: calc(84px + env(safe-area-inset-top, 0px)) var(--pad) 2.5rem;
+  overflow: hidden;
+}
+
+.kk-st-hero-inner { max-width: var(--max); margin-inline: auto; width: 100%; }
+
+/* Each line is one rung of the ladder; --i comes from the component so
+   the timing is tuned here rather than scattered through the markup. */
+.kk-st-hero-inner > * {
+  animation: kk-rise var(--settle) var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * var(--stagger) + 0.08s);
+}
+
+.kk-st-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.kk-st-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: kk-hero-settle 1.4s var(--ease-out) both;
+}
+/* The title has to stay readable over whatever photograph arrives. */
+.kk-st-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--kk-paper) 0%,
+    color-mix(in srgb, var(--kk-paper) 86%, transparent) 42%,
+    color-mix(in srgb, var(--kk-paper) 35%, transparent) 100%);
+}
+
+.kk-st-hero-mark {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: clamp(160px, 30vw, 380px);
+  height: auto;
+  color: var(--kk-accent);
+  opacity: 0;
+  pointer-events: none;
+  animation: kk-hero-mark 1.6s var(--ease-out) 0.15s both;
+}
+
+.kk-st-hero-back { margin-bottom: 1.2rem; }
+.kk-st-hero-back a { color: var(--kk-ink-soft); text-decoration: none; }
+.kk-st-hero-back a:hover { color: var(--kk-accent); }
+
+.kk-st-hero-eyebrow { color: var(--kk-accent); margin-bottom: 0.7rem; }
+
+.kk-st-hero-title {
+  font-family: var(--kk-font-display);
+  font-size: clamp(3.2rem, 15vw, 7rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+}
+
+.kk-st-hero-native {
+  font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+  color: var(--kk-accent);
+  margin-top: 0.4rem;
+}
+
+.kk-st-hero-tagline {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: clamp(1.05rem, 3.6vw, 1.45rem);
+  color: var(--kk-ink);
+  margin-top: 1rem;
+}
+
+.kk-st-hero-intro {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--kk-ink-soft);
+  margin-top: 0.9rem;
+  max-width: 38rem;
+}
+
+.kk-st-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.kk-st-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 46px;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--kk-accent) 45%, transparent);
+  border-radius: 999px;
+  font-family: var(--font-sans-stack);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--kk-accent);
+  transition:
+    background 0.25s var(--ease),
+    color 0.25s var(--ease),
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease);
+}
+
+.kk-st-cta--lead { background: var(--kk-accent); color: var(--kk-paper); }
+
+@media (hover: hover) {
+  .kk-st-cta:hover {
+    background: color-mix(in srgb, var(--kk-accent) 12%, transparent);
+    transform: translateY(-2px);
+  }
+  .kk-st-cta--lead:hover {
+    background: color-mix(in srgb, var(--kk-accent) 85%, black);
+    color: var(--kk-paper);
+    box-shadow: 0 8px 22px -10px var(--kk-accent);
+  }
+}
+
+.kk-st-shloka {
+  margin-top: 2rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid color-mix(in srgb, var(--kk-accent) 35%, transparent);
+  font-size: 1.05rem;
+  color: var(--kk-accent);
+}
+
+.kk-st-shloka-roman {
+  display: block;
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--kk-ink-soft);
+}
+
+.kk-st-patti {
+  display: block;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: kk-fade 0.9s var(--ease-out) 0.75s both;
+}
+.kk-st-patti path { stroke: var(--kk-accent); }
+
+/* ── Highlight strip ──────────────────────────────────────────── */
+.kk-st-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--kk-line);
+  border-block: 1px solid var(--kk-line);
+}
+
+.kk-st-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.1rem var(--pad);
+  background: var(--kk-paper);
+}
+
+.kk-st-stat-n {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.8rem, 7vw, 2.6rem);
+  line-height: 1;
+  color: var(--kk-accent);
+}
+
+.kk-st-stat-label { color: var(--kk-ink-soft); }
+
+/* ── Sticky section nav ───────────────────────────────────────── */
+.kk-st-nav {
+  position: sticky;
+  top: calc(62px + env(safe-area-inset-top, 0px));
+  z-index: 60;
+  background: color-mix(in srgb, var(--kk-paper) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--kk-line);
+}
+
+.kk-st-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.4rem;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: 0 var(--pad);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.kk-st-nav-list::-webkit-scrollbar { display: none; }
+
+.kk-st-nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.7rem;
+  white-space: nowrap;
+  color: var(--kk-ink-soft);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+@media (hover: hover) {
+  .kk-st-nav-link:hover { color: var(--kk-accent); border-bottom-color: var(--kk-accent); }
+}
+
+/* ── Sections ─────────────────────────────────────────────────── */
+.kk-st-section { padding: 2.75rem var(--pad); scroll-margin-top: 7.5rem; }
+.kk-st-section > * { max-width: var(--max); margin-inline: auto; }
+.kk-st-section--wash { background: color-mix(in srgb, var(--kk-accent) 4%, transparent); }
+.kk-st-section--quiet { background: var(--kk-paper-deep); }
+
+/* Headings stay flush with the content they introduce; the auto margin from
+   the container rule would otherwise centre them against the grids. */
+.kk-st-head { max-width: 44rem; margin-inline: 0; margin-bottom: 1.5rem; }
+
+.kk-st-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--kk-accent);
+  margin-bottom: 0.5rem;
+}
+
+.kk-st-title {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.9rem, 6.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.kk-st-lede {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.86rem;
+  line-height: 1.8;
+  color: var(--kk-ink-soft);
+  margin-top: 0.6rem;
+}
+
+/* ── District map ─────────────────────────────────────────────── */
+.kk-st-map { position: relative; }
+
+.kk-st-map-canvas {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--kk-accent) 5%, transparent), transparent 70%),
+    color-mix(in srgb, var(--kk-paper) 60%, transparent);
+}
+
+.kk-st-map-svg { width: 100%; height: 100%; display: block; }
+
+.kk-st-map-skeleton {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--kk-ink) 3%, transparent);
+}
+
+.kk-st-map-status {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--kk-ink-soft);
+}
+
+/* Follows the pointer; written to by the map directly, never through React. */
+.kk-st-map-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  padding: 0.35rem 0.6rem;
+  margin: -2.6rem 0 0 0.8rem;
+  white-space: nowrap;
+  color: var(--kk-paper);
+  background: var(--kk-ink);
+  border-radius: 3px;
+  transition: opacity 0.18s var(--ease);
+}
+.kk-st-map-tip[data-on] { opacity: 0.94; }
+
+/* On a phone the panel sits under the map: a 350px-wide map cannot afford
+   to have half of itself covered. From 641px it overlays the canvas. */
+.kk-st-map-panel {
+  padding: 1.1rem 0 0;
+  transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+}
+
+.kk-st-map-kicker { color: var(--kk-accent); margin-bottom: 0.3rem; }
+
+.kk-st-map-name {
+  font-family: var(--kk-font-display);
+  font-size: 1.6rem;
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.kk-st-map-note {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--kk-ink-soft);
+  max-width: 30rem;
+}
+
+.kk-st-map-crafts { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem; }
+
+.kk-st-map-clear {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 0.6rem;
+  color: var(--kk-ink-soft);
+}
+.kk-st-map-clear:hover { color: var(--kk-accent); }
+.kk-st-map-clear:focus-visible { outline: 2px solid var(--kk-accent); outline-offset: 3px; }
+
+/* ── Culture beats ────────────────────────────────────────────── */
+.kk-st-beats {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 78%;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  /* The rail must be able to bleed to the screen edge without the section
+     padding clipping the last card's shadow. */
+  margin-inline: calc(var(--pad) * -1);
+  padding-inline: var(--pad);
+}
+.kk-st-beats::-webkit-scrollbar { display: none; }
+
+.kk-st-beat {
+  scroll-snap-align: start;
+  padding: 1.2rem;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: var(--kk-paper);
+}
+
+.kk-st-beat-n {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--kk-accent);
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--kk-line);
+}
+
+.kk-st-beat-title {
+  font-family: var(--kk-font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.kk-st-beat-body {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.84rem;
+  line-height: 1.8;
+  color: var(--kk-ink-soft);
+}
+
+/* ── Crafts, as an accordion of cards ─────────────────────────── */
+.kk-st-crafts { display: grid; gap: 1rem; }
+
+.kk-st-craft {
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: var(--kk-paper);
+  overflow: hidden;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.kk-st-craft[open] {
+  grid-column: 1 / -1;
+  border-color: color-mix(in srgb, var(--kk-accent) 45%, transparent);
+}
+@media (hover: hover) {
+  .kk-st-craft:not([open]):hover {
+    border-color: color-mix(in srgb, var(--kk-accent) 40%, transparent);
+    box-shadow: 0 10px 28px -22px var(--kk-ink);
+  }
+  .kk-st-craft:not([open]):hover .kk-frame-img { transform: scale(1.04); }
+}
+
+.kk-st-craft-head {
+  display: grid;
+  gap: 0.9rem;
+  padding: 0.9rem;
+  cursor: pointer;
+  list-style: none;
+}
+.kk-st-craft-head::-webkit-details-marker { display: none; }
+.kk-st-craft-head:focus-visible { outline: 2px solid var(--kk-accent); outline-offset: -3px; }
+
+.kk-st-craft-art { width: 100%; }
+
+.kk-st-craft-where {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--kk-ink-soft);
+  margin-bottom: 0.35rem;
+}
+
+.kk-st-gi {
+  font-family: var(--font-sans-stack);
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kk-accent);
+  border: 1px solid color-mix(in srgb, var(--kk-accent) 40%, transparent);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+
+.kk-st-craft-name {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.kk-st-craft-native { font-size: 0.85rem; color: var(--kk-accent); }
+
+.kk-st-craft-hook {
+  font-family: var(--font-classic-stack);
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--kk-ink);
+  margin: 0.5rem 0 0.7rem;
+}
+
+.kk-st-craft-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--kk-accent);
+}
+
+.kk-st-craft-chev {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: transform 0.3s var(--ease-out);
+}
+.kk-st-craft[open] .kk-st-craft-chev { transform: rotate(-135deg) translate(-2px, -2px); }
+
+.kk-st-craft-open {
+  padding: 0 0.9rem 1.1rem;
+  animation: kk-expand 0.4s var(--ease-out) both;
+}
+
+.kk-st-craft-text { border-top: 1px solid var(--kk-line); padding-top: 1rem; }
+
+.kk-st-craft-story,
+.kk-st-craft-meta dd {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.86rem;
+  line-height: 1.8;
+  color: var(--kk-ink-soft);
+}
+
+.kk-st-craft-meta { display: grid; gap: 0.9rem; margin-top: 1rem; }
+.kk-st-craft-meta dt { color: var(--kk-accent); margin-bottom: 0.2rem; }
+
+.kk-st-chip {
+  font-family: var(--font-classic-stack);
+  font-size: 0.88rem;
+  color: var(--kk-accent);
+  text-decoration: none;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--kk-accent) 32%, transparent);
+  border-radius: 999px;
+  transition: background 0.2s var(--ease);
+}
+.kk-st-chip:hover { background: color-mix(in srgb, var(--kk-accent) 10%, transparent); }
+
+/* ── Products, inside an open craft ───────────────────────────── */
+.kk-st-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+}
+
+.kk-st-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: var(--kk-paper);
+  overflow: hidden;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease-out);
+}
+@media (hover: hover) {
+  .kk-st-card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--kk-accent) 40%, transparent);
+  }
+  .kk-st-card:hover .kk-frame-img { transform: scale(1.05); }
+}
+
+.kk-st-card-art { width: 100%; }
+
+.kk-st-card-tag {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kk-paper);
+  background: var(--kk-accent);
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+}
+
+.kk-st-card-body {
+  padding: 0.7rem 0.8rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.kk-st-card-name {
+  font-family: var(--kk-font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.kk-st-card-blurb {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--kk-ink-soft);
+  margin-top: 0.3rem;
+  /* Two lines keeps twelve cards scannable; the full story is above. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kk-st-card-spec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans-stack);
+  font-size: 0.63rem;
+  letter-spacing: 0.06em;
+  color: var(--kk-ink-soft);
+  margin-top: 0.5rem;
+}
+
+.kk-st-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.8rem;
+}
+
+.kk-st-price {
+  font-family: var(--kk-font-display);
+  font-size: 1.1rem;
+  color: var(--kk-ink);
+}
+
+.kk-st-buy {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--kk-accent);
+  color: var(--kk-paper);
+  font-family: var(--font-sans-stack);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: filter 0.2s var(--ease), transform 0.2s var(--ease-out);
+}
+@media (hover: hover) {
+  .kk-st-buy:hover { filter: brightness(0.92); transform: translateY(-1px); }
+}
+.kk-st-buy:focus-visible { outline: 2px solid var(--kk-ink); outline-offset: 2px; }
+
+/* ── Experiences rail ─────────────────────────────────────────── */
+.kk-st-rail {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 76%;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin-inline: calc(var(--pad) * -1);
+  padding-inline: var(--pad);
+}
+.kk-st-rail::-webkit-scrollbar { display: none; }
+
+.kk-st-exp {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: var(--kk-paper);
+  overflow: hidden;
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease-out);
+}
+@media (hover: hover) {
+  .kk-st-exp:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--kk-accent) 40%, transparent);
+  }
+  .kk-st-exp:hover .kk-frame-img { transform: scale(1.05); }
+}
+
+.kk-st-exp-art { width: 100%; }
+.kk-st-exp-body { padding: 0.9rem 1rem 1rem; display: flex; flex-direction: column; flex: 1; }
+.kk-st-exp-meta { color: var(--kk-accent); margin-bottom: 0.3rem; }
+
+.kk-st-exp-name {
+  font-family: var(--kk-font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.kk-st-exp-blurb {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.79rem;
+  line-height: 1.7;
+  color: var(--kk-ink-soft);
+  margin-top: 0.35rem;
+}
+
+.kk-st-exp-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+}
+
+/* ── Tourism ──────────────────────────────────────────────────── */
+.kk-st-places {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.2rem;
+}
+
+.kk-st-place {
+  padding-left: 0.8rem;
+  border-left: 2px solid color-mix(in srgb, var(--kk-accent) 30%, transparent);
+  transition: border-color 0.25s var(--ease);
+}
+@media (hover: hover) {
+  .kk-st-place:hover { border-left-color: var(--kk-accent); }
+}
+
+.kk-st-place-art { width: 100%; margin-bottom: 0.5rem; }
+.kk-st-place-kind { color: var(--kk-accent); }
+
+.kk-st-place-name {
+  font-family: var(--kk-font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+
+.kk-st-place-blurb {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--kk-ink-soft);
+  margin-top: 0.25rem;
+}
+
+.kk-st-place-where { color: var(--kk-ink-soft); opacity: 0.8; margin-top: 0.3rem; }
+
+/* ── Closing call to action ───────────────────────────────────── */
+.kk-st-close {
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem var(--pad);
+  text-align: center;
+  background: color-mix(in srgb, var(--kk-accent) 7%, transparent);
+  border-top: 1px solid var(--kk-line);
+}
+
+.kk-st-close-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(200px, 45vw, 340px);
+  height: auto;
+  color: var(--kk-accent);
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.kk-st-close > *:not(.kk-st-close-mark) { position: relative; }
+
+.kk-st-close-shloka { color: var(--kk-accent); font-size: 1rem; margin-bottom: 0.8rem; }
+
+.kk-st-close-title {
+  font-family: var(--kk-font-display);
+  font-size: clamp(1.9rem, 7vw, 3rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.kk-st-close-body {
+  font-family: var(--font-sans-stack);
+  font-weight: 300;
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--kk-ink-soft);
+  max-width: 34rem;
+  margin: 0.7rem auto 0;
+}
+
+.kk-st-close .kk-st-hero-cta { justify-content: center; }
+
+/* ── Wider screens ────────────────────────────────────────────── */
+@media (min-width: 641px) {
+  .kk-st-section { padding: 3.5rem var(--pad); }
+  .kk-st-stats { grid-template-columns: repeat(4, 1fr); }
+  .kk-st-beats { grid-auto-columns: 1fr; grid-auto-flow: row; grid-template-columns: repeat(2, 1fr); overflow: visible; margin-inline: 0; padding-inline: 0; }
+  /* The edge-bleed is a phone affordance. Past this width the rail must line
+     up with the heading above it, so the negative margin is undone. */
+  .kk-st-rail { grid-auto-columns: 46%; margin-inline: auto; padding-inline: 0; }
+  .kk-st-crafts { grid-template-columns: repeat(2, 1fr); }
+  .kk-st-craft-meta { grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+  .kk-st-grid { grid-template-columns: repeat(3, 1fr); }
+  .kk-st-places { grid-template-columns: repeat(3, 1fr); }
+
+  /* From here the map is big enough to carry the panel on top of it. */
+  .kk-st-map-canvas { aspect-ratio: 3 / 2; }
+  .kk-st-map-panel {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+    width: min(22rem, 46%);
+    padding: 1rem 1.1rem;
+    background: color-mix(in srgb, var(--kk-paper) 92%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--kk-line);
+    border-radius: 3px;
+    transform: translateY(6px);
+    opacity: 0.92;
+  }
+  .kk-st-map-panel[data-open] { transform: none; opacity: 1; }
+}
+
+@media (min-width: 901px) {
+  .kk-st-hero { min-height: 78vh; padding-top: calc(104px + env(safe-area-inset-top, 0px)); }
+  .kk-st-section { padding: 4.25rem var(--pad); }
+  .kk-st-beats { grid-template-columns: repeat(4, 1fr); }
+  .kk-st-rail { grid-auto-columns: 30%; }
+  .kk-st-crafts { grid-template-columns: repeat(3, 1fr); }
+  .kk-st-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Matched to the shape of a typical state so the geometry fills the
+     frame; a wider box would only reintroduce the whitespace. */
+  .kk-st-map-canvas { aspect-ratio: 7 / 5; max-width: 980px; margin-inline: auto; }
+
+  /* Open craft: art beside the text rather than stacked above it. */
+  .kk-st-craft[open] .kk-st-craft-head { grid-template-columns: 280px 1fr; align-items: start; }
+  .kk-st-craft[open] .kk-st-craft-open { padding-inline: 1.2rem; }
+}
+
+@media (min-width: 1200px) {
+  .kk-st-places { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* Without JS the containers never receive [data-in]; reveal everything. */
+
+
 /* ─────────────────────────────────────────────────────────────
    KEYFRAMES
 ───────────────────────────────────────────────────────────── */
@@ -993,6 +1972,34 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @keyframes kk-spin {
   to { transform: rotate(360deg); }
+}
+
+/* ── State page ───────────────────────────────────────────────── */
+@keyframes kk-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes kk-fade {
+  from { opacity: 0; }
+  to   { opacity: 0.5; }
+}
+
+/* The open half of the accordion. Height is left alone deliberately —
+   animating it would cost a layout on every frame. */
+@keyframes kk-expand {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes kk-hero-settle {
+  from { transform: scale(1.06); }
+  to   { transform: none; }
+}
+
+@keyframes kk-hero-mark {
+  from { opacity: 0; transform: translateY(-50%) scale(0.94); }
+  to   { opacity: 0.08; transform: translateY(-50%) scale(1); }
 }
 
 @keyframes kk-breathe {
@@ -1034,6 +2041,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+
+  /* Scroll reveals start hidden and are revealed by a transition. With that
+     transition neutralised they still need an explicit visible state, or the
+     content would depend entirely on the observer having fired. */
+  [data-reveal] > * { opacity: 1 !important; transform: none !important; }
+
+  /* The rails are scroll-snapped; snapping is fine, animated snapping is not. */
+  .kk-st-beats,
+  .kk-st-rail { scroll-snap-type: none; }
 }
 
 @tailwind base;

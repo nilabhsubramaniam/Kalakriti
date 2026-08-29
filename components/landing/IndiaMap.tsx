@@ -6,6 +6,8 @@ import {
   type Palette, type FontKey,
 } from '@/lib/stateThemes';
 import { useRegionStore, tourLength } from '@/lib/store/useRegionStore';
+import { slugForState } from '@/lib/states/slugs';
+import Link from 'next/link';
 import { Motif, Chakra, Trishul, BorderPatti } from '@/components/ornament/Motifs';
 
 const LABEL_ABBR: Record<string, string> = {
@@ -44,6 +46,26 @@ const FLY_MS = 850;
 /** Camera move during the showcase — quicker, so the hold is reading time
     rather than travel time. */
 const FLY_TOUR_MS = 560;
+
+/* ── The showcase train ──────────────────────────────────────────────────
+   The tour travels by rail. Each leg pulls the camera back far enough to
+   show both states, runs the train along the route, then settles into the
+   destination. The two moves fit *inside* STATE_HOLD rather than adding to
+   it, so the showcase still takes exactly as long as it did before — the
+   journey is bought out of the reading pause, not out of the clock. */
+
+/** Where the train sets off from before the first stop. */
+const TRAIN_ORIGIN = 'NCT of Delhi';
+/** Train run along one leg. */
+const RUN_MS = 620;
+/** Settling into the destination once the train arrives. */
+const ARRIVE_MS = 480;
+/** How far the route bows off a straight line, as a share of its length. */
+const RAIL_BOW = 0.14;
+/** The train is counter-scaled against the camera, so its design size *is*
+    its on-screen size. The rake is ~50 units long, so this puts it at
+    roughly 90px on screen — big enough to read as coaches, not a smudge. */
+const TRAIN_SCALE = 1.9;
 
 /** Scripts that Devanagari faces cannot render — fall back to the Noto set. */
 const NON_DEVANAGARI = /[ঀ-෿؀-ۿༀ-࿿]/;
@@ -85,7 +107,12 @@ export default function IndiaMap() {
   const zoomRef   = useRef<{
     toIndia: (ms?: number) => void;
     toState: (n: string, ms?: number) => void;
-  }>({ toIndia: () => {}, toState: () => {} });
+    /** Runs the showcase train from one state to the next, then settles. */
+    runLeg: (from: string, to: string) => void;
+    hideTrain: () => void;
+  }>({ toIndia: () => {}, toState: () => {}, runLeg: () => {}, hideTrain: () => {} });
+  /** The stop the train is standing at, so each leg knows where it starts. */
+  const trainAtRef = useRef<string | null>(null);
   /** Repaints every state path when the theme changes. */
   const restyleRef = useRef<(() => void) | null>(null);
   /** Selection read by the d3 closures below, which are built only once. */
@@ -352,11 +379,16 @@ export default function IndiaMap() {
       const rippleG  = root.append('g').attr('class', 'ripples').attr('pointer-events', 'none');
       const statesG  = root.append('g').attr('class', 'states');
       const labelsG  = root.append('g').attr('class', 'labels').attr('pointer-events', 'none');
+      /* Above the labels: during a leg the train is the thing being watched. */
+      const railG    = root.append('g').attr('class', 'rail').attr('pointer-events', 'none');
 
       /* Line-work and labels are counter-scaled on zoom so the map keeps a
          constant hairline weight instead of thickening into blobs. */
       let applyScale: (k: number) => void = () => {};
       let scale = 1;
+      /* Assigned once the train exists, further down; the zoom handler runs
+         before then only when there is nothing to place. */
+      let placeTrainRef: () => void = () => {};
 
       const zb = d3zoom<SVGSVGElement, unknown>()
         .scaleExtent([0.4, 20])
@@ -539,6 +571,8 @@ export default function IndiaMap() {
         labels
           .attr('font-size', (d: any) => `${labelSize(d) / k}px`)
           .attr('letter-spacing', 0.3 / k);
+        /* The train is drawn in map space too, so it inflates like the rest. */
+        placeTrainRef();
       };
 
       /* Restyle hook — React calls this when the selection changes. */
@@ -589,11 +623,198 @@ export default function IndiaMap() {
           .call(zb.transform, zoomIdentity);
       };
 
+      /* ── The showcase train ─────────────────────────────────────────────
+         Drawn in map space so it sits on the country rather than floating
+         over it, which means it inflates with the zoom exactly as the
+         pattern tiles and labels do. `place()` divides the camera scale back
+         out on every frame — including mid-flight, when the camera is moving
+         underneath the train. */
+
+      const centroidOf = (name: string): [number, number] | null => {
+        const feat = statesData.features.find((f: any) => sName(f) === name);
+        if (!feat) return null;
+        const [cx, cy] = path.centroid(feat);
+        return Number.isFinite(cx) && Number.isFinite(cy) ? [cx, cy] : null;
+      };
+
+      const rail = railG.append('path')
+        .attr('class', 'kk-rail-line')
+        .attr('fill', 'none')
+        .attr('stroke-dasharray', '3 4')
+        .attr('vector-effect', 'non-scaling-stroke')
+        .attr('stroke-width', 1)
+        .attr('opacity', 0);
+
+      /* A Namo Bharat–style rake: a tapered driving car and two trailers, in a
+         continuous window band with a livery stripe under it. Drawn once
+         around the origin, nose pointing +x, and thereafter only transformed.
+         Units are map-space; `place` divides the camera scale back out.
+
+         Colours come from the open tradition's palette, never from literals,
+         so the train re-liveries as the showcase moves across the country. */
+      const train = railG.append('g').attr('class', 'kk-train').attr('opacity', 0);
+
+      const H_CAR = 9;          /* body height          */
+      const L_CAR = 13;         /* coach length         */
+      const GAP   = 1.6;        /* coupling gap         */
+      const NOSE  = 4.5;        /* how far the cab tapers */
+
+      /** A trailer: plain rounded box. */
+      const trailer = (x: number) =>
+        train.append('rect')
+          .attr('class', 'kk-car')
+          .attr('x', x).attr('y', -H_CAR / 2)
+          .attr('width', L_CAR).attr('height', H_CAR)
+          .attr('rx', 2).attr('vector-effect', 'non-scaling-stroke');
+
+      /** The driving car, with the raked nose that reads as modern rail. */
+      const drivingCar = (x: number) => {
+        const f = x + L_CAR;
+        const h = H_CAR / 2;
+        train.append('path')
+          .attr('class', 'kk-car')
+          .attr('vector-effect', 'non-scaling-stroke')
+          .attr('d',
+            `M${x},${-h} H${f - NOSE}` +
+            `C${f - 1},${-h} ${f + NOSE},${-h * 0.55} ${f + NOSE},0` +
+            `C${f + NOSE},${h * 0.55} ${f - 1},${h} ${f - NOSE},${h}` +
+            `H${x} Z`);
+      };
+
+      /** Window band and livery stripe, the two things that make it read. */
+      const dress = (x: number, w: number) => {
+        train.append('rect')
+          .attr('class', 'kk-glass')
+          .attr('x', x + 1.4).attr('y', -H_CAR / 2 + 1.5)
+          .attr('width', w - 2.8).attr('height', 3)
+          .attr('rx', 1);
+        train.append('rect')
+          .attr('class', 'kk-livery')
+          .attr('x', x + 1).attr('y', H_CAR / 2 - 2.6)
+          .attr('width', w - 2).attr('height', 1.5)
+          .attr('rx', 0.7);
+      };
+
+      const CARS = [-34, -34 + L_CAR + GAP, -34 + 2 * (L_CAR + GAP)];
+      trailer(CARS[0]);
+      trailer(CARS[1]);
+      drivingCar(CARS[2]);
+      CARS.forEach(x => dress(x, L_CAR));
+
+      /* Bogies, drawn under the bodies so the rake sits on something. */
+      [-31, -24, -16.5, -9.5, -2, 5].forEach(x =>
+        train.insert('rect', ':first-child')
+          .attr('class', 'kk-bogie')
+          .attr('x', x).attr('y', H_CAR / 2 - 0.6)
+          .attr('width', 3.2).attr('height', 1.8).attr('rx', 0.8));
+
+      let trainPos: { x: number; y: number; a: number } | null = null;
+
+      const place = () => {
+        if (!trainPos) return;
+        train.attr(
+          'transform',
+          `translate(${trainPos.x},${trainPos.y}) rotate(${trainPos.a}) scale(${TRAIN_SCALE / scale})`,
+        );
+      };
+
+      placeTrainRef = place;
+
+      const paintTrain = () => {
+        const p = selectedRef.current ? own(selectedRef.current) : BASE_THEME;
+        const accent = hexToRgb(p.accent);
+        const paper  = hexToRgb(p.paper);
+        const ink    = hexToRgb(p.ink);
+
+        /* Pale body, accent outline, dark glass, accent stripe — the shape
+           does the work, so the livery stays quiet against the map. */
+        train.selectAll('.kk-car')
+          .attr('fill', rgba(paper, 0.97)).attr('stroke', rgba(accent, 0.95)).attr('stroke-width', 1);
+        train.selectAll('.kk-glass').attr('fill', rgba(ink, 0.45));
+        train.selectAll('.kk-livery').attr('fill', rgba(accent, 0.9));
+        train.selectAll('.kk-bogie').attr('fill', rgba(ink, 0.55));
+        rail.attr('stroke', rgba(accent, 0.5));
+      };
+
+      /* Fading and moving are separate named transitions. Two unnamed
+         transitions on the same selection cancel one another, which silently
+         left the train running the route at opacity 0. */
+      const hideTrain = () => {
+        train.interrupt('fade').interrupt('move').attr('opacity', 0);
+        rail.interrupt('fade').attr('opacity', 0);
+        trainPos = null;
+      };
+
+      /** Frames both ends of a leg, so the journey is actually visible. */
+      const toLeg = (a: [number, number], b: [number, number], ms: number) => {
+        const pad = 90;
+        const x0 = Math.min(a[0], b[0]) - pad, x1 = Math.max(a[0], b[0]) + pad;
+        const y0 = Math.min(a[1], b[1]) - pad, y1 = Math.max(a[1], b[1]) + pad;
+        const k = Math.min(6, 0.9 / Math.max((x1 - x0) / W, (y1 - y0) / H));
+        d3svg.transition().duration(ms).ease(easeCubicInOut)
+          .call(zb.transform,
+            zoomIdentity.translate(W / 2 - k * (x0 + x1) / 2, H / 2 - k * (y0 + y1) / 2).scale(k));
+      };
+
+      const runLeg = (fromName: string, toName: string) => {
+        const a = centroidOf(fromName);
+        const b = centroidOf(toName);
+        /* An unknown endpoint is not worth failing over — just fly there. */
+        if (!a || !b) { hideTrain(); toState(toName, FLY_TOUR_MS); return; }
+
+        paintTrain();
+
+        /* A shallow bow perpendicular to the leg. A dead-straight line across
+           a country reads as a chart annotation; a curve reads as a route. */
+        const [dx, dy] = [b[0] - a[0], b[1] - a[1]];
+        const len = Math.hypot(dx, dy) || 1;
+        const mx = (a[0] + b[0]) / 2 - (dy / len) * len * RAIL_BOW;
+        const my = (a[1] + b[1]) / 2 + (dx / len) * len * RAIL_BOW;
+        rail.attr('d', `M${a[0]},${a[1]} Q${mx},${my} ${b[0]},${b[1]}`);
+
+        const node = rail.node();
+        if (!node) { hideTrain(); toState(toName, FLY_TOUR_MS); return; }
+        const total = node.getTotalLength();
+
+        rail.interrupt('fade').attr('opacity', 0)
+          .transition('fade').duration(220).attr('opacity', 1);
+
+        /* The train stays on the map for the whole showcase — it pulls in,
+           waits, and departs. Only its first appearance is a fade; blinking
+           it off and on at every stop would undo the sense of one journey. */
+        if (+(train.attr('opacity') || 0) < 0.99) {
+          train.interrupt('fade').transition('fade').duration(260).attr('opacity', 1);
+        }
+
+        toLeg(a, b, RUN_MS);
+
+        train.interrupt('move').transition('move').duration(RUN_MS).ease(easeCubicInOut)
+          .attrTween('transform', () => (t: number) => {
+            const at = node.getPointAtLength(t * total);
+            /* Heading from a point just ahead, so the engine leans into the
+               curve instead of sliding sideways along it. */
+            const ahead = node.getPointAtLength(Math.min(total, t * total + 1.5));
+            const angle = (Math.atan2(ahead.y - at.y, ahead.x - at.x) * 180) / Math.PI;
+            trainPos = { x: at.x, y: at.y, a: angle };
+            return `translate(${at.x},${at.y}) rotate(${angle}) scale(${TRAIN_SCALE / scale})`;
+          })
+          .on('end', () => {
+            /* Arrived: the route behind it fades, the train stands at the
+               platform, and the camera settles into the state. */
+            rail.transition('fade').duration(ARRIVE_MS).attr('opacity', 0);
+            paintTrain();
+            toState(toName, ARRIVE_MS);
+          });
+      };
+
       /* Re-fit on resize and orientation change. Without this the map keeps
          the geometry it was built with and runs off-screen once the viewport
          changes — most visibly when a phone is rotated. */
       const relayout = () => {
         fitProjection();
+        /* The route was computed in the old projection; a rotated phone would
+           otherwise leave a train running along a line that no longer exists. */
+        hideTrain();
         paths.attr('d', (d: any) => path(d) ?? '');
         labels
           .attr('x', (d: any) => path.centroid(d)[0])
@@ -624,7 +845,7 @@ export default function IndiaMap() {
         window.removeEventListener('orientationchange', onResize);
       };
 
-      zoomRef.current = { toIndia, toState };
+      zoomRef.current = { toIndia, toState, runLeg, hideTrain };
       setReady(true);
 
       /* Deep link — /#Tamil%20Nadu opens straight into that tradition,
@@ -670,10 +891,32 @@ export default function IndiaMap() {
      before the geometry loaded (a deep link) is honoured once it arrives. */
   useEffect(() => {
     if (!ready) return;
-    const ms = touringRef.current ? FLY_TOUR_MS : undefined;
-    if (activeState) zoomRef.current.toState(activeState, ms);
-    else             zoomRef.current.toIndia(ms);
+
+    /* During the showcase the camera travels by rail: the leg is shown, the
+       train runs it, and `runLeg` settles into the destination itself. Every
+       other route into the camera — a click, the navbar, a deep link — flies
+       straight there as before. */
+    if (touringRef.current && activeState) {
+      const from = trainAtRef.current ?? TRAIN_ORIGIN;
+      trainAtRef.current = activeState;
+      if (from === activeState) zoomRef.current.toState(activeState, FLY_TOUR_MS);
+      else                      zoomRef.current.runLeg(from, activeState);
+      return;
+    }
+
+    trainAtRef.current = null;
+    zoomRef.current.hideTrain();
+    if (activeState) zoomRef.current.toState(activeState);
+    else             zoomRef.current.toIndia();
   }, [activeState, ready]);
+
+  /* Leaving the showcase — by clicking, scrolling, or reaching the end — puts
+     the train away. Without this it would sit frozen on the last leg. */
+  useEffect(() => {
+    if (tour === 'running') return;
+    trainAtRef.current = null;
+    zoomRef.current.hideTrain();
+  }, [tour]);
 
   /* ── The opening showcase ───────────────────────────────────────────────
      Land on the whole map, hold, then travel state by state. Any deliberate
@@ -717,6 +960,8 @@ export default function IndiaMap() {
 
   const hoverTheme = hoverState ? themeFor(hoverState) : null;
   const panelName  = activeState ? displayName(activeState) : null;
+  /* Only states with a data file under lib/states have a dedicated page. */
+  const pageSlug   = slugForState(activeState);
   const hoverName  = hoverState  ? displayName(hoverState)  : null;
   const scriptClass = theme.script.native && NON_DEVANAGARI.test(theme.script.native) ? 'kk-indic' : 'kk-deva';
 
@@ -874,6 +1119,11 @@ export default function IndiaMap() {
                   <span key={c} className={`kk-chip${i === 0 ? ' kk-chip--lead' : ''}`}>{c}</span>
                 ))}
               </div>
+              {pageSlug && (
+                <Link className="kk-panel-explore" href={`/state/${pageSlug}`}>
+                  Explore {panelName} →
+                </Link>
+              )}
             </div>
 
             <button className="kk-btn kk-panel-close" onClick={close} aria-label="Close panel">✕</button>
