@@ -133,15 +133,24 @@ export interface StatePage {
   /** Wide, dark-tolerant: the title sits over it. */
   hero?: ImageAsset;
 
-  /** Path under /public. */
-  geojson: string;
-  /** Geojson property holding the district name. */
-  districtProperty: string;
-  districts: District[];
+  /* Everything below is optional, and the page renders only the sections it
+     actually has data for. A state with a researched catalogue gets the full
+     page; one that only has an entry in STATE_THEMES gets an honest overview
+     rather than a scaffold of empty headings. */
 
-  chapters: Chapter[];
-  crafts: Craft[];
-  products: Product[];
-  experiences: Experience[];
-  destinations: Destination[];
+  /** Path under /public. Only states with district geometry have one. */
+  geojson?: string;
+  /** Geojson property holding the district name. */
+  districtProperty?: string;
+  districts?: District[];
+
+  chapters?: Chapter[];
+  crafts?: Craft[];
+  products?: Product[];
+  experiences?: Experience[];
+  destinations?: Destination[];
+
+  /** Craft names only, for states whose traditions are not yet written up.
+      Drawn from the cultural registry, so it is real data and not a stub. */
+  craftNames?: string[];
 }

@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { REGIONS, STATE_THEMES, displayName, themeFor } from '@/lib/stateThemes';
+/* The slug map only — importing the registry would pull every state's
+   catalogue into the bundle for a nav that renders on every page. */
+import { slugForState } from '@/lib/states/slugs';
 import { useRegionStore } from '@/lib/store/useRegionStore';
 import { Motif } from '@/components/ornament/Motifs';
 
@@ -74,20 +77,44 @@ export default function TopNav() {
                     {region.states.map(state => {
                       const t = STATE_THEMES[state];
                       if (!t) return null;
+                      const slug = slugForState(state);
+                      /* Each row wears its own tradition's pigment. */
+                      const rowStyle = { ['--row' as string]: t.colors.accent };
+                      const inner = (
+                        <>
+                          <Motif name={t.motif} size={15} strokeWidth={2} className="nav-menu-motif" />
+                          <span className="nav-menu-name">{displayName(state)}</span>
+                          <span className="nav-menu-art">{t.art}</span>
+                          {slug && <span className="nav-menu-go" aria-hidden="true">→</span>}
+                        </>
+                      );
+
                       return (
                         <li key={state}>
-                          <button
-                            role="menuitem"
-                            className="nav-menu-item"
-                            data-active={state === selected}
-                            /* Each row wears its own tradition's pigment. */
-                            style={{ ['--row' as string]: t.colors.accent }}
-                            onClick={() => choose(state)}
-                          >
-                            <Motif name={t.motif} size={15} strokeWidth={2} className="nav-menu-motif" />
-                            <span className="nav-menu-name">{displayName(state)}</span>
-                            <span className="nav-menu-art">{t.art}</span>
-                          </button>
+                          {slug ? (
+                            /* A state with its own page is a link, not a map
+                               selection — so it opens the page, and it behaves
+                               like a link: middle-click, ⌘-click, prefetch. */
+                            <Link
+                              role="menuitem"
+                              className="nav-menu-item"
+                              href={`/state/${slug}`}
+                              style={rowStyle}
+                              onClick={() => setOpen(false)}
+                            >
+                              {inner}
+                            </Link>
+                          ) : (
+                            <button
+                              role="menuitem"
+                              className="nav-menu-item"
+                              data-active={state === selected}
+                              style={rowStyle}
+                              onClick={() => choose(state)}
+                            >
+                              {inner}
+                            </button>
+                          )}
                         </li>
                       );
                     })}

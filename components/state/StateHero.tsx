@@ -15,6 +15,8 @@ import type { StatePage } from '@/lib/states/types';
 export default function StateHero({ page }: { page: StatePage }) {
   const theme = themeFor(page.state);
   const hasPhoto = Boolean(page.hero);
+  /* Only a state with a written catalogue can promise a shop. */
+  const hasShop = Boolean(page.products?.length && page.experiences?.length);
 
   return (
     <header className={`kk-st-hero${hasPhoto ? ' kk-st-hero--photo' : ''}`}>
@@ -65,12 +67,21 @@ export default function StateHero({ page }: { page: StatePage }) {
         </p>
 
         <p className="kk-st-hero-cta" style={{ '--i': 6 } as React.CSSProperties}>
-          <a className="kk-st-cta kk-st-cta--lead" href="#crafts">
-            Shop the crafts
-          </a>
-          <a className="kk-st-cta" href="#experiences">
-            Book an experience
-          </a>
+          {hasShop ? (
+            <>
+              <a className="kk-st-cta kk-st-cta--lead" href="#crafts">Shop the crafts</a>
+              <a className="kk-st-cta" href="#experiences">Book an experience</a>
+            </>
+          ) : (
+            <>
+              {/* No catalogue here yet, so the hero points at what does
+                  exist rather than at an empty section. */}
+              <a className="kk-st-cta kk-st-cta--lead" href="#crafts">See the traditions</a>
+              <Link className="kk-st-cta" href={`/#${encodeURIComponent(page.state)}`}>
+                Find it on the map
+              </Link>
+            </>
+          )}
         </p>
 
         <p

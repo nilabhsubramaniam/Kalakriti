@@ -3,10 +3,11 @@ import { notFound } from 'next/navigation';
 
 import SectionHead from '@/components/state/SectionHead';
 import StateHero from '@/components/state/StateHero';
-import StateNav from '@/components/state/StateNav';
+import StateNav, { type NavLink } from '@/components/state/StateNav';
 import HighlightStrip from '@/components/state/HighlightStrip';
 import CultureStrip from '@/components/state/CultureStrip';
 import CraftStory from '@/components/state/CraftStory';
+import CraftBrief from '@/components/state/CraftBrief';
 import DistrictMapPanel from '@/components/state/DistrictMapPanel';
 import ClosingCTA from '@/components/state/ClosingCTA';
 import RevealRoot from '@/components/state/RevealRoot';
@@ -25,10 +26,13 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const page = statePage(params.slug);
   if (!page) return {};
-  const craftNames = page.crafts.slice(0, 4).map(c => c.name).join(', ');
+  const theme = themeFor(page.state);
+  const crafts = (page.crafts?.map(c => c.name) ?? page.craftNames ?? []).slice(0, 4).join(', ');
   return {
-    title: `${page.title} — ${themeFor(page.state).art} | Kalakriti`,
-    description: `${page.tagline}. ${craftNames} and more, sourced from the districts that make them.`,
+    title: `${page.title} — ${theme.art} | Kalakriti`,
+    description: crafts
+      ? `${page.intro} ${crafts} and the districts that make them.`
+      : page.intro,
   };
 }
 
@@ -38,9 +42,29 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
 
   const theme = themeFor(page.state);
   const districtName = (id: string) =>
-    page.districts.find(d => d.id === id)?.name ?? id;
+    page.districts?.find(d => d.id === id)?.name ?? id;
   const productsOf = (craftId: string) =>
-    page.products.filter(p => p.craft === craftId);
+    page.products?.filter(p => p.craft === craftId) ?? [];
+
+  /* Which sections this state actually has. The nav is built from the same
+     flags, so it can never advertise a section that did not render. */
+  const hasMap = Boolean(page.geojson && page.districtProperty && page.districts?.length);
+  const hasChapters = Boolean(page.chapters?.length);
+  const hasCrafts = Boolean(page.crafts?.length);
+  const hasBriefs = !hasCrafts && Boolean(page.craftNames?.length);
+  const hasExperiences = Boolean(page.experiences?.length);
+  const hasDestinations = Boolean(page.destinations?.length);
+
+  const links: NavLink[] = [
+    hasMap && { href: '#map', label: 'The map' },
+    hasChapters && { href: '#culture', label: 'Culture' },
+    (hasCrafts || hasBriefs) && {
+      href: '#crafts',
+      label: hasCrafts ? 'Crafts & shop' : 'Crafts',
+    },
+    hasExperiences && { href: '#experiences', label: 'Experiences' },
+    hasDestinations && { href: '#visit', label: 'Visit' },
+  ].filter(Boolean) as NavLink[];
 
   return (
     <article className="kk-st" style={stateThemeVars(page.state)}>
@@ -52,74 +76,95 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
       </noscript>
 
       <StateHero page={page} />
-      <HighlightStrip page={page} />
-      <StateNav />
+      <HighlightStrip page={page} art={theme.art} />
+      <StateNav links={links} />
 
       {/* ── The map ───────────────────────────────────────────────────── */}
-      <section className="kk-st-section" id="map">
-        <SectionHead
-          label="The ground"
-          title="Where the work is made"
-          motif={theme.motif}
-          lede="Craft here is local to the point of being village-specific. Select a district to fly to it."
-        />
-        <DistrictMapPanel
-          geojson={page.geojson}
-          districtProperty={page.districtProperty}
-          districts={page.districts}
-        />
-      </section>
+      {hasMap && (
+        <section className="kk-st-section" id="map">
+          <SectionHead
+            label="The ground"
+            title="Where the work is made"
+            motif={theme.motif}
+            lede="Craft here is local to the point of being village-specific. Select a district to fly to it."
+          />
+          <DistrictMapPanel
+            geojson={page.geojson!}
+            districtProperty={page.districtProperty!}
+            districts={page.districts!}
+          />
+        </section>
+      )}
 
       {/* ── Culture ───────────────────────────────────────────────────── */}
-      <section className="kk-st-section kk-st-section--wash" id="culture">
-        <SectionHead label="The story" title={page.tagline} motif="kalash" />
-        <CultureStrip chapters={page.chapters} />
-      </section>
+      {hasChapters && (
+        <section className="kk-st-section kk-st-section--wash" id="culture">
+          <SectionHead label="The story" title={page.tagline} motif="kalash" />
+          <CultureStrip chapters={page.chapters!} />
+        </section>
+      )}
 
-      {/* ── Crafts and shop, merged ───────────────────────────────────── */}
-      <section className="kk-st-section" id="crafts">
-        <SectionHead
-          label="Art, craft & shop"
-          title="The living traditions"
-          motif="peacock"
-          lede="Each is still practised commercially by households in the district named — not revived for a museum. Open one to read it and to buy from it."
-        />
-        <div className="kk-st-crafts" data-reveal>
-          {page.crafts.map((craft, i) => (
-            <CraftStory
-              key={craft.id}
-              craft={craft}
-              products={productsOf(craft.id)}
-              districtName={districtName(craft.district)}
-              open={i === 0}
-            />
-          ))}
-        </div>
-      </section>
+      {/* ── Crafts, with the shop folded in where there is one ─────────── */}
+      {(hasCrafts || hasBriefs) && (
+        <section className="kk-st-section" id="crafts">
+          <SectionHead
+            label={hasCrafts ? 'Art, craft & shop' : 'Art & craft'}
+            title="The living traditions"
+            motif="peacock"
+            lede={hasCrafts
+              ? 'Each is still practised commercially by households in the district named — not revived for a museum. Open one to read it and to buy from it.'
+              : `${theme.art} leads here, alongside the traditions below. We are still working with makers in this region — the full catalogue follows.`}
+          />
+          {hasCrafts ? (
+            <div className="kk-st-crafts" data-reveal>
+              {page.crafts!.map((craft, i) => (
+                <CraftStory
+                  key={craft.id}
+                  craft={craft}
+                  products={productsOf(craft.id)}
+                  districtName={districtName(craft.district)}
+                  open={i === 0}
+                />
+              ))}
+            </div>
+          ) : (
+            <CraftBrief crafts={page.craftNames!} motif={theme.motif} art={theme.art} />
+          )}
+        </section>
+      )}
 
       {/* ── Experiences ───────────────────────────────────────────────── */}
-      <section className="kk-st-section kk-st-section--wash" id="experiences">
-        <SectionHead
-          label="Experiences"
-          title="Sit down with the makers"
-          motif="lotus"
-          lede="Booked directly with the households and collectives that run them."
-        />
-        <ExperienceList experiences={page.experiences} />
-      </section>
+      {hasExperiences && (
+        <section className="kk-st-section kk-st-section--wash" id="experiences">
+          <SectionHead
+            label="Experiences"
+            title="Sit down with the makers"
+            motif="lotus"
+            lede="Booked directly with the households and collectives that run them."
+          />
+          <ExperienceList experiences={page.experiences!} />
+        </section>
+      )}
 
       {/* ── Tourism ───────────────────────────────────────────────────── */}
-      <section className="kk-st-section kk-st-section--quiet" id="visit">
-        <SectionHead
-          label="While you are here"
-          title="Worth the detour"
-          motif="stupa"
-          lede="The craft is the reason to come. These are the reasons to stay a few days longer."
-        />
-        <TourismStrip destinations={page.destinations} />
-      </section>
+      {hasDestinations && (
+        <section className="kk-st-section kk-st-section--quiet" id="visit">
+          <SectionHead
+            label="While you are here"
+            title="Worth the detour"
+            motif="stupa"
+            lede="The craft is the reason to come. These are the reasons to stay a few days longer."
+          />
+          <TourismStrip destinations={page.destinations!} />
+        </section>
+      )}
 
-      <ClosingCTA state={page.title} motif={theme.motif} shloka={theme.shloka.native} />
+      <ClosingCTA
+        state={page.title}
+        motif={theme.motif}
+        shloka={theme.shloka.native}
+        detailed={hasCrafts}
+      />
     </article>
   );
 }

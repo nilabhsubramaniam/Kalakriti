@@ -369,6 +369,24 @@ body {
 
 .nav-menu-item:focus-visible { outline: 2px solid var(--row); outline-offset: 1px; }
 
+/* Marks the rows that open a dedicated state page rather than selecting on
+   the map, so the two behaviours are not silently mixed. */
+.nav-menu-go {
+  margin-left: auto;
+  padding-left: 0.3rem;
+  color: var(--row);
+  opacity: 0;
+  transform: translateX(-3px);
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease);
+}
+.nav-menu-item:hover .nav-menu-go,
+.nav-menu-item:focus-visible .nav-menu-go { opacity: 1; transform: none; }
+
+/* On touch there is no hover to reveal it, so it is simply always shown. */
+@media (pointer: coarse) {
+  .nav-menu-go { opacity: 1; transform: none; }
+}
+
 /* The motif sits on the baseline with the name, so give it its own alignment. */
 .nav-menu-motif {
   align-self: center;
@@ -1295,6 +1313,13 @@ body:has(.kk-st) .nav {
   color: var(--kk-accent);
 }
 
+/* One cell holds an art form's name rather than a numeral, so it needs to be
+   allowed to wrap and to sit at a readable size. */
+.kk-st-stats[data-count='2'] .kk-st-stat:last-child .kk-st-stat-n {
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
+  line-height: 1.15;
+}
+
 .kk-st-stat-label { color: var(--kk-ink-soft); }
 
 /* ── Sticky section nav ───────────────────────────────────────── */
@@ -1509,6 +1534,49 @@ body:has(.kk-st) .nav {
   font-size: 0.84rem;
   line-height: 1.8;
   color: var(--kk-ink-soft);
+}
+
+/* ── Crafts of a state without a catalogue yet ────────────────── */
+.kk-st-briefs {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.kk-st-brief {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--kk-line);
+  border-radius: 3px;
+  background: var(--kk-paper);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease-out);
+}
+@media (hover: hover) {
+  .kk-st-brief:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--kk-accent) 40%, transparent);
+  }
+}
+
+.kk-st-brief-mark { color: var(--kk-accent); opacity: 0.8; }
+
+.kk-st-brief-name {
+  font-family: var(--kk-font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.kk-st-brief-tag {
+  align-self: flex-start;
+  color: var(--kk-accent);
+  border: 1px solid color-mix(in srgb, var(--kk-accent) 40%, transparent);
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
 }
 
 /* ── Crafts, as an accordion of cards ─────────────────────────── */
@@ -1908,7 +1976,12 @@ body:has(.kk-st) .nav {
 /* ── Wider screens ────────────────────────────────────────────── */
 @media (min-width: 641px) {
   .kk-st-section { padding: 3.5rem var(--pad); }
+  /* The strip takes however many facts the state actually has. */
   .kk-st-stats { grid-template-columns: repeat(4, 1fr); }
+  .kk-st-stats[data-count='2'] { grid-template-columns: repeat(2, 1fr); }
+  .kk-st-stats[data-count='3'] { grid-template-columns: repeat(3, 1fr); }
+  .kk-st-stats[data-count='5'] { grid-template-columns: repeat(5, 1fr); }
+  .kk-st-briefs { grid-template-columns: repeat(4, 1fr); }
   .kk-st-beats { grid-auto-columns: 1fr; grid-auto-flow: row; grid-template-columns: repeat(2, 1fr); overflow: visible; margin-inline: 0; padding-inline: 0; }
   /* The edge-bleed is a phone affordance. Past this width the rail must line
      up with the heading above it, so the negative margin is undone. */

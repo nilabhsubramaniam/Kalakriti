@@ -1,31 +1,42 @@
 /**
- * Registry of states that have a dedicated page.
+ * Registry of state pages.
  *
- * Adding a state is two lines: a data file and an entry here. Everything else
- * — the route, the metadata, the map, the sections — is already generic.
+ * Every state in the cultural registry has a page. Those with a researched
+ * data file get the full treatment — district map, craft stories, shop,
+ * experiences, tourism. Every other state falls back to an overview derived
+ * from `lib/stateThemes.ts`.
  *
- * The landing map reads `hasStatePage()` to decide whether to offer the
- * "Explore" call to action, so a state without a data file simply keeps the
- * panel it has today.
+ * Adding depth to a state is therefore one file plus one line here; nothing
+ * about the route, the metadata or the components has to change.
  */
 
 import type { StatePage } from './types';
 import { bihar } from './bihar';
+import { derivePage } from './derive';
+import { SLUG_TO_STATE, STATE_PAGE_SLUGS } from './slugs';
 
-export { slugForState, STATE_PAGE_SLUGS } from './slugs';
+export { slugForState, STATE_PAGE_SLUGS, slugify } from './slugs';
 
-/** Slug → page data. Keyed by URL segment. */
+/** Slug → the hand-written pages. Keyed by URL segment. */
 export const STATE_PAGES: Record<string, StatePage> = {
   bihar,
 };
 
-export function statePage(slug: string): StatePage | undefined {
-  return STATE_PAGES[slug];
+/** True when the state has a researched catalogue rather than an overview. */
+export function isDetailed(slug: string): boolean {
+  return slug in STATE_PAGES;
 }
 
-/** Every slug, for generateStaticParams. */
+export function statePage(slug: string): StatePage | undefined {
+  const written = STATE_PAGES[slug];
+  if (written) return written;
+  const state = SLUG_TO_STATE[slug];
+  return state ? derivePage(state) : undefined;
+}
+
+/** Every slug, for generateStaticParams — all 36, not just the written ones. */
 export function stateSlugs(): string[] {
-  return Object.keys(STATE_PAGES);
+  return Object.values(STATE_PAGE_SLUGS);
 }
 
 export type { StatePage } from './types';

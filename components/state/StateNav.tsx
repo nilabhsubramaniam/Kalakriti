@@ -1,26 +1,23 @@
 /**
  * Sticky section nav.
  *
- * A five-screen page still benefits from telling you what is on it. Plain
- * anchors and `position: sticky` — no scroll-spy, no client JS, no listener
- * running on every frame of every scroll.
+ * Built from the sections the page actually rendered, so an overview state
+ * never offers a link to a shop it does not have. Plain anchors and
+ * `position: sticky` — no scroll-spy, no listener on every scroll frame.
  *
  * It sticks below the site bar; the offset is shared with `scroll-margin-top`
  * on the sections so an anchor jump does not land under either bar.
  */
-const LINKS = [
-  { href: '#map', label: 'The map' },
-  { href: '#culture', label: 'Culture' },
-  { href: '#crafts', label: 'Crafts & shop' },
-  { href: '#experiences', label: 'Experiences' },
-  { href: '#visit', label: 'Visit' },
-];
+export interface NavLink { href: string; label: string }
 
-export default function StateNav() {
+export default function StateNav({ links }: { links: NavLink[] }) {
+  /* One link is not a navigation, it is a redundant button. */
+  if (links.length < 2) return null;
+
   return (
     <nav className="kk-st-nav" aria-label="Sections">
       <ul className="kk-st-nav-list">
-        {LINKS.map(l => (
+        {links.map(l => (
           <li key={l.href}>
             <a className="kk-st-nav-link kk-label" href={l.href}>
               {l.label}
