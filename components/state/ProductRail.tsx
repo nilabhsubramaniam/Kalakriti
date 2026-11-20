@@ -41,11 +41,11 @@ export default function ProductRail({
             </p>
 
             <p className="kk-st-card-foot">
-              <span className="kk-st-price">{inr(product.price)}</span>
+              <span className="kk-st-price">{inr(product.price)} <small className="kk-preview-label">Preview price</small></span>
               {/* No cart exists in this codebase yet. The id is here so
                   wiring one up later is a one-line change. */}
-              <button className="kk-st-buy" type="button" data-product-id={product.id}>
-                Add to bag
+              <button className="kk-st-buy" type="button" data-product-id={product.id} disabled>
+                Shopping soon
               </button>
             </p>
           </div>

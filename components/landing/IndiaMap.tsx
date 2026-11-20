@@ -1,5 +1,7 @@
 'use client';
 
+import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
+
 import { useRef, useEffect, useState, useMemo, useCallback } from 'react';
 import {
   STATE_THEMES, BASE_THEME, BRAND_SHLOKA, TOUR_ORDER, themeFor, displayName,
@@ -101,7 +103,15 @@ const lerpInto = (cur: RGB, target: RGB, t: number) => {
   cur[2] += (target[2] - cur[2]) * t;
 };
 
-export default function IndiaMap() {
+function hashRegion(): string | null {
+  if (typeof window === 'undefined') return null;
+  try { return decodeURIComponent(window.location.hash.slice(1)) || null; }
+  catch { return null; }
+}
+
+export default function IndiaMap({ embedded = false, managed = false, onPreview }: { embedded?: boolean; managed?: boolean; onPreview?: (state: string | null) => void }) {
+  const previewRef = useRef(onPreview);
+  previewRef.current = onPreview;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const svgRef    = useRef<SVGSVGElement>(null);
   const zoomRef   = useRef<{
@@ -119,7 +129,7 @@ export default function IndiaMap() {
   const selectedRef = useRef<string | null>(null);
   /** Captured before the URL is rewritten, so a shared link still resolves. */
   const initialHash = useRef<string | null>(
-    typeof window === 'undefined' ? null : decodeURIComponent(window.location.hash.slice(1)) || null,
+    hashRegion(),
   );
 
   /* The navbar, the map, deep links, and the showcase all write here. */
@@ -135,6 +145,8 @@ export default function IndiaMap() {
   const [loading,    setLoading]    = useState(true);
   /** True once the geometry is drawn and the camera can be driven. */
   const [ready,      setReady]      = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [attempt, setAttempt] = useState(0);
 
   /* d3's handlers are bound once, so they reach the store through a ref. */
   const selectRef = useRef(select);
@@ -162,7 +174,7 @@ export default function IndiaMap() {
   /* ── Canvas: mandalas, kolam dots, ocean streams ───────────────────────── */
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || embedded || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     let dead = false;
     let raf  = 0;
 
@@ -326,13 +338,18 @@ export default function IndiaMap() {
 
     raf = requestAnimationFrame(tick);
     return () => { dead = true; cancelAnimationFrame(raf); window.removeEventListener('resize', size); };
-  }, []);
+  }, [embedded]);
 
   /* ── SVG India map ──────────────────────────────────────────────────── */
   useEffect(() => {
     if (!svgRef.current) return;
     let dead = false;
     let removeResize = () => {};
+    let stopTransitions = () => {};
+    const abort = new AbortController();
+    setLoading(true);
+    setFailed(false);
+    setReady(false);
 
     (async () => {
       const d3 = await import('d3');
@@ -344,6 +361,10 @@ export default function IndiaMap() {
       let H = svg.clientHeight || window.innerHeight;
 
       const d3svg = select(svg);
+      stopTransitions = () => {
+        d3svg.interrupt().on('.zoom', null);
+        d3svg.selectAll('*').interrupt().interrupt('move').interrupt('fade');
+      };
       d3svg.selectAll('*').remove();
 
       const defs = d3svg.append('defs');
@@ -400,7 +421,7 @@ export default function IndiaMap() {
       d3svg.call(zb);
       d3svg.on('dblclick.zoom', null);
 
-      const statesData: any = await json('/india-states.geojson');
+      const statesData: any = await json('/india-states.geojson', { signal: abort.signal });
       if (dead) return;
       setLoading(false);
 
@@ -415,7 +436,7 @@ export default function IndiaMap() {
         H = svg.clientHeight || window.innerHeight;
         /* On wide screens the hero occupies the left third, so the map is
            fitted to the remaining space rather than dead-centre. */
-        const leftInset = W >= 1024 ? 0.28 : 0.04;
+        const leftInset = !embedded && W >= 1024 ? 0.28 : 0.04;
         proj.fitExtent([[W * leftInset, H * 0.05], [W * 0.97, H * 0.96]], statesData);
       };
       fitProjection();
@@ -468,6 +489,16 @@ export default function IndiaMap() {
         .attr('filter', baseFilter)
         .style('cursor', 'pointer')
         .style('transition', 'fill 0.45s ease, stroke 0.45s ease')
+        .attr('tabindex', 0)
+        .attr('role', 'button')
+        .attr('aria-label', d => `Explore ${displayName(sName(d))}`)
+        .attr('aria-pressed', d => isSelected(sName(d)))
+        .on('keydown', (ev: KeyboardEvent, d) => {
+          if (ev.key === 'Enter' || ev.key === ' ') {
+            ev.preventDefault();
+            selectRef.current(sName(d));
+          }
+        })
         .on('mouseenter', function (_, d: any) {
           const n = sName(d);
           const c = hexToRgb(own(n).accent);
@@ -479,6 +510,7 @@ export default function IndiaMap() {
             .attr('filter', 'url(#glow-hover)')
             .classed('state-holo', true);
           setHoverState(n);
+          previewRef.current?.(n);
         })
         .on('mouseleave', function (_, d: any) {
           select(this)
@@ -488,6 +520,7 @@ export default function IndiaMap() {
             .attr('filter', baseFilter(d))
             .classed('state-holo', false);
           setHoverState(null);
+          previewRef.current?.(null);
         })
         .on('click', (_, d: any) => selectRef.current(sName(d)));
 
@@ -583,6 +616,7 @@ export default function IndiaMap() {
             return this.getAttribute('data-island') === selectedRef.current;
           });
         paths
+          .attr('aria-pressed', d => isSelected(sName(d)))
           .attr('fill', baseFill)
           .attr('stroke', baseStroke)
           .attr('filter', baseFilter);
@@ -596,6 +630,7 @@ export default function IndiaMap() {
          and an effect below drives the camera from it — so nav clicks, map
          clicks, deep links, and the showcase all travel the same path. */
       const toState = (name: string, ms = FLY_MS) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) ms = 0;
         const feat = statesData.features.find((f: any) => sName(f) === name);
         if (!feat) return;
         const [[x0, y0], [x1, y1]] = path.bounds(feat);
@@ -603,8 +638,8 @@ export default function IndiaMap() {
            the lower part of it, so frame the state in the band between them
            rather than dead-centre — otherwise it opens behind the panel. */
         const narrow = W < 900;
-        const topChrome = narrow ? 108 : 0;           /* nav + control row */
-        const panelH = narrow
+        const topChrome = narrow && !managed ? 108 : 0;           /* nav + control row */
+        const panelH = narrow && !managed
           ? Math.min(H * (H < 520 ? 0.46 : 0.62), 480) /* mirrors the CSS caps */
           : 0;
         const bandTop = topChrome;
@@ -619,6 +654,7 @@ export default function IndiaMap() {
       };
 
       const toIndia = (ms = 680) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) ms = 0;
         d3svg.transition().duration(ms).ease(easeCubicInOut)
           .call(zb.transform, zoomIdentity);
       };
@@ -757,6 +793,7 @@ export default function IndiaMap() {
       };
 
       const runLeg = (fromName: string, toName: string) => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { toState(toName, 0); return; }
         const a = centroidOf(fromName);
         const b = centroidOf(toName);
         /* An unknown endpoint is not worth failing over — just fly there. */
@@ -851,41 +888,53 @@ export default function IndiaMap() {
       /* Deep link — /#Tamil%20Nadu opens straight into that tradition,
          and skips the opening showcase. */
       const fromHash = initialHash.current;
-      if (fromHash && STATE_THEMES[fromHash]) selectRef.current(fromHash);
-    })();
+      if (!managed && fromHash && STATE_THEMES[fromHash]) selectRef.current(fromHash);
+    })().catch(() => {
+      if (!dead) { setLoading(false); setFailed(true); }
+    });
 
-    return () => { dead = true; restyleRef.current = null; removeResize(); };
-  }, []);
+    return () => {
+      dead = true;
+      abort.abort();
+      zoomRef.current.hideTrain();
+      zoomRef.current = { toIndia: () => {}, toState: () => {}, runLeg: () => {}, hideTrain: () => {} };
+      restyleRef.current = null;
+      removeResize();
+      stopTransitions();
+    };
+  }, [attempt, embedded, managed]);
 
   const close = useCallback(() => select(null), [select]);
 
   /* Follow the URL when it changes under us — an edited or pasted hash, or a
      link to another tradition from elsewhere on the page. */
   useEffect(() => {
+    if (managed) return;
     const onHash = () => {
-      const name = decodeURIComponent(window.location.hash.slice(1));
+      const name = hashRegion();
       if (name && STATE_THEMES[name]) select(name);
       else if (!name) select(null);
     };
     window.addEventListener('hashchange', onHash);
     return () => window.removeEventListener('hashchange', onHash);
-  }, [select]);
+  }, [select, managed]);
 
   /* Keep the URL in step with the selection, so a tradition can be shared. */
   useEffect(() => {
+    if (managed) return;
     const url = activeState
       ? `#${encodeURIComponent(activeState)}`
-      : window.location.pathname + window.location.search;
+      : window.location.pathname + window.location.search + (embedded ? '#heritage' : '');
     window.history.replaceState(null, '', url);
-  }, [activeState]);
+  }, [activeState, embedded, managed]);
 
   /* Escape returns to the full map. */
   useEffect(() => {
-    if (!activeState) return;
+    if (managed || !activeState) return;
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') close(); };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [activeState, close]);
+  }, [activeState, close, managed]);
 
   /* The camera follows the store. `ready` is in the deps so a selection made
      before the geometry loaded (a deep link) is honoured once it arrives. */
@@ -922,7 +971,7 @@ export default function IndiaMap() {
      Land on the whole map, hold, then travel state by state. Any deliberate
      input — a click, a key, a scroll, the navbar — hands control back. */
   useEffect(() => {
-    if (tour === 'idle') return;
+    if (managed || tour === 'idle') return;
     const stop = () => stopTour();
     window.addEventListener('pointerdown', stop);
     window.addEventListener('wheel', stop, { passive: true });
@@ -932,22 +981,22 @@ export default function IndiaMap() {
       window.removeEventListener('wheel', stop);
       window.removeEventListener('keydown', stop);
     };
-  }, [tour, stopTour]);
+  }, [tour, stopTour, managed]);
 
   useEffect(() => {
-    if (!ready) return;
+    if (managed || !ready) return;
     if (tour !== 'pending') return;
     /* A deep-linked visit is not a showcase. */
     if (activeState) { stopTour(); return; }
     /* Nor is it one for anyone who has asked for less movement — they can
        still start it deliberately from the control. */
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { stopTour(); return; }
+    if (embedded || window.matchMedia('(prefers-reduced-motion: reduce)').matches) { stopTour(); return; }
     const t = setTimeout(() => setTour('running'), OPENING_HOLD);
     return () => clearTimeout(t);
-  }, [ready, tour, activeState, setTour, stopTour]);
+  }, [ready, tour, activeState, setTour, stopTour, embedded, managed]);
 
   useEffect(() => {
-    if (tour !== 'running' || !ready) return;
+    if (managed || tour !== 'running' || !ready) return;
     const next = tourIndex + 1;
     /* The first stop comes quickly; later ones hold long enough to read. */
     const delay = tourIndex < 0 ? 250 : STATE_HOLD;
@@ -956,7 +1005,7 @@ export default function IndiaMap() {
       selectFromTour(TOUR_ORDER[next], next);
     }, delay);
     return () => clearTimeout(t);
-  }, [tour, tourIndex, ready, select, selectFromTour]);
+  }, [tour, tourIndex, ready, select, selectFromTour, managed]);
 
   const hoverTheme = hoverState ? themeFor(hoverState) : null;
   const panelName  = activeState ? displayName(activeState) : null;
@@ -981,6 +1030,7 @@ export default function IndiaMap() {
   /* Applied at the document root rather than on the stage, so chrome outside
      the map — the navbar and its state menu — carries the same theme. */
   useEffect(() => {
+    if (embedded) return;
     const root = document.documentElement;
     for (const [k, v] of Object.entries(themeVars)) root.style.setProperty(k, v);
   });
@@ -988,7 +1038,7 @@ export default function IndiaMap() {
   const touring = tour === 'running';
 
   return (
-    <div className="kk-stage" data-tour={touring ? 'true' : 'false'}>
+    <div className={`kk-stage${embedded ? ' kk-stage--embedded' : ''}${managed ? ' kk-stage--managed' : ''}`} style={embedded ? themeVars : undefined} data-tour={touring ? 'true' : 'false'}>
 
       {/* Animated pigment field — mandalas, kolam dots, seas */}
       <canvas
@@ -1006,6 +1056,7 @@ export default function IndiaMap() {
         strokeWidth={1.1}
       />
 
+      {failed && <div className="kk-map-error" role="alert"><p>The map couldn’t load. You can still explore every region from the header.</p><button className="kk-home-button" type="button" onClick={() => setAttempt(v => v + 1)}>Try again</button></div>}
       {loading && (
         <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 3, pointerEvents: 'none' }}>
           <span className="kk-label" style={{ color: 'var(--kk-accent)', animation: 'pulse-glow 1.4s ease-in-out infinite' }}>
@@ -1016,7 +1067,7 @@ export default function IndiaMap() {
 
       {/* Hero — retires once a state is selected */}
       <header className="kk-hero" data-hidden={activeState ? 'true' : 'false'} aria-hidden={activeState ? 'true' : 'false'}>
-        <p className="kk-hero-eyebrow kk-label">GI-Tagged · Artisan Direct</p>
+        <p className="kk-hero-eyebrow kk-label">Craft · Culture · Community</p>
         <h1 className="kk-hero-title">
           The living hand<br />of India
         </h1>
@@ -1035,14 +1086,14 @@ export default function IndiaMap() {
       <svg
         ref={svgRef}
         className="kk-map"
-        role="img"
+        role="group"
         aria-label="Map of India — select a state to see its craft traditions"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 1 }}
       />
 
       {activeState && (
         <button className="kk-btn kk-back" onClick={close}>
-          ← All States
+          <ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> All States
         </button>
       )}
 
@@ -1051,14 +1102,14 @@ export default function IndiaMap() {
         <div className="kk-tour">
           {touring ? (
             <button className="kk-btn kk-tour-btn" onClick={stopTour}>
-              ❚❚ Showcase · {Math.max(tourIndex + 1, 1)} / {tourLength}
+              <Pause className="kk-ui-icon" size={16} aria-hidden="true" /> Showcase · {Math.max(tourIndex + 1, 1)} / {tourLength}
             </button>
           ) : (
             <button
               className="kk-btn kk-tour-btn"
               onClick={() => { selectFromTour(TOUR_ORDER[0], 0); setTour('running'); }}
             >
-              ▶ Cultural showcase
+              <Play className="kk-ui-icon" size={16} aria-hidden="true" /> Cultural showcase
             </button>
           )}
         </div>
@@ -1121,7 +1172,7 @@ export default function IndiaMap() {
               </div>
               {pageSlug && (
                 <Link className="kk-panel-explore" href={`/state/${pageSlug}`}>
-                  Explore {panelName} →
+                  Explore {panelName} <ArrowRight className="kk-ui-icon" size={16} aria-hidden="true" />
                 </Link>
               )}
             </div>

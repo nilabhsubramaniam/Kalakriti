@@ -1,4 +1,6 @@
+import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Motif, BorderPatti } from '@/components/ornament/Motifs';
 import { themeFor } from '@/lib/stateThemes';
 import type { StatePage } from '@/lib/states/types';
@@ -19,31 +21,12 @@ export default function StateHero({ page }: { page: StatePage }) {
   const hasShop = Boolean(page.products?.length && page.experiences?.length);
 
   return (
-    <header className={`kk-st-hero${hasPhoto ? ' kk-st-hero--photo' : ''}`}>
-      {page.hero ? (
-        <div className="kk-st-hero-bg" aria-hidden="true">
-          {/* Local asset, hand-sized, and the site stays free of an image
-              runtime. Same decision as components/state/Frame.tsx. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={page.hero.src}
-            alt=""
-            width={page.hero.width}
-            height={page.hero.height}
-            /* The one image on the page worth blocking paint for. */
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            style={page.hero.focal ? { objectPosition: page.hero.focal } : undefined}
-          />
-        </div>
-      ) : (
-        <Motif name={theme.motif} className="kk-st-hero-mark" size={240} strokeWidth={1} />
-      )}
+    <header className={`kk-st-hero${hasPhoto ? ' kk-st-hero--illustrated' : ''}`}>
+      {!page.hero && <Motif name={theme.motif} className="kk-st-hero-mark" size={240} strokeWidth={1} />}
 
       <div className="kk-st-hero-inner">
         <p className="kk-st-hero-back kk-label" style={{ '--i': 0 } as React.CSSProperties}>
-          <Link href="/">← All of India</Link>
+          <Link href="/explore"><ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> All of India</Link>
         </p>
 
         <p className="kk-st-hero-eyebrow kk-label" style={{ '--i': 1 } as React.CSSProperties}>
@@ -69,15 +52,15 @@ export default function StateHero({ page }: { page: StatePage }) {
         <p className="kk-st-hero-cta" style={{ '--i': 6 } as React.CSSProperties}>
           {hasShop ? (
             <>
-              <a className="kk-st-cta kk-st-cta--lead" href="#crafts">Shop the crafts</a>
-              <a className="kk-st-cta" href="#experiences">Book an experience</a>
+              <a className="kk-st-cta kk-st-cta--lead" href="#crafts">Explore the crafts</a>
+              <a className="kk-st-cta" href="#experiences">See experiences</a>
             </>
           ) : (
             <>
               {/* No catalogue here yet, so the hero points at what does
                   exist rather than at an empty section. */}
               <a className="kk-st-cta kk-st-cta--lead" href="#crafts">See the traditions</a>
-              <Link className="kk-st-cta" href={`/#${encodeURIComponent(page.state)}`}>
+              <Link className="kk-st-cta" href={`/explore#${encodeURIComponent(page.state)}`}>
                 Find it on the map
               </Link>
             </>
@@ -95,6 +78,8 @@ export default function StateHero({ page }: { page: StatePage }) {
           </span>
         </p>
       </div>
+
+      {page.hero && <figure className="kk-st-hero-illustration"><Image src={page.hero.src} alt={page.hero.alt} width={page.hero.width} height={page.hero.height} priority sizes="(min-width: 901px) 50vw, 100vw" /><figcaption>{page.hero.credit}</figcaption></figure>}
 
       <BorderPatti className="kk-st-patti" height={14} />
     </header>

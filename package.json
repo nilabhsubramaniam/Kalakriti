@@ -7,22 +7,25 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm map:build && next build",
     "start": "next start",
     "lint": "next lint",
     "lint:strict": "next lint --max-warnings 0",
     "type-check": "tsc --noEmit",
     "validate": "pnpm type-check && pnpm lint:strict && pnpm build",
     "analyze": "ANALYZE=true pnpm build",
-    "size": "pnpm build && du -sh .next/static/chunks/*.js 2>/dev/null | sort -h"
+    "size": "pnpm build && du -sh .next/static/chunks/*.js 2>/dev/null | sort -h",
+    "map:build": "node scripts/build-india-map.mjs"
   },
   "dependencies": {
     "@types/d3": "^7.4.3",
     "d3": "^7.9.0",
     "ky": "^1.4.0",
+    "lucide-react": "^1.75.0",
     "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
+    "three": "^0.187.0",
     "zod": "^3.23.8",
     "zustand": "^4.5.4"
   },
@@ -39,6 +42,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.187.0",
     "@typescript-eslint/eslint-plugin": "^8.66.0",
     "@typescript-eslint/parser": "^8.66.0",
     "autoprefixer": "^10.0.1",

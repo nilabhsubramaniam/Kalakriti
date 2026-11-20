@@ -1,0 +1,20 @@
+[
+  {
+    "key": "primary",
+    "prompt": "Use case: logo-brand. Design a polished original PRIMARY HORIZONTAL LOGO for KALAKRITI, an Indian heritage marketplace showcasing hand embroidery, handmade textiles and Mithila paintings. Transparent background, wide tightly fitted canvas approximately 1800x600, no mockup. Left: a distinctive compact emblem based on a simple round EMBROIDERY HOOP, a slender needle crossing its upper-right edge with one graceful looping thread, and a restrained central Mithila-inspired paired-fish/lotus form. The hoop and needle should make the embroidery product immediately recognizable; the fish/lotus adds Bihar/Mithila heritage. Keep the emblem clean and balanced, few confident shapes, medium weight outlines, no dense miniature decoration, readable when small. Maroon #7A1E1E as the dominant mark and wordmark color, restrained antique gold #B69459 accent on thread or hoop. Right: exact wordmark 'Kalakriti' in an elegant custom high-contrast serif, highly legible and warm, not ornate calligraphy. Below it, exact small widely spaced text 'CRAFT • CULTURE • COMMUNITY'. Clear hierarchy, excellent spacing and alignment, professional scalable-logo aesthetic, flat crisp vector-like edges, no gradients, shadows, glow, photoreal objects, people, vegetables, deity imagery, generic mandala, extra text or border around entire logo. Provide only the finished horizontal logo with minimal transparent outer padding. Preserve spelling exactly: Kalakriti.",
+    "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-3d34ecbc-8077-46c7-a4a6-d244bec9b534.png",
+    "file": "kalakriti-logo-concept.png"
+  },
+  {
+    "key": "reverse",
+    "prompt": "Edit only the colors of this exact Kalakriti logo for use on a dark maroon background. Keep the emblem, fish, lotus, hoop, needle, thread, typography, spelling, tagline, layout and proportions identical. Change the maroon strokes, wordmark and tagline to warm ivory #FFF3D6. Keep antique gold accents, slightly lighter gold #E0BD7A for visibility. Preserve true transparent background and minimal padding. Do not add a maroon background, mockup, border, shadow or any new elements. Output the same horizontal logo.",
+    "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-02c1134f-c2e9-42b8-b7f3-cb2fa823024d.png",
+    "file": "kalakriti-logo-reverse-concept.png"
+  },
+  {
+    "key": "emblem",
+    "prompt": "Extract the emblem from the supplied Kalakriti logo as a standalone brand symbol. Keep the exact embroidery hoop, paired fish, lotus, needle and looping thread design and its maroon and antique gold colors. Remove the complete wordmark and tagline. Centre only the emblem on a square transparent canvas, with enough even padding that the needle and thread are completely visible. Preserve crisp edges and proportions. No added text, background, shadows, mockup, extra ornament or redesign.",
+    "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-160ce799-6a5e-453c-a69a-4521a3a90b0c.png",
+    "file": "kalakriti-logo-emblem-concept.png"
+  }
+]

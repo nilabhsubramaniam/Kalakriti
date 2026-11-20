@@ -1,5 +1,7 @@
 'use client';
 
+import { ArrowLeft } from 'lucide-react';
+
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ExtendedFeature, ExtendedFeatureCollection } from 'd3';
 import type { District } from '@/lib/states/types';
@@ -265,7 +267,7 @@ export default function DistrictMap({
                 </p>
               )}
               <button className="kk-st-map-clear kk-label" type="button" onClick={clear}>
-                ← Back to the state
+                <ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> Back to the state
               </button>
             </>
           ) : (

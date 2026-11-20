@@ -4,13 +4,14 @@
  * Every state in the cultural registry has a page. Those with a researched
  * data file get the full treatment — district map, craft stories, shop,
  * experiences, tourism. Every other state falls back to an overview derived
- * from `lib/stateThemes.ts`.
+ * from `lib/stateThemes.ts` and `lib/states/editorial.ts`.
  *
  * Adding depth to a state is therefore one file plus one line here; nothing
  * about the route, the metadata or the components has to change.
  */
 
 import type { StatePage } from './types';
+import { REGIONAL_EDITORIAL } from './editorial';
 import { bihar } from './bihar';
 import { derivePage } from './derive';
 import { SLUG_TO_STATE, STATE_PAGE_SLUGS } from './slugs';
@@ -29,7 +30,7 @@ export function isDetailed(slug: string): boolean {
 
 export function statePage(slug: string): StatePage | undefined {
   const written = STATE_PAGES[slug];
-  if (written) return written;
+  if (written) return { ...written, craftIntro: REGIONAL_EDITORIAL[written.state]?.intro, craftGuides: REGIONAL_EDITORIAL[written.state]?.crafts };
   const state = SLUG_TO_STATE[slug];
   return state ? derivePage(state) : undefined;
 }

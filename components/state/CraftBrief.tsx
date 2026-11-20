@@ -1,14 +1,5 @@
-import { Motif } from '@/components/ornament/Motifs';
-import type { MotifKey } from '@/lib/stateThemes';
+import type { CraftGuide } from '@/lib/states/editorial';
 
-/**
- * The crafts of a state that has not been written up yet.
- *
- * Names and the region's motif, and nothing more — the honest amount for
- * data we actually hold. It is deliberately not a collapsed CraftStory: an
- * accordion that opens onto nothing would promise depth this state does not
- * have yet.
- */
 /**
  * Which craft is the state's signature.
  *
@@ -24,28 +15,31 @@ function signatureIndex(crafts: string[], art: string): number {
   return crafts.findIndex(c => c.toLowerCase().includes(key));
 }
 
+/** Regional craft introductions, kept independent of product listings. */
 export default function CraftBrief({
   crafts,
-  motif,
   art,
+  guides,
 }: {
   crafts: string[];
-  motif: MotifKey;
+  guides?: CraftGuide[];
   art: string;
 }) {
   const signature = signatureIndex(crafts, art);
 
   return (
-    <ul className="kk-st-briefs" data-reveal>
-      {crafts.map((name, i) => (
-        <li key={name} className="kk-st-brief">
-          <span className="kk-st-brief-mark" aria-hidden="true">
-            <Motif name={motif} size={26} strokeWidth={1.5} />
-          </span>
-          <h3 className="kk-st-brief-name">{name}</h3>
-          {i === signature && <span className="kk-st-brief-tag kk-label">Signature</span>}
-        </li>
-      ))}
+    <ul className={`kk-st-briefs${guides?.length ? ' kk-st-briefs--editorial' : ''}`} data-reveal>
+      {crafts.map((name, i) => {
+        const guide = guides?.find(entry => entry.name === name);
+        return (
+          <li key={name} className="kk-st-brief">
+            {guide && <p className="kk-st-brief-material">{guide.material}</p>}
+            <h3 className="kk-st-brief-name">{name}</h3>
+            {guide && <p className="kk-st-brief-description">{guide.description}</p>}
+            {i === signature && <span className="kk-st-brief-tag kk-label">Signature</span>}
+          </li>
+        );
+      })}
     </ul>
   );
 }
