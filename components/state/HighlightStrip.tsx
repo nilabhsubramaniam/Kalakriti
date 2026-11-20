@@ -12,7 +12,7 @@ export default function HighlightStrip({ page, art }: { page: StatePage; art: st
   const gi = page.crafts?.filter(c => c.gi).length ?? 0;
 
   const stats: Array<{ n: string; label: string }> = [];
-  if (crafts) stats.push({ n: String(crafts), label: 'living crafts' });
+  if (crafts) stats.push({ n: String(crafts), label: page.crafts?.length ? 'living crafts' : 'selected traditions' });
   if (gi) stats.push({ n: String(gi), label: 'GI registered' });
   if (page.districts?.length) stats.push({ n: String(page.districts.length), label: 'districts' });
   if (page.experiences?.length) {

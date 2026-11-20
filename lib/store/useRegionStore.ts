@@ -33,7 +33,7 @@ interface RegionState {
 
 export const useRegionStore = create<RegionState>((set, get) => ({
   selected: null,
-  tour: 'pending',
+  tour: 'idle',
   tourIndex: -1,
 
   select: state => {
@@ -41,7 +41,10 @@ export const useRegionStore = create<RegionState>((set, get) => ({
     set({ selected: state, tour: 'idle' });
   },
 
-  selectFromTour: (state, index) => set({ selected: state, tourIndex: index }),
+  selectFromTour: (state, index) => {
+    if (!Number.isInteger(index) || TOUR_ORDER[index] !== state || !STATE_THEMES[state]) return;
+    set({ selected: state, tourIndex: index });
+  },
 
   setTour: phase => set({ tour: phase }),
 

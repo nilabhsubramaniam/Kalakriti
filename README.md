@@ -1,404 +1,161 @@
-# Kalakriti — UI
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/brand/kalakriti-logo-reverse.webp">
+    <img src="public/brand/kalakriti-logo.webp" alt="Kalakriti — Craft, Culture, Community" width="380">
+  </picture>
 
-E-commerce platform for authentic Mithila/Bihar artisan and farmer products.
+  <h1>Living threads. Timeless traditions.</h1>
+  <p><strong>मिथिलाक माटि</strong><br>The soil of Mithila. The stories of India.</p>
+  <p>An Indian heritage marketplace in the making — beginning with Bihar,<br>and following the people, materials and traditions behind the craft.</p>
 
-This is a single Next.js application — no monorepo, no workspaces. The admin panel and mobile app are separate future repositories; only the customer-facing storefront lives here.
+  <p><a href="#the-experience">The experience</a> · <a href="#run-locally">Run locally</a> · <a href="#the-design-language">Design language</a> · <a href="docs/README.md">Documentation</a></p>
 
----
-
-## Project layout
-
-```
-kalakriti/
-├── app/                            # Next.js App Router pages
-├── components/                     # React components
-├── tokens/                         # Design tokens (JSON — source of truth)
-├── public/                         # Static assets
-├── package.json
-├── next.config.ts
-├── tailwind.config.ts
-└── tsconfig.json
-```
+  <img src="public/images/stitching-courtyard.webp" alt="Editorial illustration of women working together on an embroidered textile in a stone courtyard" width="100%">
+  <p><sub>Editorial illustration · Rooted in a place. Made with meaning.</sub></p>
+</div>
 
 ---
 
-## Customer Storefront
+## The experience
 
-### Stack
+Kalakriti brings regional craft stories into an illustrated, responsive discovery experience. This repository contains one **Next.js 14 application** with statically generated public pages.
 
-| Concern | Library / Service |
-|---|---|
-| Framework | `next` 14, App Router |
-| Styling | `tailwindcss`, design tokens via CSS custom properties |
-| Server state | `next/cache` fetch + `revalidate` tags (ISR) |
-| Client state | `zustand` — cart, wishlist, UI state |
-| Forms | `react-hook-form` + `zod` |
-| HTTP client | `ky` (thin fetch wrapper) |
-| Image optimisation | `next/image` |
-| Auth | `next-auth` v5 (JWT sessions) |
-| Animation | `framer-motion` — hero carousel, add-to-cart feedback |
-| Rich text (PDP) | `@portabletext/react` or plain markdown via `remark` |
-| Analytics | `posthog-js` (event tracking) |
+| Chapter | What is implemented |
+| --- | --- |
+| **The heritage homepage** | A complete embroidery panorama, six regional stories in an automatic carousel, eight textile traditions, process stories and an artistic Mithila footer. |
+| **Bihar, painted by hand** | A dedicated Mithila journal with a full-page painted backdrop, a top section menu, four cultural chapters, nine illustrated craft stories and twelve product previews. Native disclosures work without JavaScript. |
+| **A journey across India** | A separate `/explore` atlas with lazy-loaded Three.js relief, D3 map mode, state selection, regional hover themes and an optional cultural showcase. |
+| **Regional craft introductions** | All 36 existing regional routes have introductions and craft content. Bihar has the detailed journal; the other 35 pages have selected craft descriptions and regional visual themes. |
+| **Shared discovery** | Responsive navigation, regional links, local craft search, library icons and an illustrated brand identity. |
 
-### Folder structure
+> **Current stage: heritage discovery and catalogue preview.** Product prices and experience ideas are illustrative previews. Shopping, bookings, subscriptions, accounts and payments are not live. There is no backend or database integration in this repository.
 
-```
-kalakriti/
-├── app/
-│   ├── layout.tsx                  # root layout — TopNav, Footer, Toast provider
-│   ├── page.tsx                    # / Landing page — composes all landing/ sections
-│   ├── [category]/
-│   │   ├── page.tsx                # /[category] — Category Browse
-│   │   └── [slug]/
-│   │       └── page.tsx            # /[category]/[slug] — Product Detail
-│   ├── cart/
-│   │   └── page.tsx
-│   ├── checkout/
-│   │   └── page.tsx                # multi-step, client component
-│   ├── account/
-│   │   ├── layout.tsx              # account sidebar layout
-│   │   ├── orders/
-│   │   │   ├── page.tsx            # order history list
-│   │   │   └── [id]/page.tsx       # order detail
-│   │   ├── wishlist/page.tsx
-│   │   ├── profile/page.tsx
-│   │   └── addresses/page.tsx
-│   └── api/
-│       └── auth/[...nextauth]/route.ts
-│
-├── components/
-│   ├── layout/
-│   │   ├── TopNav.tsx
-│   │   ├── Footer.tsx
-│   │   └── AccountSidebar.tsx
-│   ├── landing/                    # all sections of the / landing page
-│   │   ├── HeroBannerCarousel.tsx  # framer-motion PageView, auto-scrolls every 5s, pauses on hover/touch
-│   │   ├── BannerSlide.tsx         # single slide — image, headline, sub-copy, CTA button + href
-│   │   ├── CarouselDotIndicator.tsx
-│   │   ├── CategoryTileGrid.tsx    # 2-col mobile / 4-col desktop grid of category entry points
-│   │   ├── CategoryTile.tsx        # image + label + href → /[category]
-│   │   ├── FeaturedProductsRow.tsx # horizontal scroll row, admin-curated (not algorithmic)
-│   │   ├── GiftBoxCallout.tsx      # full-width promo block for MITH-BUN-001 (Mithila Culture Gift Box)
-│   │   ├── TrustSignalsBar.tsx     # GI-tag badge / Artisan Sourced / Sustainably Packed
-│   │   └── NewsletterStrip.tsx     # email capture — POST to /notifications/subscribe
-│   ├── browse/
-│   │   ├── FilterSidebar.tsx       # state synced to URL search params
-│   │   ├── FilterGroup.tsx
-│   │   ├── RangeSlider.tsx
-│   │   ├── SortDropdown.tsx
-│   │   └── ProductGrid.tsx         # 4-col desktop / 2-col mobile
-│   ├── product/
-│   │   ├── ImageGallery.tsx        # pinch-zoom via framer-motion or InteractiveImage
-│   │   ├── VariantSelector.tsx     # dynamic per product.variant_dimension
-│   │   ├── QuantityStepper.tsx
-│   │   ├── AddToCartButton.tsx     # idle → adding → added → idle (4-state)
-│   │   ├── NotifyMeButton.tsx      # shown when out of stock
-│   │   ├── ProductTabs.tsx         # Description / History / Care / Reviews
-│   │   └── RelatedProductsCarousel.tsx
-│   ├── cart/
-│   │   ├── CartLineItem.tsx
-│   │   ├── PromoCodeInput.tsx
-│   │   └── OrderSummary.tsx
-│   ├── checkout/
-│   │   ├── StepProgressBar.tsx
-│   │   ├── ShippingStep.tsx
-│   │   ├── DeliveryStep.tsx
-│   │   ├── PaymentStep.tsx         # gateway-rendered iframe / hosted fields
-│   │   ├── ReviewStep.tsx
-│   │   └── ConfirmationStep.tsx
-│   └── shared/
-│       ├── ProductCard.tsx         # image, name, price, GI badge, quick-add
-│       ├── GIBadge.tsx             # pill: "GI Tagged (2007)" — conditional render
-│       ├── SkeletonCard.tsx        # shimmer placeholder
-│       ├── EmptyState.tsx          # accepts icon, message, optional CTA
-│       ├── Toast.tsx               # stack-based, max 3, auto-dismiss 4s
-│       ├── Modal.tsx               # focus-trapped, portal-rendered
-│       ├── Breadcrumb.tsx
-│       └── SearchBar.tsx           # autocomplete, debounced 300ms, min 2 chars
-│
-├── lib/
-│   ├── api.ts                      # typed API client (ky instance + endpoint fns)
-│   ├── auth.ts                     # next-auth config
-│   └── utils.ts
-│
-├── store/
-│   ├── cart.ts                     # zustand — cart items, add, remove, update qty
-│   └── ui.ts                       # zustand — toast stack, modal state
-│
-├── hooks/
-│   ├── useCart.ts
-│   ├── useWishlist.ts
-│   └── useInfiniteProducts.ts      # IntersectionObserver + cursor pagination
-│
-└── middleware.ts                   # protect /account/* routes via next-auth
+The atlas follows the existing geographic dataset and its legacy region keys. Its 36 routes are not a newly revised administrative map; see [regional content scope](docs/audit/STATE_CRAFT_CONTENT.md).
+
+<table>
+  <tr>
+    <td width="50%"><img src="public/images/painting-study.webp" alt="Madhubani-inspired fish and lotus painting illustration" width="100%"></td>
+    <td width="50%"><img src="public/images/basket-study.webp" alt="Illustrative golden coiled-grass basket with red patterned bands" width="100%"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>A story in every line</strong><br><sub>Painting · pattern · the Mithila chapter</sub></td>
+    <td align="center"><strong>Beauty in the making</strong><br><sub>Grass · thread · the work of the hand</sub></td>
+  </tr>
+</table>
+
+## Run locally
+
+Use **Node.js 22 or newer** and **pnpm 11** for local development. CI uses Node 24 and pnpm 11; the lockfile and override configuration also support pnpm 9 for the existing Vercel workflow.
+
+```bash
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
-### Routes and data
+Open [localhost:3000](http://localhost:3000).
 
-| Route | Rendering | API calls |
-|---|---|---|
-| `/` | ISR (revalidate: 300s) | `GET /content/banners`, `GET /catalog/featured`, `GET /catalog/categories` |
-| `/[category]` | SSR | `GET /catalog/products?category=...` (cursor paginated) |
-| `/[category]/[slug]` | ISR (revalidate: 60s) | `GET /catalog/products/:id`, `GET /inventory/stock`, `GET /reviews/product/:id`, `GET /catalog/products/related` |
-| `/cart` | Client | `GET /cart` |
-| `/checkout` | Client (protected) | `POST /orders`, `POST /payments/initiate`, `POST /shipping/rate` |
-| `/account/*` | SSR (protected) | `GET /users/me`, `GET /orders`, `GET /wishlist` |
+| Route | Experience |
+| --- | --- |
+| `/` | Illustrated heritage homepage |
+| `/explore` | Interactive India atlas and cultural showcase |
+| `/state/bihar` | Mithila painting journal |
+| `/state/gujarat` | Example regional craft overview |
+| `/state/[slug]` | The remaining regional pages, generated at build time |
 
-### Key behaviours
+No environment variables are required for the current build. Fonts are downloaded by `next/font` at build time and served by the app at runtime; a clean build needs access to the font source or an existing font cache.
 
-- Filter sidebar state lives in URL search params — filters are shareable and survive page refresh
-- Stock is re-checked on add-to-cart click, not only on page load
-- `AddToCartButton` is disabled until a valid SKU is resolved from variant selection
-- Cart persists per user (logged-in) or session cookie (guest); merged on login
-- Stock is **not reserved** at add-to-cart — only at checkout (`POST /orders`)
-- Checkout: back-navigation blocked during payment processing (full-screen overlay)
-- Guest checkout: prompt "save your details?" shown on confirmation screen
+### Checks and production preview
+
+```bash
+pnpm validate
+pnpm start
+```
+
+`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **42 static outputs**, including the regional routes and framework outputs.
+
+To check a production build while keeping a development server's cache separate:
+
+```bash
+KALAKRITI_BUILD_DIR=.next-relief pnpm validate
+KALAKRITI_BUILD_DIR=.next-relief pnpm start --hostname 127.0.0.1 --port 3105
+```
+
+Use [localhost:3105](http://localhost:3105) for that preview. Stop servers with **Ctrl+C**. If a development tab reports a stale chunk after dependency changes, stop the dev server, remove only its generated `.next` directory, restart `pnpm dev` and hard-refresh the browser.
+
+## The design language
+
+**Painted paper, warm pigments and clear storytelling.** Kalakriti's visual identity takes its starting point from Mithila painting: outlined fish, lotus forms, patterned borders and the texture of handmade surfaces. The logo brings together embroidery, the needle and thread, paired fish and a lotus.
+
+- **Colour:** paper and ink grounds with regional accent, secondary and tertiary pigments. `lib/stateThemes.ts` owns the regional identities; `lib/states/theme.ts` exposes their CSS variables.
+- **Type:** Cormorant Garamond and the existing regional display registers, Devanagari text, and Inter for the interface. Fonts are self-hosted through `next/font`.
+- **Surfaces:** handwritten CSS in `app/globals.css`, with scoped `kk-*` classes. Tailwind remains installed; the current UI uses the existing CSS system.
+- **Motion:** CSS reveals and progressive scroll effects, plus a regional carousel that pauses for interaction and respects reduced motion. The atlas showcase starts only on request.
+- **Imagery:** editorial illustrations and craft studies are labelled. They are not authenticated product photographs or evidence of a maker's identity, provenance or certification.
+- **Interaction:** native disclosures, visible focus styles, keyboard-accessible regional controls, mobile navigation and D3 fallback when the 3D view is unavailable.
+
+Bihar's map was removed from its journal at the user's request. Geographic discovery remains on `/explore`. The full-page Mithila painting is preserved; separate backgrounds behind its section menu and headings are transparent.
+
+## Inside the repository
+
+```text
+app/
+  page.tsx                       Heritage homepage
+  explore/page.tsx               Separate India atlas
+  state/[slug]/page.tsx           Static regional routes
+  globals.css                    Shared and scoped visual styles
+components/
+  landing/                       Regional carousel, atlas, D3 and Three.js views
+  layout/                        Navigation, craft search and footer
+  state/                         Bihar journal and regional page components
+  ornament/                      Existing cultural motifs
+lib/
+  landing/editorial.ts            Homepage editorial content
+  stateThemes.ts                 Regional visual identity registry
+  states/                        Page types, regional editorial notes and Bihar data
+  store/                         Shared region selection and cultural showcase
+  three/                         Browser scene, mesh types and resource lifecycle
+public/
+  brand/                         Approved logo variants and concept artwork
+  images/                        Editorial illustrations and craft studies
+  maps/                          Prepared relief manifest, meshes and poster
+scripts/
+  build-india-map.mjs             Offline geometry preparation
+```
+
+| Area | Implementation |
+| --- | --- |
+| Framework | Next.js 14.2.35 · React 18 · App Router |
+| Types and state | Strict TypeScript · Zustand region selection |
+| Maps | D3 7 · Three.js 0.187 · offline mesh preparation |
+| UI | Handwritten CSS · Lucide React icons · `next/image` |
+| Rendering | Static public pages with small client-side interactive areas |
+| Delivery | Existing Vercel Git integration; GitHub Actions validates |
+
+The map reads shared selection state; it does not own regional content. Prepared relief buffers are generated before the Next.js build, and the browser loads them when the atlas is activated. The scene uses demand-driven rendering and disposes owned resources when it unmounts.
+
+> **Security status:** the latest production dependency audit reports unresolved advisories, including critical findings. See the [dated security review](docs/audit/SECURITY_REVIEW.md) before treating this prototype as release-ready.
+
+## Documentation and next chapters
+
+Start with the [documentation index](docs/README.md). It distinguishes implemented work from proposals and older baseline audits.
+
+| Read | Purpose |
+| --- | --- |
+| [Heritage homepage](docs/audit/HERITAGE_JOURNAL.md) | Homepage composition, carousel and visual refinements |
+| [Bihar Mithila journal](docs/audit/BIHAR_MITHILA_JOURNAL.md) | Current Bihar design, map removal and browser evidence |
+| [Regional craft content](docs/audit/STATE_CRAFT_CONTENT.md) | Coverage, source references and editorial limitations |
+| [India atlas](docs/audit/EXPLORE_ATLAS.md) | Dedicated map experience |
+| [Three.js architecture](docs/architecture/THREEJS_ARCHITECTURE.md) | Renderer boundaries, fallback and geometry decisions |
+| [Artwork and asset pipeline](docs/architecture/ASSET_PIPELINE.md) | Image provenance, generation prompts and production assets |
+| [Security review](docs/audit/SECURITY_REVIEW.md) | Baseline findings and recorded follow-up work |
+| [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Future milestones and approval boundaries |
+
+Next product milestones include maker-reviewed regional content, authenticated product photography, a real catalogue, and separately approved commerce and seller workflows. Backend, account, payment, admin and mobile architecture documents describe proposals; they are not implemented features.
 
 ---
 
-## Admin Panel — separate repo (future)
-
-> Not built here. The admin panel (React + Vite) will live in its own repository when that phase begins. Specs documented in Confluence.
-
-### Stack (reference)
-
-| Concern | Library / Service |
-|---|---|
-| Framework | `react` 18 + `vite` |
-| Styling | `tailwindcss` |
-| Server state | `@tanstack/react-query` |
-| Client state | `zustand` |
-| Data tables | `@tanstack/react-table` (or `ag-grid-react` community) |
-| Forms | `react-hook-form` + `zod` |
-| Rich text editor | `tiptap` |
-| Charts | `recharts` |
-| Drag-and-drop | `@dnd-kit/core` — image reorder, banner display_order |
-| HTTP client | `ky` |
-| Auth | JWT stored in `httpOnly` cookie; `axios` interceptor refreshes on 401 |
-| Date/time | `date-fns` |
-
-### Folder structure
-
-```
-apps/admin/
-├── src/
-│   ├── main.tsx
-│   ├── App.tsx                     # router root
-│   │
-│   ├── pages/
-│   │   ├── Dashboard.tsx           # /admin
-│   │   ├── catalog/
-│   │   │   ├── CatalogList.tsx     # /admin/catalog
-│   │   │   └── ProductForm.tsx     # /admin/catalog/new + /admin/catalog/:id
-│   │   ├── inventory/
-│   │   │   └── InventoryList.tsx   # /admin/inventory
-│   │   ├── orders/
-│   │   │   ├── OrderList.tsx       # /admin/orders
-│   │   │   └── OrderDetail.tsx     # /admin/orders/:id
-│   │   ├── vendors/
-│   │   │   ├── VendorList.tsx      # /admin/vendors
-│   │   │   └── VendorDetail.tsx    # /admin/vendors/:id
-│   │   ├── content/
-│   │   │   └── ContentPage.tsx     # /admin/content — banners + articles tabs
-│   │   ├── users/
-│   │   │   └── UserList.tsx        # /admin/users
-│   │   └── reviews/
-│   │       └── ReviewQueue.tsx     # /admin/reviews
-│   │
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── AdminLayout.tsx     # sidebar + top bar wrapper
-│   │   │   └── AdminSidebar.tsx    # collapses to icon rail below 1280px
-│   │   ├── table/
-│   │   │   ├── DataTable.tsx       # shared TanStack/AG Grid wrapper — used across all list pages
-│   │   │   ├── StatusBadge.tsx
-│   │   │   ├── StatusToggle.tsx    # inline active/inactive toggle in table row
-│   │   │   └── BulkActionsBar.tsx
-│   │   ├── catalog/
-│   │   │   ├── ProductFormSections.tsx
-│   │   │   ├── ImageUploader.tsx   # drag-drop, reorderable via @dnd-kit, type tag per image
-│   │   │   └── VariantsSubTable.tsx # inline editable rows; SKU auto-generated
-│   │   ├── orders/
-│   │   │   ├── OrderStatusDropdown.tsx  # only shows valid next states per state machine
-│   │   │   └── OrderStatusTimeline.tsx
-│   │   ├── dashboard/
-│   │   │   ├── StatCard.tsx
-│   │   │   ├── SalesLineChart.tsx  # recharts — 7d / 30d / 90d period selector
-│   │   │   ├── CategoryBarChart.tsx
-│   │   │   └── DistrictBarChart.tsx
-│   │   └── shared/
-│   │       ├── ConfirmationDialog.tsx  # required before all destructive actions
-│   │       ├── RoleGuard.tsx           # hides/disables UI elements by role
-│   │       ├── Toast.tsx
-│   │       ├── RichTextEditor.tsx      # tiptap instance
-│   │       └── AuditNote.tsx           # "Last edited by X at Y"
-│   │
-│   ├── lib/
-│   │   ├── api.ts                  # ky instance, typed endpoint fns
-│   │   ├── queryClient.ts          # TanStack Query global config
-│   │   └── orderStateMachine.ts    # valid transition map — enforced in UI
-│   │
-│   ├── store/
-│   │   └── auth.ts                 # zustand — current admin user, role
-│   │
-│   └── hooks/
-│       ├── useServerTable.ts       # shared hook: server-side pagination + sort + filter for DataTable
-│       └── useOrderActions.ts
-│
-└── index.html
-```
-
-### Order status state machine
-
-```
-pending → paid → processing → shipped → delivered
-               ↘                      ↘
-             cancelled              cancelled → refunded
-```
-
-`orderStateMachine.ts` exports a `validTransitions` map. `OrderStatusDropdown` reads from it — the dropdown only renders next states that are reachable from the current one.
-
-### Key behaviours
-
-- All `/admin/*` routes: admin-role JWT required; enforced at route level via `RoleGuard`
-- Vendor `payout_details`: displayed masked; editing requires a confirmation dialog before save
-- Every product write logs to `audit_log`; shown via `AuditNote` on edit forms
-- Catalog table and Orders table: server-side pagination — never load all rows into the client
-- Image uploader: drag-and-drop reorder via `@dnd-kit`; each image gets a type tag (main / detail / lifestyle) before upload
-- Bulk actions bar: only appears when one or more table rows are selected
-- Charts (Phase 1): no dedicated analytics service — recharts queries Order + Catalog services directly
-
----
-
-## Mobile App — separate repo (Phase B)
-
-> Not built here. Flutter app will live in its own repository after web is stable. Screens mirror the web user panel 1:1. No mobile-only feature set in Phase 1.
-
-### Stack
-
-| Concern | Package |
-|---|---|
-| State management | `flutter_riverpod` — AsyncNotifierProvider for all async data |
-| Routing + deep links | `go_router` — handles push notification → order detail, promo → product page |
-| HTTP | `dio` + interceptor for JWT refresh |
-| Caching | `flutter_riverpod` + `hive` for offline cart persistence |
-| Images | `cached_network_image` |
-| Loading placeholders | `shimmer` |
-| Payment (native) | `pay` package — Apple Pay (iOS) + Google Pay (Android) |
-| Analytics | `posthog_flutter` |
-| Local storage | `flutter_secure_storage` — JWT tokens |
-| Linting | `flutter_lints` |
-
-### Folder structure
-
-```
-apps/mobile/
-├── lib/
-│   ├── main.dart
-│   ├── router.dart                 # go_router config — all routes + deep link paths
-│   ├── theme.dart                  # ThemeData built from design tokens
-│   │
-│   ├── features/
-│   │   ├── home/
-│   │   │   ├── home_screen.dart
-│   │   │   ├── hero_carousel.dart      # PageView + Timer + dot indicator
-│   │   │   ├── category_tile_grid.dart # GridView
-│   │   │   └── featured_row.dart       # horizontal ListView.builder
-│   │   ├── browse/
-│   │   │   ├── product_list_screen.dart
-│   │   │   ├── filter_bottom_sheet.dart  # showModalBottomSheet (replaces web sidebar)
-│   │   │   └── product_grid.dart         # GridView.builder, 2-col portrait
-│   │   ├── product/
-│   │   │   ├── product_detail_screen.dart
-│   │   │   ├── image_gallery.dart        # PageView + InteractiveViewer (pinch-zoom)
-│   │   │   ├── variant_selector.dart     # ChoiceChip group, dynamic per product
-│   │   │   └── add_to_cart_button.dart   # HapticFeedback.lightImpact() on tap
-│   │   ├── cart/
-│   │   │   ├── cart_screen.dart
-│   │   │   └── cart_item.dart            # Dismissible (swipe-to-remove)
-│   │   ├── checkout/
-│   │   │   ├── checkout_screen.dart      # Stepper widget or custom PageView
-│   │   │   ├── address_form.dart
-│   │   │   ├── payment_selector.dart     # card, UPI, Apple Pay, Google Pay
-│   │   │   └── confirmation_screen.dart
-│   │   └── account/
-│   │       ├── account_screen.dart
-│   │       ├── order_list_screen.dart
-│   │       ├── order_detail_screen.dart
-│   │       ├── profile_edit_screen.dart
-│   │       ├── address_book_screen.dart
-│   │       └── wishlist_screen.dart
-│   │
-│   ├── providers/
-│   │   ├── auth_provider.dart          # AsyncNotifierProvider — JWT state
-│   │   ├── cart_provider.dart          # NotifierProvider — cart items + hive persistence
-│   │   ├── products_provider.dart      # AsyncNotifierProvider — paginated product list
-│   │   └── order_provider.dart
-│   │
-│   ├── services/
-│   │   ├── api_client.dart             # dio instance + JWT interceptor
-│   │   └── payment_service.dart        # wraps `pay` package for Apple/Google Pay
-│   │
-│   └── widgets/
-│       ├── product_card.dart
-│       ├── gi_badge.dart
-│       ├── shimmer_placeholder.dart
-│       ├── pull_to_refresh.dart        # RefreshIndicator wrapper
-│       └── bottom_nav.dart             # Home / Categories / Cart (badge) / Wishlist / Account
-│
-├── assets/
-│   └── tokens/                         # token values consumed by theme.dart
-│
-└── pubspec.yaml
-```
-
-### Navigation
-
-Bottom navigation bar (differs from web top-nav — mobile convention):
-
-```
-BottomNavigationBar
-  ├── Home
-  ├── Categories
-  ├── Cart          ← badge count from cart_provider
-  ├── Wishlist
-  └── Account       ← nested Navigator for sub-screens
-```
-
-### Key behaviours
-
-- Infinite scroll: `ScrollController.addListener` triggers next page fetch at ~80% scroll depth
-- Cart persistence: `hive` box keeps cart state across app restarts for guest users
-- Payment: Apple Pay / Google Pay available in `payment_selector.dart` — mobile-only, not in web checkout
-- Deep links via `go_router`: push notification for order update opens `/account/orders/:id` directly
-- Checkout: full-screen loading overlay during payment processing — `WillPopScope` blocks back-navigation
-
----
-
-## tokens/ — Design Tokens
-
-Source of truth for visual decisions. Lives at the root, consumed directly by Tailwind.
-
-```
-tokens/
-├── typography.json     # font family, size scale, weight, line-height, letter-spacing
-├── color.json          # brand palette + semantic colors          (to be created)
-├── spacing.json        # 4px base grid — 4, 8, 12, 16, 24, 32, 48, 64  (to be created)
-├── radius.json         # card, button, badge, modal               (to be created)
-├── shadow.json         # elevation levels 1–4                     (to be created)
-└── motion.json         # duration + easing curves                 (to be created)
-```
-
-Token values are hand-imported into `tailwind.config.ts` in Phase 1. A `style-dictionary` build step can be added later if a separate Flutter/admin repo needs to consume the same tokens.
-
----
-
-## Tooling
-
-| Tool | Purpose |
-|---|---|
-| `npm` | Package manager |
-| `eslint` + `prettier` | Lint + format |
-| `typescript` | Strict mode |
-| `vitest` | Unit tests |
-| `playwright` | E2E tests — critical paths: browse → PDP → cart → checkout |
+<div align="center">
+  <img src="public/brand/kalakriti-emblem.webp" alt="Kalakriti embroidery, fish and lotus emblem" width="72">
+  <p><strong>Many regions. Many hands.</strong><br>A shared love for things made with meaning.</p>
+  <p><sub>Rooted in Mithila. Open to India.</sub></p>
+</div>

@@ -9,6 +9,7 @@ import {
 } from 'next/font/google';
 import './globals.css';
 import TopNav from '@/components/layout/TopNav';
+import SiteFooter from '@/components/layout/SiteFooter';
 
 /* ── Typography ───────────────────────────────────────────────────────────
    Self-hosted at build time, so the page never waits on a font CDN.
@@ -75,9 +76,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Kalakriti — Authentic Art & Craft from Mithila, Bihar',
+  title: 'Kalakriti — Indian Crafts, Culture & Community',
   description:
-    'GI-tagged Madhubani paintings, Makhana, Sikki craft, and handcrafted gifts sourced directly from artisans and farmers of Mithilanchal, Bihar.',
+    'Explore India’s regional crafts, culture and produce, beginning with Madhubani painting, Sikki grass work, textiles and makhana from Mithila, Bihar.',
 };
 
 const fontVars = [classic, royal, temple, folk, deva, sans]
@@ -88,8 +89,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={fontVars}>
       <body>
+        <a className="kk-skip-link" href="#main-content">Skip to content</a>
         <TopNav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

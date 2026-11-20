@@ -8,6 +8,7 @@
  * geojson property named by `districtProperty`.
  */
 
+import type { CraftGuide } from './editorial';
 import type { MotifKey } from '@/lib/stateThemes';
 
 /**
@@ -150,7 +151,9 @@ export interface StatePage {
   experiences?: Experience[];
   destinations?: Destination[];
 
-  /** Craft names only, for states whose traditions are not yet written up.
-      Drawn from the cultural registry, so it is real data and not a stub. */
+  /** Selected craft names for regional introductions without a catalogue. */
   craftNames?: string[];
+  /** Editorial craft descriptions, independent of a product catalogue. */
+  craftGuides?: CraftGuide[];
+  craftIntro?: string;
 }

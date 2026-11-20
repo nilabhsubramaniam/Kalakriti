@@ -24,9 +24,9 @@ export function ExperienceList({ experiences }: { experiences: Experience[] }) {
             <p className="kk-st-exp-blurb">{e.blurb}</p>
 
             <p className="kk-st-exp-foot">
-              <span className="kk-st-price">{inr(e.price)}</span>
-              <button className="kk-st-buy" type="button" data-experience-id={e.id}>
-                Book
+              <span className="kk-st-price">{inr(e.price)} <small className="kk-preview-label">Preview price</small></span>
+              <button className="kk-st-buy" type="button" data-experience-id={e.id} disabled>
+                Booking soon
               </button>
             </p>
           </div>

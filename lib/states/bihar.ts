@@ -9,13 +9,19 @@
  * They are not live inventory and must be replaced before selling anything.
  */
 
-import type { StatePage } from './types';
+import type { ImageAsset, StatePage } from './types';
+
+/** Clearly labelled visual studies; no asset claims to be an item photograph. */
+function study(file: string, alt: string, width = 1024, height = 1024): ImageAsset {
+  return { src: `/images/${file}.webp`, alt, width, height, credit: 'Illustrative craft study' };
+}
 
 export const bihar: StatePage = {
   slug: 'bihar',
   state: 'Bihar',
+  hero: { src: '/images/mithila-courtyard.webp', alt: 'Editorial illustration of a painter at work in a Mithila-inspired courtyard', width: 1536, height: 1024, credit: 'Editorial illustration · Inspired by Mithila' },
   title: 'Bihar',
-  native: 'मिथिला की माटी',
+  native: 'मिथिलाक माटि',
   tagline: 'Where the wall came first, and the paper followed',
   intro:
     'Mithila painted its houses long before it painted for anyone else. What hangs in galleries today began as a wedding chamber, a courtyard floor, a grandmother teaching a granddaughter the order of the strokes. Kalakriti begins here — in the districts where those hands still work.',
@@ -61,6 +67,7 @@ export const bihar: StatePage = {
     {
       id: 'madhubani',
       name: 'Madhubani Painting',
+      image: { src: '/images/painting-study.webp', alt: 'Madhubani-inspired editorial illustration of paired fish, lotus flowers and patterned borders', width: 800, height: 800, credit: 'Editorial illustration · Madhubani-inspired' },
       native: 'मिथिला चित्रकला',
       district: 'Madhubani',
       gi: 'GI 2007',
@@ -76,6 +83,7 @@ export const bihar: StatePage = {
     {
       id: 'sikki',
       name: 'Sikki Grass Craft',
+      image: { src: '/images/basket-study.webp', alt: 'Editorial illustration of a golden coiled-grass basket with a fitted lid and red patterns', width: 800, height: 800, credit: 'Illustrative Sikki craft study' },
       native: 'सिक्की',
       district: 'Madhubani',
       motif: 'lotus',
@@ -88,6 +96,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'sujani',
+      image: study('sujani-stitch-study', 'Illustrative Sujani-inspired stitched cloth with narrative embroidery', 1536, 1024),
       name: 'Sujani Embroidery',
       native: 'सुजनी',
       district: 'Muzaffarpur',
@@ -102,6 +111,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'manjusha',
+      image: study('bihar-manjusha-study', 'Manjusha-inspired illustrative panel with angular figures, serpentine lines and pink, yellow and green colour', 1024, 1024),
       name: 'Manjusha Art',
       native: 'मंजूषा',
       district: 'Bhagalpur',
@@ -115,6 +125,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'tikuli',
+      image: study('bihar-tikuli-study', 'Illustrative lacquered Tikuli-style round panels with fine bird and lotus designs', 1024, 1024),
       name: 'Tikuli Art',
       native: 'टिकुली',
       district: 'Patna',
@@ -128,6 +139,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'tussar',
+      image: study('textile-study', 'Illustrative golden Tussar-style cloth with a red woven border', 800, 800),
       name: 'Bhagalpuri Tussar Silk',
       native: 'तसर',
       district: 'Bhagalpur',
@@ -142,6 +154,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'lac',
+      image: study('bihar-lac-study', 'Illustrative red lac bangles with small gold and mirror-like details', 1024, 1024),
       name: 'Lac Bangles',
       native: 'लहठी',
       district: 'Muzaffarpur',
@@ -155,6 +168,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'stone',
+      image: study('bihar-stone-study', 'Illustrative black stone bowl and oil lamp inspired by Patharkatti carving', 1024, 1024),
       name: 'Patharkatti Stone Craft',
       native: 'पत्थरकट्टी',
       district: 'Gaya',
@@ -168,6 +182,7 @@ export const bihar: StatePage = {
     },
     {
       id: 'makhana',
+      image: study('bihar-makhana-study', 'Illustrative woven bowl filled with white popped makhana', 1024, 1024),
       name: 'Mithila Makhana',
       native: 'मखाना',
       district: 'Darbhanga',
@@ -183,18 +198,18 @@ export const bihar: StatePage = {
   ],
 
   products: [
-    { id: 'p-kohbar',    name: 'Kohbar Wedding Panel',        craft: 'madhubani', price: 4800, spec: '22 × 30 in · handmade paper', gi: 'GI 2007', tag: 'One of one',    blurb: 'The full wedding-chamber composition — lotus pond, bamboo, the twin fish — painted in the bharni fill style.', motif: 'fish' },
-    { id: 'p-kachni',    name: 'Kachni Line Study',           craft: 'madhubani', price: 2400, spec: '11 × 15 in · handmade paper', gi: 'GI 2007',                       blurb: 'No colour fill at all: the whole image built from hatched line, which is the harder discipline.', motif: 'peacock' },
-    { id: 'p-stole-mad', name: 'Hand-painted Mithila Stole',  craft: 'madhubani', price: 3200, spec: 'Tussar silk · 2.2 m',        gi: 'GI 2007',                       blurb: 'Painted directly onto Bhagalpuri tussar — two Bihar crafts in one piece.', motif: 'lotus' },
-    { id: 'p-pauti',     name: 'Sikki Pauti Box',             craft: 'sikki',     price: 1450, spec: '6 in · lidded',                                                    blurb: 'The dowry box form, coiled in golden grass and stitched without any mould.', motif: 'kalash' },
-    { id: 'p-sikki-doll',name: 'Sikki Doll Pair',             craft: 'sikki',     price: 900,  spec: 'approx. 5 in',                                                     blurb: 'The bride-and-groom pair that a Mithila household keeps on the shelf for luck.', motif: 'lotus' },
-    { id: 'p-sujani',    name: 'Sujani Narrative Throw',      craft: 'sujani',    price: 6900, spec: '50 × 70 in · cotton',        gi: 'GI',      tag: 'Made to order',  blurb: 'A quilted panel that tells one village’s year in running stitch. Takes months.', motif: 'horse' },
-    { id: 'p-manjusha',  name: 'Manjusha Scroll',             craft: 'manjusha',  price: 2600, spec: '12 × 36 in · paper',                                               blurb: 'The Bihula-Bishahari legend in sequence, in the three permitted colours.', motif: 'conch' },
-    { id: 'p-tikuli',    name: 'Tikuli Coasters, set of six', craft: 'tikuli',    price: 1200, spec: '4 in · lacquered board',                                           blurb: 'Enamel on hardboard, finished to the glass shine the forehead ornament used to have.', motif: 'sun' },
-    { id: 'p-tussar',    name: 'Bhagalpuri Tussar Stole',     craft: 'tussar',    price: 2900, spec: '2.2 m · natural gold',       gi: 'GI',                             blurb: 'Undyed tussar with a contrast border, woven on a family pit loom.', motif: 'diamond' },
-    { id: 'p-lahthi',    name: 'Lac Bangle Set',              craft: 'lac',       price: 750,  spec: 'set of 8 · sized to order',                                        blurb: 'Warm-worked resin set with mirror, made the way a wedding set is made.', motif: 'chakra' },
-    { id: 'p-stone',     name: 'Patharkatti Stone Bowl',      craft: 'stone',     price: 1900, spec: '5 in · black stone',                                               blurb: 'Split, chiselled and hand-polished until the stone looks wet.', motif: 'stupa' },
-    { id: 'p-makhana',   name: 'Mithila Makhana',             craft: 'makhana',   price: 420,  spec: '250 g · hand-popped',        gi: 'GI 2022',                        blurb: 'Graded large, popped over flame, sold straight from the pond-farming households.', motif: 'lotus' },
+    { id: 'p-kohbar', image: { src: '/images/painting-study.webp', alt: 'Illustrative preview of a Madhubani-inspired fish and lotus painting; not a photograph of the listed item', width: 800, height: 800, credit: 'Illustrative preview' }, name: 'Kohbar Wedding Panel',        craft: 'madhubani', price: 4800, spec: '22 × 30 in · handmade paper', gi: 'GI 2007', tag: 'One of one',    blurb: 'The full wedding-chamber composition — lotus pond, bamboo, the twin fish — painted in the bharni fill style.', motif: 'fish' },
+    { id: 'p-kachni', image: study('bihar-kachni-study', 'Monochrome kachni-inspired bird and tree illustration; not a photograph of the listed item', 1024, 1024),    name: 'Kachni Line Study',           craft: 'madhubani', price: 2400, spec: '11 × 15 in · handmade paper', gi: 'GI 2007',                       blurb: 'No colour fill at all: the whole image built from hatched line, which is the harder discipline.', motif: 'peacock' },
+    { id: 'p-stole-mad', image: study('bihar-painted-stole-study', 'Mithila-inspired painted silk stole illustration; not a photograph of the listed item', 1024, 1024), name: 'Hand-painted Mithila Stole',  craft: 'madhubani', price: 3200, spec: 'Tussar silk · 2.2 m',        gi: 'GI 2007',                       blurb: 'Painted directly onto Bhagalpuri tussar — two Bihar crafts in one piece.', motif: 'lotus' },
+    { id: 'p-pauti', image: { src: '/images/basket-study.webp', alt: 'Illustrative preview of a coiled-grass lidded basket; not a photograph of the listed item', width: 800, height: 800, credit: 'Illustrative preview' }, name: 'Sikki Pauti Box',             craft: 'sikki',     price: 1450, spec: '6 in · lidded',                                                    blurb: 'The dowry box form, coiled in golden grass and stitched without any mould.', motif: 'kalash' },
+    { id: 'p-sikki-doll', image: study('bihar-sikki-dolls-study', 'Coiled-grass doll pair illustration; not a photograph of the listed item', 1024, 1024),name: 'Sikki Doll Pair',             craft: 'sikki',     price: 900,  spec: 'approx. 5 in',                                                     blurb: 'The bride-and-groom pair that a Mithila household keeps on the shelf for luck.', motif: 'lotus' },
+    { id: 'p-sujani', image: study('sujani-stitch-study', 'Sujani-inspired stitched textile illustration; not a photograph of the listed item', 1536, 1024),    name: 'Sujani Narrative Throw',      craft: 'sujani',    price: 6900, spec: '50 × 70 in · cotton',        gi: 'GI',      tag: 'Made to order',  blurb: 'A quilted panel that tells one village’s year in running stitch. Takes months.', motif: 'horse' },
+    { id: 'p-manjusha', image: study('bihar-manjusha-study', 'Manjusha-inspired narrative painting illustration; not a photograph of the listed item', 1024, 1024),  name: 'Manjusha Scroll',             craft: 'manjusha',  price: 2600, spec: '12 × 36 in · paper',                                               blurb: 'The Bihula-Bishahari legend in sequence, in the three permitted colours.', motif: 'conch' },
+    { id: 'p-tikuli', image: study('bihar-tikuli-study', 'Tikuli-inspired lacquered panel illustration; not a photograph of the listed item', 1024, 1024),    name: 'Tikuli Coasters, set of six', craft: 'tikuli',    price: 1200, spec: '4 in · lacquered board',                                           blurb: 'Enamel on hardboard, finished to the glass shine the forehead ornament used to have.', motif: 'sun' },
+    { id: 'p-tussar', image: study('textile-study', 'Golden woven textile with red border illustration; not a photograph of the listed item', 800, 800),    name: 'Bhagalpuri Tussar Stole',     craft: 'tussar',    price: 2900, spec: '2.2 m · natural gold',       gi: 'GI',                             blurb: 'Undyed tussar with a contrast border, woven on a family pit loom.', motif: 'diamond' },
+    { id: 'p-lahthi', image: study('bihar-lac-study', 'Red lac bangle illustration; not a photograph of the listed item', 1024, 1024),    name: 'Lac Bangle Set',              craft: 'lac',       price: 750,  spec: 'set of 8 · sized to order',                                        blurb: 'Warm-worked resin set with mirror, made the way a wedding set is made.', motif: 'chakra' },
+    { id: 'p-stone', image: study('bihar-stone-study', 'Polished black stone bowl illustration; not a photograph of the listed item', 1024, 1024),     name: 'Patharkatti Stone Bowl',      craft: 'stone',     price: 1900, spec: '5 in · black stone',                                               blurb: 'Split, chiselled and hand-polished until the stone looks wet.', motif: 'stupa' },
+    { id: 'p-makhana', image: study('bihar-makhana-study', 'Bowl of popped makhana illustration; not a photograph of the listed item', 1024, 1024),   name: 'Mithila Makhana',             craft: 'makhana',   price: 420,  spec: '250 g · hand-popped',        gi: 'GI 2022',                        blurb: 'Graded large, popped over flame, sold straight from the pond-farming households.', motif: 'lotus' },
   ],
 
   experiences: [

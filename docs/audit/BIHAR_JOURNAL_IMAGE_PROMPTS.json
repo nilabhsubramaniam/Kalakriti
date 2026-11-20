@@ -1,0 +1,41 @@
+{
+  "method": "Built-in image_gen tool",
+  "background": {
+    "file": "public/images/bihar-mithila-mural.webp",
+    "prompt": "Use case: illustration-story. Asset type: full-page website background for Kalakriti's Bihar Mithila craft journal. Create a wide 3:2 flat hand-painted Madhubani-inspired mural on warm ivory handmade paper, with detailed double black outlines and fine kachni hatching, deep sindoor red, turmeric ochre, muted leaf green. Dense beautiful paired fish, lotus flowers, curling vines, peacocks, tiny geometric painted borders along both outer sides, with a broad quiet parchment centre for readable website content. Edge decorations occupy outer 15 percent each, centre 70 percent has only faint tiny scattered flowers. No photorealistic depth, no scene perspective, no shadows of objects, no text, no logos, no map, no watermark. Full bleed painted illustration, premium intricate folk-art editorial background."
+  },
+  "assets": [
+    {
+      "file": "public/images/bihar-manjusha-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a complete narrow Manjusha-inspired narrative painting panel displayed upright, stylized human and snake figures with angular X-shaped bodies, flowing serpentine border, palette strictly pink, yellow, green with dark outlines. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-tikuli-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a set of three glossy lacquered round Tikuli-inspired decorative panels, fine red ochre black and gold painted birds and lotus motifs on enamel-like surfaces. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-lac-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a complete small stack of red and maroon lac bangles with gold foil details and tiny mirror insets, accurately circular bracelets, artisanal hand-worked texture. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-stone-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a complete hand-carved black stone bowl and a small black stone oil lamp, smooth polished dark surfaces with subtle chisel marks, understated Patharkatti-inspired stone craft. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-makhana-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a shallow woven bowl filled with plain white popped makhana fox nuts, rounded airy irregular white puffs, a few scattered beside it, no rice no grain no vegetables. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-kachni-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Bihar craft card editorial illustration for Kalakriti. Subject: a complete rectangular black ink Mithila-inspired kachni painting on ivory paper, paired birds and a tree of life formed entirely from very fine dense hatched lines and double outlines, black ink only with no coloured fill. Style: exquisite warm realistic editorial illustration with tangible material detail, consistent with an Indian heritage craft journal. Composition: one coherent craft study, main objects fully visible with generous 10 percent breathing room, square canvas. Setting: warm ivory plaster niche or handmade paper ground with restrained Madhubani floral vines at the far edges. Natural soft daylight, ivory and maroon colour direction. No text, no logos, no watermark, no map, no people, no fake certificates. This is an illustrative craft study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-sikki-dolls-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Kalakriti Bihar craft preview card, square editorial illustration. Subject: two small complete figurines woven and coiled from fine golden grass, a simple decorative doll pair with red thread accents, clearly woven fibre objects rather than painted wood. Entire objects visible, generous margins. Warm ivory plaster tabletop and faint Mithila painted vines along the far edges, soft natural daylight. Beautiful detailed natural materials, heritage maroon, ochre and ivory palette. No words, no logos, no watermark, no certificates, no maps, no people. Illustrative study, not a specific item photograph."
+    },
+    {
+      "file": "public/images/bihar-painted-stole-study.webp",
+      "prompt": "Use case: illustration-story. Asset type: Kalakriti Bihar craft preview card, square editorial illustration. Subject: a complete folded and loosely draped ivory silk stole with finely painted Madhubani-inspired red and black fish and lotus motifs and maroon border, visible textile texture. Entire objects visible, generous margins. Warm ivory plaster tabletop and faint Mithila painted vines along the far edges, soft natural daylight. Beautiful detailed natural materials, heritage maroon, ochre and ivory palette. No words, no logos, no watermark, no certificates, no maps, no people. Illustrative study, not a specific item photograph."
+    }
+  ]
+}

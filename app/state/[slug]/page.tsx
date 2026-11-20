@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import BiharJournal from '@/components/state/BiharJournal';
 import SectionHead from '@/components/state/SectionHead';
 import StateHero from '@/components/state/StateHero';
 import StateNav, { type NavLink } from '@/components/state/StateNav';
@@ -31,7 +32,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: `${page.title} — ${theme.art} | Kalakriti`,
     description: crafts
-      ? `${page.intro} ${crafts} and the districts that make them.`
+      ? `${page.intro} Explore ${crafts}.`
       : page.intro,
   };
 }
@@ -39,6 +40,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function StatePageRoute({ params }: { params: { slug: string } }) {
   const page = statePage(params.slug);
   if (!page) notFound();
+  if (page.slug === 'bihar') return <BiharJournal page={page} />;
 
   const theme = themeFor(page.state);
   const districtName = (id: string) =>
@@ -67,7 +69,7 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
   ].filter(Boolean) as NavLink[];
 
   return (
-    <article className="kk-st" style={stateThemeVars(page.state)}>
+    <article className="kk-st" data-state={page.slug} style={stateThemeVars(page.state)}>
       <RevealRoot />
       {/* Reveals start hidden and are switched on by the observer. With JS
           off that never happens, so the page must un-hide itself. */}
@@ -112,8 +114,8 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
             title="The living traditions"
             motif="peacock"
             lede={hasCrafts
-              ? 'Each is still practised commercially by households in the district named — not revived for a museum. Open one to read it and to buy from it.'
-              : `${theme.art} leads here, alongside the traditions below. We are still working with makers in this region — the full catalogue follows.`}
+              ? `${page.craftIntro ?? 'Explore the stories, materials and processes behind each tradition.'} Products and prices are a catalogue preview; online shopping is coming soon.`
+              : 'A closer look at selected regional traditions: the materials, the patterns and the details worth noticing. These are craft introductions; product listings will follow.'}
           />
           {hasCrafts ? (
             <div className="kk-st-crafts" data-reveal>
@@ -128,7 +130,7 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
               ))}
             </div>
           ) : (
-            <CraftBrief crafts={page.craftNames!} motif={theme.motif} art={theme.art} />
+            <CraftBrief crafts={page.craftNames!} art={theme.art} guides={page.craftGuides} />
           )}
         </section>
       )}
@@ -140,7 +142,7 @@ export default function StatePageRoute({ params }: { params: { slug: string } })
             label="Experiences"
             title="Sit down with the makers"
             motif="lotus"
-            lede="Booked directly with the households and collectives that run them."
+            lede="A preview of regional experiences. Bookings are not yet available; details and prices will be confirmed before launch."
           />
           <ExperienceList experiences={page.experiences!} />
         </section>

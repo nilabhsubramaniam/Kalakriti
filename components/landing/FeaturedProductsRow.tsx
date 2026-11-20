@@ -1,97 +1,17 @@
-'use client';
-
-import ProductCard, { type ProductCardData } from '@/components/shared/ProductCard';
-
-const FEATURED: ProductCardData[] = [
-  {
-    id: 'MITH-ART-001',
-    slug: 'madhubani-bharni',
-    name: 'Madhubani Painting — Bharni Style',
-    category: 'art-craft',
-    basePrice: 45,
-    imageUrl: '/placeholder-art.jpg',
-    imageAlt: 'Bharni style Madhubani painting on handmade paper',
-    giStatus: 'GI-tagged (2007)',
-    district: 'Madhubani',
-  },
-  {
-    id: 'MITH-FOOD-001',
-    slug: 'makhana-roasted-plain',
-    name: 'Roasted Makhana — Plain',
-    category: 'food-agri',
-    basePrice: 12,
-    imageUrl: '/placeholder-food.jpg',
-    imageAlt: 'Roasted makhana fox nuts in kraft packaging',
-    district: 'Darbhanga',
-  },
-  {
-    id: 'MITH-TEX-001',
-    slug: 'sikki-grass-basket',
-    name: 'Sikki Grass Basket',
-    category: 'art-craft',
-    basePrice: 28,
-    imageUrl: '/placeholder-sikki.jpg',
-    imageAlt: 'Hand-woven golden Sikki grass basket',
-    district: 'Madhubani',
-  },
-];
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { bihar } from '@/lib/states/bihar';
 
 export default function FeaturedProductsRow() {
-  return (
-    <section style={{
-      background: 'var(--bg-cream)',
-      padding: '80px var(--container-pad)',
-      borderTop: '1px solid var(--border)',
-    }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto' }}>
-        {/* Header row */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 48 }}>
-          <div>
-            <p style={{
-              fontFamily: "'Open Sans', sans-serif",
-              fontSize: '0.65rem', fontWeight: 600,
-              letterSpacing: '0.18em', textTransform: 'uppercase',
-              color: 'var(--accent)',
-              marginBottom: 12,
-            }}>
-              Featured
-            </p>
-            <h2 style={{
-              fontFamily: "'Eczar', Georgia, serif",
-              fontSize: 'clamp(1.6rem, 3vw, 2.25rem)',
-              fontWeight: 600,
-              color: 'var(--text-primary)',
-              lineHeight: 1.2,
-              letterSpacing: '-0.015em',
-            }}>
-              Picked by the Team
-            </h2>
-          </div>
-          <a href="/art-craft" style={{
-            fontFamily: "'Open Sans', sans-serif",
-            fontSize: '0.8125rem', fontWeight: 600,
-            letterSpacing: '0.04em',
-            color: 'var(--accent)',
-            textDecoration: 'none',
-            borderBottom: '1.5px solid rgba(196,98,42,0.35)',
-            paddingBottom: 2,
-            transition: 'color 0.2s, border-color 0.2s',
-          }}
-          onMouseEnter={e=>{const el=e.currentTarget as HTMLElement;el.style.color='#A84A20';el.style.borderColor='rgba(168,74,32,0.6)';}}
-          onMouseLeave={e=>{const el=e.currentTarget as HTMLElement;el.style.color='var(--accent)';el.style.borderColor='rgba(196,98,42,0.35)';}}
-          >
-            View all →
-          </a>
-        </div>
-
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
-          gap: 20,
-        }}>
-          {FEATURED.map(p => <ProductCard key={p.id} product={p} />)}
-        </div>
-      </div>
-    </section>
-  );
+  return <section className="kk-home-featured kk-home-section" id="collections" aria-labelledby="collections-title">
+    <div className="kk-home-featured-intro"><Image className="kk-mithila-feature-image" src="/images/painting-study.webp" alt="Editorial Madhubani-inspired painting study" fill sizes="(min-width: 901px) 38vw, 100vw" /><p className="kk-home-eyebrow">The Mithila edit · Bihar</p><h2 id="collections-title">The soul<br />of <em>Mithila.</em></h2><p>A painted line. A woven thread. Discover the traditions at the heart of our first chapter.</p><Link className="kk-home-button" href="/state/bihar#crafts">Discover Bihar’s crafts <ArrowRight className="kk-ui-icon" size={16} aria-hidden="true" /></Link><p className="kk-home-small">Illustrated craft studies · Online shopping is coming soon.</p></div>
+    <div className="kk-home-collection-grid">{['madhubani', 'sikki', 'tussar'].map((id, i) => {
+      const craft = bihar.crafts!.find(c => c.id === id)!;
+      return <Link href={`/state/bihar#craft-${id}`} className="kk-home-collection" key={id}>
+        <div className={`kk-home-collection-art kk-home-collection-art--${id}`}><Image src={`/images/${id === 'madhubani' ? 'painting' : id === 'sikki' ? 'basket' : 'textile'}-study.webp`} alt={`Illustrated study inspired by ${craft.name}; not an item for sale`} fill sizes="(min-width: 901px) 20vw, (min-width: 641px) 30vw, 100vw" /><span className="kk-home-collection-tag">Craft study · 0{i + 1}</span></div>
+        <div className="kk-home-collection-body"><p className="kk-home-eyebrow">{craft.district}, Bihar</p><h3>{craft.name}</h3><p>{id === 'madhubani' ? 'A world told in line and colour.' : id === 'sikki' ? 'Wetland grass, woven into gold.' : 'The natural beauty of woven silk.'}</p><span className="kk-home-card-link">Explore the tradition <ArrowUpRight className="kk-ui-icon" size={16} aria-hidden="true" /></span></div>
+      </Link>;
+    })}</div>
+  </section>;
 }

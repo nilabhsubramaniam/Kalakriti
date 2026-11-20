@@ -29,29 +29,26 @@ export default function ClosingCTA({
         <>
           <h2 className="kk-st-close-title">Take a piece of {state} home</h2>
           <p className="kk-st-close-body">
-            Every piece here names the household and the district it came from.
-            Buy the work, or go and watch it being made.
+            Discover the districts, materials and processes behind these traditions.
+            The catalogue is a preview; online shopping and bookings are coming soon.
           </p>
           <p className="kk-st-hero-cta">
-            <a className="kk-st-cta kk-st-cta--lead" href="#crafts">Shop the crafts</a>
-            <a className="kk-st-cta" href="#experiences">Book an experience</a>
+            <a className="kk-st-cta kk-st-cta--lead" href="#crafts">Explore the crafts</a>
+            <a className="kk-st-cta" href="#experiences">See experiences</a>
           </p>
         </>
       ) : (
         <>
-          {/* Says plainly that the catalogue is coming rather than dressing
-              an empty shop up as one. */}
-          <h2 className="kk-st-close-title">{state} is next</h2>
+          <h2 className="kk-st-close-title">Keep exploring {state}</h2>
           <p className="kk-st-close-body">
-            We are working with makers in this region to bring their work to
-            Kalakriti the way we have for Mithila — sourced by district, sold
-            with its story. Start with Bihar in the meantime.
+            Follow the materials, patterns and techniques introduced here, or
+            continue across India to discover another regional craft story.
           </p>
           <p className="kk-st-hero-cta">
-            <Link className="kk-st-cta kk-st-cta--lead" href="/state/bihar">
-              Explore Bihar
-            </Link>
-            <Link className="kk-st-cta" href="/">All of India</Link>
+            <a className="kk-st-cta kk-st-cta--lead" href="#crafts">
+              Revisit the traditions
+            </a>
+            <Link className="kk-st-cta" href="/explore">All of India</Link>
           </p>
         </>
       )}

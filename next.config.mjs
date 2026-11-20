@@ -2,6 +2,8 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 /** @type {import('next').NextConfig} */
 const config = {
+  // Keep local production QA separate from a running development server.
+  distDir: process.env.KALAKRITI_BUILD_DIR || '.next',
   poweredByHeader: false,
 
   images: {
@@ -32,6 +34,10 @@ const config = {
     ].join('; ');
 
     return [
+      {
+        source: '/maps/india-relief-:hash.bin.gz',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
       {
         // Map geometry is large and changes rarely. Without this it is served
         // with `max-age=0, must-revalidate`, so every visit re-fetches it.
