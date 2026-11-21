@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-21",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Landscape 1536x1024 premium photorealistic Delhi craft editorial still life. A quiet shaded urban haveli-style courtyard alcove with weathered warm ivory plaster, a single restrained carved sandstone screen at side and softly blurred plants, not a named monument or workshop. Balanced composition with six complete craft objects: folded deep plum zardozi-inspired embroidered cloth with restrained antique-gold raised floral threadwork; a small carved dark-brown wooden keepsake box with floral relief; a rounded warm terracotta decorative vase with incised lines; a small oval papier-mache box with muted blue hand-painted floral decoration; a simple engraved brass-coloured decorative tray; and a natural reed chik blind partly rolled, bound with fine cotton thread. Complete objects fully within frame with breathing room and realistic construction. Soft morning side light, old-gold plum muted blue palette, accurate tactile materials, sophisticated craft catalogue feel. No vegetables, jewellery, people, labels, text, watermark, monument replicas or religious symbols.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7a8cf23a-1458-4eaa-b43e-db497e0c52ff.png",
+      "path": "public/images/dl-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 361880
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original premium decorative website background inspired by Delhi craft and carved haveli screens. Warm ivory softly textured plaster, centre 82 percent almost plain for reading. Along only the extreme left and right 9 percent: delicate narrow vertical carved sandstone jali lattice with understated scrolling floral vines and a few antique-gold stitched paisley details in muted plum and blue. Refined low-relief physical texture, soft natural light, elegant warm restrained palette. Vertical edge ornaments continue beyond top and bottom crop. NO top or bottom horizontal band, no complete rectangular frame, no horizontal dividers. No buildings or monuments, no figures, religious symbols, writing, logos or watermark. Original composition not an attributed historical pattern.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-004e2577-69c0-43c9-8985-717f9876c63a.png",
+      "path": "public/images/dl-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 215300
+    },
+    {
+      "key": "zardozi",
+      "prompt": "Square 1024x1024 realistic premium craft photograph of folded deep plum textile with zardozi-inspired raised antique-gold coloured floral embroidery, restrained curling vines and small paisley motifs concentrated along one broad edge, a generous plain plum ground, finely resolved thread and coiled embellishment texture. Original decorative composition not a copied royal garment. Entire folded cloth fully visible on warm ivory studio background with breathing room, soft natural side light, refined tactile catalogue styling. No people, jewels, certification, gold purity claim, text, watermark, extra products or logos.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bba77a79-5f07-40fe-a06c-5f097d7838d7.png",
+      "path": "public/images/dl-zardozi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 167206
+    },
+    {
+      "key": "wood",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of a small closed dark warm-brown wooden keepsake box with delicately carved floral relief on lid and modest carved border, inspired by Delhi woodwork. Carved leaves, shallow rounded rosettes and visible timber grain; not inlaid, not sandalwood species claim. Coherent rectangular hinged box construction, complete object fully in frame with breathing room. Three-quarter angle, warm ivory studio background, soft natural side light, subtle shadows and believable tool marks. No deity, animals, figures, labels, text, logos or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d4af663d-ed62-4c27-b96a-46e0d9a94288.png",
+      "path": "public/images/dl-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 140702
+    },
+    {
+      "key": "pottery",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of one Delhi pottery-inspired decorative terracotta vase, warm reddish clay, gently rounded belly and short flared neck with modest incised horizontal lines and small abstract leaf marks. Unglazed tactile surface, stable flat base, believable handmade proportions. Complete vase fully visible at three-quarter angle with breathing room on warm ivory studio ground, soft natural side light. No water, food, drinking or health claims, no blue glazing, no people, text, logos, labels or other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-cffb613c-3df4-420b-a4ec-f79c4b6606d2.png",
+      "path": "public/images/dl-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 94450
+    },
+    {
+      "key": "paper",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of one small oval lidded papier-mache keepsake box, muted dusty-blue ground and restrained plum cream ochre floral vines painted across lid and sides, slim warm-gold coloured painted edge. Delicate slightly irregular hand-painted strokes and believable lightweight paper form. Lid closed, entire object fully within frame on warm ivory studio ground, soft natural side light, three-quarter angle. Original contemporary floral design without claiming Kashmiri or other exclusive regional style. No religious figures, labels, writing, signatures, logos, watermark or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0a62ecc5-26d2-4b50-861c-85b23e0989ab.png",
+      "path": "public/images/dl-paper.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149570
+    },
+    {
+      "key": "engraving",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of a round decorative brass-coloured metal tray, fine engraved curling floral linework around a narrow rim and a small centre rosette, broad clean middle ground, shallow gently raised edge. Three-quarter angle shows the engraved surface clearly. Complete tray fully within image with breathing room on warm ivory studio background, natural soft side light with restrained realistic metal reflections. No food, drink, cookware context, purity stamps, precious metal claims, text, labels, people, logos or other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-638045a0-370e-4df2-95a4-086a7f349c8e.png",
+      "path": "public/images/dl-engraving.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 106106
+    },
+    {
+      "key": "chik",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of a natural reed chik window blind, carefully bound parallel slender golden reed slats linked by thin cotton threads and finished with a narrow muted indigo textile border. Blind loosely rolled at one end with a broad flat section showing the construction. Complete rectangular piece fully visible at three-quarter angle, warm ivory studio background, soft natural side light, refined tactile thread and reed detail. Clearly a reed window blind, no chicken, embroidery, curtains, people, words, labels, logo, watermark or other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b2b6b854-c21c-4577-b90c-7f0ba0aec1af.png",
+      "path": "public/images/dl-chik.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 225320
+    }
+  ]
+}

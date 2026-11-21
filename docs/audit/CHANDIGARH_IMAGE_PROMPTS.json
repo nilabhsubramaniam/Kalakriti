@@ -1,0 +1,60 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-21",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Landscape 1536x1024 premium realistic craft editorial still life for Chandigarh India. A serene modernist courtyard alcove with pale warm concrete walls, slender shadows and softly blurred greenery. Four complete craft objects in a balanced arrangement on low simple timber plinths: a folded warm ivory cloth with restrained crimson ochre geometric Phulkari-inspired embroidery; a terracotta decorative vase with rounded body and slender neck and modest incised bands; a small original square wooden footstool with a natural woven cane seat and four straight legs, generic contemporary design not a replica or attributed historic designer; a small square abstract mosaic panel propped vertically made of irregular ceramic-like pieces in muted blue cream terracotta and mustard, purely geometric original composition. Soft natural morning light, tactile sophisticated craft photography, no vegetables, people, sculptures, identifiable monuments, writing, watermark, branding, historical furniture reproduction or copied artworks. Entire objects within frame with breathing room.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9fe58cd6-07cb-4495-a31c-63b569f2a42b.png",
+      "path": "public/images/ch-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 212648
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original elegant website decorative surround inspired by Chandigarh's mosaic material textures and modernist concrete. Centre 84 percent almost plain warm ivory softly textured concrete for readable text. Only extreme left and right edges: slender vertical arrangements of irregular ceramic-like tesserae in muted blue cream terracotta ochre with small pale stone pieces and a subtle interlaced cane strip. Hand assembled material texture, restrained modern geometry, gentle natural side light. No full frame, NO horizontal top or bottom border, NO horizontal dividers. Vertical edge elements continue off top and bottom for repeating background. No figures, Nek Chand sculptures, copied artworks, building silhouettes, logos, text, symbols or watermark. Refined and quiet rather than multicoloured busy decoration.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8dc62e5d-6c08-48fc-a6ef-371523eaaff5.png",
+      "path": "public/images/ch-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 320610
+    },
+    {
+      "key": "phulkari",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph. A warm ivory folded Phulkari-inspired embroidered stole with spaced crimson and ochre geometric flower diamonds and a narrow stitched border. Clearly visible long straight darning stitches and generous plain cloth, original modest decorative design not a historic ceremonial textile. Entire folded cloth visible with breathing room on warm ivory studio background, soft natural side lighting, tactile fine yarn detail. No people, clothing mannequins, precious fibre claims, provenance labels, text, watermark, logos or extra products.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-242cb8db-a623-4dc0-8fe8-bb7aa748aea0.png",
+      "path": "public/images/ch-phulkari.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 209154
+    },
+    {
+      "key": "pottery",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of a Chandigarh Kishangarh pottery-inspired decorative terracotta vessel, rounded red-brown body, slender neck, gently flared circular mouth and restrained incised horizontal bands with small rosette marks. Unglazed clay, stable base and believable wheel-formed handmade proportions, entire vessel fully inside frame with breathing room. Warm ivory studio ground, soft natural side light, refined tactile surface. No handles, drinking or cooling claim, food, water, people, text, labels, logos, watermark or extra products.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-793eb8ee-44a8-401a-8532-981f30ac8b24.png",
+      "path": "public/images/ch-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 78130
+    },
+    {
+      "key": "cane",
+      "prompt": "Square 1024x1024 premium realistic product photograph of a small original contemporary footstool, simple warm-brown wooden square frame with four straight short legs and tightly handwoven natural cane seat in an airy hexagonal pattern. Generic original furniture composition: no compass legs, no V-shaped supports, no Pierre Jeanneret or other designer replica, no historical attribution. Entire stool fully visible with breathing room at three-quarter angle on warm ivory studio ground, believable joints, woven cane and timber grain, soft natural side lighting. No person, text, logo, labels or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ec11d58c-c9d9-440a-9f19-a141d34432f7.png",
+      "path": "public/images/ch-cane.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 96406
+    },
+    {
+      "key": "mosaic",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of an original small square decorative mosaic panel in a slim pale wooden frame. Abstract geometry made of irregular ceramic-like tesserae in muted lake blue ivory terracotta and ochre, a calm diagonal stepped composition, tactile grout gaps and slight handmade surface variation. Entire framed panel fully within image, standing nearly upright at a slight three-quarter angle on warm ivory studio ground. Soft natural light, refined modern craft catalogue photography. Original contemporary design, no figures or faces, no Nek Chand artwork or sculpture reproduction, no monument, no material-recycling certification, text, labels, signatures, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-170f105e-0add-497c-a761-103055df7b16.png",
+      "path": "public/images/ch-mosaic.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 189366
+    }
+  ]
+}

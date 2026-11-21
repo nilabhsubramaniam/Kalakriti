@@ -99,3 +99,59 @@ The subsequent Bihar-only full-page refinement also reuses `basket-study.webp` (
 Nine new same-origin WebP illustrations support the approved Bihar redesign: `bihar-mithila-mural.webp` and `bihar-{manjusha,tikuli,lac,stone,makhana,kachni,sikki-dolls,painted-stole}-study.webp`. These were generated with the built-in image_gen tool and copied into `public/images/`; full prompts, dimensions, credits and scope are recorded in [Bihar journal documentation](../audit/BIHAR_MITHILA_JOURNAL.md) and [prompt manifest](../audit/BIHAR_JOURNAL_IMAGE_PROMPTS.json). Every craft and product-preview card has an image. Illustrations are labelled as such and do not represent actual sellable stock. Existing imagery remains preserved. No media host, image dependency or CSP changes were added.
 
 The user clarified that the original full-page `bihar-mithila-mural.webp` backdrop must stay. It is restored; only separate section-menu and heading panel backgrounds are removed. No asset files were overwritten or removed.
+
+### Jammu & Kashmir chapter — 2026-11-21
+
+Six new same-origin illustrations (`jk-hero`, `jk-pashmina`, `jk-kani`, `jk-papier-mache`, `jk-walnut`, `jk-basohli`, all WebP) were generated for the regional page and detail flows. The original Kashida textile study is reused; Bihar assets are unchanged. Delivery files total approximately 1.8 MB before Next image optimization and are lazy-loaded except the page hero. [Generation manifest](../audit/JAMMU_KASHMIR_IMAGE_PROMPTS.json) records exact prompts and file metadata. These are conceptual craft visuals, not item-authentication or tourist-site photography. No CDN origin or CSP exception was added.
+
+The subsequent background refinement adds `jk-paisley-mural.webp` (1536×1024), a decorative Kani/Sozni-inspired paisley and chinar surround with an open pale centre. It is used as the full-page CSS ground throughout the Jammu & Kashmir chapter, with local readability washes. It is not a product photograph or a historical textile attribution. The existing prompt manifest now contains seven assets.
+
+### West Bengal chapter — 2026-11-21
+
+Seven generated WebP delivery assets (`wb-hero`, `wb-mural`, `wb-baluchari`, `wb-terracotta`, `wb-dokra`, `wb-patachitra`, `wb-jamdani`) provide regional atmosphere, a full-page decorative ground and five craft studies. The existing Kantha study is reused. [Generation manifest](../audit/WEST_BENGAL_IMAGE_PROMPTS.json) records exact prompts, dimensions and byte sizes. These are conceptual illustrations rather than verified stock or destination photographs. Existing images remain intact; no dependency, media host or CSP change was introduced.
+
+### Odisha chapter — 2026-11-21
+
+Seven new WebP illustrations (`od-hero`, `od-mural`, `od-pattachitra`, `od-sambalpuri`, `od-pipili`, `od-filigree`, `od-kotpad`) supply a regional hero, decorative page surround and five craft studies. The generic conceptual metal bird in `wb-dokra.webp` is reused without asserting item-level geographic provenance. [Generation manifest](../audit/ODISHA_IMAGE_PROMPTS.json) records prompts, dimensions, byte sizes and reuse. No previous image was overwritten; no new host, dependency or CSP exception was added.
+
+### Jharkhand chapter — 2026-11-21
+
+Eight new conceptual illustrations are stored as same-origin WebP files: `jh-hero`, `jh-mural`, `jh-sohrai`, `jh-khovar`, `jh-paitkar`, `jh-dhokra`, `jh-bamboo` and `jh-tasar`. They were generated, visually inspected and resized/re-encoded; previous regional assets remain intact. The hero and painted surround are conceptual regional artwork, not documentary workshop photographs. [Exact prompts and file metadata](../audit/JHARKHAND_IMAGE_PROMPTS.json) record their provenance.
+
+### Uttar Pradesh chapter — 2026-11-21
+
+Eight new conceptual illustrations are stored under `public/images/up-*.webp`: hero, mural, chikankari, banarasi, brass, khurja, carpet and terracotta. The built-in image tool produced original artwork; each image was inspected and resized/re-encoded to WebP. These are conceptual regional compositions, not documentary workshop or inventory photographs. Earlier region assets are intact. [Exact prompts and file metadata](../audit/UTTAR_PRADESH_IMAGE_PROMPTS.json) record provenance.
+
+### Uttarakhand chapter — 2026-11-21
+
+Eight new conceptual images are stored under `public/images/uk-*.webp`: hero, mural, aipan, ringal, copper, thulma, likhai and nettle. The built-in image tool produced original artwork; each asset was inspected and resized/re-encoded to WebP. The hero is atmospheric craft artwork rather than a named workshop, and the background is an original decorative Aipan-inspired composition. Earlier regional images remain intact. [Exact prompts and file metadata](../audit/UTTARAKHAND_IMAGE_PROMPTS.json) record provenance.
+
+### Himachal Pradesh chapter — 2026-11-21
+
+Eight new conceptual compositions are stored under `public/images/hp-*.webp`: hero, mural, rumal, kullu, kinnauri, kangra, chappal and wood. They were generated using the built-in image tool, inspected and resized/re-encoded to WebP. The embroidery and landscape images are original concepts, not attributed ceremonial textiles or historical paintings. The veranda is atmospheric artwork rather than a named workshop. Earlier assets are intact. [Exact prompts and file metadata](../audit/HIMACHAL_PRADESH_IMAGE_PROMPTS.json) record provenance.
+
+### Madhya Pradesh chapter — 2026-11-21
+
+Eight new conceptual images are stored under `public/images/mp-*.webp`: hero, mural, gond, bagh, chanderi, maheshwari, metal and batik. They were generated using the built-in image tool, inspected and resized/re-encoded to WebP. The painted nature compositions are original concepts rather than reproductions attributed to a particular Gond painter. The courtyard is atmospheric artwork rather than a named workshop or monument. Earlier assets are intact. [Exact prompts and file metadata](../audit/MADHYA_PRADESH_IMAGE_PROMPTS.json) record provenance.
+
+The active Madhya Pradesh surround is `mp-mural-v2.webp`, a built-in edit removing the first version’s horizontal frame to avoid repeated dividers. The original mural is retained and both prompts are recorded in its manifest.
+
+
+### Chhattisgarh chapter — 2026-11-21
+
+Eight new conceptual compositions are stored under `public/images/cg-*.webp`: hero, mural, dhokra, iron, kosa, bamboo, terracotta and wood. Generated using the built-in image tool and resized/re-encoded to WebP, they are original concepts rather than documentary inventory or named workshop photographs. The surround uses bronze coiled lines and foliage at the edges with a quiet centre. Earlier assets are intact. [Exact prompts and file metadata](../audit/CHHATTISGARH_IMAGE_PROMPTS.json) record provenance.
+
+
+### Punjab chapter — 2026-11-21
+
+Eight original conceptual compositions are stored under `public/images/pb-*.webp`: hero, mural, phulkari, jutti, inlay, metal, durrie and paranda. Generated using the built-in image tool, inspected and resized/re-encoded to WebP, they represent craft concepts rather than documentary inventory or named workshops. The embroidered surround keeps its centre quiet and confines Phulkari-inspired geometric stitching to the edges. Earlier assets remain intact. [Exact prompts and file metadata](../audit/PUNJAB_IMAGE_PROMPTS.json) record provenance.
+
+
+### Haryana chapter — 2026-11-21
+
+Eight original conceptual compositions are stored under `public/images/hr-*.webp`: hero, mural, durrie, pottery, mudha, peedha, brass and embroidery. They were generated with the built-in image tool, inspected and resized/re-encoded to WebP. The original surround confines woven geometry and reed bindings to its vertical edges. The courtyard does not depict a named workshop; object images are conceptual artwork rather than documentary inventory photography. Earlier regional assets are intact. [Exact prompts and file metadata](../audit/HARYANA_IMAGE_PROMPTS.json) record provenance.
+
+
+### Delhi chapter — 2026-11-21
+
+Eight original conceptual compositions are stored under `public/images/dl-*.webp`: hero, mural, zardozi, wood, pottery, paper, engraving and chik. They were generated with the built-in image tool, inspected and resized/re-encoded to WebP. The surround uses floral threadwork and carved-screen detail at its vertical edges with a quiet centre. The courtyard does not depict a named workshop or monument; object images are concepts rather than documentary inventory photographs. Earlier assets are intact. [Exact prompts and file metadata](../audit/DELHI_IMAGE_PROMPTS.json) record provenance.

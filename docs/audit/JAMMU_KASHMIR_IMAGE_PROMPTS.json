@@ -1,0 +1,58 @@
+{
+  "generated": "2026-11-21",
+  "tool": "built-in image_gen",
+  "purpose": "Conceptual regional craft visuals, not photographs of verified stock, makers or visitor destinations",
+  "processing": "Converted to RGB WebP quality 86, method 6; max 1536x1024 hero and 1024x1024 studies; no source image overwritten",
+  "assets": [
+    {
+      "file": "public/images/jk-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 424256,
+      "prompt": "Create a beautiful landscape 3:2 editorial artwork for Kalakriti's Jammu and Kashmir craft marketplace, realistic painterly heritage illustration, mature premium art direction. A walnut wood artisan table beside a carved wooden lattice window, with folded ivory pashmina and indigo Kani-patterned shawls with rose and sage paisley borders, a small dark blue floral papier-mache box, a carved walnut wooden box, delicate threads and chinar leaves; distant soft lake and blue-grey mountains beyond the window, no identifiable tourist monument. Daylight, tactile fabrics and natural wood, predominantly lake blue, cool ivory, muted rose and sage, quietly luxurious. No people, no text, no letters, no logos, no UI, no labels, no collage panels. Whole craft tableau visible, leave comfortable space around objects. This is illustrative regional atmosphere, not a claimed photograph of a real artisan or product."
+    },
+    {
+      "file": "public/images/jk-pashmina.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 205732,
+      "prompt": "Square 1:1 premium heritage craft still life for a Jammu and Kashmir marketplace. A fine ivory woven shawl loosely folded, a narrow muted lake-blue and dusty-rose woven border, subtle delicate weave visible, on a carved walnut table near a softly blurred blue-grey window. Realistic painterly editorial illustration with gentle daylight, exquisite textile texture and understated material beauty, no people, no text, no logos, no labels. Entire shawl fold visible within generous margins, suitable for a collection tile and image-backed detail viewer. Conceptual pashmina craft study, no authenticity seals."
+    },
+    {
+      "file": "public/images/jk-kani.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 321190,
+      "prompt": "Square 1:1 premium heritage craft illustration, Jammu and Kashmir Kani shawl design study. A neatly draped woven shawl covered in intricate densely woven paisley patterns in indigo, muted rose, sage and antique ivory; visibly a woven textile rather than embroidered raised threads. Shawl takes most of frame on quiet cool ivory surface, softly blurred walnut loom elements behind. Realistic painterly editorial still life, refined daylight, tactile handloom weave. No people, no writing, no logos, no fake certificates, no labels. Keep entire fabric composition comfortably framed, not cut off."
+    },
+    {
+      "file": "public/images/jk-papier-mache.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 220202,
+      "prompt": "Square 1:1 premium heritage craft illustration for Jammu and Kashmir. One small elegant lidded papier-mache keepsake box, lid closed, deep lake-blue lacquer with fine painted rose, sage and warm ivory floral vine patterns and a thin warm gold painted rim, on a pale blue-grey textile. Realistic painterly editorial still life, subtle sheen and handmade character, natural side light, restrained palette, full object visible with space around it. No people, no text, no logos, no certification, no surrounding merchandise, no collage."
+    },
+    {
+      "file": "public/images/jk-walnut.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 312308,
+      "prompt": "Square 1:1 premium heritage craft still-life illustration for Jammu and Kashmir walnut wood carving. One small rectangular rich natural walnut keepsake box with closed lid, hand-carved chinar leaf and floral relief on lid and edges, beautifully legible wood grain, warm medium-brown wood on cool ivory-blue handwoven cloth. Realistic painterly editorial illustration with soft daylight, tactile carved recesses and natural finish. Whole object fully visible at three-quarter angle with generous margins. No people, no text, no logos, no labels, no certificates."
+    },
+    {
+      "file": "public/images/jk-basohli.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 342038,
+      "prompt": "Square 1:1 refined editorial craft illustration of a Basohli-inspired Pahari miniature painting study displayed on a simple cool ivory surface. The artwork itself has a deep red border, a bold yellow ground, a stylized flowering tree with small birds and a small traditional pavilion, fine confident lines, saturated primary color accents and delicate details, recalling historic Jammu hill painting traditions without copying an existing artwork. Paper edges visible, artwork straight-on and occupies most of frame, no surrounding clutter. No people, no gods, no script, no letters, no labels, no logo, no museum attribution. Beautiful mature hand-painted surface and a restrained premium craft catalogue presentation."
+    },
+    {
+      "file": "public/images/jk-paisley-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 574072,
+      "purpose": "Full-page decorative textile ground with an open centre for readable content",
+      "prompt": "Create a landscape 3:2 flat ornamental background artwork for the FULL PAGE of Kalakriti's Jammu and Kashmir heritage marketplace, equivalent in richness to a Mithila painted page surround but distinctly Kashmiri. It is an exquisite hand-rendered textile manuscript ground, not a photograph or a scene. Cool pale ivory and very pale ice blue linen paper with a broad largely open CENTRAL 65 PERCENT for readable website text. Rich intricate Kani paisley and Sozni-inspired embroidered floral borders along BOTH VERTICAL EDGES, deep lake blue outlines, muted rose flowers, sage leaves, warm antique-gold fine thread details and a few chinar leaves; smaller gracefully curling paisley medallions near corners. Finely woven cloth texture throughout the pale center, only a few tiny very faint floral sprigs there. Both side borders fully inside the image, each about 10-14 percent of width. Balanced mature luxury, beautiful precise handwork, vibrant detailed borders with calm pale center. Flat straight-on, no perspective, no room, no people, no objects, no writing, no words, no logos, no UI. Top and bottom edges restrained so repeating vertically on a long website looks graceful; do not add a heavy horizontal frame. Do not include Madhubani fish, peacocks, Bihar motifs or temples. No shadows pretending to be a physical hanging cloth. This is a decorative regional artwork, not an authenticated historical textile."
+    }
+  ]
+}

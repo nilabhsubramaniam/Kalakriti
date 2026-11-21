@@ -1,0 +1,64 @@
+{
+  "generated": "2026-11-21",
+  "tool": "built-in image_gen",
+  "purpose": "Original conceptual regional craft illustrations and decorative ground; not stock authentication, named workshops, actual sacred murals or ceremonial reproductions",
+  "processing": "RGB WebP quality 86, method 6; resize/re-encode only, source PNGs retained",
+  "assets": [
+    {
+      "file": "public/images/jh-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 480004,
+      "prompt": "Create a 3:2 landscape premium realistic painterly editorial illustration for Kalakriti's Jharkhand heritage craft marketplace. A complete still-life arrangement on a low rough wooden workbench against a warm earthen plaster verandah: one Sohrai-inspired clay-red, charcoal and ivory painted panel with stylized cattle and plants, one smaller black-and-ivory Khovar-inspired combed floral panel, a rolled narrow Paitkar-inspired narrative paper scroll, a naturally woven bamboo basket, folded warm golden-brown tasar-like textile, and one small brass lost-wax-style turtle ornament. Soft forest greenery beyond an open side, grounded handmade atmosphere, natural daylight, tactile earth pigments and materials. Earthy rust, muted ochre, charcoal, natural ivory, subdued brass. All objects fully visible with generous margins. No people or invented artisans, no ceremony, no sacred diagrams, no text, no writing, no logos, no certificates, no UI. Original conceptual craft artwork, not a photo of a named workshop, historical mural or verified sellable stock."
+    },
+    {
+      "file": "public/images/jh-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 254718,
+      "prompt": "Create a 3:2 landscape FLAT DECORATIVE BACKGROUND for a full Jharkhand heritage marketplace page. Pale warm ivory EARTH-PLASTER ground, broad OPEN CENTRAL 68 percent for readable web text. Both vertical edges contain rich yet restrained SOHRAI-INSPIRED decorative vines, stylized cattle and woodland birds in clay rust, charcoal black, muted ochre and ivory, with narrow geometric border ribbons and short combed-line accents recalling handworked wall surfaces. Organic confident folk-art brushwork rather than ornate gold filigree. All decorative side artwork fully inside image, 12-15 percent width on each side. Quiet lightly textured pale center with only tiny faint pigment marks. No heavy horizontal top/bottom frame; suitable for repeating vertically along a long webpage. Do not copy a specific artist or actual sacred/ceremonial mural; make original decorative flora and fauna. No paisleys, temple wheels, conch shells, Bankura horses or Madhubani fish. No people, no text, no letters, no logos, no UI. Mature grounded regional art, not a claim of an authentic historic community mural."
+    },
+    {
+      "file": "public/images/jh-sohrai.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 273988,
+      "prompt": "Square 1:1 original SOHRAI-INSPIRED painted-panel craft illustration for Jharkhand, straight-on. Warm pale earth-plaster surface carrying stylized cattle, small woodland birds and leafy plant forms in confident clay-red, charcoal-black, ivory and muted ochre lines. Broad organic silhouettes, balanced negative space and restrained fine pattern marks, tactile natural pigment appearance. Entire square panel and simple paper-like edge visible on a quiet pale background. No copying a living artist or historical mural, no claim of sacred symbol meanings, no religious figures, no people, no text, no logos, no certificates. A mature conceptual study of regional painted visual language, not Madhubani or Odisha Pattachitra."
+    },
+    {
+      "file": "public/images/jh-khovar.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 345292,
+      "prompt": "Square 1:1 original KHOVAR-INSPIRED combed-pattern craft illustration for a Jharkhand heritage marketplace. A straight-on square panel with strong charcoal-black and warm ivory contrasts, organic leaf, bird and flowing floral shapes revealed as light forms against the dark ground, visible parallel combed or scratched lines suggesting a worked plaster surface. Restrained earthy monochrome, confident large forms rather than dense colorful miniature ornament. Whole panel edge visible with comfortable margin on warm pale plaster. No actual wedding or ritual, no fertility-symbol explanation, no copy of a specific community mural or artist, no people, no sacred diagrams, no lettering, no text, no branding or authenticity seals. Original nonceremonial visual study."
+    },
+    {
+      "file": "public/images/jh-paitkar.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 322698,
+      "prompt": "Square 1:1 original PAITKAR-INSPIRED narrative scroll illustration for a Jharkhand heritage marketplace. A narrow vertical paper scroll shown straight-on within a square frame, three simple sequential scenes of trees, woodland birds, an abstract river and village hut forms; confident dark painted outlines, natural red ochre, soot charcoal, yellow earth and pale ivory, looser narrative folk brushwork rather than dense ornate Odisha or Bengal borderwork. Full scroll edges visible on a quiet warm ivory woven surface, tactile painted paper, mature refined presentation. No humans, no funerary scene, no deities, no ceremonial symbolism, no script, no letters, no text, no logos, no copying existing artists or verified-stock claims."
+    },
+    {
+      "file": "public/images/jh-dhokra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 221942,
+      "prompt": "Square 1:1 premium realistic painterly editorial craft still-life of one small DHOKRA-STYLE cast brass TURTLE ornament for a Jharkhand regional craft study. Distinct stylized turtle with a gently domed openwork shell, coiled wire-like geometric surface texture, four short legs, small head and tail, warm muted brass patina. Entire ornament comfortably framed on warm ivory handwoven cloth with softly blurred clay-ochre plaster behind. Fine tactile cast details and natural daylight, restrained mature artisan marketplace look. No other animals, no people, no text, no hallmarks, no logos, no certificates. A conceptual lost-wax metalwork study, not proof of geographical origin or actual sale stock."
+    },
+    {
+      "file": "public/images/jh-bamboo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 179398,
+      "prompt": "Square 1:1 premium realistic painterly editorial still-life for a Jharkhand bamboo craft study. One naturally woven split-bamboo basket with a round open top, sturdy bound rim and clearly visible alternating weave, warm pale straw-brown material with subtle handmade variation. Entire basket visible including base and rim, at a gentle three-quarter angle on an earthen workbench with softly blurred green foliage and simple bamboo strips in background. Natural daylight, excellent tactile weaving detail, grounded mature heritage art direction. No painted ethnic emblems or claimed community-specific patterns, no people, no letters, no labels, no branding, no certification or verified-stock claim."
+    },
+    {
+      "file": "public/images/jh-tasar.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 275194,
+      "prompt": "Square 1:1 premium realistic painterly editorial textile study for Jharkhand tasar weaving. A neatly folded warm natural golden-brown silk-like cloth with visible slubbed handloom texture and a narrow earthy rust and charcoal woven border, on a simple wooden loom edge with a small shuttle. Understated material-led composition, soft daylight, earthy ivory backdrop, full fabric arrangement within frame and comfortable margin. Fine natural sheen rather than shiny synthetic satin, no dense embroidery, no Kashmiri paisley, no ornate figurative sari border. No people, no words, no text, no logos, no organic/fibre certificates or origin labels. A conceptual textile illustration rather than authenticated product photography."
+    }
+  ]
+}

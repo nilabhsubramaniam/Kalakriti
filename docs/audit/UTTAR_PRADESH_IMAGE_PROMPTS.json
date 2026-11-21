@@ -1,0 +1,77 @@
+{
+  "method": "Built-in image_gen; original conceptual regional artwork. Source PNGs retained outside repository. WebP conversion only.",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Landscape 1536x1024. A complete, uncropped craft arrangement in a quiet sandstone courtyard: ivory white-on-white floral embroidered cloth in hoop, folded burgundy brocade with gold floral buti, a modest engraved brass vase, an ivory ceramic bowl with cobalt handpainted flowers, rolled indigo and rust floral carpet and one small simple terracotta elephant. Arrange coherently on a table, enough breathing space, detailed craft surfaces, not a collage, no invented iconic monument.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a9a4f0a9-dcbf-467f-aaea-3fcb1792abb1.png",
+      "target": "public/images/up-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 363636
+    },
+    {
+      "key": "mural",
+      "prompt": "Use case: stylized-concept. Landscape 1536x1024 decorative full-page background for premium Uttar Pradesh heritage marketplace. Original Chikankari-inspired textile surface, warm ivory cotton with delicate raised white-on-white floral vines along the two outer edges, fine burgundy and gold woven borders at extreme edges, sparse muted indigo leaf accents. Large quiet empty pale ivory central 70 percent reserved for website content. Intricate but restrained, tactile threads, flat front view, continuous textile not framed artwork. No text, people, deities, monuments, logos, watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-4bbbb01a-ab00-4c21-8644-ad5c284a7c3a.png",
+      "target": "public/images/up-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 354686
+    },
+    {
+      "key": "chikankari",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. One ivory cotton stole softly folded, white-on-white floral hand embroidery clearly visible with shadowed stitches and tiny openwork details, entire folded cloth and tassel edge inside frame. Crisp close product study on neutral sandstone.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-160d585d-f422-4c97-a03d-6d5f246a0e93.png",
+      "target": "public/images/up-chikankari.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 239606
+    },
+    {
+      "key": "banarasi",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. One folded burgundy sari textile with modest gold floral buti motifs and an elegant broad floral woven border. Detailed interlaced brocade, soft natural folds, complete folded textile inside frame, no embroidery hoop, no printed appearance.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e77e3a41-21c1-4d06-972c-7121678c026f.png",
+      "target": "public/images/up-banarasi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 259238
+    },
+    {
+      "key": "brass",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. Single small brass-toned decorative vase, elegant rounded body narrow neck, restrained engraved leaf and floral pattern around body, warm patina, entire object visible, no handles, no jewelry or mirror, studio product study.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8b66b4c6-a260-48fb-8569-b66080c8d6ad.png",
+      "target": "public/images/up-brass.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 113726
+    },
+    {
+      "key": "khurja",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. One cream glazed ceramic decorative bowl, cobalt blue handpainted floral vines and tiny muted green leaves on interior and exterior, subtle handworked character, round foot, entire bowl visible three quarter view, not Jaipur blue pottery, no food, tableware certification or text.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ee7303ad-1137-445b-aff1-53ebda6a05d7.png",
+      "target": "public/images/up-khurja.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 157162
+    },
+    {
+      "key": "carpet",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. One small rectangular indigo and rust carpet with cream floral medallion and vine border, slightly curled at one corner to reveal textile thickness, tactile soft pile and short fringes, entire rectangular rug inside frame, mostly overhead view. No geometric tribal pattern.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bc127969-5e0d-4659-9cf4-60e18acf5a55.png",
+      "target": "public/images/up-carpet.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 340362
+    },
+    {
+      "key": "terracotta",
+      "prompt": "Use case: product-mockup. Original conceptual regional craft illustration for Kalakriti, Uttar Pradesh. Realistic materials, softly lit, elegant editorial still life, warm ivory background, burgundy, muted gold and indigo accents. No text, letters, logos, watermark, price tags, people or documentary provenance claims. Square 1024x1024. Single warm red-brown unglazed terracotta elephant ornament, simple rounded folk form with modest incised floral decoration and tiny pierced openings on saddle area, four clearly formed legs, trunk curved down, entire object visible on ivory ground. Not a Bankura horse, no metal or glaze.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-526b9b2e-07dc-4c20-b1c4-44f0158a1acc.png",
+      "target": "public/images/up-terracotta.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 118148
+    }
+  ]
+}

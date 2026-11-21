@@ -86,3 +86,31 @@ The shared `ProductDetail` server component and `ProductGallery` client componen
 The scene now fits both the source-image aspect ratio and the configured crop to the viewport; a landscape Sujani image is not stretched into a square. Existing imagery is retained in full except the previously reviewed Kohbar crop. Coiling, stitch, weave, line and surface detail labels are configured per product. This extends the image-backed viewing interaction; it does not turn basket, jewellery, textile or produce photographs into verified volumetric models. Original imagery, responsive HTML details, shared market prices/cart and graceful fallback remain available. No new dependencies, CSP exceptions, map changes or backend routes were introduced.
 
 Validation for the expanded slice: strict TypeScript, zero-warning lint and a 68-output static build passed. Local Chrome exercised all 12 product routes and their four presets at 320px and 1440px, plus the landscape textile at 390/768/1024px. All nine collection sections linked their items correctly; related-item navigation, EUR pricing, basket destinations, unknown-product 404 and unavailable-WebGL fallback passed without runtime exceptions or horizontal overflow. Landscape gallery stages now follow the source aspect ratio to avoid excess vertical space.
+
+**21 November 2026 — regional reuse:** The same opt-in image-backed viewer now serves six Jammu & Kashmir sample items, with their own image, close-up label, origin, theme and price. Region-aware detail links do not alter the renderer lifecycle or atlas/D3 implementation. These remain image presentations rather than authored 360-degree product models.
+
+**21 November 2026 — West Bengal:** Six additional regional sample items reuse `ProductGallery` and the unchanged image-backed scene. Regional theme/origin resolution now comes from the shared region and theme metadata modules. No 3D models, atlas changes, decoders or new lifecycle behavior were added.
+
+**21 November 2026 — Odisha:** Six regional sample items reuse the opt-in image-backed viewer and existing lifecycle. The region’s images, close-up labels, origin and price resolve through the existing metadata/catalogue pathways. No new geometric models, renderer behavior, atlas/D3 changes or decoders are introduced.
+
+**21 November 2026 — Jharkhand:** Six additional items reuse the opt-in image-backed viewer, four view presets and existing renderer lifecycle. No scanned models, new geometry pipeline, decoders or atlas/D3 changes are introduced.
+
+**21 November 2026 — Uttar Pradesh:** Six items reuse the existing opt-in image-backed viewer and four presets. No volumetric models, geometry pipeline, rendering lifecycle or atlas/D3 code changes are introduced. Image mode and shopping remain available independently of WebGL.
+
+**21 November 2026 — Uttarakhand:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**21 November 2026 — Himachal Pradesh:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**21 November 2026 — Madhya Pradesh:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**21 November 2026 — Chhattisgarh:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**21 November 2026 — Punjab:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**21 November 2026 — Haryana:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**21 November 2026 — Delhi:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.

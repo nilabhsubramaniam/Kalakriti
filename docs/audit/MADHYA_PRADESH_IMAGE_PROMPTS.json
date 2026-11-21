@@ -1,0 +1,87 @@
+{
+  "method": "Built-in image_gen; original conceptual regional artwork. Source PNGs retained outside repository. WebP conversion only.",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Landscape 1536x1024. Complete uncropped craft still life on an old wooden table in a quiet sandstone courtyard. Six crafts: upright original Gond-inspired painting of a branching tree and birds filled with fine repeated dash-and-dot patterns; folded ivory Bagh-inspired cloth with red and black block-printed floral repeat; light warm gold Chanderi-style sari with sparse tiny woven buti motifs; folded teal Maheshwari-style textile with narrow geometric woven border and striped end panel; small warm bronze decorative bird; folded indigo batik cloth with cream wax-resist leaf shapes and subtle crackle. Balanced realistic arrangement with space around each object, no named monument, deities, ritual imagery, copied painting or generic collage.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-1b12cbde-82c3-4fab-81a1-9a14b7e17861.png",
+      "target": "public/images/mp-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 472438
+    },
+    {
+      "key": "mural",
+      "prompt": "Use case: stylized-concept. Landscape 1536x1024 original Gond-inspired decorative website background for Madhya Pradesh. Warm pale ivory handmade-paper centre occupying 75 percent, almost blank and quiet for text. Only at far left and far right edges: branching trees, small birds and leaves with intricate repeated fine dash-and-dot infill in terracotta, muted teal, charcoal and ochre. Thin handpainted outer borders. Flat continuous surface, original nature composition, not a reproduction of any living artist. No text, signatures, people, deities, religious diagrams, scene panels, watermark or named-maker attribution. Elegant restrained edges, tactile pigment and paper.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-64b5c913-fb1e-4a7f-b9ca-0476af5894e9.png",
+      "target": "public/images/mp-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 358250
+    },
+    {
+      "key": "gond",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One complete original decorative painting on ivory paper: gracefully branching tree with two birds, organic silhouettes filled with fine repeating short dashes and dots in terracotta, teal, black and ochre, Gond-inspired contemporary concept. Full painted sheet visible front-on, quiet space around edges. No copied work, recognizable living-artist signature style, deity, human figures or ceremonial motif.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0e093053-17cb-49aa-9feb-871c6d397442.png",
+      "target": "public/images/mp-gond.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 356596
+    },
+    {
+      "key": "bagh",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded ivory cotton stole with repeating red and black hand-block-print-inspired floral motifs, clearly aligned small repeats and a defined decorative border, Bagh-inspired textile concept. Subtle imperfect impressions and visible cotton texture, entire folded cloth visible, no embroidery, woven buti, wax crackle or extra props.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-819ce705-8abe-49a1-96eb-2b91bfa98a8f.png",
+      "target": "public/images/mp-bagh.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 305194
+    },
+    {
+      "key": "chanderi",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One softly folded light warm golden-ivory sari, airy fine woven cloth with sparse tiny gold-toned buti motifs and a narrow understated gold border, Chanderi-inspired textile concept. Restrained sheen, delicate light weave, entire folded textile visible, no heavy Banarasi brocade, embroidery, printed flowers, fabric purity or precious-metal claim.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-03711fe6-dc69-4613-9333-8c1be8d61ac8.png",
+      "target": "public/images/mp-chanderi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 175816
+    },
+    {
+      "key": "maheshwari",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded teal sari textile with fine narrow cream and muted gold geometric woven borders and a clearly visible striped end panel, Maheshwari-inspired weaving concept. Crisp yet softly draped woven surface, entire folded cloth visible, distinctive stripe rhythm, no bulky brocade, embroidery or printed flowers.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-972dc71d-6d75-4233-99ca-56f1be215fff.png",
+      "target": "public/images/mp-maheshwari.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 314308
+    },
+    {
+      "key": "metal",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small bronze-toned decorative bird on a simple low round base, long graceful neck, coiled-line and dotted surface ornament inspired by central Indian bell-metal casting. Realistic casting texture and warm patina, entire object visible three-quarter view on ivory ground. No deity, human figure, ritual symbol, shiny plastic, claims of alloy composition or copied known sculpture.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-65871d25-0fdd-4856-b076-ceb26291d6a1.png",
+      "target": "public/images/mp-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 104770
+    },
+    {
+      "key": "batik",
+      "prompt": "Use case: product-mockup. Original conceptual Madhya Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural soft daylight, warm ivory with terracotta, teal, charcoal and restrained gold. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded indigo cotton stole with cream flowing leaf forms and subtle wax-resist crackle across the dyed ground, Ujjain batik-inspired concept. Clear distinction between resist shapes and irregular fine crackle, entire folded textile visible, short simple fringe, no block-printed red floral repeat, embroidery, Indonesian royal motifs or text.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e6184b39-0e8c-4829-b308-83f94456ad9a.png",
+      "target": "public/images/mp-batik.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 283962
+    },
+    {
+      "key": "mural-v2",
+      "prompt": "Use case: precise-object-edit. Edit this original decorative Madhya Pradesh website background. Preserve its warm pale ivory paper, terracotta/teal/charcoal Gond-inspired trees, small birds, dotted leaf details, and narrow outer LEFT and RIGHT borders. Remove the straight horizontal frames at the TOP and BOTTOM completely; those areas must become uninterrupted paper in the central 75 percent. Adapt the side tree decoration to continue vertically off the top and bottom edges, ideally tileable vertically, with NO horizontal divider, band, stripe, rule, frame or garland spanning across the width. The centre must remain quiet and nearly blank throughout its full height. Full 1536x1024 composition, keep existing colours and realistic paper texture. No text, signatures, people, deities, logos or additional imagery.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-637f290d-7105-41de-9804-172852de127b.png",
+      "target": "public/images/mp-mural-v2.webp",
+      "supersedes": "mural",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 298042
+    }
+  ]
+}

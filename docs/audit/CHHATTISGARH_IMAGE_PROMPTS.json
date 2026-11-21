@@ -1,0 +1,77 @@
+{
+  "method": "Built-in image_gen; original conceptual regional artwork. Source PNGs retained outside repository. WebP conversion only.",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Landscape 1536x1024 complete uncropped still life on a weathered wooden table in a quiet shaded craft veranda with leafy trees beyond. Six objects: small brass-toned elephant with coiled-line Dhokra-inspired casting detail, black wrought-iron decorative tree with simple birds, folded warm golden-brown Kosa-inspired woven stole with narrow olive border, one lidded bamboo basket, a simple reddish terracotta vase with incised lines, and a small carved wooden leaf relief panel. Coherent composition with breathing room around objects, natural proportions, tactile materials. No named workshop, monument, deity, ritual object, masks or stereotyped human figures.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-22d35380-50db-4b1a-8fb8-690d5d2381b5.png",
+      "target": "public/images/cg-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 365184
+    },
+    {
+      "key": "mural",
+      "prompt": "Use case: stylized-concept. Landscape 1536x1024 original decorative background for a Chhattisgarh heritage craft website. Warm pale ivory handmade-paper centre spanning 75 percent, almost blank for legible content. Only along LEFT and RIGHT outer edges: delicate bronze-toned coiled wire loops, small leaf and bird silhouettes, fine charcoal and forest-green accents inspired by Dhokra surface detail and ironwork. Slim vertical ornamental edge. Flat continuous design. NO top or bottom frame, NO horizontal lines, bands, dividers or garlands across width; side ornament continues off top and bottom for vertical repeating use. Not an attributed tribal painting or historical artwork. No people, masks, deities, religious diagrams, text, logos or watermarks.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ac668c8f-a8f1-4128-91d0-21a6c92dda6d.png",
+      "target": "public/images/cg-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 212844
+    },
+    {
+      "key": "dhokra",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small brass-toned elephant ornament inspired by Bastar Dhokra casting, coiled wire-like lines and dotted surface ornament, simple saddle pattern, natural four-legged stance, curved trunk. Entire elephant visible in three-quarter view on ivory ground, realistic warm casting texture and patina. No deity, rider, ritual symbol, bells or copied known sculpture.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-754b8457-0790-4951-a4be-96dd1abf3257.png",
+      "target": "public/images/cg-dhokra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149018
+    },
+    {
+      "key": "iron",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One dark wrought-iron decorative tree on a low stable base, several simple branches, small leaf shapes and two perched birds, handmade hammered surface, open silhouette. Entire object visible, three-quarter studio view on ivory background. No Gond painted infill, brass casting, black plastic, people, ritual figures or candles.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-562b064a-3dcc-44ec-aa3e-b26a44c7b679.png",
+      "target": "public/images/cg-iron.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 78728
+    },
+    {
+      "key": "kosa",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded warm golden-brown woven stole inspired by Chhattisgarh Kosa textiles, restrained natural sheen, visible fine yarn variation, narrow muted olive border and short fringe. Entire folded textile visible, pale stone ground, no heavy brocade, printed motifs, embroidery, organic or fibre-purity label.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a9f36718-fa89-46d9-82b9-b2a3dd4851da.png",
+      "target": "public/images/cg-kosa.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 272000
+    },
+    {
+      "key": "bamboo",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small round lidded woven bamboo storage basket, fine interlaced strips, slightly domed lid, tiny woven loop grip, bound rim. Entire basket and closed lid visible on warm ivory ground, three-quarter view, natural straw texture, no plastic, painted symbols or metal frame.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-09eedf46-7008-46d8-8ab7-50adcb744cb0.png",
+      "target": "public/images/cg-bamboo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 139784
+    },
+    {
+      "key": "terracotta",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One simple unglazed reddish-brown terracotta decorative vase, gently rounded body and short narrow neck, modest incised parallel lines and small leaf marks around shoulder. Entire vase visible on ivory ground, realistic clay surface and subtle handworked variation. No deity, votive figure, elephant, glaze, food-contact or water-storage claim.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c7d00b0c-6725-45e8-a321-8967bd2caec7.png",
+      "target": "public/images/cg-terracotta.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 90548
+    },
+    {
+      "key": "wood",
+      "prompt": "Use case: product-mockup. Original conceptual Chhattisgarh regional craft artwork for Kalakriti. Realistic materials, elegant restrained presentation, natural soft light, warm ivory, aged bronze, forest green and earthen red. No text, letters, signatures, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small rectangular warm-brown carved wooden decorative relief panel with original flowing leaf forms and restrained repeated rosettes, shallow chisel detail and visible timber grain, full panel visible in three-quarter view on ivory ground. No tribal face, mask, deity, temple replica, lettering, copied known design or claimed wood-species certification.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b80e20e4-65fc-4ff0-80a4-1be86b6fb4b9.png",
+      "target": "public/images/cg-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149138
+    }
+  ]
+}

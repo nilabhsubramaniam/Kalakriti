@@ -13,6 +13,19 @@
 import type { StatePage } from './types';
 import { REGIONAL_EDITORIAL } from './editorial';
 import { bihar } from './bihar';
+import { jammuKashmir } from './jammuKashmir';
+import { chhattisgarh } from './chhattisgarh';
+import { punjab } from './punjab';
+import { haryana } from './haryana';
+import { delhi } from './delhi';
+import { chandigarh } from './chandigarh';
+import { madhyaPradesh } from './madhyaPradesh';
+import { himachalPradesh } from './himachalPradesh';
+import { uttarakhand } from './uttarakhand';
+import { uttarPradesh } from './uttarPradesh';
+import { jharkhand } from './jharkhand';
+import { odisha } from './odisha';
+import { westBengal } from './westBengal';
 import { derivePage } from './derive';
 import { SLUG_TO_STATE, STATE_PAGE_SLUGS } from './slugs';
 
@@ -21,6 +34,19 @@ export { slugForState, STATE_PAGE_SLUGS, slugify } from './slugs';
 /** Slug → the hand-written pages. Keyed by URL segment. */
 export const STATE_PAGES: Record<string, StatePage> = {
   bihar,
+  [jammuKashmir.slug]: jammuKashmir,
+  [westBengal.slug]: westBengal,
+  [odisha.slug]: odisha,
+  [jharkhand.slug]: jharkhand,
+  [uttarPradesh.slug]: uttarPradesh,
+  [uttarakhand.slug]: uttarakhand,
+  [himachalPradesh.slug]: himachalPradesh,
+  [madhyaPradesh.slug]: madhyaPradesh,
+  [chhattisgarh.slug]: chhattisgarh,
+  [punjab.slug]: punjab,
+  [haryana.slug]: haryana,
+  [delhi.slug]: delhi,
+  [chandigarh.slug]: chandigarh,
 };
 
 /** True when the state has a researched catalogue rather than an overview. */

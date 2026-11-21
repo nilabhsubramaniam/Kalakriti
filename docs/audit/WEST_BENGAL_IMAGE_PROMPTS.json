@@ -1,0 +1,57 @@
+{
+  "generated": "2026-11-21",
+  "tool": "built-in image_gen",
+  "purpose": "Conceptual regional craft illustrations and decorative background, not authenticated product or location photography",
+  "processing": "RGB WebP quality 86, method 6; resized only; original PNGs retained",
+  "assets": [
+    {
+      "file": "public/images/wb-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 508648,
+      "prompt": "Create a beautiful 3:2 landscape realistic painterly editorial illustration for Kalakriti's West Bengal heritage craft marketplace. A complete still-life tableau on a warm wooden verandah table: an elegant long-necked BANKURA TERRACOTTA HORSE in reddish fired clay, neatly folded deep indigo Baluchari-style silk with a terracotta and antique-gold woven narrative border, a pale ivory Kantha stitched textile, a small warm brass Dokra bird and a rolled hand-painted Bengal Patachitra scroll with visible painted birds and foliage. Background: soft Bengal riverside vegetation and the suggestion of a terracotta arched verandah, not a copy or photograph of a named monument. Warm ivory, terracotta red, deep indigo, muted brass. Mature premium Indian heritage art direction, natural daylight, richly tactile handwork. All main objects fully visible inside the composition, no people, no letters, no text, no logos, no certification seals, no UI. It is an illustrative regional atmosphere, not actual stock photography."
+    },
+    {
+      "file": "public/images/wb-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 368564,
+      "prompt": "Create a 3:2 landscape flat decorative BACKGROUND for the entire West Bengal chapter of a heritage marketplace. Warm ivory handmade cloth-paper ground, broad OPEN CENTRAL 68 percent for website text. Both VERTICAL EDGES have rich hand-painted Bengal-inspired ornament: white rice-paste ALPANA linework on narrow terracotta-red edge ribbons, running-stitch KANTHA-inspired indigo and brass thread borders, elegant long-necked BANKURA TERRACOTTA HORSE motifs near the side edges, small lotus vines, birds and stylized Bengal Patachitra-inspired foliage. Entirely different from a Kashmiri paisley design: NO paisleys, NO chinar leaves, NO Kashmiri motifs. Terracotta red, deep indigo, muted antique brass, natural warm ivory; fine handwork, mature premium heritage feeling. Center remains very pale and quiet with only tiny faint stitch marks. All border artwork fully within image, about 12-15 percent of width each side. No heavy horizontal border; suitable for vertical repeating webpage surround. Flat straight-on artwork, no perspective, no people, no actual historic artifact claim, no text, no logos, no UI."
+    },
+    {
+      "file": "public/images/wb-baluchari.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 375606,
+      "prompt": "Square 1:1 premium realistic painterly heritage textile still-life for West Bengal. A beautifully folded deep indigo silk sari study with a wide terracotta-red and antique-gold woven narrative border, tiny stylized figures and pavilion forms WOVEN INTO the fabric rather than raised embroidery, recalling the Baluchari tradition without copying a known textile. The decorative end panel and its fine woven motifs are clearly visible, on warm ivory handloom cloth with soft wooden loom elements in background. Tactile natural daylight, restrained warm richness, entire fabric arrangement comfortably framed. No people, text, labels, logos, seals or certificates. Conceptual craft illustration, not a product authenticity photograph."
+    },
+    {
+      "file": "public/images/wb-terracotta.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149534,
+      "prompt": "Square 1:1 premium heritage craft still-life illustration of ONE classic BANKURA TERRACOTTA HORSE from West Bengal: distinctive tall elongated upright neck, small upright ears, stylized slender long legs, gently flared decorated chest and collar, reddish-brown fired clay with fine modeled incised ornamental details. The full standing horse is visible including its feet, no crop, against warm pale ivory plaster and a softly blurred terracotta workshop background. Realistic painterly editorial art with natural daylight and tactile clay grain, mature Indian artisan marketplace styling. No people, no writing, no labels, no logos, no certificates, no other horses. Do not depict a realistic biological horse or a toy rocking horse."
+    },
+    {
+      "file": "public/images/wb-dokra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 182736,
+      "prompt": "Square 1:1 premium realistic painterly editorial still-life illustration of a small Bengal DOKRA lost-wax-style brass bird ornament on a warm ivory handwoven cloth. A stylized bird with delicate coiled wire-like surface texture, lattice ornament on the body, warm muted brass patina and visible handmade character; full object including feet and tail completely inside frame with generous margin. Soft natural daylight, a subdued terracotta-red wall in background. Refined heritage marketplace presentation, not a museum attribution or photograph of verified stock. No people, no text, no logos, no certificates, no fake seals."
+    },
+    {
+      "file": "public/images/wb-patachitra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 469274,
+      "prompt": "Square 1:1 mature premium editorial craft illustration of a BENGAL PATACHITRA-inspired scroll painting displayed flat straight-on. A vertical paper scroll inside the square composition, arranged into three narrative panels with stylized birds, trees, river boats and village flora, bold confident black outlines and earthy red, indigo, mustard and green colours, decorative red borders. Bengali narrative scroll character, not Madhubani or Odisha Pattachitra. No human portraits or sacred figures. Paper edges fully visible on a quiet warm ivory woven ground. Rich hand-painted texture, beautiful confident folk-art lines. No letters, no writing, no logos, no seals, no museum label. A new illustrative study, not a copy of an existing artist's work."
+    },
+    {
+      "file": "public/images/wb-jamdani.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 252688,
+      "prompt": "Square 1:1 premium heritage textile illustration for West Bengal, realistic painterly editorial still-life. Airy finely woven ivory cotton cloth with small supplementary-weft geometric and floral motifs and a narrow deep indigo and terracotta-red woven border, gently draped in clear folds over a wooden loom edge. Motifs are integrated into the weave, NOT embroidered on top. The light fine weave and spaces between individual motifs are visible. Natural soft daylight, warm ivory ground and muted wood, refined mature artisan marketplace aesthetic. Full textile arrangement comfortably inside frame with room around it. No people, no text, no branding, no certification, no national origin label. Conceptual Jamdani weaving study, not proof of fiber or provenance."
+    }
+  ]
+}

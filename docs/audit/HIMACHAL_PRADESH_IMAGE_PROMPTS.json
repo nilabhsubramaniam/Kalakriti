@@ -1,0 +1,77 @@
+{
+  "method": "Built-in image_gen; original conceptual regional artwork. Source PNGs retained outside repository. WebP conversion only.",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Landscape 1536x1024 complete uncropped craft still life on a wooden table in a quiet mountain veranda with cedar beams and distant pine-covered hills. Six objects: ivory embroidered square cloth with original multicolour floral and bird composition inspired by Chamba Rumal, folded pale grey wool shawl with broad red black geometric Kullu-inspired border, folded charcoal shawl with narrow intricate green yellow red stepped Kinnauri-inspired border, original small landscape painting of green hills and river inspired by Kangra miniature painting, a pair of flat brown leather open sandals with restrained red-gold embroidered straps, and a small carved wood floral box. Cohesive elegant composition, breathing space, no snow fantasy, deities, sacred symbols, named monuments or portrait scenes.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f7e55519-14a5-425a-b37d-9abf74dd9103.png",
+      "target": "public/images/hp-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 461600
+    },
+    {
+      "key": "mural",
+      "prompt": "Use case: stylized-concept. Landscape 1536x1024 original decorative background for a premium Himachal Pradesh craft website. Cool pale ivory linen with restrained hand-embroidered floral vines, small birds, leaves and delicate red blue green thread rosettes confined to outer 12 percent at left and right edges. Fine woven geometric red and blue edging at extreme sides, quiet almost blank central 75 percent for text. Inspired by floral needlework associated with Chamba, original nonceremonial design. Tactile stitches, flat continuous textile, no framed artwork, people, text, logos, sacred symbols or historical reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-3f2ebcd0-199a-44b8-9e86-30c10fe199f6.png",
+      "target": "public/images/hp-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 514350
+    },
+    {
+      "key": "rumal",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. One ivory square embroidered decorative cloth laid almost flat, original fine multicolour floral vines and paired small birds surrounding a quiet central floral rosette, Chamba Rumal-inspired concept. Clearly visible fine thread stitches, subtle creases, full square and stitched edge visible with breathing room. Not printed, no human figures, deities, lettering or replica of a known ceremonial textile.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-66b162d9-4613-4918-b7c2-7dce323df559.png",
+      "target": "public/images/hp-rumal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 287126
+    },
+    {
+      "key": "kullu",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. One folded pale grey wool shawl with broad red and black woven border containing restrained multicolour interlocking diamond patterns, Kullu-inspired textile concept. Soft visible wool weave, short fringe, entire folded cloth inside frame, no embroidered floral motif, no fake luxury silk shine.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-78c891b0-afac-4920-bbc0-b26c39478938.png",
+      "target": "public/images/hp-kullu.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 298742
+    },
+    {
+      "key": "kinnauri",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. One folded charcoal grey wool shawl with narrow intricate repeated stepped geometric border bands in green, yellow, red, blue and ivory, Kinnauri-inspired textile concept. Very fine interlocked woven motif detail, short fringe, entire folded cloth visible. Distinct from a broad red Kullu border, no embroidery, religious diagrams or lettering.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e8e814f3-2a21-4091-abbf-d471ded1511f.png",
+      "target": "public/images/hp-kinnauri.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 344052
+    },
+    {
+      "key": "kangra",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. Original small landscape painting on pale paper inspired by Kangra miniature painting, gently rolling green hills, delicate trees, a curving blue river, distant pale mountains and tiny garden pavilion without iconic monument likeness. Fine painted outlines, calm restrained colours and narrow muted red border, full painted sheet visible almost front-on. No people, deities, signatures, text or copied historical composition.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c1109c3a-cca7-4d68-995f-680cd934c5e6.png",
+      "target": "public/images/hp-kangra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 288996
+    },
+    {
+      "key": "chappal",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. A matching pair of simple flat brown leather open sandals inspired by Chamba footwear, restrained red and gold floral embroidery on the broad leather upper straps, rounded front, narrow sole, believable handmade construction. Both complete sandals visible in a three-quarter overhead studio view, no feet, brand or certification marks, no high heels or pointed jutti shape.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-31c95625-2cbb-46e6-b3fc-ce23ad7a87fd.png",
+      "target": "public/images/hp-chappal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 200036
+    },
+    {
+      "key": "wood",
+      "prompt": "Use case: product-mockup. Original conceptual Himachal Pradesh regional craft artwork for Kalakriti. Premium realistic materials, natural daylight, cool ivory ground with muted red, deep blue and forest-green accents. No text, lettering, logos, labels, watermark, people, maker attribution, certification marks or historical authenticity claim. Square 1024x1024. One small closed warm brown wooden keepsake box inspired by Himachali wood carving, shallow carved rosettes and flowing leaves across lid and edge, fine chisel detail, realistic grain, simple brass hinge, entire box visible in three-quarter view. No deities, temple replica, human figures, lettering or claimed historical reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-745db8dc-efbb-4d99-afac-3969373ca4f2.png",
+      "target": "public/images/hp-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 288372
+    }
+  ]
+}

@@ -73,7 +73,7 @@ pnpm validate
 pnpm start
 ```
 
-`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **68 static outputs**, including the regional routes and framework outputs.
+`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **248 static outputs**, including the regional routes and framework outputs.
 
 To check a production build while keeping a development server's cache separate:
 
@@ -151,6 +151,30 @@ Start with the [documentation index](docs/README.md). It distinguishes implement
 | [Artwork and asset pipeline](docs/architecture/ASSET_PIPELINE.md) | Image provenance, generation prompts and production assets |
 | [Security review](docs/audit/SECURITY_REVIEW.md) | Baseline findings and recorded follow-up work |
 | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Future milestones and approval boundaries |
+
+Delhi now has its regional chapter at `/state/delhi`, with a carved-screen and floral-threadwork surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Delhi implementation and sources](docs/audit/DELHI_JOURNAL.md).
+
+Haryana now has its regional chapter at `/state/haryana`, with a durrie-and-reed-inspired surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Haryana implementation and sources](docs/audit/HARYANA_JOURNAL.md).
+
+Punjab now has its regional chapter at `/state/punjab`, with a Phulkari-inspired embroidered surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Punjab implementation and sources](docs/audit/PUNJAB_JOURNAL.md).
+
+Chhattisgarh now has its regional chapter at `/state/chhattisgarh`, with a Dhokra-inspired bronze and forest-green surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Chhattisgarh implementation and sources](docs/audit/CHHATTISGARH_JOURNAL.md).
+
+Madhya Pradesh now has its regional chapter at `/state/madhya-pradesh`, with a Gond-inspired painted surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Madhya Pradesh implementation and sources](docs/audit/MADHYA_PRADESH_JOURNAL.md).
+
+Himachal Pradesh now has its regional chapter at `/state/himachal-pradesh`, with an embroidered floral surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Himachal Pradesh implementation and sources](docs/audit/HIMACHAL_PRADESH_JOURNAL.md).
+
+Uttarakhand now has its regional chapter at `/state/uttarakhand`, with Aipan-inspired red-and-white borders, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Uttarakhand implementation and sources](docs/audit/UTTARAKHAND_JOURNAL.md).
+
+Uttar Pradesh now has its regional chapter at `/state/uttar-pradesh`, with an embroidered ivory surround, burgundy and gold styling, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Uttar Pradesh implementation and sources](docs/audit/UTTAR_PRADESH_JOURNAL.md).
+
+Jharkhand now has its regional chapter at `/state/jharkhand`, with a full-page Sohrai-inspired painted surround, six craft collections and item viewers, three reading pages and six visitor-information entries. See [Jharkhand implementation and sources](docs/audit/JHARKHAND_JOURNAL.md).
+
+Odisha now has its regional chapter at `/state/odisha`, with Odia text, a full-page painted surround, six craft collections and item viewers, three journal articles and six visitor-information entries. The hero leads directly into the collections without a slogan ribbon. See [Odisha implementation and sources](docs/audit/ODISHA_JOURNAL.md).
+
+West Bengal now has a full illustrated regional chapter at `/state/west-bengal`: six craft collections and product details, three journal articles, six tourism entries, Bengali text, a terracotta/indigo/brass theme and an Alpana/Kantha-inspired page surround. See [West Bengal implementation and source notes](docs/audit/WEST_BENGAL_JOURNAL.md).
+
+Jammu & Kashmir now has its own blue, rose and sage regional chapter at `/state/jammu-and-kashmir`, with six craft collections, six item detail pages, three journal articles, six tourism entries and regional navigation/footer. The shared sample catalogue and basket support Bihar, Jammu & Kashmir, West Bengal, Odisha, Jharkhand, Uttar Pradesh, Uttarakhand, Himachal Pradesh, Madhya Pradesh, Chhattisgarh, Punjab, Haryana and Delhi. See [implementation and source notes](docs/audit/JAMMU_KASHMIR_JOURNAL.md).
 
 All 12 Bihar products across nine craft collections open dedicated detail pages with optional Three.js full/left/right/detail views, rotation and zoom. The shared viewer uses existing images at their original aspect ratios; these are image-backed presentations, not scanned or authored object models. Product details, original images, regional prices and cart remain independent of WebGL. The original Kohbar detail URL is preserved; the other products use `/state/bihar/products/[product]`.
 

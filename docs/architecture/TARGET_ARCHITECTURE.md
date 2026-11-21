@@ -224,3 +224,31 @@ See [ASSET_PIPELINE](ASSET_PIPELINE.md) and [DEPLOYMENT_ARCHITECTURE](DEPLOYMENT
 | 6 | Object storage, CDN, Go host, Postgres provider | Hosted in India | Open |
 | 7 | Admin inside the main app or separate | Inside, to start | Open |
 | 8 | Customer login method; payment provider and payout model | — | Open |
+
+**Implemented regional expansion — 21 November 2026:** Jammu & Kashmir now has a typed regional chapter, collection/journal/detail routes and region-aware shared catalogue/cart. This extends the existing static frontend and mock market pricing without approving or introducing a backend. The Bihar flow and original detail URLs are retained. See [regional implementation](../audit/JAMMU_KASHMIR_JOURNAL.md).
+
+**Implemented regional expansion — 21 November 2026:** West Bengal now follows the static regional collection/journal/product pattern. Shared route-facing theme metadata and the sample catalogue region list support Bihar, Jammu & Kashmir and West Bengal. This introduces no backend, live inventory, authored model assets or payment integration.
+
+**Implemented regional expansion — 21 November 2026:** Odisha extends the existing static regional pattern and sample catalogue to a fourth region, using the established viewer, basket and theme metadata. The data remains local frontend fixtures; no backend, payments, booking service or authored product model assets are introduced.
+
+**Implemented regional expansion — 21 November 2026:** Jharkhand extends the shared static chapter, catalogue, currency selector and cart to a fifth region. Six collections, six item routes and three reading routes use local fixtures; no backend, payment service or new renderer is introduced.
+
+**Implemented regional expansion — 21 November 2026:** Uttar Pradesh extends the static regional chapter and shared sample catalogue/cart to a sixth region. Six collections, six product routes and three reading routes reuse the established frontend architecture. No backend, payment system, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 21 November 2026:** Uttarakhand extends the static chapter and shared sample catalogue/cart to a seventh region. Six collections, six item routes and three reading routes reuse the existing frontend architecture. No backend, dependency, payment or renderer change is introduced.
+
+**Implemented regional expansion — 21 November 2026:** Himachal Pradesh extends the static chapter and shared sample catalogue/cart to an eighth region. Six collections, six item routes and three reading routes reuse the existing frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 21 November 2026:** Madhya Pradesh extends the static chapter and shared sample catalogue/cart to a ninth region. Six collections, six item routes and three reading routes reuse the existing frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 21 November 2026:** Chhattisgarh extends the static chapter and shared sample catalogue/cart to a tenth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 21 November 2026:** Punjab extends the static chapter and shared sample catalogue/cart to an eleventh region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 21 November 2026:** Haryana extends the static chapter and shared sample catalogue/cart to a twelfth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 21 November 2026:** Delhi extends the static chapter and shared sample catalogue/cart to a thirteenth region. Six collections, six item routes and three reading routes reuse the existing frontend architecture. No backend, payment, dependency or renderer change is introduced.

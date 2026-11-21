@@ -15,6 +15,18 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories
 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment
+- [Delhi chapter](audit/DELHI_JOURNAL.md) — carved-screen surround, six collections, item viewers and heritage destinations
+- [Haryana chapter](audit/HARYANA_JOURNAL.md) — woven geometry, reed textures, six collections, item viewers and visitor information
+- [Punjab chapter](audit/PUNJAB_JOURNAL.md) — Phulkari-inspired surround, six collections, item viewers and visitor information
+- [Chhattisgarh chapter](audit/CHHATTISGARH_JOURNAL.md) — Dhokra-inspired surround, six collections, item viewers and visitor information
+- [Madhya Pradesh chapter](audit/MADHYA_PRADESH_JOURNAL.md) — Gond-inspired surround, six collections, item viewers and visitor information
+- [Himachal Pradesh chapter](audit/HIMACHAL_PRADESH_JOURNAL.md) — embroidered surround, six regional collections, item viewers and visitor information
+- [Uttarakhand chapter](audit/UTTARAKHAND_JOURNAL.md) — Aipan-inspired surround, six collections, item viewers and hill destinations
+- [Uttar Pradesh chapter](audit/UTTAR_PRADESH_JOURNAL.md) — Chikankari-inspired surround, six collections, item viewers and visitor information
+- [Jharkhand chapter](audit/JHARKHAND_JOURNAL.md) — Sohrai-inspired background, six collections, item details and regional reading
+- [Odisha chapter](audit/ODISHA_JOURNAL.md) — Odia theme, painted background, craft collections and item details
+- [West Bengal chapter](audit/WEST_BENGAL_JOURNAL.md) — Bengali theme, full-page artwork, six collections and product details
+- [Jammu & Kashmir chapter](audit/JAMMU_KASHMIR_JOURNAL.md) — regional theme, six collections, detail viewers, journal and tourism
 - [Bihar Mithila journal](audit/BIHAR_MITHILA_JOURNAL.md) — illustrated Bihar page, top section menu and map removal
 - [Regional craft content](audit/STATE_CRAFT_CONTENT.md) — introductions across all 36 existing region routes and source review
 - [Dedicated India atlas](audit/EXPLORE_ATLAS.md) — `/explore` with Three.js and D3 modes

@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-21",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Photorealistic premium craft editorial still life for Haryana, India. Landscape 1536x1024. A shaded limewashed rural courtyard with low brick plinth and subtle greenery blurred behind. Balanced arrangement of six complete craft objects: a folded brick-red cream indigo flatwoven geometric Panipat durrie on a low wooden bench, a red-brown Jhajjar-style slim-necked clay surahi decorative vessel with incised rosettes, a small cylindrical sarkanda reed mudha stool with bound reed sides, a separate square low wooden peedha stool with tightly woven burgundy and natural cord seat, a simple hammered brass decorative bowl, and an ochre embroidered cloth with modest crimson geometric floral threadwork. Low eye level three-quarter viewpoint, believable construction and scale, complete objects with breathing room, soft morning light, rich earth tones, beautiful tactile thread clay reed brass surfaces. No vegetables, crops, people, writing, logos, watermarks, named workshop or monuments.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d4d669e5-766e-457e-8ab2-a2271b88debf.png",
+      "path": "public/images/hr-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 342040
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original decorative website surround inspired by Haryana's flatwoven durries and sarkanda reed work. Warm ivory lime-plaster centre with a subtle quiet cotton weave texture. Only at leftmost and rightmost 9 percent: narrow vertical woven geometric stepped diamonds in earthy terracotta, deep crimson, muted indigo and straw-gold, interspersed with fine braided reed bindings. Sophisticated realistic woven craft texture, precise yet handmade, warm natural light. Central 82 percent nearly plain and very quiet for text. No horizontal top or bottom bands, no full rectangle frame, no horizontal divider anywhere. Vertical ornament extends out of top and bottom crop for unobtrusive repeating background. No religious symbols, people, scenes, writing, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e073241b-f301-475e-89dd-ca982ae0d914.png",
+      "path": "public/images/hr-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 302426
+    },
+    {
+      "key": "durrie",
+      "prompt": "Square 1024x1024 realistic premium product photograph of a folded Panipat-inspired flatwoven durrie rug, brick-red and warm cream broad bands, narrow indigo lines and small stepped geometric diamond forms, short cream fringe. Coarse visible flat weave without pile, folded once to show pattern and finished edge. Entire folded rug fully inside image with breathing room, warm ivory studio background and natural soft side light, tactile refined craft catalogue photography. No words, labels, logos, people or other products.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-56c9dc6f-aa2e-49b8-9939-7ef84027c087.png",
+      "path": "public/images/hr-durrie.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 236598
+    },
+    {
+      "key": "pottery",
+      "prompt": "Square 1024x1024 premium realistic craft photograph: one Jhajjar-inspired decorative red-brown terracotta surahi, rounded belly, slender long neck and flared circular mouth, no handle or spout, modest incised rosette and flowing line decoration on body. Unglazed clay with fine tactile surface, stable flat base, elegant believable vessel shape. Complete object fully inside image against warm ivory studio ground, three-quarter angle, natural soft light. No water, food, drinking or cooling claim, no purity or certification labels, text, logos, people, extra objects or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-506325e6-b686-4fd7-b23e-d7f9eae32658.png",
+      "path": "public/images/hr-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 63464
+    },
+    {
+      "key": "mudha",
+      "prompt": "Square 1024x1024 premium realistic product photograph of one Haryana sarkanda reed mudha stool, low cylindrical hourglass form, bundles of straw-golden reeds held vertically with burgundy cord bindings, closely woven natural fibre round seat. Structurally believable construction with neatly bound edges and stable base. Entire stool fully inside image at three-quarter angle, warm ivory seamless studio ground, soft natural side light, visible individual reeds and binding details. No cushions, people, text, labels, logos, agricultural props or other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-27f4a091-bd01-407e-ab01-2630f0030476.png",
+      "path": "public/images/hr-mudha.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 192304
+    },
+    {
+      "key": "peedha",
+      "prompt": "Square 1024x1024 premium realistic product photograph of one low square wooden peedha stool inspired by Sonipat Haryana, four short sturdy wooden legs and a rectangular frame, tightly woven burgundy and natural-cream cord seat with a restrained diamond pattern. Three-quarter angle showing the top weave and all four legs clearly, believable joints and cord wrapped around frame. Entire stool fully visible with breathing room on warm ivory studio background, natural soft light, elegant tactile handmade furniture detail. Not a cylindrical reed mudha. No people, text, labels, logos or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-2d68e16a-9f41-4859-bac7-1aa0b45f7810.png",
+      "path": "public/images/hr-peedha.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 106904
+    },
+    {
+      "key": "brass",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of one Rewari-inspired decorative brass bowl, warm muted golden metal, gently rounded shallow body, simple smooth rolled rim, subtle irregular hammer facets, no engraving, no handles. Three-quarter angle shows inside and outside, complete bowl fully visible with breathing room. Warm ivory studio ground, restrained natural soft side light and realistic non-mirror reflections. No food, liquid, cooking setup, purity stamp, health claim, text, labels, logos, people or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d3f1951e-96cb-4081-8035-99d2a39a7a71.png",
+      "path": "public/images/hr-brass.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 46724
+    },
+    {
+      "key": "embroidery",
+      "prompt": "Square 1024x1024 premium realistic product photograph of an ochre hand-embroidery-inspired stole associated with Haryana's wider needlework landscape, modest scattered crimson geometric flower diamonds and a narrow brick-red stitched border. Long straight stitches with clearly visible thread direction on a golden-ochre cotton-like ground, understated composition with ample plain cloth. Loosely folded once diagonally, entire cloth within frame with breathing room, warm ivory studio background, soft natural side light. Original decorative design not an attributed historic or ceremonial textile. No people, jewellery, vegetables, text, labels, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ef25127d-eaee-43fd-b47c-9bf5fcaf7f5f.png",
+      "path": "public/images/hr-embroidery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 204880
+    }
+  ]
+}

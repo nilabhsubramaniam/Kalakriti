@@ -1,6 +1,19 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import ChhattisgarhJournal from '@/components/state/ChhattisgarhJournal';
+import PunjabJournal from '@/components/state/PunjabJournal';
+import HaryanaJournal from '@/components/state/HaryanaJournal';
+import DelhiJournal from '@/components/state/DelhiJournal';
+import ChandigarhJournal from '@/components/state/ChandigarhJournal';
+import MadhyaPradeshJournal from '@/components/state/MadhyaPradeshJournal';
+import HimachalPradeshJournal from '@/components/state/HimachalPradeshJournal';
+import UttarakhandJournal from '@/components/state/UttarakhandJournal';
+import UttarPradeshJournal from '@/components/state/UttarPradeshJournal';
+import JharkhandJournal from '@/components/state/JharkhandJournal';
+import OdishaJournal from '@/components/state/OdishaJournal';
+import WestBengalJournal from '@/components/state/WestBengalJournal';
+import JammuKashmirJournal from '@/components/state/JammuKashmirJournal';
 import BiharJournal from '@/components/state/BiharJournal';
 import SectionHead from '@/components/state/SectionHead';
 import StateHero from '@/components/state/StateHero';
@@ -40,6 +53,19 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function StatePageRoute({ params }: { params: { slug: string } }) {
   const page = statePage(params.slug);
   if (!page) notFound();
+  if (page.slug === 'chandigarh') return <ChandigarhJournal />;
+  if (page.slug === 'delhi') return <DelhiJournal />;
+  if (page.slug === 'haryana') return <HaryanaJournal />;
+  if (page.slug === 'punjab') return <PunjabJournal />;
+  if (page.slug === 'chhattisgarh') return <ChhattisgarhJournal />;
+  if (page.slug === 'madhya-pradesh') return <MadhyaPradeshJournal />;
+  if (page.slug === 'himachal-pradesh') return <HimachalPradeshJournal />;
+  if (page.slug === 'uttarakhand') return <UttarakhandJournal />;
+  if (page.slug === 'uttar-pradesh') return <UttarPradeshJournal />;
+  if (page.slug === 'jharkhand') return <JharkhandJournal />;
+  if (page.slug === 'odisha') return <OdishaJournal />;
+  if (page.slug === 'west-bengal') return <WestBengalJournal />;
+  if (page.slug === 'jammu-and-kashmir') return <JammuKashmirJournal />;
   if (page.slug === 'bihar') return <BiharJournal page={page} />;
 
   const theme = themeFor(page.state);

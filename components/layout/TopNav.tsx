@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { CartLink } from '@/components/commerce/ShopControls';
 import CraftSearch from '@/components/layout/CraftSearch';
+import { regionalJournals } from '@/lib/states/journalTheme';
 import { SLUG_TO_STATE } from '@/lib/states/slugs';
 import { stateThemeVars } from '@/lib/states/theme';
 import { REGIONS, STATE_THEMES, displayName, themeFor } from '@/lib/stateThemes';
@@ -27,6 +28,10 @@ const pageLinks = [
 export default function TopNav() {
   const pathname = usePathname();
   const routeState = pathname.startsWith('/state/') ? SLUG_TO_STATE[pathname.split('/')[2]] : null;
+  const regionalSlug = pathname.startsWith('/state/') ? pathname.split('/')[2] : '';
+  const regional = Boolean(regionalJournals[regionalSlug]);
+  const regionalRoot = `/state/${regionalSlug}`;
+  const links = regional ? [{ href: regionalRoot, label: 'Overview' }, { href: `${regionalRoot}#crafts`, label: 'Crafts' }, { href: `${regionalRoot}#culture`, label: 'The journal' }, { href: `${regionalRoot}#visit`, label: 'Discover' }] : pageLinks;
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
   const [hash, setHash] = useState('');
@@ -46,6 +51,7 @@ export default function TopNav() {
   }, [pathname]);
 
   const currentPage = (href: string): 'page' | 'location' | undefined => {
+    if (regional) return pathname === regionalRoot && href === `${regionalRoot}${hash}` ? (hash ? 'location' : 'page') : undefined;
     if (pathname !== '/') return undefined;
     if (href === '/') return hash ? undefined : 'page';
     return href === `/${hash}` || (href === '/#collections' && hash === '#categories') ? 'location' : undefined;
@@ -79,7 +85,7 @@ export default function TopNav() {
         <span className="nav-brand-compact" aria-hidden="true"><Image src="/brand/kalakriti-emblem.webp" alt="" width={1254} height={1254} sizes="44px" /><span>Kalakriti</span></span>
       </Link>
 
-      <div className="nav-primary-links">{pageLinks.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}</Link>)}</div>
+      <div className="nav-primary-links">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}</Link>)}</div>
       <div className="nav-right" ref={menuRef} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }} onFocusCapture={event => { if (event.target instanceof Element && event.target.closest('.kk-craft-search')) setOpen(false); }}>
         <Link className="nav-explore-link" href="/explore" aria-current={pathname === "/explore" ? "page" : undefined} onClick={() => choose(null)}>Explore India <ArrowUpRight size={14} aria-hidden="true" /></Link>
         {/* What is currently open, so the navbar always names the region */}
@@ -107,7 +113,7 @@ export default function TopNav() {
 
         {open && (
           <div className="nav-menu" id="state-navigation" aria-label="Pages and states">
-            <div className="nav-menu-primary" aria-label="Explore Kalakriti">{pageLinks.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></Link>)}</div>
+            <div className="nav-menu-primary" aria-label="Explore Kalakriti">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></Link>)}</div>
             <div className="nav-menu-heading"><span><span className="kk-deva" lang="mai">मिथिलाक माटि</span><strong>A country of living traditions</strong></span><span>Choose your next chapter</span></div>
             <Link className="nav-menu-all" href="/explore" onClick={() => choose(null)}><ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> All of India</Link>
 

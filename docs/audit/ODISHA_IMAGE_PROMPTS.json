@@ -1,0 +1,60 @@
+{
+  "generated": "2026-11-21",
+  "tool": "built-in image_gen",
+  "purpose": "Conceptual regional artwork and craft studies, not verified stock or tourist-site photography",
+  "processing": "RGB WebP quality 86, method 6; resized only, original PNGs retained",
+  "reused": {
+    "public/images/wb-dokra.webp": "Generic conceptual lost-wax-style bird study, not a verified district-specific product photograph"
+  },
+  "assets": [
+    {
+      "file": "public/images/od-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 478264,
+      "prompt": "Create a beautiful 3:2 landscape realistic painterly heritage editorial illustration for the Odisha chapter of Kalakriti. A complete carefully composed artisan still-life on a low warm wooden table in a shaded ochre verandah: an Odisha Pattachitra-inspired lotus-and-bird painted panel with intricate red and gold floral borders, folded Sambalpuri-style ikat cloth in ivory, forest green and burnt red, a small round Pipili applique cloth wall hanging with vivid cut-fabric lotus and bird motifs, a delicate silver-toned filigree ornament on a dark green cloth, and folded earthy ivory-and-rust Kotpad-inspired cotton. Small brass lost-wax-style bird at the side. A softly blurred palm-lined landscape and distant warm stone architectural forms, NOT a named temple or photographed tourist destination. All main objects fully visible with breathing room. Premium mature Indian heritage aesthetic, soft daylight, finely tactile textiles and painted surface, warm ivory, burnt red, forest green and muted gold. No people, no words, no writing, no logos, no seals, no UI; concept illustration rather than verified stock or workshop photography."
+    },
+    {
+      "file": "public/images/od-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 312170,
+      "prompt": "Create a 3:2 landscape FLAT DECORATIVE BACKGROUND for a full Odisha heritage-marketplace webpage. Warm pale ivory handmade-paper ground with a very quiet OPEN CENTRAL 68 percent for readable website text. Both vertical edges have beautifully detailed ODISHAN PATTACHITRA-inspired floral vine borders in burnt red, forest green and muted turmeric gold; stylized lotus medallions, slender scrolling foliage, small conch-shell forms and restrained eight-spoked stone-chariot-wheel-inspired roundels, clearly decorative drawings rather than photographs or a reconstruction of a monument. Narrow red and green geometric frieze ribbons at outer edges, finely painted lines and subtle cloth-paper grain. Do not use Bengali Bankura horse motifs, Alpana white-on-red borders, Kashmiri paisleys, chinar leaves or Madhubani fish. All border artwork inside image, each side 12-15 percent of image width, very pale quiet center, no heavy horizontal top or bottom border, suited to vertical repeating page surround. Mature refined hand-painted artistry, no people, no letters, no text, no labels, no logos, no UI, no historical-artifact attribution."
+    },
+    {
+      "file": "public/images/od-pattachitra.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 419976,
+      "prompt": "Square 1:1 premium Odisha PATTACHITRA-inspired painted panel study for a heritage marketplace. A dense elegant composition of a central lotus pond with two stylized graceful birds and flowering vines, arranged symmetrically inside intricate traditional-style ornamental floral borders; confident very fine outlines, rich burnt red ground with warm ivory, forest green and antique-gold details. Odisha painted-panel visual character, NOT Bengal narrative scroll panels or Madhubani style. Entire square panel and paper edges visible, straight-on on a quiet warm ivory surface, finely tactile painted texture. New conceptual artwork, no copying an existing artist, no sacred figures, no people, no words, no lettering, no certificate, no logo, no museum attribution."
+    },
+    {
+      "file": "public/images/od-sambalpuri.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 325980,
+      "prompt": "Square 1:1 premium realistic painterly editorial textile still-life for Odisha Sambalpuri bandha/ikat weaving. A beautiful folded sari-length textile study with resist-dyed geometric patterning in deep forest green, burnt red, muted gold and ivory; characteristic softly feathered colour edges visibly INTEGRATED INTO THE WEAVE, not printed sharp lines and not embroidered raised threads. Bold patterned end panel and a quieter body, on a pale warm cotton ground beside a small wooden shuttle. Soft natural daylight, visible weave, all cloth folds comfortably framed. No people, no text, no labels, no branding, no certificate, no claims of verified provenance or fiber. Mature heritage craft illustration."
+    },
+    {
+      "file": "public/images/od-pipili.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 344292,
+      "prompt": "Square 1:1 premium realistic painterly craft illustration of a PIPILI APPLIQUE wall hanging from an Odisha craft study. One round textile hanging lying flat on warm ivory handwoven cloth: bright burnt red outer ground, forest green, warm golden yellow and ivory CUT-FABRIC motifs stitched on top, stylized lotus, two small birds and concentric circular forms, visible carefully stitched fabric edges and small reflective decorative details. Distinct layered applique construction, not painting and not fine needle embroidery. Full circular hanging and its edge visible with generous margins, natural daylight and tactile cloth. No people, no text, no lettering, no branding, no seals, no fake authenticity claims."
+    },
+    {
+      "file": "public/images/od-filigree.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 398592,
+      "prompt": "Square 1:1 premium realistic painterly editorial craft illustration of a silver-toned Cuttack TARAKASI filigree ornament from Odisha: one delicate lotus-shaped pendant-like decorative piece with extraordinarily fine coiled wire, lace-like openwork petals and a subtle reflective silver tone, lying on matte deep forest-green handloom cloth with warm ivory paper nearby. Entire ornament fully within frame, fine wires visibly legible, understated natural daylight, refined mature heritage marketplace still-life. No gemstone, no hallmark, no metal purity stamp, no brand, no letters, no people, no text, no certificates. Conceptual craft study, not an authenticated jewelry product photo."
+    },
+    {
+      "file": "public/images/od-kotpad.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 270564,
+      "prompt": "Square 1:1 premium realistic painterly editorial textile illustration for Odisha Kotpad handloom craft. An earthy ivory cotton cloth neatly folded with deep rust-maroon and near-black narrow woven borders, simple restrained geometric accents integrated into the weave, tactile slightly slubbed cotton and natural handloom character. On a warm wooden loom edge with a small shuttle and thread in background, soft daylight. Full textile arrangement comfortably framed with generous margins, elegant and understated, warm ivory/rust palette. Do not copy sacred or community-specific emblems or imply their meanings. No people, no writing, no logos, no certification, no organic label, no text. A conceptual weaving study rather than verified product photography."
+    }
+  ]
+}

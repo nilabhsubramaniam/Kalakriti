@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-21",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Photorealistic premium Indian craft editorial still life, landscape 1536x1024. A shaded Punjab courtyard veranda with warm lime plaster and a softly blurred courtyard tree. On a broad low wooden table: folded deep madder red Phulkari embroidered cloth with mustard orange pink geometric darn-stitch diamonds, a pair of burgundy Punjabi embroidered jutti shoes, a dark wooden rectangular keepsake box with fine pale non-ivory floral inlay, a small hammered copper decorative bowl, folded indigo cream flatwoven striped durrie, and a black braided paranda hair accessory with magenta mustard tassels. All six objects clearly visible, coherent realistic scale and construction. Soft natural morning light, elegant earthy saturated palette. No vegetables, produce, people, monuments, writing, watermark or branding. Complete objects with breathing room, camera at table height, original composition not documentary named workshop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c435adb5-672b-4e16-92b7-52a6a8f825cb.png",
+      "path": "public/images/pb-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 316552
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 seamless-feeling decorative website background inspired by Punjabi Phulkari embroidery. Warm ivory woven cotton ground, very fine tactile thread weave. Only along the leftmost and rightmost 10 percent: narrow vertical arrangements of hand-stitched geometric flower diamonds and small stepped triangles in deep madder burgundy, mustard gold, muted pink and tiny deep green accents. Visible straight satin/darning stitches, sophisticated imperfect handmade embroidery texture. Centre 80 percent plain softly lit ivory textile for readable text, extremely restrained. NO horizontal bands, NO top or bottom border, NO frame across top or bottom, no objects or scenes, no letters or symbols of religion, no text or watermark. Edge ornaments run vertically out of crop so repetition does not produce horizontal dividers.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-89fcc6d2-a53a-4e52-b866-697515b9ee6d.png",
+      "path": "public/images/pb-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 343606
+    },
+    {
+      "key": "phulkari",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. Punjabi Phulkari-inspired embroidered stole in deep madder red cotton, generously embroidered small mustard orange pink geometric flower diamonds using visible long straight darning stitches. Folded loosely diagonally to show both complete cloth edge and a broad textile area. Subtle cream studio ground and natural warm soft light. Finely resolved stitch direction and thread texture. Original geometric composition not copied from a historical ceremonial textile. No person, labels, text, watermark, agricultural produce or extra products. Entire object within frame.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-37531311-8c5a-4eab-92ce-d24a783224f4.png",
+      "path": "public/images/pb-phulkari.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 382964
+    },
+    {
+      "key": "jutti",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. A complete matching pair of Punjabi jutti slip-on shoes, burgundy uppers embroidered with restrained mustard gold floral threadwork, slightly rounded pointed toes, flat tan soles, no high heels and no exaggerated curled tips. Three-quarter angle with both shoes fully within frame. Warm ivory studio background, soft natural light, believable stitching and material construction. No feet, people, labels, logos, text or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-82d8a9e6-e48e-4ea1-bb66-601a9d576769.png",
+      "path": "public/images/pb-jutti.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 117306
+    },
+    {
+      "key": "inlay",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. A small closed rectangular dark warm-brown wooden keepsake box inspired by Hoshiarpur wood inlay, delicate pale cream floral vines inlaid flush across lid with a restrained geometric border. The pale material is a modern non-ivory decorative inlay, no ivory or bone. Three-quarter view shows lid, front and side, coherent box construction. Complete box within frame on warm ivory studio ground, soft natural side light, visible grain. No text, badges, maker signature, extra objects or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-069f8010-4eca-43bd-a88c-7c554d20d686.png",
+      "path": "public/images/pb-inlay.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 134212
+    },
+    {
+      "key": "metal",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. A small decorative copper bowl inspired by the hammered metalwork of Jandiala Guru Punjab, warm red-copper surface with fine irregular hammer facets, rounded belly and smoothly finished rim, no handles or engraving. Three-quarter view showing inner and outer surfaces, complete bowl within frame. Warm ivory studio ground, natural side lighting, realistic metal reflections, refined craft catalogue style. No food, water, cooking setup, purity stamps, certification, text, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-90a48fd5-8bca-4e20-b294-5b55e896c98b.png",
+      "path": "public/images/pb-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 85584
+    },
+    {
+      "key": "durrie",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. A Punjabi flatwoven durrie rug folded once diagonally, indigo and warm cream horizontal bands with small madder geometric stepped diamond accents, short cream fringe at one end. Clearly visible flat plain-weave construction, no carpet pile. Entire folded rug within frame on warm ivory studio background, natural soft light, beautiful tactile cotton-like threads. No people, other products, words, badges or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f733fd30-354d-4d8e-a4dc-da154ac97312.png",
+      "path": "public/images/pb-durrie.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 333316
+    },
+    {
+      "key": "paranda",
+      "prompt": "Square premium realistic craft product photograph 1024x1024. One Punjabi paranda hair ornament carefully arranged in a loose U shape: three long black braided cords ending in generously tied magenta and mustard thread tassels with small wrapped thread knots. Balanced clear construction, complete ornament fully visible, no human hair or person. Warm ivory studio backdrop, soft side lighting, realistic fine thread texture, restrained elegant product styling. No metallic religious symbols, labels, writing, watermark or other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-50df1c4f-cf95-4171-97ae-a5cbe8cd257f.png",
+      "path": "public/images/pb-paranda.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 116874
+    }
+  ]
+}

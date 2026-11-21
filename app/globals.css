@@ -3603,3 +3603,280 @@ body:has(.kk-bihar-journal) .kk-footer-availability { display: none; }
 @media (min-width: 901px) { .kk-painting-product { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; } }
 @media (hover: hover) { .kk-painting-gallery button:not(:disabled):hover { border-color: var(--kk-accent); } .kk-bj-work h3 a:hover { text-decoration: underline; text-underline-offset: 5px; } }
 .kk-product-related { margin-top: 40px; }
+
+/* Jammu & Kashmir: the registered lake-blue, rose and sage regional palette. */
+.kk-region-journal { color: var(--kk-ink); background: var(--kk-paper); --kk-primary: var(--kk-accent); --kk-action-halo: color-mix(in srgb, var(--kk-accent) 25%, transparent); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) { background-image: radial-gradient(ellipse at 0% 8%, color-mix(in srgb, var(--kk-secondary) 7%, transparent), transparent 45%), repeating-linear-gradient(0deg, transparent, transparent 5px, color-mix(in srgb, var(--kk-accent) 2%, transparent) 5px, color-mix(in srgb, var(--kk-accent) 2%, transparent) 6px); padding-top: 124px; border-inline: 4px double var(--kk-line); }
+.kk-region-journal * { scroll-margin-top: 200px; }
+.kk-rj-section { width: min(1220px, calc(100% - 36px)); margin-inline: auto; padding-block: 40px; }
+.kk-rj-nav { position: sticky; top: 124px; z-index: 20; border-bottom: 1px solid var(--kk-line); background: color-mix(in srgb, var(--kk-paper) 94%, transparent); backdrop-filter: blur(12px); }
+.kk-rj-nav > div { display: flex; width: min(1220px, calc(100% - 36px)); margin: auto; overflow-x: auto; gap: 24px; }
+.kk-rj-nav a { display: inline-flex; align-items: center; min-height: 52px; font-size: 14px; white-space: nowrap; text-decoration: none; color: var(--kk-ink); }
+.kk-rj-nav a:focus-visible { outline-offset: -3px; }
+.kk-rj-hero { display: grid; gap: 28px; padding-top: 28px; align-items: center; }
+.kk-rj-eyebrow { font-size: 12px; line-height: 1.6; letter-spacing: .11em; color: var(--kk-accent); margin-bottom: 12px; }
+.kk-rj-native { display: inline-flex; flex-direction: column; align-items: flex-start; font-size: 30px; line-height: 2; margin: 6px 0 16px; color: var(--kk-secondary); }
+.kk-rj-native span { font: 12px/1.5 var(--font-sans-stack); letter-spacing: .02em; }
+.kk-rj-hero h1, .kk-rj-collection-hero h1, .kk-rj-article h1 { color: var(--kk-ink); font: 400 clamp(40px, 6vw, 78px)/1.1 var(--kk-font-display); margin: 0 0 20px; letter-spacing: -.025em; overflow-wrap: break-word; }
+.kk-rj-hero h1 em, .kk-rj-heading h2 em, .kk-rj-closing h2 em { color: var(--kk-accent); font-style: normal; }
+.kk-rj-hero-copy > p:not(.kk-rj-eyebrow):not(.kk-rj-native):not(.kk-rj-hero-line) { max-width: 52ch; font-size: 16px; line-height: 1.9; }
+.kk-rj-hero .kk-rj-hero-line { font-size: 18px; line-height: 1.6; margin-bottom: 16px; color: var(--kk-secondary); }
+.kk-rj-hero-art { margin: 0; min-width: 0; position: relative; }
+.kk-rj-hero-art::before { content: ''; position: absolute; inset: -7px; border: 1px solid var(--kk-line); border-radius: 48% 48% 8px 8px / 20% 20% 8px 8px; pointer-events: none; }
+.kk-rj-hero-art img { display: block; width: 100%; height: auto; border-radius: 48% 48% 5px 5px / 20% 20% 5px 5px; }
+.kk-rj-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 26px; }
+.kk-rj-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 12px 20px; border: 1px solid var(--kk-accent); border-radius: 7px; background: var(--kk-accent); color: var(--kk-paper); font: 14px/1.5 var(--font-sans-stack); text-decoration: none; transition: box-shadow 180ms ease; }
+.kk-rj-text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; line-height: 1.5; color: var(--kk-accent); text-decoration: underline; text-underline-offset: 5px; }
+.kk-rj-heading { max-width: 760px; margin-bottom: 28px; }
+.kk-rj-heading h2, .kk-rj-closing h2 { font: 400 clamp(28px, 4vw, 44px)/1.25 var(--kk-font-display); margin-bottom: 18px; color: var(--kk-ink); letter-spacing: -.015em; }
+.kk-rj-heading > p:last-child { font-size: 16px; line-height: 1.85; max-width: 64ch; }
+.kk-rj-craft-grid, .kk-rj-product-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
+.kk-rj-craft, .kk-rj-product { min-width: 0; border: 1px solid var(--kk-line); border-radius: 10px; overflow: hidden; background: var(--kk-paper-deep); }
+.kk-rj-craft { color: inherit; text-decoration: none; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.kk-rj-card-image, .kk-rj-product-image { position: relative; display: block; aspect-ratio: 1.15; background: var(--kk-paper); }
+.kk-rj-card-image img, .kk-rj-product-image img { object-fit: contain; }
+.kk-rj-card-copy { padding: 22px; }
+.kk-rj-card-copy h3 { color: var(--kk-ink); font: 400 24px/1.35 var(--kk-font-display); margin: 7px 0 14px; overflow-wrap: break-word; }
+.kk-rj-card-copy h3 a { color: inherit; text-decoration: none; }
+.kk-rj-card-copy > p:not(.kk-rj-eyebrow) { font-size: 16px; line-height: 1.75; }
+.kk-rj-card-action { display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; font-size: 14px; color: var(--kk-accent); text-decoration: underline; text-underline-offset: 5px; }
+.kk-rj-story-band { position: relative; border-block: 1px solid var(--kk-line); background: linear-gradient(90deg, var(--kk-paper-deep), color-mix(in srgb, var(--kk-tertiary) 7%, var(--kk-paper))); }
+.kk-rj-reading-list { display: grid; gap: 20px; }
+.kk-rj-reading-link { display: grid; grid-template-columns: 85px minmax(0, 1fr); align-items: center; gap: 18px; text-decoration: none; color: inherit; padding-bottom: 20px; border-bottom: 1px solid var(--kk-line); }
+.kk-rj-reading-image { position: relative; min-height: 115px; align-self: stretch; border-radius: 6px; overflow: hidden; }
+.kk-rj-reading-image img { object-fit: cover; }
+.kk-rj-reading-link h3 { font: 400 23px/1.4 var(--kk-font-display); margin-bottom: 10px; }
+.kk-rj-reading-link p:not(.kk-rj-eyebrow) { font-size: 14px; line-height: 1.8; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-market { background: var(--kk-paper-deep); color: var(--kk-ink); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-market select { color: var(--kk-ink); background: var(--kk-paper); border-color: var(--kk-line); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-price { color: var(--kk-accent); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-button { background: var(--kk-accent); border-color: var(--kk-accent); color: var(--kk-paper); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-purchase-status { color: var(--kk-tertiary); }
+.kk-rj-tourism { border: 1px solid var(--kk-line); border-radius: 12px; padding: 24px; background: var(--kk-paper-deep); }
+.kk-rj-places { display: grid; gap: 24px; }
+.kk-rj-places > article { display: flex; flex-direction: column; align-items: flex-start; padding-top: 24px; border-top: 1px solid var(--kk-line); }
+.kk-rj-places svg { color: var(--kk-accent); margin-bottom: 12px; }
+.kk-rj-places h3 { font: 400 28px/1.35 var(--kk-font-display); margin-bottom: 12px; }
+.kk-rj-places p { font-size: 16px; line-height: 1.8; }
+.kk-rj-places .kk-rj-location { display: flex; align-items: center; gap: 6px; font-size: 14px; margin-bottom: 12px; color: var(--kk-secondary); }
+.kk-rj-location svg { margin: 0; }
+.kk-rj-places a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 18px; color: var(--kk-accent); font-size: 14px; text-underline-offset: 5px; }
+.kk-rj-places a svg { margin: 0; }
+.kk-rj-closing { text-align: center; padding-bottom: 64px; }
+.kk-rj-closing > svg { color: var(--kk-secondary); margin-bottom: 20px; }
+.kk-rj-closing .kk-rj-actions { justify-content: center; }
+.kk-rj-detail { padding-top: 150px; }
+.kk-rj-collection-hero { display: grid; gap: 26px; align-items: center; margin-top: 24px; }
+.kk-rj-collection-image { margin: 0; min-width: 0; }
+.kk-rj-collection-image img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.kk-rj-lede { font-size: 18px; line-height: 1.85; max-width: 54ch; }
+.kk-rj-detail-section { margin-block: 44px; }
+.kk-rj-prose { max-width: 78ch; padding: 28px; border: 1px solid var(--kk-line); border-radius: 10px; background: var(--kk-paper-deep); margin-block: 30px; }
+.kk-rj-prose h2 { font: 400 30px/1.4 var(--kk-font-display); margin-bottom: 20px; }
+.kk-rj-prose h3 { font: 400 24px/1.4 var(--kk-font-display); margin: 24px 0 16px; }
+.kk-rj-prose p { font-size: 16px; line-height: 1.95; margin-bottom: 18px; }
+.kk-rj-prose p:last-child { margin-bottom: 0; }
+.kk-rj-article { max-width: 820px; }
+.kk-rj-article header { margin-block: 32px; }
+.kk-rj-article figure { margin: 30px 0; }
+.kk-rj-article figure img { width: 100%; height: auto; border-radius: 10px; display: block; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal).kk-painting-page { padding-top: 150px; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-section { width: min(1220px, calc(100% - 36px)); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-eyebrow { color: var(--kk-accent); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-text-link, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-craft-action { color: var(--kk-accent); border-color: var(--kk-line); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-heading { background: none; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-heading h2 { color: var(--kk-ink); font-family: var(--kk-font-display); font-size: clamp(28px, 4vw, 40px); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-craft { background: var(--kk-paper-deep); border-color: var(--kk-line); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-craft h3 { color: var(--kk-ink); font-family: var(--kk-font-display); font-size: 23px; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal).kk-cart-page { padding-top: 150px; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-lines > li, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-summary { background: var(--kk-paper-deep); border-color: var(--kk-line); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-item > a, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-page h1, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-line-total { color: var(--kk-ink); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-cart-quantity button { color: var(--kk-accent); background: var(--kk-paper); border-color: var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav { --kk-primary: var(--kk-accent); --kk-action-halo: color-mix(in srgb, var(--kk-accent) 25%, transparent); background: var(--kk-paper); border-color: var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .nav-primary-links > a[aria-current] { background: var(--kk-paper-deep); border-color: var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .nav-menu, body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .nav-menu-btn { background: var(--kk-paper); border-color: var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .kk-craft-search form { background: var(--kk-paper); border: 1px solid var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .kk-craft-search input { font-size: 14px; }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav .kk-craft-search input:focus { outline: none; box-shadow: inset 0 0 0 1px var(--kk-line); }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .kk-footer-availability { display: none; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) { background: var(--kk-accent); color: var(--kk-paper); border-top: 5px double color-mix(in srgb, var(--kk-paper) 45%, transparent); }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-footer-mural { opacity: .18; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-footer-mural > img { object-fit: cover; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-footer-mural::after { background: linear-gradient(90deg, var(--kk-accent), transparent); }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner { padding-block: 44px; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner h2, :is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner p, :is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner a, :is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-bottom { color: var(--kk-paper); }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-bottom { border-color: color-mix(in srgb, var(--kk-paper) 30%, transparent); }
+@media (min-width: 641px) {
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) { padding-top: 94px; }
+  .kk-region-journal * { scroll-margin-top: 170px; }
+  .kk-rj-nav { top: 94px; }
+  .kk-rj-section { width: min(1220px, calc(100% - 64px)); padding-block: 48px; }
+  .kk-rj-craft-grid, .kk-rj-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kk-rj-reading-link { grid-template-columns: 150px minmax(0, 1fr); gap: 28px; }
+  .kk-rj-reading-image { min-height: 140px; }
+  .kk-rj-tourism { padding: 32px; }
+  .kk-rj-detail, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal).kk-painting-page, :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal).kk-cart-page { padding-top: 115px; }
+  :is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 901px) {
+  .kk-rj-hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); gap: 48px; }
+  .kk-rj-hero h1 { font-size: clamp(52px, 5vw, 72px); }
+  .kk-rj-craft-grid, .kk-rj-product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kk-rj-places { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kk-rj-collection-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
+}
+@media (hover: hover) {
+  .kk-rj-button:hover { box-shadow: 0 0 0 3px color-mix(in srgb, var(--kk-accent) 12%, transparent), 0 0 24px var(--kk-action-halo); }
+  .kk-rj-craft:hover { border-color: var(--kk-accent); box-shadow: 0 8px 22px color-mix(in srgb, var(--kk-accent) 9%, transparent); }
+  .kk-rj-card-copy h3 a:hover { text-decoration: underline; text-underline-offset: 5px; }
+}
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) { position: relative; isolation: isolate; overflow: hidden; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner, :is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-bottom { position: relative; z-index: 1; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner h2 { font-size: 14px; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner > div:not(.kk-footer-brand) > a { font-size: 14px; min-height: 44px; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner p { font-size: 14px; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-inner .kk-footer-native { font-size: 24px; }
+:is(.kk-footer-jk, .kk-footer-wb, .kk-footer-od, .kk-footer-jh, .kk-footer-up, .kk-footer-uk, .kk-footer-hp, .kk-footer-mp, .kk-footer-cg, .kk-footer-pb, .kk-footer-hr, .kk-footer-dl, .kk-footer-ch) .kk-site-footer-bottom { font-size: 12px; }
+.kk-rj-closing > svg { display: block; margin-inline: auto; }
+body:has(:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal)) .nav-primary-links > a { font-size: 14px; }
+
+/* Full-page Kashmiri textile ground, following Bihar's illustrated surround. */
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) {
+  --kk-region-wash: color-mix(in srgb, var(--kk-paper) 94%, transparent);
+  background: var(--kk-paper-deep) url('/images/jk-paisley-mural.webp') center top / 100% auto repeat-y;
+  border-inline: 0;
+}
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-hero-copy,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-heading,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-collection-hero > div:first-child,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-article > header,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-closing {
+  background: linear-gradient(90deg, var(--kk-region-wash), var(--kk-region-wash) 78%, transparent);
+}
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-hero-copy,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-collection-hero > div:first-child { padding: 20px; border-radius: 10px; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-heading,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-article > header { padding: 16px 20px; border-radius: 8px; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-story-band { background: transparent; }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-reading-link { padding: 18px; border: 1px solid var(--kk-line); border-radius: 8px; background: var(--kk-region-wash); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-craft,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-product,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-prose,
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-tourism {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--kk-secondary) 5%, var(--kk-paper)), var(--kk-paper-deep));
+}
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-article > .kk-rj-text-link { padding-inline: 14px; border-radius: 6px; background: var(--kk-region-wash); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-closing { border-radius: 12px; background: radial-gradient(ellipse, var(--kk-region-wash) 50%, transparent 77%); }
+:is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-heading { padding: 18px; border-radius: 8px; background: linear-gradient(90deg, var(--kk-region-wash), var(--kk-region-wash) 80%, transparent); }
+@media (max-width: 640px) {
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-hero-copy,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-collection-hero > div:first-child { padding: 16px 12px; }
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-heading,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-article > header { padding: 14px 12px; }
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-reading-link { padding: 12px; gap: 12px; }
+}
+@media (max-width: 640px) {
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-hero-copy,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-heading,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-collection-hero > div:first-child,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-article > header,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-rj-closing,
+  :is(.kk-jk-journal, .kk-wb-journal, .kk-od-journal, .kk-jh-journal, .kk-up-journal, .kk-uk-journal, .kk-hp-journal, .kk-mp-journal, .kk-cg-journal, .kk-pb-journal, .kk-hr-journal, .kk-dl-journal, .kk-ch-journal) .kk-bj-heading { background: var(--kk-region-wash); }
+}
+
+/* Bengal inherits its registered terracotta, indigo and brass palette. */
+.kk-wb-journal { background-image: url('/images/wb-mural.webp'); }
+.kk-wb-journal .kk-rj-hero-art img, .kk-wb-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-wb-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-indic-stack); }
+.kk-wb-journal :is(.kk-rj-hero h1, .kk-rj-heading h2, .kk-rj-closing h2, .kk-rj-card-copy h3) { font-weight: 600; }
+
+/* Keep the hero-to-collection transition compact after removing the ribbon. */
+.kk-rj-hero + #crafts { padding-top: 12px; }
+
+/* Odisha: Pattachitra paper, temple typography and registered green/gold accents. */
+.kk-od-journal { background-image: url('/images/od-mural.webp'); }
+.kk-od-journal .kk-rj-hero-art img, .kk-od-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-od-journal .kk-rj-native { align-items: flex-start; font-family: 'Noto Sans Oriya', 'Oriya Sangam MN', var(--font-indic-stack); }
+.kk-od-journal .kk-rj-hero h1 { letter-spacing: -.03em; }
+
+/* Jharkhand: the registered earth-pigment palette and folk typography. */
+.kk-jh-journal { background-image: url('/images/jh-mural.webp'); }
+.kk-jh-journal .kk-rj-hero-art img, .kk-jh-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-jh-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); }
+.kk-jh-journal .kk-rj-hero h1 { font-size: clamp(36px, 5vw, 66px); letter-spacing: -.025em; }
+
+/* Uttar Pradesh — embroidered ivory ground, registered burgundy/gold palette. */
+.kk-up-journal { background-image: url('/images/up-mural.webp'); }
+.kk-up-journal .kk-rj-hero-art img, .kk-up-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-up-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-up-journal .kk-rj-native span { font-size: 14px; }
+.kk-up-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.8vw, 64px); letter-spacing: -.025em; }
+.kk-up-journal .kk-rj-hero .kk-rj-hero-line, .kk-up-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Uttarakhand — Aipan-inspired borders and the registered ochre-red palette. */
+.kk-uk-journal { background-image: url('/images/uk-mural.webp'); }
+.kk-uk-journal .kk-rj-hero-art img, .kk-uk-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-uk-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-uk-journal .kk-rj-native span { font-size: 14px; }
+.kk-uk-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.8vw, 64px); letter-spacing: -.025em; }
+.kk-uk-journal .kk-rj-hero .kk-rj-hero-line, .kk-uk-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Himachal Pradesh — embroidered floral ground and the registered hill palette. */
+.kk-hp-journal { background-image: url('/images/hp-mural.webp'); }
+.kk-hp-journal .kk-rj-hero-art img, .kk-hp-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-hp-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-hp-journal .kk-rj-native span { font-size: 14px; }
+.kk-hp-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -.025em; }
+.kk-hp-journal .kk-rj-hero .kk-rj-hero-line, .kk-hp-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Madhya Pradesh — Gond-inspired painted edges and a quiet paper ground. */
+.kk-mp-journal { background-image: url('/images/mp-mural-v2.webp'); }
+.kk-mp-journal .kk-rj-hero-art img, .kk-mp-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-mp-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-mp-journal .kk-rj-native span { font-size: 14px; }
+.kk-mp-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -.025em; }
+.kk-mp-journal .kk-rj-hero .kk-rj-hero-line, .kk-mp-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+.kk-mp-journal .kk-purchase-status { color: var(--kk-secondary); }
+
+/* Chhattisgarh — coiled-metal-inspired edges and a warm paper ground. */
+.kk-cg-journal { background-image: url('/images/cg-mural.webp'); }
+.kk-cg-journal .kk-rj-hero-art img, .kk-cg-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-cg-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-cg-journal .kk-rj-native span { font-size: 14px; }
+.kk-cg-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -.025em; }
+.kk-cg-journal .kk-rj-hero .kk-rj-hero-line, .kk-cg-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Punjab: Phulkari stitching frames quiet reading surfaces. */
+.kk-pb-journal { background-image: url('/images/pb-mural.webp'); }
+.kk-pb-journal .kk-rj-hero-art img, .kk-pb-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-pb-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-indic-stack); color: var(--kk-accent); }
+.kk-pb-journal .kk-rj-native span { font-size: 14px; }
+.kk-pb-journal .kk-rj-hero h1 { font-size: clamp(40px, 5vw, 72px); }
+.kk-pb-journal .kk-rj-hero .kk-rj-hero-line, .kk-pb-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Haryana: flatwoven geometry and reed bindings frame quiet reading areas. */
+.kk-hr-journal { background-image: url('/images/hr-mural.webp'); }
+.kk-hr-journal .kk-rj-hero-art img, .kk-hr-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-hr-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-hr-journal .kk-rj-native span { font-size: 14px; }
+.kk-hr-journal .kk-rj-hero h1 { font-size: clamp(40px, 5vw, 72px); }
+.kk-hr-journal .kk-rj-hero .kk-rj-hero-line, .kk-hr-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Delhi: floral threadwork and carved-screen detail around calm reading areas. */
+.kk-dl-journal { background-image: url('/images/dl-mural.webp'); }
+.kk-dl-journal .kk-rj-hero-art img, .kk-dl-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-dl-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-deva-stack); color: var(--kk-accent); }
+.kk-dl-journal .kk-rj-native span { font-size: 14px; }
+.kk-dl-journal .kk-rj-hero h1 { font-size: clamp(40px, 5vw, 72px); }
+.kk-dl-journal .kk-rj-hero .kk-rj-hero-line, .kk-dl-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+
+/* Chandigarh: mosaic edges and concrete texture around quiet reading areas. */
+.kk-ch-journal { background-image: url('/images/ch-mural.webp'); }
+.kk-ch-journal .kk-rj-hero-art img, .kk-ch-journal .kk-rj-hero-art::before { border-radius: 10px; }
+.kk-ch-journal .kk-rj-native { align-items: flex-start; font-family: var(--font-indic-stack); color: var(--kk-accent); }
+.kk-ch-journal .kk-rj-native span { font-size: 14px; }
+.kk-ch-journal .kk-rj-hero h1 { font-size: clamp(36px, 4.6vw, 62px); letter-spacing: -.025em; }
+.kk-ch-journal .kk-rj-hero .kk-rj-hero-line, .kk-ch-journal .kk-rj-places .kk-rj-location { color: var(--kk-ink); }
+@media (min-width: 901px) {
+  .kk-ch-journal .kk-rj-craft-grid, .kk-ch-journal .kk-rj-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

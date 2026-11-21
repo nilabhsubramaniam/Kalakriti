@@ -1,0 +1,77 @@
+{
+  "method": "Built-in image_gen; original conceptual regional artwork. Source PNGs retained outside repository. WebP conversion only.",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Landscape 1536x1024. Complete uncropped still life on a weathered wooden table in a quiet Himalayan stone veranda, distant hazy wooded hills. Six crafts: an ochre-red square painted panel with white dotted geometric floral Aipan-inspired decoration, a small woven ringal bamboo basket, a warm hammered copper vase, folded fluffy ivory wool blanket with narrow charcoal bands, a carved wooden floral panel, folded natural oatmeal nettle cloth. Harmonious believable arrangement, ample space around objects, tactile materials, no snow fantasy, monuments, deities, swastikas or ritual symbols.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bc2bde2f-ffc0-4dba-967a-fc74e02fd1a5.png",
+      "target": "public/images/uk-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 451470
+    },
+    {
+      "key": "mural",
+      "prompt": "Use case: stylized-concept. Landscape 1536x1024 original decorative Aipan-inspired website background for Uttarakhand. Warm pale ivory handmade-paper central 75 percent almost blank and quiet. Rich ochre-red painted strips confined to far left and right edges, adorned with delicate white finger-painted dotted lines, floral rosettes, simple diamonds and flowing geometric borders. Slightly imperfect brushwork and fine paper texture. A few tiny forest-green leaf accents at outer edges. Flat continuous surface, no frames, people, buildings, text, logos, swastikas, deities, religious diagrams, footprints or ceremonial authenticity claims. Elegant restrained rather than dense.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d141d47d-f624-4ede-ac52-457d8d3659a7.png",
+      "target": "public/images/uk-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 243218
+    },
+    {
+      "key": "aipan",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One square ochre-red painted decorative panel, white dotted floral rosette and nested geometric border, original nonceremonial Aipan-inspired composition. Full panel visible with breathing space on warm ivory ground, slight handmade brush variation, no swastika, deity, footprints, text or ritual diagram. Straight front view.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c3444f99-795b-47e1-a9f0-7e0f5d04be11.png",
+      "target": "public/images/uk-aipan.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 242714
+    },
+    {
+      "key": "ringal",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small open ringal bamboo basket, fine narrow interlaced strips, gently tapering rounded form, bound rim, warm straw tones, entire basket inside frame on neutral pale stone, three-quarter view, no painted or plastic parts.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c41545a4-1488-462f-ba69-734460feb3ad.png",
+      "target": "public/images/uk-ringal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 158420
+    },
+    {
+      "key": "copper",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One small hammered copper decorative vase, rounded body, short neck and flared mouth, handworked shallow hammer texture, reddish copper patina, entire object visible on warm ivory ground, no engravings, handles, spout, water or health claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-1a4f06ea-7369-40d9-8459-349b8055a94c.png",
+      "target": "public/images/uk-copper.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 57896
+    },
+    {
+      "key": "thulma",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded thick ivory wool blanket inspired by Uttarakhand Thulma woollens, plush long raised nap, narrow charcoal woven bands visible at the end, simple utilitarian textile, entire folded blanket visible, close enough to see wool fibres. No Kinnauri multicolour borders, embroidery, printed pattern or staged luxury fur.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-70b9954e-eac0-4dca-afa3-bc18b0ad4f7a.png",
+      "target": "public/images/uk-thulma.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 198902
+    },
+    {
+      "key": "likhai",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One rectangular carved wood decorative panel inspired by Kumaon Likhai architectural carving. Warm brown wood, original repeated floral rosettes and scrolling leaf border in shallow relief, fine chisel marks, entire panel visible, softly lit three-quarter product view on ivory background. No deities, temple replica, doors, figures, lettering or historical reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8a938c5e-d59d-48dd-99b3-7bc6fc31adc9.png",
+      "target": "public/images/uk-likhai.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 187416
+    },
+    {
+      "key": "nettle",
+      "prompt": "Use case: product-mockup. Original conceptual Uttarakhand regional craft artwork for Kalakriti, premium realistic materials, soft natural daylight, warm ivory and ochre-red with forest-green accents. No text, letters, labels, logos, watermark, people, named-maker attribution or certification marks. Square 1024x1024. One folded oatmeal and natural brown coarse woven textile inspired by Himalayan nettle fibre work, visible slub yarn and simple weave, narrow plain darker border and short twisted fringe, entire cloth inside frame, soft neutral sandstone ground. Show distinct plant-fibre texture, not wool, silk, embroidery or printed geometric pattern.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-efc1520d-f47b-4a2d-9a07-96a5dc70aa09.png",
+      "target": "public/images/uk-nettle.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 325920
+    }
+  ]
+}

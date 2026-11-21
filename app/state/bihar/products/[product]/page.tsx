@@ -1,7 +1,7 @@
 import ProductDetail, { productMetadata } from '@/components/product/ProductDetail';
 import { productDetails } from '@/lib/commerce/productDetails';
 
-const products = productDetails.filter(item => item.productId !== 'p-kohbar');
+const products = productDetails.filter(item => !item.regionSlug && item.productId !== 'p-kohbar');
 export const dynamicParams = false;
 export function generateStaticParams() { return products.map(item => ({ product: item.slug })); }
 export function generateMetadata({ params }: { params: { product: string } }) {
