@@ -2,7 +2,7 @@ import { themeFor } from '@/lib/stateThemes';
 
 /** Editorial presentation only. Regional facts and routes remain in the state registry. */
 export const regionalStudies = [
-  { state: 'Bihar', craft: 'Sujani embroidery', image: 'sujani-stitch-study', detail: 'A story told through cloth and stitch.', kind: 'Embroidery', href: '/state/bihar#craft-sujani' },
+  { state: 'Bihar', craft: 'Sujani embroidery', image: 'sujani-stitch-study', detail: 'A story told through cloth and stitch.', kind: 'Embroidery', href: '/state/bihar/crafts/sujani' },
   { state: 'Tamil Nadu', craft: 'Kanjivaram silk', image: 'tamil-silk-workshop', detail: 'Colour, woven borders and the work of the loom.', kind: 'Weaving' },
   { state: 'Kerala', craft: 'Kasavu textiles', image: 'kerala-weaving-study', detail: 'Ivory cloth and the quiet beauty of gold.', kind: 'Weaving' },
   { state: 'Punjab', craft: 'Phulkari', image: 'phulkari-stitch-study', detail: 'A field of colour, worked in thread.', kind: 'Embroidery' },

@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { CartLink } from '@/components/commerce/ShopControls';
 import CraftSearch from '@/components/layout/CraftSearch';
 import { SLUG_TO_STATE } from '@/lib/states/slugs';
 import { stateThemeVars } from '@/lib/states/theme';
@@ -90,7 +91,7 @@ export default function TopNav() {
           </span>
         )}
 
-        <button
+        <div className="nav-utility-actions"><button
           ref={triggerRef}
           className="nav-menu-btn"
           type="button"
@@ -102,7 +103,7 @@ export default function TopNav() {
           <span className="nav-states-label">States</span><span className="nav-mobile-label">{open ? 'Close' : 'Menu'}</span>
           <ChevronDown className="kk-ui-icon nav-caret" data-open={open} size={16} aria-hidden="true" />
           <span className="nav-mobile-icon" aria-hidden="true">{open ? <X size={17} /> : <Menu size={17} />}</span>
-        </button>
+        </button><CartLink /></div>
 
         {open && (
           <div className="nav-menu" id="state-navigation" aria-label="Pages and states">

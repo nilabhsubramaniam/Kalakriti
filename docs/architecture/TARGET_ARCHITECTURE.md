@@ -1,5 +1,7 @@
 # Target architecture
 
+> **Implemented Bihar collection and reading routes — 2026-11-21:** The approved Bihar flow separates district-labelled craft discovery, nine craft collections and four journal articles. All thirteen new destinations are prebuilt; no client data layer, dependency or commerce service was introduced. [Current behavior and evidence](../audit/BIHAR_MITHILA_JOURNAL.md).
+
 > **Implemented Bihar journal redesign — 2026-11-20:** Bihar now has a dedicated static, server-rendered Mithila journal. The district map is removed from its page at the user’s request; the independent atlas and other region pages retain their existing architecture. Native details provide stories and previews without a new client island. [Design, imagery and evidence](../audit/BIHAR_MITHILA_JOURNAL.md).
 
 > **Implemented regional editorial milestone — 2026-11-20:** All 36 existing region routes incorporate craft introductions from a typed server-side content module. The 35 overview pages render three selected descriptive craft cards, while Bihar retains its detailed content. No new runtime data service, route, dependency or map architecture was introduced. [Implementation and sources](../audit/STATE_CRAFT_CONTENT.md).
@@ -12,7 +14,7 @@
 
 > **Latest approved composition — 2026-11-17:** Following user feedback, the illustrated craft-and-culture hero again opens the homepage. 3D geographic discovery and the opt-in cultural showcase remain immediately below, in one compact framed section. Renderer, store, fallback and offline asset decisions remain implemented; see [homepage refinement](../audit/HOMEPAGE_BALANCE.md).
 
-> **Implemented map milestone — 2026-11-17:** The approved state-first 3D map and cultural showcase now exist. See [Three.js architecture](THREEJS_ARCHITECTURE.md) for the implemented boundaries and decision table. Runtime is lazy vanilla Three.js; meshes are generated offline into same-origin gzip buffers, with D3 fallback. Hash-named buffers have immutable cache headers; CSP and the default `.next` deployment output remain unchanged. `KALAKRITI_BUILD_DIR=.next-relief` is an optional isolated local QA output. Backend, product viewers and other target domains below remain proposals.
+> **Implemented map milestone — 2026-11-17:** The approved state-first 3D map and cultural showcase now exist. See [Three.js architecture](THREEJS_ARCHITECTURE.md) for the implemented boundaries and decision table. Runtime is lazy vanilla Three.js; meshes are generated offline into same-origin gzip buffers, with D3 fallback. Hash-named buffers have immutable cache headers; CSP and the default `.next` deployment output remain unchanged. `KALAKRITI_BUILD_DIR=.next-relief` is an optional isolated local QA output. Backend, authored product models and other target domains below remain proposals. A bounded Kohbar image-backed detail viewer was implemented on 21 November 2026; see the Three.js architecture.
 
 > **Status: Proposed — not approved.** Nothing here is implemented. Items marked **Decision** need explicit approval (CLAUDE.md §14, Phase 3). Based on the [audit](../audit/REPOSITORY_OVERVIEW.md) and the [gap analysis](GAP_ANALYSIS.md).
 >

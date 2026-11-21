@@ -1,10 +1,14 @@
 # Three.js architecture
 
+> **Latest product coverage — 2026-11-21:** All 12 Bihar items now share the product detail/gallery pattern described in “All Bihar product sections” below. The earlier Kohbar-only milestone is retained as implementation history.
+
+> **Painting detail milestone — 2026-11-21:** Kohbar Wedding Panel now has a static detail route and opt-in, image-backed Three.js viewing angles. This is a presentation of the existing front image, not an authored or scanned product model. Accurate back/depth/360° models remain future work.
+
 > **Current composition — 2026-11-19:** Geographic discovery now lives at the dedicated static `/explore` route, with a borderless full-width map presentation. The illustrated homepage contains no map section. Header, hero, footer and state-page map links lead to this destination. See [dedicated atlas implementation](../audit/EXPLORE_ATLAS.md).
 
 > **Latest approved composition — 2026-11-17:** Following user feedback, the illustrated craft-and-culture hero again opens the homepage. 3D geographic discovery and the opt-in cultural showcase remain immediately below, in one compact framed section. Renderer, store, fallback and offline asset decisions remain implemented; see [homepage refinement](../audit/HOMEPAGE_BALANCE.md).
 
-> **Status: Map experience approved and implemented locally, 2026-11-17.** The user approved the extruded-state concept and explicitly requested the cultural showcase. Product viewers and immersive storytelling remain proposals, not implemented features. No deployment is authorized.
+> **Status: Map experience approved and implemented locally, 2026-11-17.** The user approved the extruded-state concept and explicitly requested the cultural showcase. Authored product models and immersive storytelling remain proposals. The bounded Kohbar image-backed viewer is implemented separately below. No deployment is authorized.
 
 ## Decision record
 
@@ -21,7 +25,8 @@
 | 3D default | Active when the atlas enters view; automatic 2D fallback on failure | Approved visual direction; implemented, with real-device performance follow-up |
 | Model decoders | No Draco/Meshopt/KTX2 decoder in this map slice | Not needed |
 | React Three Fiber / Drei / GSAP | Not installed | Not needed |
-| Product GLB viewer | Image-first gallery with optional accurate model | Future proposal |
+| Painting detail viewer | Image-first Kohbar detail, opt-in front/left/right/detail views | Implemented image-backed presentation; no verified depth or back |
+| Product GLB viewer | Optional accurate, approved product model | Future proposal |
 | Artisan scene | Small, consented, authentic scene after the core catalogue works | Future proposal |
 
 ## Source boundaries
@@ -61,3 +66,23 @@ CSP remains unchanged: no external CDN, Worker or WASM is used. The earlier blan
 ## Validation
 
 See [THREE_MAP_IMPLEMENTATION](../audit/THREE_MAP_IMPLEMENTATION.md) for current build, browser, dependency and measurement evidence. Hardware mobile FPS, physical-device touch behavior, screen-reader coverage and throttled Core Web Vitals remain follow-up validation. Do not infer those from a desktop software-rendering test.
+
+## Kohbar painting viewer
+
+- Static route: `/state/bihar/paintings/kohbar-wedding-panel`. Collection image, title and detail link lead here; the basket links back to this detail page. No viewer is loaded on a listing page.
+- `lib/commerce/productDetails.ts` contains the eligible product ID, stable slug, reviewed normalized image bounds and camera presets. Eligibility is explicit; other paintings need their own reviewed imagery before enabling 3D.
+- `components/product/ProductGallery.tsx` defaults to the existing image and imports `lib/three/createProductScene.ts` only after the user requests 3D. Prices, metadata and purchase controls remain ordinary DOM outside WebGL.
+- The scene maps the existing framed front image to a plane. It does not invent frame thickness, rear construction, a scan or a GLB. Rotation is bounded to front-facing angles; presets and zoom change immediately, with no autoplay or motion that bypasses reduced-motion preferences.
+- Mouse/touch dragging, keyboard rotation/zoom/reset and named HTML controls are supported. Touch retains vertical document scrolling.
+- Rendering is demand-driven and stops when hidden/offscreen. DPR is capped at 1.5; observers, events, texture, geometry, material, renderer, context and scheduled frames are disposed when switching modes or leaving the route. Import/image timeout and WebGL/context failure restore the normal image. No dependencies, external origins, CSP changes or deployment changes were introduced.
+- TypeScript, strict lint and the 57-output static production build passed. Local Chrome/SwiftShader checks cover five widths (320, 390, 768, 1024, 1440), click-through, presets, keyboard, zoom, idle rendering, context-loss/unavailable-WebGL fallback, cart and unknown-route 404. These checks do not establish physical-device FPS or asset authenticity.
+
+Additional local lifecycle checks passed for real pointer dragging, failed source-image loading, and server-rendered image/details with JavaScript disabled. Owned WebGL buffers, program and image texture were deleted on mode exit; renderer placeholder textures are released through forced context loss. Screenshots of the image mode, angled view and mobile detail were reviewed.
+
+## All Bihar product sections — 21 November 2026
+
+The shared `ProductDetail` server component and `ProductGallery` client component now serve all 12 existing Bihar SKUs across nine craft collections. Kohbar retains its original painting URL; the remaining 11 pages are generated under `/state/bihar/products/[product]`, with `dynamicParams=false`. Collection images/titles/detail actions, related-product cards and basket destinations use the same explicit `productHref` registry. No prices or content are invented for other states.
+
+The scene now fits both the source-image aspect ratio and the configured crop to the viewport; a landscape Sujani image is not stretched into a square. Existing imagery is retained in full except the previously reviewed Kohbar crop. Coiling, stitch, weave, line and surface detail labels are configured per product. This extends the image-backed viewing interaction; it does not turn basket, jewellery, textile or produce photographs into verified volumetric models. Original imagery, responsive HTML details, shared market prices/cart and graceful fallback remain available. No new dependencies, CSP exceptions, map changes or backend routes were introduced.
+
+Validation for the expanded slice: strict TypeScript, zero-warning lint and a 68-output static build passed. Local Chrome exercised all 12 product routes and their four presets at 320px and 1440px, plus the landscape textile at 390/768/1024px. All nine collection sections linked their items correctly; related-item navigation, EUR pricing, basket destinations, unknown-product 404 and unavailable-WebGL fallback passed without runtime exceptions or horizontal overflow. Landscape gallery stages now follow the source aspect ratio to avoid excess vertical space.

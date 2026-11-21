@@ -26,7 +26,7 @@ export default function CraftSearch() {
   return <div className="kk-craft-search" onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false); }}>
     <form role="search" onSubmit={e => { e.preventDefault(); setOpen(true); setSearched(true); input.current?.focus(); }} onKeyDown={e => { if (e.key === 'Escape') { setOpen(false); input.current?.focus(); } }}>
       <label className="kk-sr-only" htmlFor={id}>Search regions and crafts</label>
-      <input ref={input} id={id} type="search" placeholder="Search crafts, regions…" value={query} onChange={e => { setQuery(e.target.value); setOpen(true); setSearched(false); }} onFocus={() => setOpen(true)} autoComplete="off" aria-controls={`${id}-results`} />
+      <input ref={input} id={id} type="search" placeholder={pathname.startsWith('/state/bihar') ? 'Search crafts…' : 'Search crafts, regions…'} value={query} onChange={e => { setQuery(e.target.value); setOpen(true); setSearched(false); }} onFocus={() => setOpen(true)} autoComplete="off" aria-controls={`${id}-results`} />
       <button type="submit" aria-label="Search"><Search className="kk-ui-icon" size={16} aria-hidden="true" /></button>
     </form>
     {open && (term || searched) && <div className="kk-search-results" id={`${id}-results`}>

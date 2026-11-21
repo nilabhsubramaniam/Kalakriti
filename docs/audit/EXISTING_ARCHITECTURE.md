@@ -1,5 +1,7 @@
 # Existing architecture
 
+> **Bihar collection-first navigation — 2026-11-21:** Bihar now links to nine statically generated craft collections and four journal articles. Craft cards and journal rows navigate instead of expanding. The district-led discovery page no longer renders product previews or availability notices. [Current Bihar implementation](BIHAR_MITHILA_JOURNAL.md).
+
 > **Bihar redesign — 2026-11-20:** Bihar now renders a dedicated server-side Mithila journal with a continuous painted backdrop, illustrated craft cards and native disclosure stories. Its district map is removed from the page; the separate atlas and other state templates remain unchanged. [Implementation and validation](BIHAR_MITHILA_JOURNAL.md).
 
 > **Regional content expansion — 2026-11-20:** All 36 existing region pages now incorporate server-side editorial notes. The 35 overview pages show three selected craft descriptions with material labels in themed parchment cards, while Bihar keeps its detailed catalogue and gains an expanded crafts introduction. See [content scope, source review and validation](STATE_CRAFT_CONTENT.md). Routes, map data and static rendering are preserved.
@@ -83,3 +85,7 @@ Tailwind is installed and its directives sit at the end of `globals.css`. No com
 - Vercel's Git integration deploys. GitHub Actions only validates (`permissions: contents: read`, pnpm 11, Node 24).
 - Security headers and the GeoJSON cache policy are set in `next.config.mjs`.
 - No environment variable is needed to build; `lib/env.ts` has no importers.
+
+**21 November 2026 — Kohbar detail:** A static `/state/bihar/paintings/[painting]` route now generates one eligible painting detail. Its client gallery lazy-imports an image-backed Three.js surface only on explicit activation; metadata, product information, market prices and cart remain independent of WebGL. This does not add authored GLB assets or a backend.
+
+**21 November 2026 — all Bihar collections:** The product detail/gallery pattern now applies to all 12 catalogue items across nine craft sections. A shared server detail layout and opt-in image-backed 3D viewer provide per-item content, original aspect ratio, close-up labels, market prices, cart and related-product links. Eleven new static `/state/bihar/products/[product]` routes join the preserved Kohbar URL. See `lib/commerce/productDetails.ts`, `components/product/ProductDetail.tsx`, `components/product/ProductGallery.tsx` and `lib/three/createProductScene.ts`. Existing image assets are retained; these are presentation surfaces, not newly authored 3D models.

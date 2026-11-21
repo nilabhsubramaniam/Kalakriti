@@ -23,7 +23,7 @@ Kalakriti brings regional craft stories into an illustrated, responsive discover
 | Chapter | What is implemented |
 | --- | --- |
 | **The heritage homepage** | A complete embroidery panorama, six regional stories in an automatic carousel, eight textile traditions, process stories and an artistic Mithila footer. |
-| **Bihar, painted by hand** | A dedicated Mithila journal with a full-page painted backdrop, a top section menu, four cultural chapters, nine illustrated craft stories and twelve product previews. Native disclosures work without JavaScript. |
+| **Bihar, painted by hand** | A district-led Bihar page with a painted backdrop, nine craft collections, dedicated collection pages and four separate journal articles. Navigation works through ordinary links. |
 | **A journey across India** | A separate `/explore` atlas with lazy-loaded Three.js relief, D3 map mode, state selection, regional hover themes and an optional cultural showcase. |
 | **Regional craft introductions** | All 36 existing regional routes have introductions and craft content. Bihar has the detailed journal; the other 35 pages have selected craft descriptions and regional visual themes. |
 | **Shared discovery** | Responsive navigation, regional links, local craft search, library icons and an illustrated brand identity. |
@@ -59,6 +59,8 @@ Open [localhost:3000](http://localhost:3000).
 | `/` | Illustrated heritage homepage |
 | `/explore` | Interactive India atlas and cultural showcase |
 | `/state/bihar` | Mithila painting journal |
+| `/state/bihar/crafts/madhubani` | Madhubani forms, district context and making traditions |
+| `/state/bihar/journal/the-wall-came-first` | A dedicated Mithila reading page |
 | `/state/gujarat` | Example regional craft overview |
 | `/state/[slug]` | The remaining regional pages, generated at build time |
 
@@ -71,7 +73,7 @@ pnpm validate
 pnpm start
 ```
 
-`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **42 static outputs**, including the regional routes and framework outputs.
+`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **68 static outputs**, including the regional routes and framework outputs.
 
 To check a production build while keeping a development server's cache separate:
 
@@ -91,7 +93,7 @@ Use [localhost:3105](http://localhost:3105) for that preview. Stop servers with 
 - **Surfaces:** handwritten CSS in `app/globals.css`, with scoped `kk-*` classes. Tailwind remains installed; the current UI uses the existing CSS system.
 - **Motion:** CSS reveals and progressive scroll effects, plus a regional carousel that pauses for interaction and respects reduced motion. The atlas showcase starts only on request.
 - **Imagery:** editorial illustrations and craft studies are labelled. They are not authenticated product photographs or evidence of a maker's identity, provenance or certification.
-- **Interaction:** native disclosures, visible focus styles, keyboard-accessible regional controls, mobile navigation and D3 fallback when the 3D view is unavailable.
+- **Interaction:** direct collection links, separate reading pages, visible focus styles, keyboard-accessible regional controls, mobile navigation and D3 fallback when the 3D view is unavailable.
 
 Bihar's map was removed from its journal at the user's request. Geographic discovery remains on `/explore`. The full-page Mithila painting is preserved; separate backgrounds behind its section menu and headings are transparent.
 
@@ -149,6 +151,10 @@ Start with the [documentation index](docs/README.md). It distinguishes implement
 | [Artwork and asset pipeline](docs/architecture/ASSET_PIPELINE.md) | Image provenance, generation prompts and production assets |
 | [Security review](docs/audit/SECURITY_REVIEW.md) | Baseline findings and recorded follow-up work |
 | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Future milestones and approval boundaries |
+
+All 12 Bihar products across nine craft collections open dedicated detail pages with optional Three.js full/left/right/detail views, rotation and zoom. The shared viewer uses existing images at their original aspect ratios; these are image-backed presentations, not scanned or authored object models. Product details, original images, regional prices and cart remain independent of WebGL. The original Kohbar detail URL is preserved; the other products use `/state/bihar/products/[product]`.
+
+The Bihar collections include a local persistent cart at `/cart`, quantity and removal controls, and selectable INR, EUR, USD and GBP sample prices. Market prices are fixed local fixtures in `lib/commerce/catalog.ts`; they are not live exchange rates. No checkout, payment, inventory reservation or order service is connected. The tourism chapter links Rajgir, Bodh Gaya and Nalanda to official Bihar visitor information.
 
 Next product milestones include maker-reviewed regional content, authenticated product photography, a real catalogue, and separately approved commerce and seller workflows. Backend, account, payment, admin and mobile architecture documents describe proposals; they are not implemented features.
 
