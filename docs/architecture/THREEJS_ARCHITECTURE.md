@@ -131,3 +131,11 @@ Validation for the expanded slice: strict TypeScript, zero-warning lint and a 68
 **22 November 2026 — Puducherry:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
 
 **22 November 2026 — Island chapters:** Twelve Andaman & Nicobar/Lakshadweep items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Rajasthan:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Gujarat:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Maharashtra:** Six items reuse the opt-in image-backed viewer and four presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain available without WebGL.
+
+**22 November 2026 — western coastal chapters:** Twelve items reuse the optional image-backed viewer and four existing presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain usable without WebGL.

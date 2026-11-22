@@ -186,3 +186,19 @@ Eight original concepts are stored under `public/images/py-*.webp`: hero, mural,
 ### Andaman & Nicobar and Lakshadweep chapters — 2026-11-22
 
 Sixteen original concepts are stored under `public/images/an-*.webp` and `public/images/ld-*.webp`: two heroes, two quiet-centred murals and twelve item images. Built-in generation, visual inspection and WebP conversion retain the original PNGs. Woven bamboo/forest textures distinguish Andaman from Lakshadweep’s flowing lagoon/coir edges. No marine-shell, coral, turtle-shell inventory, named workshops or attributed community patterns are added. Images are concepts rather than documentary inventory photography. Earlier assets remain intact. [Andaman prompts and metadata](../audit/ANDAMAN_NICOBAR_IMAGE_PROMPTS.json) and [Lakshadweep prompts and metadata](../audit/LAKSHADWEEP_IMAGE_PROMPTS.json) record provenance.
+
+### Rajasthan chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/raj-*.webp`: hero, mural, pottery, sanganer, bagru, bandhani, kota and miniature. Built-in generation, visual inspection and WebP conversion retain source PNGs. Fine blue floral vertical borders leave a quiet warm-ivory centre. Light-ground Sanganer prints, indigo-ground Bagru work, tied-dot Bandhani and open-check Kota weaving have distinct compositions. The miniature is an original garden scene rather than an attributed historical reproduction; the courtyard is not a named workshop. These are concepts rather than documentary inventory photographs. Earlier assets remain intact. [Exact prompts and metadata](../audit/RAJASTHAN_IMAGE_PROMPTS.json) record provenance.
+
+### Gujarat chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/gj-*.webp`: hero, mural, ajrakh, embroidery, rogan, patola, tangaliya and lippan. Built-in generation, visual inspection and WebP conversion retain source PNGs. Indigo/maroon geometric vertical borders leave a quiet ivory centre. Each process has its own composition; the embroidered cushion is a contemporary design and the Rogan-inspired floral tree is original. The courtyard is unnamed. The cushion is displayed filled, while the product is a cover only. These are concepts rather than documentary inventory photographs. Earlier assets remain intact. [Exact prompts and metadata](../audit/GUJARAT_IMAGE_PROMPTS.json) record provenance.
+
+### Maharashtra chapter — 2026-11-22
+
+Eight original concepts use `public/images/mh-*.webp`: hero, mural, warli, paithani, himroo, kolhapuri, sawantwadi and solapur. Earthen geometric vertical borders preserve a quiet ivory centre. The Warli-inspired landscape avoids ceremonial compositions or named-artist imitation; the courtyard is unnamed. These are concepts rather than documentary inventory photographs. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/MAHARASHTRA_IMAGE_PROMPTS.json) record provenance.
+
+### Goa and western union-territory chapters — 2026-11-22
+
+Eighteen local WebP concepts use `ga-*` (eight), `dn-*` (five) and `dd-*` (five) filenames. Tile/check motifs, bamboo/earthen geometry and teal interlaced strips distinguish the three quiet-centred murals. Original PNGs and previous assets remain intact. The images are concepts, not documentary inventory photos. No named workshop, ceremonial reproduction, marine-shell or ivory inventory is introduced. [Generation prompts and metadata](../audit/WEST_COAST_IMAGE_PROMPTS.json) record provenance.

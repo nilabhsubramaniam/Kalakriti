@@ -269,3 +269,11 @@ See [ASSET_PIPELINE](ASSET_PIPELINE.md) and [DEPLOYMENT_ARCHITECTURE](DEPLOYMENT
 **Implemented regional expansion — 22 November 2026:** Puducherry extends the static chapter and shared sample catalogue/cart to a twentieth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. Visitor information includes Puducherry, Karaikal, Mahé and Yanam without inventing catalogue origins in each enclave. No backend, payment, dependency or renderer change is introduced.
 
 **Implemented regional expansion — 22 November 2026:** Andaman & Nicobar and Lakshadweep extend the static chapter and shared sample catalogue/cart to twenty-two regions. Six Andaman and three Lakshadweep collections connect twelve item routes and six reading routes. Broad regional craft associations avoid invented island or community product provenance; visitor links include official access-information pathways. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Rajasthan extends the static chapter and shared sample catalogue/cart to a twenty-third region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Gujarat extends the static chapter and shared sample catalogue/cart to a twenty-fourth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Maharashtra extends the static chapter and shared sample catalogue/cart to a twenty-fifth region. Six collections, six item routes and three reading routes reuse the existing frontend. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Goa and the two existing Dadra & Nagar Haveli / Daman & Diu discovery chapters extend the catalogue to 28 regional entries. They share 12 item routes and eight reading routes within the existing static architecture. Cultural discovery entries are not administrative-entity counts; no map/schema migration, backend or dependency change is introduced.

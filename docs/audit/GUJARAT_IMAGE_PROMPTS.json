@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Landscape 3:2 still life in an unnamed Gujarat courtyard with warm plaster, subtle geometric timber detail and soft shade. Arrange six distinct crafts on and behind a low table: indigo-and-maroon Ajrakh-style geometric printed stole, ivory contemporary embroidered cushion with maroon and ochre geometric stitches and small mirrors, dark indigo Rogan-inspired painted cloth with original flowing golden floral tree, folded crimson Patola-inspired double-ikat geometric textile with indigo/ochre details, indigo Tangaliya-inspired woven stole with small raised ivory dot rows, and small ivory clay-relief mirrorwork wall panel. All six clear and visible with breathing room, no people, no identifiable monument or workshop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-54e14a2f-c611-423a-be5d-df5e56dc0681.png",
+      "path": "public/images/gj-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 488392
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Landscape 3:2 FLAT website background. Central 84% quiet pale warm ivory handmade-paper texture. ONLY outer left and right 8% vertical edges show restrained indigo and maroon Ajrakh-inspired geometric repeat bands with fine ochre embroidered-style stitch accents and tiny muted mirror-like circles. Delicate intricate side borders, not shiny or glittery. NO horizontal bands, no top/bottom frames, no centre objects, no perspective. Vertical repeats continue beyond top and bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a81a043a-c81a-4c5e-8e51-90d4980329f4.png",
+      "path": "public/images/gj-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 251762
+    },
+    {
+      "key": "ajrakh",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of folded indigo and maroon Ajrakh-inspired decorative stole with finely aligned repeated geometric rosettes, small ivory details and an intricate narrow border. A visible printed-cloth surface, not embroidery. Entire arrangement visible with generous margins on warm ivory table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-04ebe47b-bb91-4958-9e1c-666321dfd705.png",
+      "path": "public/images/gj-ajrakh.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 268822
+    },
+    {
+      "key": "embroidery",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of one ivory cushion with an original contemporary Kutch-inspired geometric embroidery composition in maroon, indigo and ochre, a few small securely encircled mirror details, fine visible stitches and quiet centre. No attribution to a particular community or workshop, no ceremonial motif. Entire cushion visible with generous margins.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-42b2262b-69cb-40f6-a3fc-774662c064f7.png",
+      "path": "public/images/gj-embroidery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 262180
+    },
+    {
+      "key": "rogan",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of an entire rectangular dark indigo decorative cloth wall panel with an original Rogan-inspired flowing golden-ochre floral tree and restrained maroon/green accents, fine slightly raised curving paint lines, narrow floral border, clearly painted textile not embroidery. Entire panel visible with generous margins against ivory plaster. No named artist or attributed reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-3166455c-f826-452c-bca1-69ecd55b2dcb.png",
+      "path": "public/images/gj-rogan.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 246882
+    },
+    {
+      "key": "patola",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of folded crimson Patan-Patola-inspired geometric woven textile, precise double-ikat-style diamond and lozenge repeats with ivory, indigo and ochre details, finely visible interlaced yarn texture, one end softly draped. Entire arrangement visible with generous margins on warm ivory table. No fibre-purity or certification claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-eff3a325-68f6-43f0-91d0-9c2be470b8ff.png",
+      "path": "public/images/gj-patola.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 286868
+    },
+    {
+      "key": "tangaliya",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of folded indigo Tangaliya-inspired woven stole with small raised ivory yarn dots organised in spaced geometric rows and diamonds, restrained maroon edge, clearly visible knotted woven dots rather than printed circles. Entire arrangement visible with generous margins on ivory table. No community ceremonial-garment reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-53902959-b5ef-4cb3-9d0b-dac8ca4add1c.png",
+      "path": "public/images/gj-tangaliya.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 273824
+    },
+    {
+      "key": "lippan",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Gujarat chapter. Warm ivory, deep maroon, indigo and muted ochre palette; believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables, named community ceremonial patterns or imitation of a named artist. Square product photograph of a small square ivory decorative clay-relief and mirrorwork wall panel, original contemporary geometric flower and diamond composition, gently raised earthen lines with small round mirror pieces, warm subtle shadows, simple unframed edges. Entire square panel visible with generous margins against warm ivory plaster. No sacred symbols, no workshop or historical attribution.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0b226e14-e739-4edd-a947-03b62a5ef8d0.png",
+      "path": "public/images/gj-lippan.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 154464
+    }
+  ]
+}

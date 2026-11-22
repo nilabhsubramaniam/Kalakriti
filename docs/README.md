@@ -15,6 +15,10 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories
 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment
+- [Goa, Dadra & Nagar Haveli and Daman & Diu](audit/WEST_COAST_CHAPTERS.md) — distinct coastal and inland material traditions with linked union-territory chapters
+- [Maharashtra chapter](audit/MAHARASHTRA_JOURNAL.md) — earthen painting, patterned cloth, leather footwear, lacquered wood and regional places
+- [Gujarat chapter](audit/GUJARAT_JOURNAL.md) — printed, embroidered, painted and woven textiles, clay relief and regional visitor information
+- [Rajasthan chapter](audit/RAJASTHAN_JOURNAL.md) — blue floral borders, distinct printing and weaving collections, fine painting and visitor information
 - [Andaman & Nicobar chapter](audit/ANDAMAN_NICOBAR_JOURNAL.md) — woven island borders, six material-led collections and official visitor information
 - [Lakshadweep chapter](audit/LAKSHADWEEP_JOURNAL.md) — lagoon/coir borders, three focused collections, six products and official access information
 - [Puducherry chapter](audit/PUDUCHERRY_JOURNAL.md) — terracotta/teal kolam borders, clay, paper, ceramics, weaving, embroidery and four-enclave visitor information

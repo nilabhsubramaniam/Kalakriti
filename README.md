@@ -73,7 +73,7 @@ pnpm validate
 pnpm start
 ```
 
-`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **376 static outputs**, including the regional routes and framework outputs.
+`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **450 static outputs**, including the regional routes and framework outputs.
 
 To check a production build while keeping a development server's cache separate:
 
@@ -152,6 +152,14 @@ Start with the [documentation index](docs/README.md). It distinguishes implement
 | [Security review](docs/audit/SECURITY_REVIEW.md) | Baseline findings and recorded follow-up work |
 | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Future milestones and approval boundaries |
 
+Goa, Dadra & Nagar Haveli and Daman & Diu now have distinct regional chapters, with 12 item viewers and eight separate reading pages. Goa covers six material traditions; the inland chapter focuses on Warli and bamboo, while the coastal chapter explores mat weaving. The two latter chapters link across the same current union territory while preserving existing discovery URLs. See [western coastal chapters and sources](docs/audit/WEST_COAST_CHAPTERS.md).
+
+Maharashtra now has its regional chapter at `/state/maharashtra`, with warm earthen geometric borders, six collections covering Warli, Paithani, Himroo, Kolhapuri footwear, Sawantwadi woodwork and Solapur weaving, six item viewers, three reading pages and six visitor entries. See [Maharashtra implementation and sources](docs/audit/MAHARASHTRA_JOURNAL.md).
+
+Gujarat now has its regional chapter at `/state/gujarat`, with indigo-and-maroon geometric borders, six collections covering Ajrakh, Kutch embroidery, Rogan, Patan Patola, Tangaliya and Lippan work, six item viewers, three reading pages and six visitor-information entries. See [Gujarat implementation and sources](docs/audit/GUJARAT_JOURNAL.md).
+
+Rajasthan now has its regional chapter at `/state/rajasthan`, with blue-pottery-inspired floral borders, six craft collections and item viewers, three reading pages and six official visitor-information entries. See [Rajasthan implementation and sources](docs/audit/RAJASTHAN_JOURNAL.md).
+
 Andaman & Nicobar and Lakshadweep now have distinct island chapters at `/state/andaman-and-nicobar` and `/state/lakshadweep`. Woven bamboo/forest textures and lagoon/coir borders frame nine material-led collections, twelve product viewers, six reading pages and official visitor information. See [Andaman & Nicobar notes](docs/audit/ANDAMAN_NICOBAR_JOURNAL.md) and [Lakshadweep notes](docs/audit/LAKSHADWEEP_JOURNAL.md).
 
 Puducherry now has its regional chapter at `/state/puducherry`, with kolam-inspired terracotta/teal borders, six craft collections and item viewers, three reading pages and six visitor entries spanning all four parts of the union territory. See [Puducherry implementation and sources](docs/audit/PUDUCHERRY_JOURNAL.md).
@@ -188,7 +196,7 @@ Odisha now has its regional chapter at `/state/odisha`, with Odia text, a full-p
 
 West Bengal now has a full illustrated regional chapter at `/state/west-bengal`: six craft collections and product details, three journal articles, six tourism entries, Bengali text, a terracotta/indigo/brass theme and an Alpana/Kantha-inspired page surround. See [West Bengal implementation and source notes](docs/audit/WEST_BENGAL_JOURNAL.md).
 
-Jammu & Kashmir now has its own blue, rose and sage regional chapter at `/state/jammu-and-kashmir`, with six craft collections, six item detail pages, three journal articles, six tourism entries and regional navigation/footer. The shared sample catalogue and basket support Bihar, Jammu & Kashmir, West Bengal, Odisha, Jharkhand, Uttar Pradesh, Uttarakhand, Himachal Pradesh, Madhya Pradesh, Chhattisgarh, Punjab, Haryana, Delhi, Chandigarh, Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Puducherry, Andaman & Nicobar and Lakshadweep. See [implementation and source notes](docs/audit/JAMMU_KASHMIR_JOURNAL.md).
+Jammu & Kashmir now has its own blue, rose and sage regional chapter at `/state/jammu-and-kashmir`, with six craft collections, six item detail pages, three journal articles, six tourism entries and regional navigation/footer. The shared sample catalogue and basket support Bihar, Jammu & Kashmir, West Bengal, Odisha, Jharkhand, Uttar Pradesh, Uttarakhand, Himachal Pradesh, Madhya Pradesh, Chhattisgarh, Punjab, Haryana, Delhi, Chandigarh, Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Puducherry, Andaman & Nicobar, Lakshadweep, Rajasthan, Gujarat, Maharashtra, Goa, Dadra & Nagar Haveli and Daman & Diu. See [implementation and source notes](docs/audit/JAMMU_KASHMIR_JOURNAL.md).
 
 All 12 Bihar products across nine craft collections open dedicated detail pages with optional Three.js full/left/right/detail views, rotation and zoom. The shared viewer uses existing images at their original aspect ratios; these are image-backed presentations, not scanned or authored object models. Product details, original images, regional prices and cart remain independent of WebGL. The original Kohbar detail URL is preserved; the other products use `/state/bihar/products/[product]`.
 

@@ -1,0 +1,168 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "ga-hero",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Landscape 3:2 unnamed Goan veranda still life on wooden table: folded red checked Kunbi-inspired cloth, round unglazed terracotta decorative vase, blue-white floral painted tile on stand, carved coconut shell trinket bowl, natural bamboo basket, cream crochet table runner. Six complete objects, no people.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-3a7f4343-492b-4480-a835-047d9361db3c.png",
+      "path": "public/images/ga-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 383514
+    },
+    {
+      "key": "ga-mural",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Landscape 3:2 readable webpage background. Central 84 percent quiet ivory plaster unmarked. Outermost narrow vertical edges only: teal fine floral tile-inspired ornament, terracotta checked textile lines and subtle gold fibre curves. No horizontal border or central frame.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8cc78e13-a366-401f-a4b6-f9fe22302a86.png",
+      "path": "public/images/ga-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 163828
+    },
+    {
+      "key": "ga-kunbi",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph folded red and dark brown checked woven cloth with narrow pale border, visible cotton-like weave, warm ivory surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-14c2cbc4-d4ad-44f8-9461-7965f059c01d.png",
+      "path": "public/images/ga-kunbi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 268206
+    },
+    {
+      "key": "ga-pottery",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph complete round red terracotta decorative vase, short narrow neck, subtle incised bands, unglazed clay on cream stone. No plants, no food.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-13c348a4-4041-4bbe-a029-d7fae955a4ee.png",
+      "path": "public/images/ga-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 145006
+    },
+    {
+      "key": "ga-tile",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph complete square glazed blue and white decorative ceramic tile, original flowing floral vine geometry, upright against warm cream wall. No text or named artist imitation.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-693d3d6c-a03c-40b2-bc16-d6f6d8aff02d.png",
+      "path": "public/images/ga-tile.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 202644
+    },
+    {
+      "key": "ga-coconut",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph complete small dark-brown carved coconut shell trinket bowl, smooth rim and subtle incised geometric band, empty, natural fibrous texture outside, ivory table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d79563c9-9511-41a7-abc0-5d60c41722bd.png",
+      "path": "public/images/ga-coconut.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 136246
+    },
+    {
+      "key": "ga-bamboo",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph complete natural bamboo oval storage basket with low sides, fine interlaced strips and bound rim, empty, warm ivory background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-57d9521d-64e7-49ed-8918-2e374a3d58de.png",
+      "path": "public/images/ga-bamboo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 141420
+    },
+    {
+      "key": "ga-crochet",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Goa, warm ivory, terracotta, teal and muted gold. Square photograph cream cotton-like crochet table runner folded with one section extended, repeating open floral geometry and scalloped edge, ivory wooden table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-40b05e99-fd95-41cf-b228-d5da4b5d5381.png",
+      "path": "public/images/ga-crochet.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 248426
+    },
+    {
+      "key": "dn-hero",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Dadra and Nagar Haveli, warm ivory, forest olive and ochre brown. Landscape 3:2 unnamed shaded courtyard still life: brown original Warli-inspired painting panel with white geometric trees and daily-life figures, natural bamboo round lidded basket, shallow rectangular bamboo tray with bound rim. Three complete objects on wooden bench, no people, no rituals or sacred motifs.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f78d8385-9f46-4e0b-bed6-e0ec01a57516.png",
+      "path": "public/images/dn-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 331404
+    },
+    {
+      "key": "dn-mural",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Dadra and Nagar Haveli, warm ivory, forest olive and ochre brown. Landscape 3:2 readable webpage background central 84 percent quiet ivory unmarked. Narrow outer vertical edges with fine olive bamboo leaves, ochre interlaced strip textures and small white geometric trees on muted earth bands. No horizontal borders or central frame, no sacred imagery.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9b9ff0ca-4dc5-4dbd-9f80-5728c4864213.png",
+      "path": "public/images/dn-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 219798
+    },
+    {
+      "key": "dn-warli",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Dadra and Nagar Haveli, warm ivory, forest olive and ochre brown. Square photograph complete brown original Warli-inspired art panel with white geometric trees, birds and small people walking, paired triangular bodies, no ritual squares, no dance circles, no named-artist imitation. Cream wall.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-85409169-e818-4485-8a16-ac52284340f2.png",
+      "path": "public/images/dn-warli.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 259076
+    },
+    {
+      "key": "dn-basket",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Dadra and Nagar Haveli, warm ivory, forest olive and ochre brown. Square photograph complete natural bamboo round lidded storage basket with tightly interlaced strips, fitted lid and bound rim, quiet ivory studio surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0b031c63-488a-4a44-86b3-2e6c71db71b8.png",
+      "path": "public/images/dn-basket.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 199202
+    },
+    {
+      "key": "dn-tray",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Dadra and Nagar Haveli, warm ivory, forest olive and ochre brown. Square photograph complete shallow rectangular bamboo tray with subtly curved sides and neatly bound rim, fine natural split-bamboo weaving, empty, warm ivory studio surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-93275d80-6e10-47a3-8aee-27be4eb406af.png",
+      "path": "public/images/dn-tray.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 145618
+    },
+    {
+      "key": "dd-hero",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Daman and Diu, quiet coastal ivory, deep teal and muted ochre. Landscape 3:2 unnamed coastal veranda still life with three woven plant-fibre objects: natural rectangular floor mat with narrow teal edge, folded table runner with muted ochre fine stripe, pair of small rectangular placemats with simple dark teal band. Clearly different scales, complete arrangements, soft coastal light, no sea shells or coral, no people.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a1ab908e-bfdc-4449-91f6-df46b380ffdd.png",
+      "path": "public/images/dd-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 323564
+    },
+    {
+      "key": "dd-mural",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Daman and Diu, quiet coastal ivory, deep teal and muted ochre. Landscape 3:2 webpage background. Central 84 percent quiet ivory completely unmarked. Outermost narrow vertical edges only: fine teal wave lines interlaced with natural straw-coloured woven geometric strips, restrained ochre accents. No shells, no horizontal borders or central frame.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-2d671070-d84f-4796-acc9-1b8024dec062.png",
+      "path": "public/images/dd-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 117576
+    },
+    {
+      "key": "dd-mat",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Daman and Diu, quiet coastal ivory, deep teal and muted ochre. Square photograph complete rectangular natural plant-fibre floor mat with narrow deep teal edge, close visible interlaced strips and bound ends, slightly curled corner, cream stone floor.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-73d9a4ce-2ad8-4912-ae58-b4b2d616b95b.png",
+      "path": "public/images/dd-mat.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 268440
+    },
+    {
+      "key": "dd-runner",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Daman and Diu, quiet coastal ivory, deep teal and muted ochre. Square photograph natural straw-coloured woven plant-fibre table runner partially folded, muted ochre narrow stripes and neatly bound edges, ivory table, entire arrangement visible.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-20c064c1-bbd9-4b91-a62a-2bc615e88ce7.png",
+      "path": "public/images/dd-runner.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 209844
+    },
+    {
+      "key": "dd-placemats",
+      "prompt": "Original premium Kalakriti heritage marketplace asset, realistic handmade materials, soft natural daylight, elegant editorial photograph. No text, logos, badges, vegetables, named makers or workshops. Daman and Diu, quiet coastal ivory, deep teal and muted ochre. Square photograph pair of small rectangular natural woven plant-fibre placemats, simple deep teal band at each short end, slightly overlapping on ivory table, no food or tableware.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-6808903a-0437-4e93-b72e-46c2d2f32032.png",
+      "path": "public/images/dd-placemats.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 258714
+    }
+  ]
+}

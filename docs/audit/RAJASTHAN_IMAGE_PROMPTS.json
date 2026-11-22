@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Landscape 3:2 still life in an unnamed quiet sandstone haveli courtyard, subtle carved stone and warm plaster. On a low table arrange six distinct crafts: small white glazed vase with blue/turquoise floral painting, ivory fine floral printed cloth in red and blue, indigo resist-patterned stole with ivory motifs, red Bandhani-style dotted stole with ochre edge, airy ivory square-checked Kota-Doria-inspired textile with fine blue border, and a small framed original finely painted garden-bird-and-lotus miniature. All six clearly visible with breathing room, no people or recognizable named monument.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-fc2083b0-e295-413c-9147-350396778a41.png",
+      "path": "public/images/raj-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 382318
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Landscape 3:2 FLAT website background. Central 84% is very quiet pale warm ivory handmade paper with subtle fibres. ONLY outer left and right 8% vertical edges have fine blue-pottery-inspired floral vines in Jaipur blue and turquoise on ivory, narrow restrained red and ochre line accents. Delicate, elegant, small scale. NO horizontal bands, no top/bottom frames, no centre object, no perspective. Vertical patterns continue beyond top and bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0405cfe0-74d1-499f-93f3-a9e6dfd15f0f.png",
+      "path": "public/images/raj-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 163296
+    },
+    {
+      "key": "pottery",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of one small Jaipur-blue-pottery-inspired decorative vase, white glazed ground with cobalt-blue and turquoise fine flowers and leaves, rounded body and modest flared neck, hand-painted character. Entire vase visible with generous margins on warm ivory surface, no flowers inside, no food-safety, maker or material-purity claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c8569b0a-cfab-428e-a606-83fba9930669.png",
+      "path": "public/images/raj-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 111984
+    },
+    {
+      "key": "sanganer",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of folded ivory decorative textile with exceptionally fine red and blue floral block-print-style repeats, airy light ground and a narrow matching border, one corner gently draped on ivory table. Clearly distinct tiny floral repeated units. Whole cloth arrangement visible with generous margins.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-37929bf1-1fb6-4399-93d0-f33b457efeaa.png",
+      "path": "public/images/raj-sanganer.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 242412
+    },
+    {
+      "key": "bagru",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of folded indigo decorative stole with small ivory resist-style geometric sprig motifs and restrained terracotta border, slightly irregular hand-printed character, deep coloured ground clearly different from fine flowers on white. Entire arrangement visible with generous margins on warm ivory table. No specific dye or certification claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b1df8978-1757-4fce-a79e-055f17b00529.png",
+      "path": "public/images/raj-bagru.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 203490
+    },
+    {
+      "key": "bandhani",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of folded rich red Bandhani-inspired stole with small white tie-resist dots arranged in restrained diamond groups, narrow ochre edge, gently crinkled cloth surface rather than smooth printed dots. Entire textile arrangement visible with generous margins on ivory table, no fibre-purity claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-87667d9c-3948-44f5-bd8a-a2e59e53aa24.png",
+      "path": "public/images/raj-bandhani.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 171748
+    },
+    {
+      "key": "kota",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of folded airy ivory Kota-Doria-inspired textile with a clearly visible fine square-check grid, a slender blue and muted ochre border, one end lightly draped so the open weave catches the light. Entire arrangement visible with generous margins on warm ivory surface. No fibre or zari-purity claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-797bee54-b53a-4841-a27c-94c3ce5e554c.png",
+      "path": "public/images/raj-kota.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 160136
+    },
+    {
+      "key": "miniature",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Rajasthan chapter. Warm ivory, Jaipur blue, restrained terracotta red and muted ochre palette, believable handmade textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, maker identities, certification labels, vegetables or imitation of a named artist. Square product photograph of an entire small rectangular original miniature-style decorative painting of two fine garden birds beside a lotus pond and lush foliage, refined dark brush outlines, ivory, soft green, Jaipur blue and ochre palette, narrow red painted border and modest wood frame. Painting occupies about 75% of image, whole frame visible with margins against warm plaster. No people, named artist, attributed historic reproduction or palace claim.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b9b348de-066e-44e4-97f6-08d5cbd659c5.png",
+      "path": "public/images/raj-miniature.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 290652
+    }
+  ]
+}

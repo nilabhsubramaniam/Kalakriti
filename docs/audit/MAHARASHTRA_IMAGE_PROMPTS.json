@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Landscape 3:2 unnamed Deccan courtyard still life, six objects clearly composed on a low wooden bench: terracotta-brown rectangular Warli-inspired original landscape panel with white geometric trees and small daily-life figures, folded plum Paithani-inspired textile with muted gold border and stylised birds, deep blue Himroo-inspired floral woven stole, pair of tan braided leather open sandals, small red ochre lacquered wooden lidded box, folded ivory and terracotta geometric Solapur-style bedcover. All complete in frame, no people, breathing room.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ed5419c2-9ded-47a7-927c-597936f6ec29.png",
+      "path": "public/images/mh-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 335250
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Landscape 3:2 seamless-looking warm ivory plaster paper background. Keep central 84 percent completely quiet unmarked ivory. Narrow vertical outermost edges with fine earth brown and white Warli-inspired original geometric trees, triangular leaves, tiny daily-life stick figures, restrained ochre lines. No horizontal borders, no central medallion, no frames. Background texture for readable website, not object photo.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a39a843d-a510-4dbf-8783-f8be93c970da.png",
+      "path": "public/images/mh-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 138516
+    },
+    {
+      "key": "warli",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph, complete rectangular terracotta-brown art panel with original white geometric landscape: fine trees, birds and tiny people walking and tending plants, simple paired-triangle bodies. No rituals, deities, sacred squares or dance circles. Propped on warm cream wall, no crop of panel.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7a0956a3-1665-4161-a7e5-02440da80982.png",
+      "path": "public/images/mh-warli.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 276136
+    },
+    {
+      "key": "paithani",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph of folded plum woven sari textile, generous muted golden border with stylised small bird and floral motifs, fine lustrous woven texture and carefully arranged fold. Warm ivory stone surface. Whole textile arrangement visible.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-5e2ae848-b828-4607-9f30-79d4de6b4d7d.png",
+      "path": "public/images/mh-paithani.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 318958
+    },
+    {
+      "key": "himroo",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph deep midnight blue woven stole draped softly with muted ivory repeating floral vine pattern, delicate fabric texture and small fringed edge. Warm cream studio surface. Pattern should read woven, not painted.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-31d02470-5048-4778-9687-a24bf08d6103.png",
+      "path": "public/images/mh-himroo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 271686
+    },
+    {
+      "key": "kolhapuri",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph one complete pair tan brown handmade leather open sandals with broad front strap, braided detailing, toe loop, flat sole, neatly stitched edges, side by side on warm cream stone. No feet, no extra shoes, no cropped sole.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-02571d5c-a4b9-4548-857d-36f1dd2a339b.png",
+      "path": "public/images/mh-kolhapuri.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 188958
+    },
+    {
+      "key": "sawantwadi",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph of one small turned wooden cylindrical lidded decorative box, rich red ochre lacquer finish, restrained mustard and dark green concentric bands, natural wood subtly visible. Lid seated, no painted figures, warm cream studio surface. Complete object.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-385c13a4-905f-4785-9212-ffe8f7de7412.png",
+      "path": "public/images/mh-sawantwadi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 96956
+    },
+    {
+      "key": "solapur",
+      "prompt": "Create an original premium Kalakriti Maharashtra craft marketplace asset. Warm earth brown, ivory, muted gold, deep plum accents, realistic handmade materials and soft natural daylight, elegant editorial photography. No lettering, logos, watermarks, certification badges, vegetables, named maker, named workshop, ceremonial imagery or imitation of named artist. Square product photograph folded ivory and terracotta woven bedcover with restrained geometric diamond grid and rust border, substantial cotton-like weave and short fringe. Warm cream bench, no bed, entire arrangement visible.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9a49628f-7f5c-4a18-a413-dacfc1b0d579.png",
+      "path": "public/images/mh-solapur.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 236764
+    }
+  ]
+}

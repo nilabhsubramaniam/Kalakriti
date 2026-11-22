@@ -26,6 +26,12 @@ import { andhraPradesh } from './andhraPradesh';
 import { telangana } from './telangana';
 import { puducherry } from './puducherry';
 import { lakshadweep } from './lakshadweep';
+import { rajasthan } from './rajasthan';
+import { gujarat } from './gujarat';
+import { maharashtra } from './maharashtra';
+import { damanDiu } from './damanDiu';
+import { dadraNagarHaveli } from './dadraNagarHaveli';
+import { goa } from './goa';
 import { andamanNicobar } from './andamanNicobar';
 import { madhyaPradesh } from './madhyaPradesh';
 import { himachalPradesh } from './himachalPradesh';
@@ -62,6 +68,12 @@ export const STATE_PAGES: Record<string, StatePage> = {
   [telangana.slug]: telangana,
   [puducherry.slug]: puducherry,
   [lakshadweep.slug]: lakshadweep,
+  [rajasthan.slug]: rajasthan,
+  [gujarat.slug]: gujarat,
+  [maharashtra.slug]: maharashtra,
+  [damanDiu.slug]: damanDiu,
+  [dadraNagarHaveli.slug]: dadraNagarHaveli,
+  [goa.slug]: goa,
   [andamanNicobar.slug]: andamanNicobar,
 };
 

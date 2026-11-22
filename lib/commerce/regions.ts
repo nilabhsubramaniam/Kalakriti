@@ -12,6 +12,12 @@ import { andhraPradesh } from '@/lib/states/andhraPradesh';
 import { telangana } from '@/lib/states/telangana';
 import { puducherry } from '@/lib/states/puducherry';
 import { lakshadweep } from '@/lib/states/lakshadweep';
+import { rajasthan } from '@/lib/states/rajasthan';
+import { gujarat } from '@/lib/states/gujarat';
+import { maharashtra } from '@/lib/states/maharashtra';
+import { damanDiu } from '@/lib/states/damanDiu';
+import { dadraNagarHaveli } from '@/lib/states/dadraNagarHaveli';
+import { goa } from '@/lib/states/goa';
 import { andamanNicobar } from '@/lib/states/andamanNicobar';
 import { madhyaPradesh } from '@/lib/states/madhyaPradesh';
 import { himachalPradesh } from '@/lib/states/himachalPradesh';
@@ -21,4 +27,4 @@ import { jharkhand } from '@/lib/states/jharkhand';
 import { odisha } from '@/lib/states/odisha';
 import { westBengal } from '@/lib/states/westBengal';
 /** Current sample catalogue regions; future authoritative catalogue data comes from the API. */
-export const commerceRegions = [bihar, jammuKashmir, westBengal, odisha, jharkhand, uttarPradesh, uttarakhand, himachalPradesh, madhyaPradesh, chhattisgarh, punjab, haryana, delhi, chandigarh, kerala, karnataka, tamilNadu, andhraPradesh, telangana, puducherry, andamanNicobar, lakshadweep];
+export const commerceRegions = [damanDiu, dadraNagarHaveli, goa, bihar, jammuKashmir, westBengal, odisha, jharkhand, uttarPradesh, uttarakhand, himachalPradesh, madhyaPradesh, chhattisgarh, punjab, haryana, delhi, chandigarh, kerala, karnataka, tamilNadu, andhraPradesh, telangana, puducherry, andamanNicobar, lakshadweep, rajasthan, gujarat, maharashtra];
