@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Landscape 1536x1024 premium realistic Tamil Nadu craft editorial still life in a shaded Chettinad-inspired veranda with warm ivory limewashed walls, dark timber columns and softly blurred courtyard greenery, no named house or monument. Six complete craft objects in a balanced arrangement on a broad low wooden table: neatly folded deep-crimson Kanchipuram-inspired sari with an understated gold-coloured woven border and dark green edge; a small framed original Thanjavur-inspired devotional painting of seated Ganesha with correctly arranged four arms, warm red green colours and raised gold-coloured arch detail, no inscription; a small bronze-toned cast decorative peacock ornament on simple base; folded ivory Toda-inspired textile with sparse red and black counted-thread geometric bands, no mirrors or applique; a rolled fine natural korai-grass mat with restrained crimson border; a small lidded palm-leaf Chettinad Kottan-inspired basket in natural straw with green crimson woven geometry. All objects fully within frame with breathing room, believable scale and coherent material construction. Soft natural morning light, restrained crimson gold green palette, tactile heritage catalogue style. No vegetables, fruit, people, labels, logos, certificates, text or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-16912a02-8a65-4739-97c1-d67c4f4ce597.png",
+      "path": "public/images/tn-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 327122
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original elegant decorative website surround inspired by Tamil Nadu kolam linework and woven sari borders. Centre 84 percent warm ivory softly textured lime plaster, almost plain for readable content. Only extreme left and right 8 percent: narrow deep-crimson vertical woven borders with fine warm-ivory continuous looping kolam-inspired geometric lines and small aged-gold accents, occasional restrained deep-green thread edges. Tactile handmade linework and textile detail, sophisticated calm heritage style, soft natural light. Vertical ornaments continue beyond top and bottom crop. NO horizontal top or bottom band, no full rectangle frame, NO horizontal dividers. No temple silhouettes, gods, people, religious inscriptions, letters, logos or watermark. Original nonfigurative geometric composition.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-56acd833-34f8-4d63-9af7-d43559dea595.png",
+      "path": "public/images/tn-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 293962
+    },
+    {
+      "key": "kanchi",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of a neatly folded Kanchipuram-inspired sari in deep crimson with a broad understated gold-coloured woven border, small subtle geometric motifs and a narrow deep-green edge. Generous plain cloth and visible fine weave, restrained lustre rather than plastic shine, complete folded textile inside frame with breathing room on warm ivory studio ground, soft natural side light. Original textile concept, no silk or gold purity certification, no people, mannequin, jewellery, words, labels, logo or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7443792a-13cb-4c36-8a6e-ba4f7f650ff4.png",
+      "path": "public/images/tn-kanchi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 190538
+    },
+    {
+      "key": "painting",
+      "prompt": "Square 1024x1024 premium realistic photograph of a small fully framed original Thanjavur-inspired devotional painting of seated Ganesha, gentle elephant face, one trunk, correctly arranged four arms with a lotus and a small sweet bowl, calm dignified expression. Compact balanced central composition in warm crimson dark green and ochre, raised gold-coloured gesso-like arch and restrained jewel-like accents, traditional flat painted treatment rather than photorealistic deity. Entire dark timber frame fully inside image with breathing room, nearly frontal slight three-quarter view on warm ivory studio background, soft natural light reveals relief texture. Original composition not a reproduction of a named artist or temple painting. No inscriptions, artist signatures, certification, purity badges, words, labels, logo or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ddcf8d36-215d-4d9e-bcf8-7f39f8a4aaf1.png",
+      "path": "public/images/tn-painting.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 291696
+    },
+    {
+      "key": "bronze",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of one small bronze-toned cast decorative peacock ornament inspired by Tamil Nadu metal casting, elegant compact body, slender neck, small modest crest and closed tail with restrained incised feather detail, stable simple low rectangular base, accurate bird anatomy and believable cast metal construction. Complete object fully within frame with breathing room on warm ivory studio ground, three-quarter angle, soft natural side light, muted metal reflections. Not an attributed sacred icon. No deity, open tail fan, fire, people, text, purity stamp, certificates, logos, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-4e8fd7c2-2a74-4b69-8482-7933a78ae77f.png",
+      "path": "public/images/tn-bronze.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 83778
+    },
+    {
+      "key": "toda",
+      "prompt": "Square 1024x1024 premium realistic textile product photograph of an ivory contemporary stole inspired by Toda counted-thread embroidery, fine red and black geometric stepped diamond bands near the edges and scattered small strictly geometric motifs, generous plain cloth, visible counted stitches and thread crossings. Clearly distinct from patchwork or mirror embroidery: no mirrors, no beads, no applique, no floral satin stitch. Folded once loosely with entire textile in frame and breathing room on warm ivory studio ground, soft natural side light. Original design not a copied community ceremonial garment, no named maker or community authenticity claim, no people, words, labels, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-414d59bd-1903-462a-9244-7ba429eca2b8.png",
+      "path": "public/images/tn-toda.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 215690
+    },
+    {
+      "key": "mat",
+      "prompt": "Square 1024x1024 premium realistic product photograph of one fine Pattamadai-inspired korai-grass mat, pale natural straw-coloured tightly woven thin strips with a restrained narrow crimson and muted-green edge, one end rolled once to show the flexibility and finely worked surface. Entire mat within frame with breathing room on warm ivory studio ground, three-quarter angle, soft natural side light, refined tactile weaving detail, no pile. No words woven into the mat, no people, food, religious objects, fibre certification, labels, text, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-21318257-8078-4c9a-a5c0-dc5144d558a3.png",
+      "path": "public/images/tn-mat.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 162836
+    },
+    {
+      "key": "kottan",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of a small Chettinad Kottan-inspired lidded palm-leaf basket, square slightly tapered form, neatly woven fine natural straw palm strips with restrained crimson deep-green geometric chevrons on the lid and side panels, closely finished corners and rim. Lid closed, entire basket fully inside frame with breathing room at three-quarter angle, warm ivory studio ground, soft natural side light, believable leaf-strip construction and tactile fine detail. No bamboo poles, people, food, fruit, badges, words, labels, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-6341a248-70e5-486a-bd56-969c7e2da27c.png",
+      "path": "public/images/tn-kottan.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 144206
+    }
+  ]
+}

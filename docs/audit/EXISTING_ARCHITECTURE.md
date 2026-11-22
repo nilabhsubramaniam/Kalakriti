@@ -117,3 +117,20 @@ Tailwind is installed and its directives sit at the end of `globals.css`. No com
 
 
 **21 November 2026 — Delhi:** A thirteenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Floral threadwork and carved-screen details frame `.kk-dl-journal`, including regional navigation/footer. The formal registry key remains `NCT of Delhi`, while the route and page title use Delhi. The build produces 248 static outputs. See [implementation and sources](DELHI_JOURNAL.md).
+
+
+**22 November 2026 — Kerala:** The fifteenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Kasavu-inspired woven borders, foliage and natural-fibre details frame `.kk-kl-journal`, including regional navigation/footer. The build now produces 274 static outputs, including the existing Chandigarh child routes. See [implementation and sources](KERALA_JOURNAL.md).
+
+
+**22 November 2026 — Karnataka:** A sixteenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Bidri-inspired floral borders frame `.kk-ka-journal`, including regional navigation/footer, with the existing plum/teal/gold tokens retained. Channapatna uses the current Bengaluru South district name. The build produces 289 static outputs. See [implementation and sources](KARNATAKA_JOURNAL.md).
+
+
+**22 November 2026 — Tamil Nadu:** A seventeenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Kolam-inspired crimson borders frame `.kk-tn-journal`, with matching regional navigation/footer and the existing gold/green palette retained. The build produces 304 static outputs. See [implementation and sources](TAMIL_NADU_JOURNAL.md).
+
+**22 November 2026 — Andhra Pradesh:** An eighteenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Kalamkari-inspired floral borders frame `.kk-ap-journal` with matching navigation/footer and the existing terracotta/green/ochre palette. Nirmal’s incorrect Andhra Pradesh association is corrected. The build produces 319 static outputs. See [implementation and sources](ANDHRA_PRADESH_JOURNAL.md).
+
+**22 November 2026 — Telangana:** A nineteenth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries. Ikat-inspired plum/teal borders frame `.kk-tg-journal`, with matching regional navigation/footer and existing tokens retained. Current district labels accompany Cheriyal, Gadwal and Pochampally. The build produces 334 static outputs. See [implementation and sources](TELANGANA_JOURNAL.md).
+
+**22 November 2026 — Puducherry:** A twentieth detailed regional chapter adds six collections, six item viewers, three reading routes and six visitor entries covering all four parts of the union territory. Fine kolam-inspired terracotta borders frame `.kk-py-journal`, with matching navigation/footer and retained teal/ochre tokens. The introduction distinguishes Puducherry’s paper-making context from nearby Auroville. The build produces 349 static outputs. See [implementation and sources](PUDUCHERRY_JOURNAL.md).
+
+**22 November 2026 — Island chapters:** Andaman & Nicobar and Lakshadweep extend the detailed chapters and sample catalogue to twenty-two regions. Nine collections, twelve item viewers and six reading pages add 27 static child routes. Woven bamboo/forest borders and lagoon/coir borders retain distinct registered palettes. The build produces 376 static outputs. See [Andaman & Nicobar](ANDAMAN_NICOBAR_JOURNAL.md) and [Lakshadweep](LAKSHADWEEP_JOURNAL.md) implementation/source notes.

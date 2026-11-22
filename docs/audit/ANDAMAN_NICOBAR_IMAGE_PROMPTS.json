@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman & Nicobar chapter, landscape 3:2 still life in an unnamed airy timber island veranda looking toward a lush green coast and turquoise water. Arrange six objects on a low table: polished brown coconut-shell lidded box, reddish-brown carved decorative wooden bird, open fine cane basket, folded flat bamboo-strip woven table runner, oval natural coir mat, ivory cushion with restrained original teal leaf embroidery. Sea teal, forest green, warm amber wood, ivory. All objects visible with breathing room. No sacred or community-specific motifs, no identifiable village or protected site.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-cb8372d1-14ca-49c0-9e7c-f568a3abdee7.png",
+      "path": "public/images/an-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 350510
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman & Nicobar chapter landscape 3:2 FLAT website background. Central 84% quiet very pale cool ivory paper. ONLY outer left/right 8% vertical edges show fine woven bamboo lattice, slender forest-green leaf shadows and sea-teal strips, muted amber accents. Subtle elegant natural-material framing. NO horizontal bands, no top/bottom frame, no centre decoration, no perspective. Side patterns continue beyond top/bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b63012ab-0d7f-4873-8f60-7c09408e78ce.png",
+      "path": "public/images/an-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 120498
+    },
+    {
+      "key": "coconut",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: polished dark-brown coconut-shell decorative lidded trinket box with a round low body, small smooth knob and simple rim, natural speckles visible, no metal inlay. Entire object visible with generous margins on cool ivory table, sea-teal background accent.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ca1a5d1a-e2cd-48ec-94b0-39c80b51d5bd.png",
+      "path": "public/images/an-coconut.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 74074
+    },
+    {
+      "key": "wood",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: small contemporary carved reddish-brown wooden bird with closed wings and a simple compact base, visible fine wood grain, restrained incised feather lines. Entire decorative sculpture visible with generous margins against cool ivory plaster. No claim of specific wood species, no tribal motifs.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d8723747-d646-42e3-8630-b73bdb6076c3.png",
+      "path": "public/images/an-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 79014
+    },
+    {
+      "key": "cane",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: small open rectangular cane basket with gently rounded corners, thin interlaced strands and neatly bound rim, natural warm honey colour, clearly flexible rounded cane strips rather than flat bamboo. Entire basket visible with generous margins on ivory table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-738651de-ab3f-4951-ade3-fa0f27d4390c.png",
+      "path": "public/images/an-cane.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 99220
+    },
+    {
+      "key": "bamboo",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: flat rectangular bamboo-strip woven table runner, pale natural colour with a restrained forest-green border, broad flat strips interlaced in a clear even pattern, one end gently raised to show the edge. Entire runner visible with generous margins, no other objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-130018a7-9f02-4050-8914-7f22bf1f639d.png",
+      "path": "public/images/an-bamboo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 129126
+    },
+    {
+      "key": "coir",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: oval natural brown coir-fibre mat with clearly visible coarse fibres, dense woven surface and a simple bound edge, no letters or printed designs. Entire mat visible with generous margins on ivory table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-09003581-5104-4088-a674-46a1dd37f5ea.png",
+      "path": "public/images/an-coir.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 241306
+    },
+    {
+      "key": "stitch",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Andaman chapter square product photograph: ivory decorative cushion with original restrained teal and forest-green leaf embroidery at two corners, quiet centre and fine stitched edge. Whole cushion visible with generous margins against warm timber and ivory setting. No attributed community, ceremonial pattern or workshop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-76f249c1-13b9-4ea6-8953-828b42f3b057.png",
+      "path": "public/images/an-stitch.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 175350
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter landscape 3:2 still life on an unnamed airy island veranda, pale timber and white plaster, soft glimpse of turquoise lagoon and coconut palms. Arrange a rectangular natural coir mat, four small round woven coir coasters, a neat coil of coir cord, a braided coir decorative trivet, a polished coconut-shell trinket box, and a small abstract coconut-shell pendant on simple cord. All six objects distinct, visible with breathing room. Lagoon blue, sea green, natural brown and quiet ivory. No specific island or building claim.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-5f46e1dc-996d-4efb-befd-03e792d40c5f.png",
+      "path": "public/images/ld-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 399616
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter landscape 3:2 FLAT website background. Central 84% quiet very pale blue-tinted ivory paper. ONLY outer left/right 8% vertical edges have delicate lagoon-teal flowing wave linework and thin natural coir-braid textures, restrained muted gold. Elegant and airy, no identifiable cultural or sacred symbols. NO horizontal bands, no top/bottom frame, no centre decoration, no perspective. Side pattern continues beyond top/bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d1b6004d-951a-4052-b999-4a68eaf6774c.png",
+      "path": "public/images/ld-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 105732
+    },
+    {
+      "key": "mat",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: rectangular natural brown coir-fibre mat with simple straight bound edge, close woven coarse fibre texture, no printed design or lettering. Entire mat visible with generous margins on pale cool ivory surface, soft lagoon-teal background accent.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-69b67ff4-2b4e-43ce-99ed-3a8dbe843ef7.png",
+      "path": "public/images/ld-mat.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 252644
+    },
+    {
+      "key": "coaster",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: set of four small circular woven coir coasters, three slightly overlapped and one separate, natural brown fibres with a simple neat circular edge. All four fully visible with generous margins on ivory tabletop. No cups or food.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-33d660f5-0e50-481c-b62f-b20efa321dd2.png",
+      "path": "public/images/ld-coaster.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 211198
+    },
+    {
+      "key": "cord",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: neatly wound coil of natural brown coir cordage, three-strand twisted texture clearly visible, one short free end lies on ivory tabletop. Entire coil visible with generous margins. Decorative craft cord, no marine equipment, no load rating or industrial claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e51dcd48-21b0-4bab-bcd1-a95076aa5fb3.png",
+      "path": "public/images/ld-cord.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 148718
+    },
+    {
+      "key": "braid",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: round flat decorative coir trivet made of clearly visible thicker braided strands arranged in a spiral, natural warm brown, simple hand-finished edge. Whole item visible with generous margins on cool ivory table. No cookware, no heatproof claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-13b5f508-42dd-451d-ba06-8432436a36d3.png",
+      "path": "public/images/ld-braid.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 150690
+    },
+    {
+      "key": "box",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: a polished dark-brown coconut-shell trinket box with rounded low body and plain fitted lid, natural speckles and a simple small wooden knob, entire item visible with generous margins on cool ivory tabletop. No inlay.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-217d6150-c578-4770-b865-1e3fa5462d0b.png",
+      "path": "public/images/ld-box.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 66144
+    },
+    {
+      "key": "pendant",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti. Believable handmade material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, named makers, people, brands, certification labels, vegetables, seashells, coral, turtle shell or imitation of a named artist. Lakshadweep chapter square product photograph: one small contemporary abstract oval coconut-shell pendant on a plain fine dark cord, visible natural brown speckles, softly polished edges, no metal fittings, no sacred or tribal motif. Full pendant and neatly coiled cord visible with generous margins on cool ivory surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-6d5c8eaa-1659-4ee8-9ad1-279db6847425.png",
+      "path": "public/images/ld-pendant.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 58970
+    }
+  ]
+}

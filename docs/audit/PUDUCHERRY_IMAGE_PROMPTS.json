@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Landscape 3:2 still life in an unnamed coastal Tamil courtyard with pale ochre plaster and teal wooden shutters. On a low wooden table display six distinct craft objects: small unglazed red-clay horse, painted papier-mache bird, blank handmade-paper stitched notebook, sea-teal glazed ceramic vase, tightly woven natural grass table mat, and ivory embroidered cushion with small terracotta and teal floral sprays. All objects visible with breathing room, warm calm composition, no people, no recognizable named monument or workshop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-368a507b-32fb-4b70-b9d2-ceda55adf67c.png",
+      "path": "public/images/py-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 355180
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Landscape 3:2 FLAT background texture for a long readable website. Central 84% is very quiet pale ivory handmade paper with subtle fibres. ONLY outer left and right 8% vertical edges have narrow terracotta borders with fine ivory looping kolam-inspired linework, slender teal stripes and occasional restrained woven-grass texture. Elegant and delicate, no large objects. NO horizontal bands, no top or bottom frames, no central decoration, no perspective. Side decoration runs continuously beyond top/bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9151eb33-ebb3-407a-b356-05f3ef6bfb31.png",
+      "path": "public/images/py-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 172106
+    },
+    {
+      "key": "clay",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: one small Villianur-inspired unglazed terracotta decorative horse, upright ears and simple hand-modelled incised saddle details, earthy warm red clay, restrained elegant silhouette. Entire horse including feet visible with generous margins on ivory tabletop. No sacred or antique provenance claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d1a03a26-224f-4352-95ae-e3677c213ff2.png",
+      "path": "public/images/py-clay.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 121146
+    },
+    {
+      "key": "mache",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: one small original decorative papier-mache bird with softly modelled body, painted terracotta, ivory and muted teal floral detail, perched on a simple compact integral base. Light paper-composite surface with hand-painted finish, NOT glazed ceramic or carved wood. Whole bird and base visible with generous margins on ivory table.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bf89976a-fb77-4131-ad74-955a3b214693.png",
+      "path": "public/images/py-mache.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 117274
+    },
+    {
+      "key": "paper",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: blank handmade-paper notebook with warm ivory softly textured deckled pages, understated teal cover and exposed stitched binding, no text at all, slightly open on ivory table so the fibres and layered edges are visible. Entire notebook visible with generous margins, no flowers stuck to paper, no manufacturer identity.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-37051cb8-e2ca-4cf5-a831-fdf0de700efd.png",
+      "path": "public/images/py-paper.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 115158
+    },
+    {
+      "key": "ceramic",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: single elegant studio pottery vase, gently rounded hand-formed body, narrow opening, sea-teal glaze with subtle variations and a small unglazed warm clay foot. Whole vase visible with generous margins against pale ivory plaster. No plant inside, no food-safety or maker claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a0d59923-4e9f-44b9-b6b0-5b693af4e682.png",
+      "path": "public/images/py-ceramic.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 71770
+    },
+    {
+      "key": "mat",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: tightly woven natural straw-coloured korai-grass rectangular table mat, fine even weave with narrow terracotta and muted teal border, one corner slightly curled to show flexibility and finished edge. Entire mat visible with generous margins on warm ivory tabletop. No objects placed on top.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-22985153-d17b-4256-8dcd-71526a4e4204.png",
+      "path": "public/images/py-mat.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 272744
+    },
+    {
+      "key": "stitch",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Puducherry chapter. Warm ivory, terracotta, sea teal and muted ochre palette; believable handmade textures, soft coastal daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, named makers, institution emblems, certification labels, vegetables or imitation of a named artist. Square product photograph: one ivory decorative cushion cover on a softly filled square cushion, original delicate hand-embroidery-style small terracotta flowers and sea-teal leaves around corners, quiet plain centre, visible stitch texture and restrained piped edge. Entire cushion visible with generous margins in a warm ivory setting. No attribution to Cluny or any workshop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f2aa25ce-a545-489d-b895-0426c060adff.png",
+      "path": "public/images/py-stitch.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 163366
+    }
+  ]
+}

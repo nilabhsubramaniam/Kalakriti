@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Landscape 3:2 still life in an unnamed Deccan stone veranda: folded plum-and-ivory ikat textile with softly edged diamond repeats, teal sari with broad gold-coloured border, restrained checked ochre sari, small black-ground painted floral panel, a separate red-ground painted village scene in horizontal registers, and one embossed warm brass-toned floral decorative plate upright on a stand. All six craft types clearly visible, coherent yet distinct. No people, no recognizable monument. Entire composition with breathing room.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-907aeca2-94e2-4867-a575-b6aa247ce060.png",
+      "path": "public/images/tg-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 501970
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Landscape 3:2 FLAT background texture for a long readable page. Central 84% quiet pale ivory handmade paper, plain with very subtle fibre texture. ONLY outer left and right 8% vertical edges carry woven deep-plum and teal ikat-inspired stepped diamonds with softly feathered yarn edges, fine muted ochre accents. Restrained elegant textile border, small scale. NO horizontal bands or top/bottom frames, NO central object, no perspective. Side decoration runs continuously beyond top and bottom.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8092efd5-7366-49f5-ad75-f51ee6e1f486.png",
+      "path": "public/images/tg-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 187376
+    },
+    {
+      "key": "ikat",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of folded plum-and-ivory Pochampally-inspired ikat stole. Large clear geometric diamonds with subtly feathered yarn-dyed edges, teal accents, visible textile weave. One end gently draped on a warm ivory table. Fully visible, generous margins. Pattern comes from woven yarns, not surface paint.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-927bda0c-e976-48c0-9cc5-199eed398737.png",
+      "path": "public/images/tg-ikat.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 194750
+    },
+    {
+      "key": "nirmal",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of an entire small rectangular Nirmal-inspired decorative painting on a dark nearly black panel, original elegant golden-ochre birds and fine flowering branches with muted green and plum details, warm narrow wooden frame. Entire frame fully visible against ivory plaster with generous margins. No text or recognisable copyrighted work.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b2606b95-028c-45ae-9e7b-50ee73e8f606.png",
+      "path": "public/images/tg-nirmal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 172422
+    },
+    {
+      "key": "cheriyal",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of an entire original Cheriyal-inspired cloth wall panel, flat rich red ground, two horizontal narrative registers of stylised village musicians and women carrying water pots, ivory, ochre and muted green figures with fine dark outlines and floral edge. Folk narrative painting, restrained simple forms, not photographic people. Entire textile panel visible against warm plaster, generous margins. No sacred icon or attributed historical reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-28ef626b-84e2-4e01-99cb-ef7ab0d61264.png",
+      "path": "public/images/tg-cheriyal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 235354
+    },
+    {
+      "key": "gadwal",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of folded deep teal Gadwal-inspired sari with contrasting broad plum and gold-coloured woven border, decorative end panel with restrained tiny geometric motifs. Plain body, clear weave texture, carefully arranged on ivory table, generous margins. No fibre purity or actual gold claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d278ab30-a5bc-4175-b170-3c41618290e5.png",
+      "path": "public/images/tg-gadwal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 228890
+    },
+    {
+      "key": "narayanpet",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of folded Narayanpet-inspired ochre-and-ivory fine checked sari with a narrow teal border and subtle plum stripe at the edge. Small restrained woven checks, clearly different from broad ornamental sari borders and large ikat motifs. One end softly draped on an ivory tabletop, full product visible.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c88a2447-1f76-44e2-9d16-fb55a8cc5704.png",
+      "path": "public/images/tg-narayanpet.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 221670
+    },
+    {
+      "key": "metal",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Telangana chapter. Warm ivory, deep plum, teal and muted gold palette, believable textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, certification labels, vegetables, named makers or imitation of a named artist. Square product photograph of one upright circular Pembarthi-inspired warm brass-toned decorative sheet-metal plate on a small dark stand. Raised original central floral rosette with gently hammered leaves and vines in shallow relief, clearly embossed sheet surface not a cast sculpture. Full plate and rim visible with generous margins against warm ivory plaster. No purity or maker claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a03ab901-e231-47a5-8bed-3d445865b9e3.png",
+      "path": "public/images/tg-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 240020
+    }
+  ]
+}

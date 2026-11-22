@@ -1,6 +1,14 @@
 /** Small route-facing theme metadata; no catalogue content in navbar/footer imports. */
 export const regionalJournals: Record<string, { state: string; className: string; footerClass: string; footerImage: string; native: string; lang: string }> = {
   'jammu-and-kashmir': { state: 'Jammu & Kashmir', className: 'kk-jk-journal', footerClass: 'kk-footer-jk', footerImage: '/images/jk-kani.webp', native: 'دستکاری', lang: 'ur' },
+  "andaman-and-nicobar": {"state": "Andaman & Nicobar Island", "className": "kk-an-journal", "footerClass": "kk-footer-an", "footerImage": "/images/an-bamboo.webp", "native": "सागर शिल्प", "lang": "hi"},
+  "lakshadweep": {"state": "Lakshadweep", "className": "kk-ld-journal", "footerClass": "kk-footer-ld", "footerImage": "/images/ld-mat.webp", "native": "ദ്വീപ് കല", "lang": "ml"},
+  puducherry: { state: 'Puducherry', className: 'kk-py-journal', footerClass: 'kk-footer-py', footerImage: '/images/py-stitch.webp', native: 'கலைத் துறை', lang: 'ta' },
+  telangana: { state: 'Telangana', className: 'kk-tg-journal', footerClass: 'kk-footer-tg', footerImage: '/images/tg-ikat.webp', native: 'కళల నేల', lang: 'te' },
+  'andhra-pradesh': { state: 'Andhra Pradesh', className: 'kk-ap-journal', footerClass: 'kk-footer-ap', footerImage: '/images/ap-pen.webp', native: 'కళల భూమి', lang: 'te' },
+  'tamil-nadu': { state: 'Tamil Nadu', className: 'kk-tn-journal', footerClass: 'kk-footer-tn', footerImage: '/images/tn-kanchi.webp', native: 'கலைகளின் தாயகம்', lang: 'ta' },
+  karnataka: { state: 'Karnataka', className: 'kk-ka-journal', footerClass: 'kk-footer-ka', footerImage: '/images/ka-bidri.webp', native: 'ಕಲೆಗಳ ನಾಡು', lang: 'kn' },
+  kerala: { state: 'Kerala', className: 'kk-kl-journal', footerClass: 'kk-footer-kl', footerImage: '/images/kl-kasavu.webp', native: 'കലയുടെ നാട്', lang: 'ml' },
   chandigarh: { state: 'Chandigarh', className: 'kk-ch-journal', footerClass: 'kk-footer-ch', footerImage: '/images/ch-mosaic.webp', native: 'ਕਲਾ ਦਾ ਸ਼ਹਿਰ', lang: 'pa' },
   delhi: { state: 'NCT of Delhi', className: 'kk-dl-journal', footerClass: 'kk-footer-dl', footerImage: '/images/dl-zardozi.webp', native: 'दिल्ली की कारीगरी', lang: 'hi' },
   haryana: { state: 'Haryana', className: 'kk-hr-journal', footerClass: 'kk-footer-hr', footerImage: '/images/hr-durrie.webp', native: 'हरियाणा की कारीगरी', lang: 'hi' },

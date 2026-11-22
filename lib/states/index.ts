@@ -19,6 +19,14 @@ import { punjab } from './punjab';
 import { haryana } from './haryana';
 import { delhi } from './delhi';
 import { chandigarh } from './chandigarh';
+import { kerala } from './kerala';
+import { karnataka } from './karnataka';
+import { tamilNadu } from './tamilNadu';
+import { andhraPradesh } from './andhraPradesh';
+import { telangana } from './telangana';
+import { puducherry } from './puducherry';
+import { lakshadweep } from './lakshadweep';
+import { andamanNicobar } from './andamanNicobar';
 import { madhyaPradesh } from './madhyaPradesh';
 import { himachalPradesh } from './himachalPradesh';
 import { uttarakhand } from './uttarakhand';
@@ -47,6 +55,14 @@ export const STATE_PAGES: Record<string, StatePage> = {
   [haryana.slug]: haryana,
   [delhi.slug]: delhi,
   [chandigarh.slug]: chandigarh,
+  [kerala.slug]: kerala,
+  [karnataka.slug]: karnataka,
+  [tamilNadu.slug]: tamilNadu,
+  [andhraPradesh.slug]: andhraPradesh,
+  [telangana.slug]: telangana,
+  [puducherry.slug]: puducherry,
+  [lakshadweep.slug]: lakshadweep,
+  [andamanNicobar.slug]: andamanNicobar,
 };
 
 /** True when the state has a researched catalogue rather than an overview. */

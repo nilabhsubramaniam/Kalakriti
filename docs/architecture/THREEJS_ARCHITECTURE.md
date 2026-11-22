@@ -114,3 +114,20 @@ Validation for the expanded slice: strict TypeScript, zero-warning lint and a 68
 
 
 **21 November 2026 — Delhi:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**22 November 2026 — Kerala:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**22 November 2026 — Karnataka:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+
+**22 November 2026 — Tamil Nadu:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Andhra Pradesh:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Telangana:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Puducherry:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.
+
+**22 November 2026 — Island chapters:** Twelve Andaman & Nicobar/Lakshadweep items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, geometry pipeline, renderer lifecycle or atlas/D3 changes are introduced. Image mode and shopping remain independent of WebGL.

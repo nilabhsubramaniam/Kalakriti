@@ -252,3 +252,20 @@ See [ASSET_PIPELINE](ASSET_PIPELINE.md) and [DEPLOYMENT_ARCHITECTURE](DEPLOYMENT
 
 
 **Implemented regional expansion — 21 November 2026:** Delhi extends the static chapter and shared sample catalogue/cart to a thirteenth region. Six collections, six item routes and three reading routes reuse the existing frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 22 November 2026:** Kerala extends the static chapter and shared sample catalogue/cart to a fifteenth region, including the existing Chandigarh chapter. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 22 November 2026:** Karnataka extends the static chapter and shared sample catalogue/cart to a sixteenth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+
+**Implemented regional expansion — 22 November 2026:** Tamil Nadu extends the static chapter and shared sample catalogue/cart to a seventeenth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Andhra Pradesh extends the static chapter and shared sample catalogue/cart to an eighteenth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Telangana extends the static chapter and shared sample catalogue/cart to a nineteenth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Puducherry extends the static chapter and shared sample catalogue/cart to a twentieth region. Six collections, six item routes and three reading routes reuse the established frontend architecture. Visitor information includes Puducherry, Karaikal, Mahé and Yanam without inventing catalogue origins in each enclave. No backend, payment, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Andaman & Nicobar and Lakshadweep extend the static chapter and shared sample catalogue/cart to twenty-two regions. Six Andaman and three Lakshadweep collections connect twelve item routes and six reading routes. Broad regional craft associations avoid invented island or community product provenance; visitor links include official access-information pathways. No backend, payment, dependency or renderer change is introduced.

@@ -155,3 +155,34 @@ Eight original conceptual compositions are stored under `public/images/hr-*.webp
 ### Delhi chapter — 2026-11-21
 
 Eight original conceptual compositions are stored under `public/images/dl-*.webp`: hero, mural, zardozi, wood, pottery, paper, engraving and chik. They were generated with the built-in image tool, inspected and resized/re-encoded to WebP. The surround uses floral threadwork and carved-screen detail at its vertical edges with a quiet centre. The courtyard does not depict a named workshop or monument; object images are concepts rather than documentary inventory photographs. Earlier assets are intact. [Exact prompts and file metadata](../audit/DELHI_IMAGE_PROMPTS.json) record provenance.
+
+
+### Kerala chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/kl-*.webp`: hero, mural, kasavu, mirror, coir, screwpine, metal and shell. They were generated with the built-in image tool, visually inspected and resized/re-encoded to WebP. The surround uses woven gold borders, leaf shadows and fibre textures at the vertical edges with a quiet centre. The veranda is not a named workshop; object images are concepts rather than documentary inventory photographs. Existing regional assets remain intact. [Exact prompts and file metadata](../audit/KERALA_IMAGE_PROMPTS.json) record provenance.
+
+
+### Karnataka chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/ka-*.webp`: hero, mural, bidri, lacquer, silk, ilkal, kasuti and lambani. They were generated with the built-in image tool, visually inspected and resized/re-encoded to WebP. The surround confines pale floral inlay-inspired patterns to dark teal vertical borders, leaving a quiet centre. Kasuti counted stitchwork and Lambani patchwork/embellishment have distinct imagery. The veranda is not a named workshop; products are conceptual compositions rather than documentary inventory photographs. Earlier assets remain intact. [Exact prompts and file metadata](../audit/KARNATAKA_IMAGE_PROMPTS.json) record provenance.
+
+
+### Tamil Nadu chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/tn-*.webp`: hero, mural, kanchi, painting, bronze, toda, mat and kottan. They were generated with the built-in image tool, visually inspected and resized/re-encoded to WebP. The surround confines looping kolam-inspired geometry to crimson vertical borders with a quiet centre. The painting is an original devotional composition, not a named artist’s reproduction; the textile is a contemporary counted-stitch concept rather than an attributed ceremonial garment. The veranda is not a named workshop. Earlier regional assets are intact. [Exact prompts and file metadata](../audit/TAMIL_NADU_IMAGE_PROMPTS.json) record provenance.
+
+### Andhra Pradesh chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/ap-*.webp`: hero, mural, pen, block, wood, lacquer, weave and metal. Built-in image generation, visual inspection and WebP conversion retain original source PNGs. Vertical floral/peacock edges leave a quiet ivory centre; pen-drawn cloth and block-printed repeats have distinct compositions. These are conceptual artworks rather than documentary inventory photography. Earlier assets remain intact. [Exact prompts and file metadata](../audit/ANDHRA_PRADESH_IMAGE_PROMPTS.json) record provenance.
+
+### Telangana chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/tg-*.webp`: hero, mural, ikat, nirmal, cheriyal, gadwal, narayanpet and metal. Built-in generation, visual inspection and WebP conversion retain original PNGs. Plum/teal ikat-inspired vertical borders leave a quiet centre. Three weaving concepts and two painting concepts have distinct visual structures. These are conceptual artworks rather than documentary inventory photographs; the veranda is not a named workshop. Earlier assets remain intact. [Exact prompts and file metadata](../audit/TELANGANA_IMAGE_PROMPTS.json) record provenance.
+
+### Puducherry chapter — 2026-11-22
+
+Eight original concepts are stored under `public/images/py-*.webp`: hero, mural, clay, mache, paper, ceramic, mat and stitch. Built-in generation, visual inspection and WebP conversion retain original PNGs. Fine kolam-inspired terracotta/teal vertical borders leave a quiet paper-textured centre. Clay, paper composite and glazed ceramic have distinct objects and surfaces; cushion-cover copy specifies the cover-only sample. These are conceptual artworks rather than documentary inventory photographs; the courtyard is not a named workshop. Earlier assets remain intact. [Exact prompts and metadata](../audit/PUDUCHERRY_IMAGE_PROMPTS.json) record provenance.
+
+### Andaman & Nicobar and Lakshadweep chapters — 2026-11-22
+
+Sixteen original concepts are stored under `public/images/an-*.webp` and `public/images/ld-*.webp`: two heroes, two quiet-centred murals and twelve item images. Built-in generation, visual inspection and WebP conversion retain the original PNGs. Woven bamboo/forest textures distinguish Andaman from Lakshadweep’s flowing lagoon/coir edges. No marine-shell, coral, turtle-shell inventory, named workshops or attributed community patterns are added. Images are concepts rather than documentary inventory photography. Earlier assets remain intact. [Andaman prompts and metadata](../audit/ANDAMAN_NICOBAR_IMAGE_PROMPTS.json) and [Lakshadweep prompts and metadata](../audit/LAKSHADWEEP_IMAGE_PROMPTS.json) record provenance.

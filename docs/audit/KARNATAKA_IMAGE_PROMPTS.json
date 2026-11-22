@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Landscape 1536x1024 premium realistic Karnataka craft editorial still life in a shaded Deccan courtyard veranda, warm ivory lime-plaster, dark timber and softly blurred leafy background, no named monument or workshop. Balanced arrangement of six complete craft objects on a low timber table: a small black Bidri-inspired vase with restrained fine pale silver-coloured floral inlay; a pair of simple turned wooden decorative birds with lacquer-like mustard red teal colours; folded deep-plum Mysuru silk-inspired sari with a muted gold woven border; folded Ilkal-inspired sari with deep-teal small-check body and contrasting red cream striped end; an indigo Kasuti-inspired stitched textile with precise small orange cream counted-thread geometric motifs; a small crimson Lambani-inspired embroidered pouch with bright patchwork, a few stitched mirror discs and tiny thread tassels. All complete objects within frame with breathing room and coherent realistic scale. Soft natural morning light, tactile accurate materials, restrained saturated colours, elegant heritage catalogue style. No vegetables, people, labels, logos, text, certifications, watermark, deity or historical garment reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-1bae975a-03eb-438b-bd5c-208c706e7ee3.png",
+      "path": "public/images/ka-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 320768
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original refined decorative website surround for Karnataka crafts. Central 84 percent quiet warm ivory subtly textured paper for readable content. Only extreme left and right 8 percent: narrow deep-teal nearly black Bidri-inspired metal-like floral vine borders, with fine pale silver-coloured inlaid leaves and tiny muted-plum and aged-gold woven geometric accents. Refined tactile material detail, elegant restrained pattern, soft natural lighting, original floral composition. Vertical ornaments extend off top and bottom crop for repeating background. NO horizontal top/bottom bands, no full rectangular frame, NO horizontal dividers. No people, gods, temples, buildings, religious symbols, writing, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ded72cfb-8188-433f-b176-30fddf896f09.png",
+      "path": "public/images/ka-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 191050
+    },
+    {
+      "key": "bidri",
+      "prompt": "Square 1024x1024 premium realistic Karnataka craft product photograph of one small Bidri-inspired decorative vase, deep matte-black metal-like body, rounded belly and short flared neck, restrained fine pale silver-coloured floral vine inlay on the body and narrow geometric neck band. Coherent elegant form and believable flush inlay details, entire vase fully visible with breathing room against warm ivory studio ground. Natural soft side lighting, accurate subtle metal reflections, refined tactile catalogue styling. No food, flowers, people, labels, alloy or purity stamps, certifications, logos, writing or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b7db55b4-b96d-4911-bcd9-10485e74264e.png",
+      "path": "public/images/ka-bidri.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 55008
+    },
+    {
+      "key": "lacquer",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of a matching pair of small Channapatna-inspired lathe-turned wooden decorative birds, rounded bodies and simple pointed beaks, one mustard-gold with muted red bands and one deep teal with warm cream bands, lacquer-like smooth finish, modest turned timber bases. Clearly decorative objects, not a baby toy or safety-certified product. Complete birds both fully visible with breathing room on warm ivory studio ground, gentle natural side light, believable wood turning and simple construction. No extra birds, people, text, labels, logos, certification or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-40192b7b-6df4-4b9c-8654-e78cc899938f.png",
+      "path": "public/images/ka-lacquer.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 44874
+    },
+    {
+      "key": "silk",
+      "prompt": "Square 1024x1024 premium realistic Karnataka textile product photograph of a neatly folded Mysuru silk-inspired sari, deep plum body with a quiet smooth lustre, restrained gold-coloured woven border and thin deep-teal edge. Generous plain cloth, visible fine weave, no embroidery, no glitter or plastic sheen, entire folded textile inside frame with breathing room. Warm ivory studio backdrop, soft natural side light, elegant tactile catalogue style. No person, mannequin, jewellery, brand logo, pure silk or gold certification, words, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e145f18e-81a8-44ad-891f-d699045ecf66.png",
+      "path": "public/images/ka-silk.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 135188
+    },
+    {
+      "key": "ilkal",
+      "prompt": "Square 1024x1024 premium realistic textile product photograph of a folded Ilkal-inspired sari, deep-teal small-check body, contrasting red border and a visible red-and-cream striped end panel, restrained traditional geometric layout, visibly woven texture and believable folded cloth. Entire folded textile within frame with breathing room on warm ivory studio ground, soft natural side light, refined catalogue photography. No embroidery, person, mannequin, copied ceremonial garment, fibre purity claims, text, logos, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7e7d4e1b-54be-46a8-b88d-f55bb8d55319.png",
+      "path": "public/images/ka-ilkal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 289134
+    },
+    {
+      "key": "kasuti",
+      "prompt": "Square 1024x1024 premium realistic craft photograph of an indigo textile stole loosely folded once with precisely spaced tiny orange cream and muted-red Kasuti-inspired counted-thread geometric stitched motifs, simple small stepped flowers and lattice-like diamonds, straight even stitches, lots of plain indigo ground, narrow stitched edge. Original nonfigurative design with fine visible stitch direction. Entire cloth within frame with breathing room on warm ivory studio backdrop, soft natural light. No mirror discs, patchwork, large satin-stitch flowers, temples, people, labels, writing, logos or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8b73833e-a201-493e-b805-4fe6f399c8a8.png",
+      "path": "public/images/ka-kasuti.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 197346
+    },
+    {
+      "key": "lambani",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of one small contemporary crimson embroidered pouch inspired by Sandur Lambani needlework, bright teal ochre and red patchwork geometry, dense varied thread stitching, a few small round mirror discs held by visible stitches and tiny thread tassels along lower edge. Simple closed fabric pouch with no modern brand hardware, complete pouch fully visible at three-quarter angle on warm ivory studio ground. Natural soft side light and tactile thread details. Original design, not a copied ceremonial community garment, no community authenticity badge or named artisan attribution, no coins, bone, people, logos, text, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-528adb45-bf99-4a4b-b42b-76183d3a9a58.png",
+      "path": "public/images/ka-lambani.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 233148
+    }
+  ]
+}

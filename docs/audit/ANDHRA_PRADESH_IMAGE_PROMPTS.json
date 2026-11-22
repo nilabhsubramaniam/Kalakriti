@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Landscape 3:2 composition in a serene Andhra courtyard: a large pen-drawn Kalamkari peacock-and-floral cloth hanging behind a low table with a distinct block-printed floral stole, a small painted wooden village figurine, turned lacquer jar, green woven-border sari and warm brass-toned vase. All six craft objects clear, visually balanced with breathing room; no people or recognisable named monument.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e29c7ef0-5048-42a8-98ec-010046030540.png",
+      "path": "public/images/ap-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 474048
+    },
+    {
+      "key": "mural",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Landscape 3:2 flat background texture, very pale ivory handmade paper with subtle fine Kalamkari floral vines and peacocks ONLY along the outermost left and right 8% vertical edges. The central 84% is quiet plain pale ivory. Restrained terracotta fine ink, muted green leaves and ochre. No horizontal bands, top/bottom frames or central focal objects. Seam-friendly background for long readable pages.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e263bef4-1561-4ab2-b47b-66d98cbbf094.png",
+      "path": "public/images/ap-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 170038
+    },
+    {
+      "key": "pen",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: an entire rectangular original pen-drawn Kalamkari-style decorative cloth panel, hand-drawn flowing peacock amid branching floral vines, fine dark outlines with terracotta, muted indigo and ochre colour, ivory textile ground and narrow border, hung fully visible with small margins against warm plaster. Distinct freehand composition, no figures or text.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9b79794a-149c-440e-a614-d5c2ce1653eb.png",
+      "path": "public/images/ap-pen.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 417122
+    },
+    {
+      "key": "block",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: folded ivory textile stole with repeating small floral block-print-style motifs in terracotta and muted indigo, clear regular repeats and a narrow patterned border, one end gently draped on a warm ivory table. Full product visible, distinctly repeated printed patterns rather than freehand narrative painting.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9d14b1e3-d80b-4fae-8ea2-eb56a23363a5.png",
+      "path": "public/images/ap-block.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 207956
+    },
+    {
+      "key": "wood",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: a small Kondapalli-inspired painted carved-wood decorative village bullock cart figurine, charming hand-carved visible wood, terracotta yellow and green painted details, simple restrained shape on a warm ivory tabletop. Fully visible with generous margins. No child safety claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-cb851a0d-19f4-43f9-a58a-a443829ced92.png",
+      "path": "public/images/ap-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 149824
+    },
+    {
+      "key": "lacquer",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: one elegant Etikoppaka-inspired turned-wood decorative lidded jar, rounded silhouette, smooth warm ochre lacquer body with dark green and terracotta rings, visible turned construction, fully visible on ivory tabletop. No figurines, no text.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c995956d-6138-4bef-a0d2-ab15ca8591d6.png",
+      "path": "public/images/ap-lacquer.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 129438
+    },
+    {
+      "key": "weave",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: folded forest-green Mangalagiri-inspired woven sari with understated ochre woven border and narrow terracotta edge, plain cloth body with visible weave, one end softly draped over warm ivory tabletop, full product and edge detail clearly visible. No printed motifs, no fibre-purity claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-66d26aee-4a3d-4f47-b7cc-e1279971fed9.png",
+      "path": "public/images/ap-weave.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 197892
+    },
+    {
+      "key": "metal",
+      "prompt": "Create an original premium Indian heritage marketplace image for Kalakriti’s Andhra Pradesh chapter. Warm ivory, terracotta, forest green, muted indigo and ochre palette; believable material textures, soft daylight, elegant editorial photography with painterly warmth. No text, lettering, logos, watermarks, labels, vegetables or claims of certification. No imitation of a named artist. Square product photograph: a single Budithi-inspired warm brass-toned decorative vase with a rounded body, slender neck and simple flared lip, subtle hand-finished surface, no ornate engraved patterns, fully visible on warm ivory tabletop with soft shadows. No alloy-purity or maker claims.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-eae9a1b2-cfa7-420f-93ed-8908c0075a93.png",
+      "path": "public/images/ap-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 135732
+    }
+  ]
+}

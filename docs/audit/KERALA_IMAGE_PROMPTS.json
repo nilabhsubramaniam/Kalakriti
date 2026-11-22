@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Landscape 1536x1024 premium realistic Kerala craft editorial still life. Shaded traditional Kerala veranda with dark timber columns, ivory limewashed walls and softly blurred tropical greenery, not a named house or monument. Six complete craft objects balanced on a broad low wooden table: folded ivory Kasavu-inspired cloth with broad muted gold woven border; a small oval polished metal mirror in restrained brass-coloured leaf frame on a short stand, no glass pane or people reflected; a neatly rolled natural brown coir floor mat; a small rectangular lidded woven screw-pine leaf box in pale straw with a deep green edge; an unlit slender traditional Kerala brass-toned standing lamp with simple circular dish and pedestal; a polished dark coconut-shell lidded keepsake container with subtle pale natural grain, no food. Entire objects fully inside frame with breathing room and believable scale. Gentle morning light, aged gold ivory forest green palette, beautiful tactile materials, elegant craft catalogue composition. No vegetables, produce, people, text, logos, certificates, watermark or religious figures.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-9644dfc3-fe40-4a38-a61b-0ef334f1dd74.png",
+      "path": "public/images/kl-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 250328
+    },
+    {
+      "key": "mural",
+      "prompt": "Landscape 1536x1024 original refined decorative website background for Kerala heritage crafts. Central 82 percent quiet warm ivory woven cloth with extremely subtle fibre texture for readable text. Along only extreme left and right 9 percent: slim Kasavu-inspired aged-gold woven border strips, delicate dark muted green palm-leaf shadows and a few fine natural coir and screw-pine weave details. Real tactile textiles, sophisticated and restrained natural material palette. No horizontal top or bottom bands, no complete frame, NO horizontal dividers. Vertical border ornaments extend out of top and bottom crop to repeat without dividers. No temples, buildings, people, religious figures, letters, symbols, text, logos or watermark. Original composition, calm and premium.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-1e67670e-7871-4a78-ad8d-bae68047df6a.png",
+      "path": "public/images/kl-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 303842
+    },
+    {
+      "key": "kasavu",
+      "prompt": "Square 1024x1024 premium realistic Kerala craft product photograph. Ivory Kasavu-inspired sari neatly folded and draped once to show a broad understated gold-coloured woven border and a narrow deep-green finishing line, generous plain ivory cotton-like ground. Visible fine yarn and border weave, no embroidery or glitter. Entire folded cloth inside frame with breathing room on warm ivory studio backdrop, soft natural side lighting, refined tactile catalogue quality. Original textile concept no gold purity or fibre certification claim. No people, mannequin, jewellery, food, text, logo, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-de88b691-c9a4-4399-a9a9-d6d1a01b41ff.png",
+      "path": "public/images/kl-kasavu.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 175204
+    },
+    {
+      "key": "mirror",
+      "prompt": "Square 1024x1024 premium realistic Kerala craft photograph of a small Aranmula-inspired oval metal mirror with restrained brass-toned leaf-shaped frame and low simple stand, reflective polished metal face with a soft neutral studio reflection, no glass back, no person or camera reflected. Fine unobtrusive floral edge detail and believable construction, entire object inside frame with breathing room. Three-quarter angle on warm ivory studio ground, gentle natural light, realistic metal reflections and surface detail. No deity, exaggerated ornament, certificate, purity badge, text, logo, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-caaed683-b955-44fe-bd97-c5fee864b1d7.png",
+      "path": "public/images/kl-mirror.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 62828
+    },
+    {
+      "key": "coir",
+      "prompt": "Square 1024x1024 premium realistic Kerala craft product photograph of a natural brown coir floor mat, rectangular with softly rounded corners, tightly worked coarse coconut fibre surface and a restrained deep-green geometric edge band, one corner slightly rolled to reveal thickness and weave. Entire mat fully inside frame with breathing room on warm ivory studio ground, soft natural side light, visible rough natural fibres, refined catalogue composition. No welcome text, words, badges, claims, logo, people, vegetables, coconut fruit or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f79636c5-85b6-4cff-8dac-6504bb9b2390.png",
+      "path": "public/images/kl-coir.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 267272
+    },
+    {
+      "key": "screwpine",
+      "prompt": "Square 1024x1024 premium realistic craft product photograph of a small rectangular lidded box woven from pale straw-coloured screw-pine leaf strips, fine diagonal interlacing with a narrow deep-green edge and neatly bound corners. Lid closed, entire object fully visible with breathing room at three-quarter angle. Warm ivory studio background, soft natural side light, visible fine leaf-strip texture, believable handwoven construction. Kerala craft inspired original concept. No bamboo sticks, people, food, fruit, text, labels, logo, watermark or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-570ebcc4-93f3-4b44-aae3-fab27080cd82.png",
+      "path": "public/images/kl-screwpine.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 101090
+    },
+    {
+      "key": "metal",
+      "prompt": "Square 1024x1024 premium realistic Kerala craft product photograph of one unlit slender traditional standing lamp inspired by Kerala bell-metal work, aged golden brass-toned surface, simple circular shallow dish with small projecting wick rests, turned stem and stable round pedestal base, no bird or deity at top. Entire lamp fully within frame with breathing room, believable construction and restrained scale, warm ivory studio ground, soft natural side lighting, realistic metal reflections and tactile finish. No fire, smoke, oil, religious icons, text, purity claims, certificates, labels, logos, people or extra objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0881b0b4-c814-4184-a854-136ceda0821e.png",
+      "path": "public/images/kl-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 35574
+    },
+    {
+      "key": "shell",
+      "prompt": "Square 1024x1024 premium realistic Kerala craft product photograph of a small polished dark-brown coconut-shell keepsake box with a fitted domed lid and modest wooden knob, oval natural shell shape with a flat low base, visible subtle pale fibre grain and carefully smoothed edges. Original nonreligious decorative object, entire container fully visible with breathing room at three-quarter angle on warm ivory studio background, gentle natural side light, tactile natural surface. No food, liquid, brass inlay, certification, sustainability badges, people, coconut fruit, words, logos, labels or watermark.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-58519a75-510d-41af-be32-4436035a5959.png",
+      "path": "public/images/kl-shell.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 99526
+    }
+  ]
+}

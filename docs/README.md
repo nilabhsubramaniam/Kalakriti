@@ -15,6 +15,14 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories
 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment
+- [Andaman & Nicobar chapter](audit/ANDAMAN_NICOBAR_JOURNAL.md) — woven island borders, six material-led collections and official visitor information
+- [Lakshadweep chapter](audit/LAKSHADWEEP_JOURNAL.md) — lagoon/coir borders, three focused collections, six products and official access information
+- [Puducherry chapter](audit/PUDUCHERRY_JOURNAL.md) — terracotta/teal kolam borders, clay, paper, ceramics, weaving, embroidery and four-enclave visitor information
+- [Telangana chapter](audit/TELANGANA_JOURNAL.md) — ikat-inspired borders, distinct textile and painting collections, raised metalwork and visitor information
+- [Andhra Pradesh chapter](audit/ANDHRA_PRADESH_JOURNAL.md) — Kalamkari-inspired borders, distinct painted/printed cloth, woodcraft, lacquer, weaving and metalwork
+- [Tamil Nadu chapter](audit/TAMIL_NADU_JOURNAL.md) — kolam-inspired borders, painting, casting, textiles, natural fibres and visitor information
+- [Karnataka chapter](audit/KARNATAKA_JOURNAL.md) — Bidri-inspired borders, woven textiles, distinct embroidery collections and visitor information
+- [Kerala chapter](audit/KERALA_JOURNAL.md) — woven gold borders, natural-fibre crafts, six collections and visitor information
 - [Delhi chapter](audit/DELHI_JOURNAL.md) — carved-screen surround, six collections, item viewers and heritage destinations
 - [Haryana chapter](audit/HARYANA_JOURNAL.md) — woven geometry, reed textures, six collections, item viewers and visitor information
 - [Punjab chapter](audit/PUNJAB_JOURNAL.md) — Phulkari-inspired surround, six collections, item viewers and visitor information
