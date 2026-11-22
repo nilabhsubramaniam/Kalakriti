@@ -13,7 +13,7 @@ export default function RegionPreview({ region, previewing, touring, onSelect }:
   return <aside className="kk-region-preview" aria-label={`${displayName(region)} cultural preview`}>
     <div className="kk-region-preview-top"><p className="kk-home-eyebrow">{touring ? 'Cultural showcase' : previewing ? 'A glimpse of the region' : isBihar ? 'Our first chapter' : 'Discover a tradition'}</p><span data-region-motif><Motif name={theme.motif} size={35} /></span></div>
     <div className="kk-region-identity">
-      <h3>{displayName(region)}</h3>
+      <h2>{displayName(region)}</h2>
       <p className="kk-region-native kk-indic">{theme.script.native}</p>
       <p className="kk-region-art">{theme.art}</p>
     </div>

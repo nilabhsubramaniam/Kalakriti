@@ -12,6 +12,7 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 
 ## Current experience — implemented
 
+- [Design review](audit/DESIGN_REVIEW.md) — 20 design findings (2026-11-22), what was fixed, what is open and why
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories
 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment

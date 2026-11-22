@@ -2,7 +2,7 @@ import {
   ACESFilmicToneMapping, AmbientLight, BufferAttribute, BufferGeometry, CanvasTexture, Color,
   DirectionalLight, Float32BufferAttribute, Group, LineBasicMaterial,
   LineSegments, Mesh, MeshDepthMaterial, MeshStandardMaterial, OrthographicCamera,
-  PCFSoftShadowMap, PlaneGeometry, Raycaster, Scene, ShadowMaterial,
+  PCFShadowMap, PlaneGeometry, Raycaster, Scene, ShadowMaterial,
   SRGBColorSpace, Vector2, Vector3, WebGLRenderer,
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -28,7 +28,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   renderer.toneMapping = ACESFilmicToneMapping;
   renderer.toneMappingExposure = .9;
   renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = PCFSoftShadowMap;
+  renderer.shadowMap.type = PCFShadowMap;
   renderer.domElement.setAttribute('aria-hidden', 'true');
   host.appendChild(renderer.domElement);
   const scene = new Scene();
