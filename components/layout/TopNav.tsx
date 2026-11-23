@@ -131,7 +131,8 @@ export default function TopNav() {
           ref={triggerRef}
           className="nav-menu-btn"
           type="button"
-          aria-label={open ? 'Close navigation and states' : 'Browse navigation and states'}
+          /* Contains every visible label — States, Menu, Close — for voice control. */
+          aria-label={open ? 'Close states menu' : 'Menu: browse pages and states'}
           aria-controls="state-navigation"
           onClick={() => open ? setOpen(false) : showMenu()}
           onKeyDown={event => {
@@ -169,7 +170,7 @@ export default function TopNav() {
                       const rowStyle = { ['--row' as string]: t.colors.accent };
                       const inner = (
                         <>
-                          <Motif name={t.motif} size={15} strokeWidth={2} className="nav-menu-motif" />
+                          <Motif name={t.motif} size={20} strokeWidth={2.2} className="nav-menu-motif" />
                           <span className="nav-menu-name">{displayName(state)}</span>
                           <span className="nav-menu-art">{t.art}</span>
                           {slug && <ArrowRight className="kk-ui-icon nav-menu-go" size={16} aria-hidden="true" />}

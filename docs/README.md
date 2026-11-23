@@ -12,6 +12,7 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 
 ## Current experience — implemented
 
+- [Dropdowns](audit/DROPDOWNS.md) — every select, search and menu dropdown: findings, fixes and checks
 - [Account pages](audit/ACCOUNT_PAGES.md) — `/login` and `/signup` design and form logic; no backend yet
 - [Design review](audit/DESIGN_REVIEW.md) — 20 design findings (2026-11-22), what was fixed, what is open and why
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories

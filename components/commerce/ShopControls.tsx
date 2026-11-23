@@ -2,6 +2,7 @@
 import { useEffect, useId, useState } from 'react';
 import Link from 'next/link';
 import { ShoppingBag, Plus } from 'lucide-react';
+import SelectField from '@/components/shared/SelectField';
 import { useShopStore } from '@/lib/store/useShopStore';
 import { markets, priceFor, formatPrice, type Market } from '@/lib/commerce/catalog';
 
@@ -16,7 +17,7 @@ export function MarketSelector() {
   const id = useId();
   const market = useShopStore(s => s.market);
   const setMarket = useShopStore(s => s.setMarket);
-  return <div className="kk-market"><label htmlFor={id}>Shopping region</label><select id={id} value={market} onChange={event => setMarket(event.target.value as Market)}>{Object.entries(markets).map(([key, value]) => <option key={key} value={key}>{value.label}</option>)}</select><p className="kk-market-note">Preview prices. Online ordering opens soon.</p></div>;
+  return <div className="kk-market"><label htmlFor={id}>Shopping region</label><SelectField id={id} value={market} onChange={event => setMarket(event.target.value as Market)}>{Object.entries(markets).map(([key, value]) => <option key={key} value={key}>{value.label}</option>)}</SelectField><p className="kk-market-note">Preview prices. Online ordering opens soon.</p></div>;
 }
 export function ProductPurchase({ productId }: { productId: string }) {
   const market = useShopStore(s => s.market);

@@ -80,3 +80,15 @@ Screenshots: `/tmp/kalakriti-3d-desktop.png`, `/tmp/kalakriti-3d-hover.png`, `/t
 Physical mobile FPS, hardware GPU performance, long-session memory profiling, screen-reader behavior and throttled Core Web Vitals need separate measurement. No 30/60 FPS guarantee is made from SwiftShader tests. Existing dependency advisories and geographic accuracy review remain unresolved. Real inventory, consented producer profiles, checkout, subscriptions, product 3D and immersive storytelling remain separate milestones.
 
 CSP, deployment ownership, public routes and the existing geography were not loosened or replaced. No user development server was stopped; only task-owned QA processes are torn down.
+
+## Explore visual and hover refinement — 23 November 2026
+
+`lib/three/createIndiaScene.ts` now gives resting state surfaces a stronger version of their registered accent, uses that state’s accent/ink mixture on the side faces, and draws only the top perimeter. Filtering existing edge segments removes the vertical tessellation lines that otherwise make the sides look striped. A slightly more oblique camera, deeper craft relief and restrained shadows make the structure clearer. These are presentation heights, not topographic elevation. Existing boundary data and offline meshes are unchanged.
+
+Hover uses invisible resting-footprint meshes that share existing geometry/material resources. Three’s installed Raycaster tests object layers rather than visibility, so these surfaces participate in picking without another render pass. Lifting a visible tile no longer changes its hit target and causes neighbouring previews to alternate. No extra GPU geometry or texture allocation is needed for the picking meshes. Existing geometry, materials, textures and context are still disposed once during cleanup. Pointer cancellation clears interrupted gestures; only primary-button gestures select.
+
+Manual zoom is tracked separately from hover/tour focus. Hovering no longer resets a zoom chosen by the user; reset still restores the original view. Navbar Escape handling no longer clears the map selection.
+
+`RegionPreview.tsx` now reuses the lightweight journal-theme metadata to show an existing craft image for every region, with a Bihar fallback. The motif hook used by the map remains available. A consistent image area, identity space, four-line desktop summary and three craft highlights keep hover content orderly. The state-page link is retained and the outdated “catalogue will follow” text is replaced with a description of the available chapters.
+
+The labelled Explore CSS section adds readable labels, a full-width state action, 44px controls, restrained card spacing and a more compact phone introduction. The map remains borderless. The sidebar does not follow the pointer or cover nearby states, and the dropdown remains the keyboard/touch alternative. No dependency, CSP, backend, boundary source or D3 implementation is changed.

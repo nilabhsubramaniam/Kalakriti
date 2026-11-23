@@ -7,7 +7,7 @@ import {
 } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { BASE_THEME, themeFor } from '@/lib/stateThemes';
-import type { IndiaMeshManifest, IndiaScene } from '@/lib/three/types';
+import { type IndiaMeshManifest, type IndiaScene } from '@/lib/three/types';
 
 interface SceneOptions {
   host: HTMLDivElement;
@@ -33,7 +33,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   host.appendChild(renderer.domElement);
   const scene = new Scene();
   const camera = new OrthographicCamera(-450, 450, 450, -450, .1, 4000);
-  camera.position.set(0, 950, 570);
+  camera.position.set(-60, 900, 700);
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enablePan = false;
   controls.enableRotate = !matchMedia('(pointer: coarse)').matches;
@@ -46,7 +46,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   controls.maxAzimuthAngle = .4;
   controls.target.set(0, 0, 0);
   controls.update();
-  scene.add(new AmbientLight(BASE_THEME.paper, 1.3));
+  scene.add(new AmbientLight(BASE_THEME.paper, 1.05));
   const sun = new DirectionalLight(BASE_THEME.paper, 2.4);
   sun.position.set(-350, 900, 450);
   sun.castShadow = true;
@@ -64,7 +64,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   root.rotation.x = -Math.PI / 2;
   scene.add(root);
   const groundGeometry = new PlaneGeometry(2200, 2200);
-  const groundMaterial = new ShadowMaterial({ color: BASE_THEME.ink, opacity: .16 });
+  const groundMaterial = new ShadowMaterial({ color: BASE_THEME.ink, opacity: .2 });
   const ground = new Mesh(groundGeometry, groundMaterial);
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = -1;
@@ -72,7 +72,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   scene.add(ground);
   const floats = new Float32Array(buffer);
   const slice = (attribute: { offset: number; length: number }) => floats.subarray(attribute.offset, attribute.offset + attribute.length);
-  const borderMaterial = new LineBasicMaterial({ color: new Color(BASE_THEME.accent).lerp(new Color(BASE_THEME.paper), .6), transparent: true, opacity: .56 });
+  const borderMaterial = new LineBasicMaterial({ color: BASE_THEME.paper, transparent: true, opacity: .76 });
   const grainCanvas = document.createElement('canvas');
   grainCanvas.width = 256; grainCanvas.height = 256;
   const grainContext = grainCanvas.getContext('2d');
@@ -99,23 +99,41 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
     region.groups.forEach(group => geometry.addGroup(group.start, group.count, group.materialIndex));
     geometry.computeBoundingSphere();
     const accent = new Color(themeFor(region.name).colors.accent);
-    const base = new Color(BASE_THEME.paper).lerp(accent, .17);
+    const base = accent.clone().lerp(new Color(BASE_THEME.paper), .15);
     const top = new MeshStandardMaterial({ color: base, map: paperTexture, roughness: .93, metalness: .02 });
-    const side = new MeshStandardMaterial({ color: new Color(BASE_THEME.secondary).lerp(new Color(BASE_THEME.paperDeep), .45), roughness: .86, metalness: .03 });
+    const side = new MeshStandardMaterial({ color: accent.clone().lerp(new Color(themeFor(region.name).colors.ink), .28), roughness: .86, metalness: .03 });
     const mesh = new Mesh(geometry, [top, side]);
     mesh.name = region.name;
     mesh.customDepthMaterial = shadowDepthMaterial;
     mesh.castShadow = true;
     mesh.receiveShadow = true;
     const outlineGeometry = new BufferGeometry();
-    outlineGeometry.setAttribute('position', new Float32BufferAttribute(slice(region.edges), 3));
+    geometry.computeBoundingBox();
+    const topZ = geometry.boundingBox!.max.z;
+    const edges = slice(region.edges);
+    const rim: number[] = [];
+    // Keep the top perimeter; vertical tessellation edges made solid sides look striped.
+    for (let i = 0; i < edges.length; i += 6) {
+      if (edges[i + 2] >= topZ - .001 && edges[i + 5] >= topZ - .001) {
+        for (let j = 0; j < 6; j++) rim.push(edges[i + j]);
+      }
+    }
+    outlineGeometry.setAttribute('position', new Float32BufferAttribute(rim, 3));
     const outline = new LineSegments(outlineGeometry, borderMaterial);
     const group = new Group();
     group.add(mesh, outline);
+    group.scale.z = 1.45;
     root.add(group);
-    return { region, geometry, outlineGeometry, mesh, group, top, side, base, target: 0 };
+    // Pick against the resting footprint: lifted tiles cannot flicker between neighbours.
+    // Three's Raycaster tests layers, not visibility; these share existing GPU resources.
+    const pickMesh = new Mesh(geometry, [top, side]);
+    pickMesh.name = region.name;
+    pickMesh.visible = false;
+    pickMesh.scale.z = 1.45;
+    root.add(pickMesh);
+    return { region, geometry, outlineGeometry, mesh, pickMesh, group, top, side, base, accent, target: 0 };
   });
-  const meshes = tiles.map(tile => tile.mesh);
+  const meshes = tiles.map(tile => tile.pickMesh);
   const raycaster = new Raycaster();
   const pointer = new Vector2();
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -135,6 +153,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   const projectedTarget = new Vector3();
   const target = new Vector3();
   let targetZoom = 1;
+  let manualZoom = 1;
 
   function draw(now: number) {
     raf = 0;
@@ -145,10 +164,10 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
     for (const tile of tiles) {
       const isFocus = tile.region.name === focusName;
       const isSelected = tile.region.name === selectedName;
-      tile.target = isFocus ? 23 : isSelected ? 11 : 0;
+      tile.target = isFocus ? 18 : isSelected ? 8 : 0;
       tile.group.position.z += (tile.target - tile.group.position.z) * ease;
       if (Math.abs(tile.target - tile.group.position.z) > .02) moving = true;
-      const desired = isFocus || isSelected ? new Color(themeFor(tile.region.name).colors.accent) : tile.base;
+      const desired = isFocus || isSelected ? tile.accent : tile.base;
       tile.top.color.lerp(desired, ease);
       if (Math.abs(tile.top.color.r - desired.r) + Math.abs(tile.top.color.g - desired.g) + Math.abs(tile.top.color.b - desired.b) > .002) moving = true;
     }
@@ -191,7 +210,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
     host.style.cursor = name ? 'pointer' : 'grab';
     if (name !== framePreview) { framePreview = name; onHover(name); }
   }
-  function pointerDown(event: PointerEvent) { pointerStart = { x: event.clientX, y: event.clientY }; dragged = false; }
+  function pointerDown(event: PointerEvent) { if (!event.isPrimary || event.button !== 0) return; pointerStart = { x: event.clientX, y: event.clientY }; dragged = false; }
   function pointerUp(event: PointerEvent) {
     if (!dragged && pointerStart) {
       const name = hit(event.clientX, event.clientY);
@@ -217,6 +236,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
   renderer.domElement.addEventListener('pointerdown', pointerDown);
   renderer.domElement.addEventListener('pointerup', pointerUp);
   renderer.domElement.addEventListener('pointerleave', pointerLeave);
+  renderer.domElement.addEventListener('pointercancel', pointerLeave);
   renderer.domElement.addEventListener('webglcontextlost', contextLost);
   document.addEventListener('visibilitychange', visibility);
   motion.addEventListener('change', reducedMotion);
@@ -270,11 +290,11 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
         projectedTarget.set(destination.region.center[0] * .1, 0, -destination.region.center[1] * .1);
         target.copy(projectedTarget);
       }
-      targetZoom = touring ? 1.06 : 1;
+      targetZoom = touring ? Math.max(manualZoom, 1.06) : manualZoom;
       invalidate();
     },
-    zoom(direction) { targetZoom = Math.max(.8, Math.min(1.8, targetZoom + direction * .15)); invalidate(); },
-    reset() { controls.reset(); target.set(0, 0, 0); targetZoom = 1; invalidate(); },
+    zoom(direction) { manualZoom = Math.max(.8, Math.min(1.8, manualZoom + direction * .15)); targetZoom = manualZoom; invalidate(); },
+    reset() { controls.reset(); target.set(0, 0, 0); manualZoom = 1; targetZoom = 1; invalidate(); },
     dispose() {
       dead = true;
       cancelAnimationFrame(raf);
@@ -286,6 +306,7 @@ export function createIndiaScene(options: SceneOptions): IndiaScene {
       renderer.domElement.removeEventListener('pointerdown', pointerDown);
       renderer.domElement.removeEventListener('pointerup', pointerUp);
       renderer.domElement.removeEventListener('pointerleave', pointerLeave);
+      renderer.domElement.removeEventListener('pointercancel', pointerLeave);
       renderer.domElement.removeEventListener('webglcontextlost', contextLost);
       for (const image of pendingImages) { image.onload = null; image.onerror = null; image.src = ''; }
       textures.forEach(texture => texture.dispose());

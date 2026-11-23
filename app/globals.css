@@ -4441,3 +4441,136 @@ body .nav .kk-craft-search input[type='search'] { font-size: 16px; }
 
 /* Bihar uses a three-pixel lower header border rather than the shared one. */
 body:has(.kk-bihar-journal) .nav { --kk-menu-edge: 3px; }
+
+/* Explore India: colour-coded craft relief and a steady, image-led hover preview. */
+.kk-explore .kk-explore-page { padding: 24px clamp(16px, 4vw, 60px) 28px; }
+.kk-explore .kk-discovery-intro { gap: 16px 30px; margin-bottom: 24px; }
+.kk-explore .kk-discovery-intro > p { color: var(--kk-ink); font-size: 14px; line-height: 1.7; }
+.kk-explore .kk-discovery-controls { gap: 16px; padding-bottom: 20px; }
+.kk-explore .kk-region-picker { gap: 10px; }
+.kk-explore .kk-region-picker label { color: var(--kk-ink); font-size: 13px; }
+.kk-explore .kk-region-picker select { min-height: 44px; width: 100%; font-size: 16px; color: var(--kk-ink); background: var(--kk-paper); }
+.kk-explore .kk-discovery-body { gap: 26px; align-items: start; }
+.kk-explore .kk-discovery-map { padding: 0; }
+.kk-explore .kk-map-topline { gap: 14px; min-height: 44px; color: var(--kk-ink); font-size: 12px; }
+.kk-explore .kk-map-topline button, .kk-explore .kk-relief-zoom button, .kk-explore .kk-showcase button, .kk-explore .kk-map-modes button, .kk-explore .kk-quick-regions button { min-height: 44px; }
+.kk-explore .kk-relief-stage { height: clamp(370px, 57svh, 560px); margin-block: 8px 12px; }
+.kk-explore .kk-relief-zoom { top: 12px; right: 0; gap: 8px; }
+.kk-explore .kk-relief-zoom button { width: 44px; border-radius: 12px; box-shadow: 0 3px 12px color-mix(in srgb, var(--kk-ink) 7%, transparent); }
+.kk-explore .kk-relief-hint { bottom: 0; font-size: 11px; line-height: 1.6; color: var(--kk-ink); }
+.kk-explore .kk-relief-hint small { font-size: 10px; opacity: 1; }
+.kk-explore .kk-map-bottomline { gap: 14px; align-items: center; flex-wrap: wrap; }
+.kk-explore .kk-map-bottomline > p { color: var(--kk-ink); font-size: 12px; line-height: 1.6; }
+.kk-explore .kk-map-modes button { min-width: 72px; font-size: 12px; }
+.kk-explore .kk-quick-regions { gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.kk-explore .kk-quick-regions button { padding-inline: 13px; color: var(--kk-ink); font-size: 12px; }
+.kk-explore .kk-discovery-preview { align-items: start; border: 0; }
+.kk-explore .kk-region-preview { display: flex; flex-direction: column; align-items: stretch; gap: 14px; margin: 0; padding: 22px; border: 1px solid var(--kk-line); border-radius: 18px; background: color-mix(in srgb, var(--kk-paper) 92%, var(--kk-paper-deep)); box-shadow: 0 12px 35px color-mix(in srgb, var(--kk-ink) 5%, transparent); }
+.kk-explore .kk-region-preview::before { display: none; }
+.kk-explore .kk-region-preview-top { min-height: 26px; color: var(--kk-ink); }
+.kk-explore .kk-region-preview-top .kk-home-eyebrow { font-size: 11px; letter-spacing: .1em; color: var(--kk-ink); }
+.kk-explore .kk-region-preview-image { width: 100%; height: auto; aspect-ratio: 1.8; margin: 0; border: 0; border-radius: 10px; flex-shrink: 0; }
+.kk-explore .kk-region-preview-image > span { bottom: 8px; right: 8px; padding: 5px 8px; color: var(--kk-ink); background: var(--kk-paper); font-size: 10px; }
+.kk-explore .kk-region-identity h2 { margin: 0 0 6px; font-size: clamp(29px, 3vw, 38px); line-height: 1.12; overflow-wrap: normal; }
+.kk-explore .kk-region-native { font-size: 14px; color: var(--kk-ink); }
+.kk-explore .kk-region-description { color: var(--kk-ink); font-size: 14px; line-height: 1.65; margin: 0; }
+.kk-explore .kk-region-crafts { display: grid; gap: 7px; }
+.kk-explore .kk-region-crafts > span { display: flex; align-items: baseline; gap: 9px; padding: 0; border: 0; border-radius: 0; font-size: 13px; line-height: 1.5; }
+.kk-explore .kk-region-crafts > span::before { content: ''; width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: var(--kk-accent); }
+.kk-explore .kk-region-explore { gap: 12px; margin-top: 4px; min-height: 48px; border-radius: 9px; font-size: 13px; color: var(--kk-paper); background: color-mix(in srgb, var(--kk-accent) 65%, var(--kk-ink)); }
+.kk-explore .kk-region-explore svg { flex-shrink: 0; }
+.kk-explore .kk-region-footnote { font-size: 11px; line-height: 1.6; color: var(--kk-ink); }
+.kk-explore .kk-discovery-caption { gap: 14px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--kk-line); color: var(--kk-ink); font-size: 12px; }
+.kk-explore .kk-discovery-caption > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--kk-ink); }
+@media (min-width: 641px) { .kk-explore .kk-region-picker select { width: 220px; } .kk-explore .kk-discovery-preview { max-width: 560px; width: 100%; justify-self: center; } }
+@media (min-width: 901px) {
+  .kk-explore .kk-discovery-body { grid-template-columns: minmax(0, 1fr) minmax(300px, 340px); gap: clamp(24px, 3vw, 48px); }
+  .kk-explore .kk-relief-stage { height: clamp(420px, calc(100svh - 450px), 700px); }
+  .kk-explore .kk-discovery-preview { max-width: none; position: sticky; top: 114px; }
+  .kk-explore .kk-region-identity { min-height: 90px; }
+  .kk-explore .kk-region-description { min-height: 6.6em; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .kk-explore .kk-region-crafts { min-height: 72px; align-content: start; }
+}
+
+/* Keep phone discovery focused on the map rather than introductory whitespace. */
+@media (max-width: 640px) {
+  .kk-explore .kk-explore-page { padding-top: 16px; }
+  .kk-explore .kk-explore-back { margin-bottom: 8px; }
+  .kk-explore .kk-discovery-intro { margin-bottom: 16px; }
+  .kk-explore .kk-discovery-intro > p { display: none; }
+  .kk-explore .kk-discovery-intro .kk-home-eyebrow { margin-bottom: 6px; }
+  .kk-explore .kk-relief-stage { height: clamp(350px, 50svh, 460px); }
+}
+@media (min-width: 901px) {
+  .kk-explore .kk-region-identity { min-height: 100px; }
+  .kk-explore .kk-region-identity h2 { font-size: 32px; }
+}
+
+/* ── Dropdowns and their icons (2026-11-23) ──────────────────────────────
+   One native select with a themed chevron, one contained search focus ring,
+   and legible state-menu icons. See docs/audit/DROPDOWNS.md.              */
+.kk-select { position: relative; display: inline-block; min-width: 0; max-width: 100%; color: color-mix(in srgb, var(--kk-accent) 62%, var(--kk-ink)); vertical-align: middle; }
+/* 16px keeps iOS from zooming; the right padding is the icon's own column.
+   Two classes deep so it outranks each page's older select padding. */
+body .kk-select.kk-select select { appearance: none; -webkit-appearance: none; width: 100%; min-height: 44px; padding: 10px 42px 10px 14px; border-radius: 8px; font-size: 16px; line-height: 1.4; text-overflow: ellipsis; cursor: pointer; }
+.kk-select-icon { position: absolute; top: 50%; right: 14px; transform: translateY(-50%); pointer-events: none; }
+body .kk-select.kk-select select:focus-visible { outline: 2px solid color-mix(in srgb, var(--kk-accent) 62%, var(--kk-ink)); outline-offset: 2px; }
+.kk-select select:disabled { cursor: not-allowed; }
+.kk-select select:disabled + .kk-select-icon { opacity: .5; }
+/* Drops under its label when the longest state name would not fit beside it. */
+.kk-region-picker { flex-wrap: wrap; row-gap: 8px; }
+.kk-region-picker .kk-select { flex: 1 1 226px; }
+.kk-auth-phone .kk-select { display: block; }
+body .kk-auth-phone .kk-select.kk-select select { min-height: 48px; }
+/* Stacked on the narrowest phones: side by side there, the dialling code
+   was cut to "+91 I…". */
+.kk-auth-phone { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 381px) {
+  .kk-auth-phone { grid-template-columns: minmax(0, 176px) minmax(0, 1fr); }
+}
+@media (min-width: 641px) {
+  .kk-region-picker .kk-select { flex: 0 0 auto; }
+}
+
+/* The product page tints this box but had left its text on the edge. */
+@media (min-width: 381px) {
+  .kk-painting-info .kk-market { padding: 12px 14px; }
+}
+
+/* Search: one ring around the whole field, and the clear button in the
+   site's ink rather than the browser's blue. */
+body .nav .nav-right .kk-craft-search form:has(input:focus) { border-color: transparent; box-shadow: none; outline: 2px solid color-mix(in srgb, var(--kk-accent) 62%, var(--kk-ink)); outline-offset: -1px; }
+body .nav .nav-right .kk-craft-search input[type='search']:focus { outline: none; box-shadow: none; }
+.kk-craft-search button:focus-visible { outline-offset: -3px; }
+.kk-craft-search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; width: 16px; height: 16px; margin: 0 2px; cursor: pointer; background: var(--kk-ink); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E") center / contain no-repeat; }
+.kk-craft-search input:placeholder-shown { text-overflow: ellipsis; }
+.kk-craft-search input:placeholder-shown::-webkit-search-cancel-button { display: none; }
+.kk-search-results a { gap: 12px; }
+.kk-search-results a:last-child { border-bottom: 0; }
+.kk-search-results a > svg { flex-shrink: 0; }
+.kk-search-results small { color: color-mix(in srgb, var(--kk-ink) 80%, var(--kk-paper)); font-size: 12px; line-height: 1.4; }
+.kk-search-results a:focus-visible { outline-offset: -2px; }
+@media (hover: hover) {
+  .kk-search-results a:hover { background: color-mix(in srgb, var(--kk-primary) 6%, transparent); }
+}
+/* Hang the results from the header's edge, as the states menu does, instead
+   of from the field, which left the panel straddling the header line. */
+@media (min-width: 641px) {
+  .nav .kk-craft-search { position: static; }
+  body .nav .nav-right .kk-search-results { top: calc(100% + var(--kk-menu-edge, 1px)); right: 20px; max-height: min(480px, calc(100dvh - 110px)); border-radius: 0 0 12px 12px; }
+}
+@media (min-width: 1200px) {
+  body .nav .nav-right .kk-search-results { right: max(24px, calc((100vw - 1360px) / 2)); }
+}
+
+/* States menu icons: full strength, darkened within each region's pigment
+   so the pale golds still read on paper. */
+.nav .nav-menu-motif, .nav .nav-menu-item .nav-menu-go { opacity: 1; color: color-mix(in srgb, var(--row) 72%, var(--kk-ink)); }
+.nav .nav-menu-go { padding-left: 0; }
+.nav-menu-region-toggle > svg { flex-shrink: 0; margin-right: 6px; transition: transform 200ms var(--ease); }
+@media (max-width: 640px) {
+  /* Same 14px drop everywhere; Bihar carried its own larger offset. */
+  body .nav .nav-right .kk-search-results.kk-search-results { top: calc(100% + 14px); }
+  /* "All of India" already draws the line above the first group. */
+  .nav .nav-menu-group:first-child { border-top: 0; }
+}

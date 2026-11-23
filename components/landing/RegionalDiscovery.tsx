@@ -10,8 +10,9 @@ import { slugForState } from '@/lib/states/slugs';
 import { stateThemeVars } from '@/lib/states/theme';
 import { useRegionStore } from '@/lib/store/useRegionStore';
 import { useCulturalShowcase } from '@/lib/store/useCulturalShowcase';
-import type { IndiaScene } from '@/lib/three/types';
+import { type IndiaScene } from '@/lib/three/types';
 import { Motif } from '@/components/ornament/Motifs';
+import SelectField from '@/components/shared/SelectField';
 import RegionPreview from '@/components/landing/RegionPreview';
 
 const MapThreeView = dynamic(() => import('@/components/landing/MapThreeView'), { ssr: false });
@@ -34,14 +35,27 @@ export default function RegionalDiscovery() {
   const section = useRef<HTMLElement>(null);
   const scene = useRef<IndiaScene | null>(null);
   const previewCard = useRef<HTMLDivElement>(null);
+  const hoverClear = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showcase = useCulturalShowcase(visible && (mode === '2d' || ready));
   const region = (showcase.running ? selected : hovered ?? selected) ?? 'Bihar';
   const theme = themeFor(region);
-  const choose = useCallback((name: string) => { setHovered(null); select(name); }, [select]);
-  const preview = useCallback((name: string | null) => {
-    setHovered(name);
-    if (name) useRegionStore.getState().stopTour();
+  const keepPreview = useCallback(() => {
+    if (hoverClear.current) clearTimeout(hoverClear.current);
+    hoverClear.current = null;
   }, []);
+  const choose = useCallback((name: string) => { keepPreview(); setHovered(null); select(name); }, [keepPreview, select]);
+  const preview = useCallback((name: string | null) => {
+    keepPreview();
+    if (name) { setHovered(name); useRegionStore.getState().stopTour(); }
+    else hoverClear.current = setTimeout(() => {
+      hoverClear.current = null;
+      // Native canvas leave can arrive after React's card-enter event.
+      const card = previewCard.current;
+      if (!card?.matches(':hover') && !card?.contains(document.activeElement)) setHovered(null);
+    }, 300);
+  }, [keepPreview]);
+
+  useEffect(() => () => keepPreview(), [keepPreview]);
   const controller = useCallback((value: IndiaScene | null) => { scene.current = value; }, []);
   const onReady = useCallback(() => setReady(true), []);
   const fallback = useCallback(() => { setMode('2d'); setReady(false); setFailure(true); setHovered(null); }, []);
@@ -81,6 +95,7 @@ export default function RegionalDiscovery() {
 
   useEffect(() => {
     const escape = (event: KeyboardEvent) => {
+      if (event.target instanceof Element && event.target.closest('.nav')) return;
       if (event.key === 'Escape') { select(null); setHovered(null); scene.current?.reset(); }
     };
     window.addEventListener('keydown', escape);
@@ -88,7 +103,7 @@ export default function RegionalDiscovery() {
   }, [select]);
 
   const reset = () => {
-    select(null); setHovered(null); scene.current?.reset();
+    keepPreview(); select(null); setHovered(null); scene.current?.reset();
     history.replaceState(null, '', location.pathname + location.search + '#heritage');
   };
   const changeMode = (next: '3d' | '2d') => {
@@ -102,7 +117,7 @@ export default function RegionalDiscovery() {
     </header>
     <div className="kk-discovery-workspace">
       <div className="kk-discovery-controls">
-        <div className="kk-region-picker"><label htmlFor="map-region">Choose a state</label><select id="map-region" value={selected ?? ''} onChange={e => e.target.value ? choose(e.target.value) : reset()}><option value="">All of India</option>{Object.keys(STATE_THEMES).sort((a,b) => displayName(a).localeCompare(displayName(b))).map(state => <option key={state} value={state}>{displayName(state)}</option>)}</select></div>
+        <div className="kk-region-picker"><label htmlFor="map-region">Choose a state</label><SelectField id="map-region" value={selected ?? ''} onChange={e => e.target.value ? choose(e.target.value) : reset()}><option value="">All of India</option>{Object.keys(STATE_THEMES).sort((a,b) => displayName(a).localeCompare(displayName(b))).map(state => <option key={state} value={state}>{displayName(state)}</option>)}</SelectField></div>
         <div className="kk-showcase" data-showcase-control>
           <button type="button" className="kk-showcase-step" aria-label="Previous showcase state" onClick={() => showcase.step(-1)}><ChevronLeft className="kk-ui-icon" size={16} aria-hidden="true" /></button>
           <button type="button" className="kk-showcase-play" onClick={showcase.toggle} aria-pressed={showcase.running}>{showcase.running ? <Pause className="kk-ui-icon" size={16} aria-hidden="true" /> : <Play className="kk-ui-icon" size={16} aria-hidden="true" />}{showcase.running ? 'Pause showcase' : 'Cultural showcase'}</button>
@@ -124,11 +139,11 @@ export default function RegionalDiscovery() {
             </>}
             {mode === '2d' && <IndiaMap embedded managed onPreview={preview} />}
           </div>
-          <div className="kk-map-bottomline"><p><span /> Choose a state to explore its traditions</p><div className="kk-map-modes" aria-label="Map display"><button type="button" aria-pressed={mode === '3d'} onClick={() => changeMode('3d')}>3D map</button><button type="button" aria-pressed={mode === '2d'} onClick={() => changeMode('2d')}>2D map</button></div></div>
+          <div className="kk-map-bottomline"><p><span /> State colours follow their regional craft palettes</p><div className="kk-map-modes" aria-label="Map display"><button type="button" aria-pressed={mode === '3d'} onClick={() => changeMode('3d')}>3D map</button><button type="button" aria-pressed={mode === '2d'} onClick={() => changeMode('2d')}>2D map</button></div></div>
           <div className="kk-quick-regions" aria-label="Featured regions">{quickStates.map(state => <button key={state} type="button" onClick={() => choose(state)} aria-pressed={selected === state}>{displayName(state)}</button>)}</div>
           {failure && <p className="kk-map-fallback" role="status">The 3D view isn’t available right now. The interactive 2D map and region selector remain available.</p>}
         </div>
-        <div ref={previewCard} className="kk-discovery-preview"><RegionPreview region={region} previewing={Boolean(hovered && hovered !== selected)} touring={showcase.running} onSelect={() => choose(region)} /></div>
+        <div ref={previewCard} className="kk-discovery-preview" onPointerEnter={keepPreview} onPointerLeave={() => preview(null)} onFocusCapture={keepPreview} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) preview(null); }}><RegionPreview region={region} previewing={Boolean(hovered && hovered !== selected)} touring={showcase.running} onSelect={() => choose(region)} /></div>
       </div>
       <p className="kk-sr-only" role="status" aria-live="polite">{selected ? `${displayName(selected)} selected. Explore its traditions in the state preview.` : 'All of India. Bihar is our featured first chapter.'}</p>
       <div className="kk-discovery-caption"><span><Motif name={theme.motif} size={19} />{theme.script.roman} <span aria-hidden="true">·</span> {theme.script.meaning}</span><Link href={`/state/${slugForState(region)}`}>The stories of {displayName(region)} <ArrowUpRight className="kk-ui-icon" size={16} aria-hidden="true" /></Link></div>

@@ -162,3 +162,7 @@ Six Mizoram items reuse the existing opt-in image-backed close-up viewer with fo
 ### Tripura and Sikkim — 2026-11-23
 
 Twelve Tripura/Sikkim items reuse the existing opt-in image-backed close-up viewer, four presets and image fallback. These are textured surfaces rather than scans. No shared renderer, map or lifecycle code is changed.
+
+### Explore relief and hover refinement — 2026-11-23
+
+Implemented: stronger registry-based state pigments, state-coloured side faces, top-only rim lines and a more oblique relief presentation. Static invisible picking meshes share resources with the visible tiles, keeping hover stable while the visible tile rises. User zoom persists through hover. Region previews reuse existing journal images with consistent layout; D3 and native selection remain available. No new mesh source, dependency, origin or topographic claim is introduced. See [implementation and verification](../audit/THREE_MAP_IMPLEMENTATION.md).

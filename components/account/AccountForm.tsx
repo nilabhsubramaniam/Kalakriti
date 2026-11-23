@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { ArrowRight, CircleAlert, Eye, EyeOff, KeyRound, Mail, MailCheck, Smartphone } from 'lucide-react';
+import SelectField from '@/components/shared/SelectField';
 import { submitAccountRequest } from '@/lib/account/client';
 import {
   COUNTRY_CODES, PASSWORD_HINT, PHONE_HINT, emptyAccountValues, fieldsFor, validateAccount, validateField,
@@ -185,12 +186,12 @@ export default function AccountForm({ mode }: { mode: AccountMode }) {
       {method === 'phone' && (
         <Field field="phone" id={fieldId('phone')} error={errors.phone} hint={PHONE_HINT}>
           <div className="kk-auth-phone">
-            <select
+            <SelectField
               aria-label="Country code" name="countryCode" value={values.countryCode} autoComplete="tel-country-code"
               onChange={event => update('countryCode', event.target.value)}
             >
               {COUNTRY_CODES.map(country => <option key={country.code} value={country.code}>{country.label}</option>)}
-            </select>
+            </SelectField>
             <input
               id={fieldId('phone')} name="phone" type="tel" inputMode="tel" value={values.phone}
               autoComplete="tel-national" maxLength={20}
