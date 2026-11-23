@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. ONE continuous landscape 3:2 photograph, one camera view, no collage, no grid, no panels. Unnamed Meghalaya shaded timber veranda in leafy hills. One low table with six complete objects: creamy Ryndia-like textured woven shawl with thin forest-green border, softly folded muted ochre textured stole, ivory woven cloth with delicate black narrow raised linear embroidered edge, folded deep red Dakmanda-inspired textile with broad ochre black ivory horizontal geometric bands, natural tall oval bamboo/cane storage basket, small squat matte black hand-shaped decorative clay vase. Harmonious breathing room, full shapes, no cropped objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-60d4a0dd-b809-4234-acf9-5b9c319c6e4b.png",
+      "path": "public/images/ml-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 334428
+    },
+    {
+      "key": "mural",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Landscape 3:2 website background. Centre 84 percent completely quiet pale ivory with faint woven-fibre texture. Only narrow outer vertical edges: fine forest-green woven geometric bands, subtle bamboo leaves, muted ochre thread marks. No horizontal borders, no central illustrations, no landscape scene.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-62b8c947-4222-4d32-b107-ed45586da0be.png",
+      "path": "public/images/ml-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 255738
+    },
+    {
+      "key": "ryndia",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph creamy ivory softly textured woven shawl, matte spun-silk-like yarn, very narrow forest-green woven edge, short fringe, folded on pale timber. Complete arrangement.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-245dc868-a381-4ad0-9741-71047b63eaf4.png",
+      "path": "public/images/ml-ryndia.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 238966
+    },
+    {
+      "key": "stole",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph warm muted ochre textured woven stole, narrow ivory border, small fringes, softly folded on pale stone. Matte spun-silk-like texture, complete arrangement.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-843409d7-0faf-4558-842c-f6e7d3254d84.png",
+      "path": "public/images/ml-stole.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 331556
+    },
+    {
+      "key": "khneng",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph complete folded ivory textured woven cloth with delicate black narrow linear hand-stitched border, repeated tiny raised segmented lines, restrained contemporary composition, visible thread detail on plain fabric. No symbols or complex ceremonial design. Pale wood surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a0b384a3-73ca-4bfc-bfb4-dbfda105ee10.png",
+      "path": "public/images/ml-khneng.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 223400
+    },
+    {
+      "key": "dakmanda",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph folded deep red cotton-like woven wrap textile with broad ochre black and ivory horizontal geometric patterned bands, small repeated diamond and line units, fine woven surface. Original contemporary motif arrangement, no copying named community ceremonial pattern. Pale timber surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-64c23fe3-f546-4cdf-b4a2-109d5e87f3d3.png",
+      "path": "public/images/ml-dakmanda.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 286646
+    },
+    {
+      "key": "basketry",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph complete tall oval natural bamboo and cane storage basket, interlaced thin strips, sturdy bound rim, empty and upright. Pale ivory surface, no handles or straps.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bcfa605b-a3da-443a-8f3c-b3061c9f5488.png",
+      "path": "public/images/ml-basketry.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 193712
+    },
+    {
+      "key": "pottery",
+      "prompt": "Original premium Kalakriti Meghalaya marketplace asset. Photorealistic handmade textures, misty forest greens, warm ivory, muted terracotta, restrained red ochre, soft overcast daylight. No text, logos, badges, named artist or workshop, vegetables, people, sacred or ceremonial compositions. Square product photograph complete squat matte charcoal-black hand-shaped decorative clay vase, short open neck, soft irregular rounded body, subtle hand-worked texture, no glaze shine, no plant or food. Quiet pale stone surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-882fd917-fa5f-48f8-ab03-744f0d23110c.png",
+      "path": "public/images/ml-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 95054
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Landscape 3:2 single continuous scene: an unnamed timber veranda opening onto soft green hills and bamboo leaves. A wooden display table carries four folded textiles: elaborate red black ivory small-geometric woven bands, black cloth with red and green stripes, ivory cloth with broad black bands, and black cloth with white narrow patterned stripes. Beside them a natural bamboo storage basket and shallow round woven tray. All six objects fully within frame, no food, pottery or ceremonial props.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-86943ff9-4060-414a-aa50-3db13ab80f02.png",
+      "output": "public/images/mz-hero.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 357606
+    },
+    {
+      "key": "puanchei",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of neatly folded dense woven textile, richly arranged horizontal geometric bands in red, black and ivory with tiny restrained green accents; fine weave clearly visible. Inspired by Puanchei's documented colour and band relationships without asserting an exact traditional motif. Timber surface, quiet pale background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-981b8472-5808-4042-899b-849258b69ab0.png",
+      "output": "public/images/mz-puanchei.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 253554
+    },
+    {
+      "key": "pawndum",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of folded black woven cloth with parallel deep red and muted green bands running across it, fine visible yarn texture, no figurative motifs; contemporary colour study associated with Pawndum weaving. Pale neutral timber setting.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-48179b7b-a6ca-4d5f-9d19-b18385aca36f.png",
+      "output": "public/images/mz-pawndum.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 226178
+    },
+    {
+      "key": "ngotekherh",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of folded ivory woven cloth featuring two confident broad black bands and very fine black stripes, clean geometric contrast, no coloured motifs, visible threads. Quiet pale timber setting; contemporary study of Ngotekherh's contrasting bands.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-81fa4412-e465-4b76-9289-cf779c7f0884.png",
+      "output": "public/images/mz-ngotekherh.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 233796
+    },
+    {
+      "key": "hmaram",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of folded black woven cloth with five prominent narrow white geometric patterned bands separated by finer white stripes, black-and-white only, neat hemmed edge without fringe. Small restrained geometric units, no named sacred symbol. Quiet pale timber surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f7c7b469-546f-419c-90dc-444574b2d8b5.png",
+      "output": "public/images/mz-hmaram.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 265810
+    },
+    {
+      "key": "basket",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of one upright natural golden-brown split-bamboo storage basket, rectangular base with gently flared sides and a carefully bound cane rim, fine interlacing, contemporary household form without back straps or ceremonial objects. Quiet pale timber background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-32f81298-0035-4205-8db9-35435b51fc93.png",
+      "output": "public/images/mz-basket.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 163606
+    },
+    {
+      "key": "tray",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Square product photograph of one shallow round natural golden-brown bamboo woven tray, flat interlaced base and slightly raised finely bound rim, subtle material variations, contemporary household form, empty and no food. Quiet pale timber background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-770d0431-ff11-4ecd-81f4-7b35b8719219.png",
+      "output": "public/images/mz-tray.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 169678
+    },
+    {
+      "key": "mural",
+      "prompt": "Create one premium realistic editorial craft photograph for Kalakriti's Mizoram chapter, warm natural daylight, accurate visible textile or plant fibres, restrained composition, no people, no text, no logos, no GI labels or claims, no montage, no illustration borders. A contemporary concept, not documentary evidence or a certified replica. Landscape 3:2 seamless-feeling decorative website background only: very quiet pale ivory woven cloth filling the central 82 percent, extremely subtle visible yarn texture. Along the extreme left and right outer 9 percent narrow vertical woven bands in dark red, black, ivory and restrained forest green; small simple repeating rectangles and geometric stitches. Very restrained border scale. No objects, text, emblems, flowers or central medallion. Keep centre near plain for readable content.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-373f495b-91c3-4a71-9787-fb4f7d9ce3e9.png",
+      "output": "public/images/mz-mural.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 427272
+    }
+  ]
+}

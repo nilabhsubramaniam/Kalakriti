@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. ONE single continuous landscape photograph 3:2, one camera view, no collage, grid or panels. Unnamed timber veranda overlooking green Naga hills. On ONE low wooden bench arrange six complete objects: folded deep-red charcoal ivory striped contemporary woven shawl, natural bamboo/cane oval storage basket, small dark wooden lidded box with simple carved line border, contemporary necklace of small red black ivory and ochre glass-like beads on cream cloth, squat earthy brown decorative clay vase, folded pale natural textured plant-fibre stole with charcoal edge. All six clearly visible, generous framing, no cropped objects.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ed62a8c6-059a-497a-8a90-a6cefaba6c9d.png",
+      "path": "public/images/nl-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 330356
+    },
+    {
+      "key": "mural",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Landscape 3:2 readable website background. Central 84 percent completely quiet warm ivory woven-paper texture. Only narrow outer vertical borders: restrained red charcoal ivory geometric woven bands, tiny ochre thread marks and subtle bamboo leaves. No horizontal frames, central emblems, figurative motifs or named-community ceremonial patterns.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b980cd09-e407-4392-9b20-19274d14afdc.png",
+      "path": "public/images/nl-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 316060
+    },
+    {
+      "key": "weave",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph folded deep-red charcoal and ivory striped contemporary woven shawl, modest narrow geometric end band and short fringe, visible cotton-like interlacing. Original nonceremonial arrangement, no emblems, no animals, warm ivory surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7699161e-8737-43d1-8ad5-31419b3a0d5d.png",
+      "path": "public/images/nl-weave.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 313472
+    },
+    {
+      "key": "basketry",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph complete natural bamboo/cane oval storage basket with fine interlaced sides, tightly bound rim and gently curved base, empty, ivory tabletop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-fd9cbd68-da7e-41b6-8ac2-1e5e98c16fde.png",
+      "path": "public/images/nl-basketry.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 195532
+    },
+    {
+      "key": "wood",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph complete small dark-brown wooden lidded box, simple shallow carved line border, natural grain, no figures or emblems, warm ivory stone surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-71f4483c-98ae-4bd4-b583-7993ba155092.png",
+      "path": "public/images/nl-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 179928
+    },
+    {
+      "key": "beadwork",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph complete contemporary single-strand necklace arranged in oval on cream cloth, small round glass-like beads in deep red charcoal ivory and muted ochre, restrained repeated colour groups, simple dark cord closure, no animal parts, shells, coral or antique beads.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b5ad2563-16db-4f13-b7ae-56f08fa0c378.png",
+      "path": "public/images/nl-beadwork.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 220018
+    },
+    {
+      "key": "pottery",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph complete squat earthy-brown hand-shaped decorative clay vase, short open neck, subtly uneven rounded body, matte worked surface, no glaze, food or plants, pale timber surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-04d032e8-8dfb-4202-82e8-2f313381e008.png",
+      "path": "public/images/nl-pottery.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 162654
+    },
+    {
+      "key": "nettle",
+      "prompt": "Original premium Kalakriti Nagaland marketplace asset. Realistic handmade textures, soft daylight, warm ivory, deep red, charcoal, natural bamboo and muted ochre. No lettering, logos, badges, named makers or workshops, people, weapons, animal parts, sacred or status-restricted motifs. No reproduction of a named traditional shawl. Square product photograph pale natural beige textured plant-fibre woven stole, narrow charcoal border and small fringes, loosely folded, visible coarse fine interlacing, complete arrangement, quiet ivory timber. No embroidered motifs.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b3c95e51-b9fb-4696-9daa-97cbb2151393.png",
+      "path": "public/images/nl-nettle.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 347892
+    }
+  ]
+}

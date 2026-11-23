@@ -139,3 +139,26 @@ Validation for the expanded slice: strict TypeScript, zero-warning lint and a 68
 **22 November 2026 — Maharashtra:** Six items reuse the opt-in image-backed viewer and four presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain available without WebGL.
 
 **22 November 2026 — western coastal chapters:** Twelve items reuse the optional image-backed viewer and four existing presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain usable without WebGL.
+
+**22 November 2026 — Assam:** Six items reuse the optional image-backed surface and four presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain usable without WebGL.
+
+**23 November 2026 — Meghalaya:** Six items reuse the opt-in image-backed viewer and four existing presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain usable without WebGL.
+
+**23 November 2026 — Arunachal Pradesh:** Six items reuse the optional image-backed close-up surface and four presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Image mode and purchase controls remain available without WebGL.
+
+**23 November 2026 — Nagaland:** Six items reuse the optional image-backed close-up surface and four presets. No scans, volumetric models, renderer lifecycle or atlas/D3 changes are introduced. Images and purchase controls remain available without WebGL.
+
+
+### Manipur chapter — 2026-11-23
+
+Manipur adds six image-backed product close-ups through the existing viewer, using four presets and opt-in WebGL. These are textured surfaces rather than scanned objects; image mode and purchase controls remain available without WebGL. No shared renderer or cleanup changes are introduced.
+
+
+### Mizoram chapter — 2026-11-23
+
+Six Mizoram items reuse the existing opt-in image-backed close-up viewer with four presets. These are textured surfaces, not scans; images and normal purchase controls remain available without WebGL. No shared renderer or lifecycle code changes are introduced.
+
+
+### Tripura and Sikkim — 2026-11-23
+
+Twelve Tripura/Sikkim items reuse the existing opt-in image-backed close-up viewer, four presets and image fallback. These are textured surfaces rather than scans. No shared renderer, map or lifecycle code is changed.

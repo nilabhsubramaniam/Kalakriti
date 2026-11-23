@@ -1,0 +1,94 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. ONE single continuous landscape photograph 3:2, one camera view, absolutely no collage, grid or panels. Unnamed leafy Manipur veranda, one low wooden table. Arrange SIX complete distinct objects: squat matte black hand-shaped pottery decorative vase with subtle burnished sheen, folded ivory textile with brick-red stepped triangular needlepoint woven border, finely woven ivory translucent textile with restrained small white floral units, natural golden kauna-rush rectangular mat partly rolled, small natural rounded kauna-rush tote basket with loop handles, low dark natural bamboo/cane storage basket with neatly bound rim. Whole arrangements visible with breathing room.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-2e64b3ac-a656-479d-a507-fb87bc97ab48.png",
+      "output": "public/images/mn-hero.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 324084
+    },
+    {
+      "key": "longpi",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph complete squat matte charcoal-black hand-shaped decorative pottery vase, short open neck, gently rounded shoulder and subtle burnished surface. No handles, reed wrapping, food or plants. Ivory stone surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-2e2be63a-b756-4561-9378-1b49dc4b7583.png",
+      "output": "public/images/mn-longpi.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 90688
+    },
+    {
+      "key": "moirang",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph folded ivory woven cloth with brick-red border of repeating restrained stepped triangular needlepoint units, narrow fine red lines beside edge, visible cotton-like weave. Original modest composition, complete arrangement, pale timber.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c72669d0-0c19-440f-b0ec-fa21f9b3e94f.png",
+      "output": "public/images/mn-moirang.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 262594
+    },
+    {
+      "key": "wangkhei",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph folded finely woven translucent ivory textile, sparse small white floral woven units across fine open ground, narrow plain ivory edge. Soft light reveals delicate interlacing, complete arrangement, warm pale surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-87ab6e92-e17b-4d2e-b0a7-3240aaea741c.png",
+      "output": "public/images/mn-wangkhei.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 255166
+    },
+    {
+      "key": "kauna",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph natural pale-gold kauna-rush rectangular mat partly rolled, visible rounded rush strands and neatly finished edges, no painted motifs, complete arrangement, ivory wood surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-1888808e-9d89-4a48-9709-e71bb0d3b3a5.png",
+      "output": "public/images/mn-kauna.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 247864
+    },
+    {
+      "key": "bag",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph complete small rounded natural pale-gold kauna-rush tote basket, two woven loop handles, softly curved sides, fine close weave, empty, warm ivory tabletop.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a7734a29-3ebd-4ffd-a8a2-23f6c51a1dde.png",
+      "output": "public/images/mn-bag.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 181140
+    },
+    {
+      "key": "bamboo",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Square product photograph complete low oval natural brown bamboo/cane storage basket with fine split-strip interlacing and neatly bound rim, empty, ivory surface. Distinct stiff bamboo strip texture, not soft rush.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b73643f7-20de-4c99-82cb-0cae8df1c42b.png",
+      "output": "public/images/mn-bamboo.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 140266
+    },
+    {
+      "key": "mural",
+      "prompt": "Original premium Kalakriti Manipur marketplace asset. Realistic handmade material textures, soft natural daylight, charcoal black, warm ivory, restrained brick red and natural reed green. No text, logos, badges, named makers or workshops, people, food, religious figures or ceremonial objects. Landscape 3:2 readable webpage background, centre 84 percent completely quiet warm ivory handmade-paper texture. Narrow outer vertical edges only: restrained brick-red stepped triangular woven-border units, charcoal fine lines and pale-gold interlaced rush textures. No horizontal frames, central symbols, landscape or figurative imagery.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-af03c286-c6cb-4f11-9ca6-6949aeb40a3d.png",
+      "output": "public/images/mn-mural.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 190286
+    }
+  ]
+}

@@ -277,3 +277,31 @@ See [ASSET_PIPELINE](ASSET_PIPELINE.md) and [DEPLOYMENT_ARCHITECTURE](DEPLOYMENT
 **Implemented regional expansion — 22 November 2026:** Maharashtra extends the static chapter and shared sample catalogue/cart to a twenty-fifth region. Six collections, six item routes and three reading routes reuse the existing frontend. No backend, payment, dependency or renderer change is introduced.
 
 **Implemented regional expansion — 22 November 2026:** Goa and the two existing Dadra & Nagar Haveli / Daman & Diu discovery chapters extend the catalogue to 28 regional entries. They share 12 item routes and eight reading routes within the existing static architecture. Cultural discovery entries are not administrative-entity counts; no map/schema migration, backend or dependency change is introduced.
+
+**Implemented regional expansion — 22 November 2026:** Assam begins the Northeast rollout, extending the existing static chapter and shared sample catalogue to 29 discovery entries. Six collections, six item routes and three reading routes reuse the frontend architecture. No backend, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 23 November 2026:** Meghalaya extends the static chapter and shared sample catalogue to 30 discovery entries. Five collections, six item routes and three reading routes reuse the existing architecture. Two Ryndia item forms share one collection rather than being presented as separate traditions. No backend, dependency or renderer change is introduced.
+
+**Implemented regional expansion — 23 November 2026:** Arunachal Pradesh extends the static chapter and shared sample catalogue to 31 discovery entries. Six collections, six item routes and three reading routes reuse the established frontend. No backend, dependency, boundary migration or renderer change is introduced.
+
+**Implemented regional expansion — 23 November 2026:** Nagaland extends the static chapter and shared sample catalogue to 32 discovery entries. Six collections, six item routes and three reading routes reuse the established frontend. No backend, dependency, boundary or renderer change is introduced.
+
+
+### Manipur chapter — 2026-11-23
+
+Implemented: Manipur follows the approved regional chapter pattern with five material collections, six product viewers, three articles and six visitor entries. This milestone adds no backend, dependency or renderer change. See [implementation](../audit/MANIPUR_JOURNAL.md).
+
+
+### Mizoram chapter — 2026-11-23
+
+Implemented: Mizoram follows the regional chapter pattern with five collections, six item pages, three articles and six visitor entries. No backend or renderer change is introduced. See [implementation](../audit/MIZORAM_JOURNAL.md).
+
+
+### Tripura and Sikkim — 2026-11-23
+
+Implemented: Tripura and Sikkim complete the regional chapter rollout across the 36 registered regions. Each uses five collections, six item close-ups, three articles and six visitor entries. This milestone adds no backend, dependency or renderer change. [Tripura](../audit/TRIPURA_JOURNAL.md) and [Sikkim](../audit/SIKKIM_JOURNAL.md) record implementation and sources.
+
+
+### Account visual design — 2026-11-23
+
+Implemented: login and signup share a full-viewport regional-image carousel, a static Mithila form panel and compact account footer. Existing validation and preview-only submissions remain unchanged. Autoplay is opt-out, manual scene selection is available and reduced-motion preferences stop automatic changes. No account backend, session, email or SMS service is implemented. See [account design](../audit/ACCOUNT_PAGES.md).

@@ -1,0 +1,83 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-22",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create ONE single continuous landscape photograph, aspect ratio 3:2, for Kalakriti Assam homepage hero. ONE camera view of ONE still life. Absolutely no collage, no contact sheet, no grid, no multiple panels, no repeated scenes, no split screen. Unnamed leafy Assam courtyard in soft warm daylight. On one low wooden table, arrange folded golden silk-like cloth with green edge at left, creamy textured ivory stole draped beside it, folded white cloth with red geometric woven end bands at right, one oval natural bamboo basket at rear, one shallow golden-toned decorative metal bowl at front, and one fine pale woven plant-strip mat beneath. All six distinct materials in ONE harmonious complete scene. Premium realistic editorial craft photograph, warm ivory, gold, green and restrained red. No text, no logo, no people, no badges, no named workshop, no food.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-32a28d13-88cf-455b-b52e-dd6f27d64928.png",
+      "path": "public/images/as-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 375198,
+      "rejected_attempt": {
+        "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Landscape 3:2 unnamed Assam courtyard still life on low wooden table: folded naturally golden silk-like textile with fine geometric border, creamy textured Eri-like stole with fringes, white Gamosa-inspired cloth with red woven geometric end bands, oval bamboo and cane basket, simple shallow golden bell-metal decorative bowl, light natural Sitalpati-style interlaced reed mat. Six complete arrangements, quiet leafy background, no people.",
+        "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ab6bc6b9-2493-4695-9ae8-81ca8c0b6910.png",
+        "reason": "Unexpected six-panel contact sheet; replaced with one continuous photograph."
+      }
+    },
+    {
+      "key": "mural",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Landscape 3:2 website background. Central 84 percent quiet ivory woven-paper texture, unmarked. Narrow outer vertical borders only with fine red geometric woven bands, muted gold silk-like lines and a few forest green bamboo leaves. No horizontal frames, no central symbols, no animals or people.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-f1722ceb-445b-47c3-aa17-030b2b42dbef.png",
+      "path": "public/images/as-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 305362
+    },
+    {
+      "key": "muga",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph folded warm golden woven textile, fine restrained deep green geometric border, soft natural lustre, visible fine weave, on warm ivory stone.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a769bf2d-5df9-4e0b-9d24-834eaddd9bc0.png",
+      "path": "public/images/as-muga.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 285856
+    },
+    {
+      "key": "eri",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph creamy ivory softly textured spun-silk-like stole draped neatly, subtle forest green narrow edge and short fringes, warm ivory wooden bench. Natural matte texture distinct from shiny silk.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-159fbbb6-a0bb-4698-944d-901ec8749881.png",
+      "path": "public/images/as-eri.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 212026
+    },
+    {
+      "key": "gamosa",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph folded white cloth with carefully woven red geometric end panels and narrow red side borders, small regular original diamond-and-floral units, fine cotton-like weave, warm ivory table. No lettering.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-cf47f401-61f8-4a3d-8106-666c848f3234.png",
+      "path": "public/images/as-gamosa.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 317526
+    },
+    {
+      "key": "bamboo",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph empty oval natural bamboo and cane storage basket, fine interlaced body and neatly bound sturdy rim, complete basket, quiet ivory background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-98d26c6c-a126-4e8f-b109-41921279cfdd.png",
+      "path": "public/images/as-bamboo.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 128916
+    },
+    {
+      "key": "metal",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph complete simple shallow golden-toned bell-metal decorative bowl with broad curved rim and subtle hammer marks, no pedestal or lid, empty, warm ivory studio surface. No food, no ritual accessories.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7679411a-dd05-4210-b8cf-c60d4463d8bb.png",
+      "path": "public/images/as-metal.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 134260
+    },
+    {
+      "key": "sitalpati",
+      "prompt": "Original premium Kalakriti Assam marketplace image. Realistic handmade materials, warm ivory, muted gold, forest green and restrained red accents, soft daylight, elegant editorial photography. No text, logos, badges, named artisan or workshop, vegetables, religious objects or ceremonial scene. Square product photograph light natural Sitalpati-style reed-strip mat, fine diagonal interlacing with restrained forest green narrow bound edge, loosely rolled at one end to show flexibility, ivory surface, complete arrangement.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b78d5e04-de46-4172-b8fa-290da95db288.png",
+      "path": "public/images/as-sitalpati.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 266092
+    }
+  ]
+}

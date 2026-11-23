@@ -202,3 +202,39 @@ Eight original concepts use `public/images/mh-*.webp`: hero, mural, warli, paith
 ### Goa and western union-territory chapters — 2026-11-22
 
 Eighteen local WebP concepts use `ga-*` (eight), `dn-*` (five) and `dd-*` (five) filenames. Tile/check motifs, bamboo/earthen geometry and teal interlaced strips distinguish the three quiet-centred murals. Original PNGs and previous assets remain intact. The images are concepts, not documentary inventory photos. No named workshop, ceremonial reproduction, marine-shell or ivory inventory is introduced. [Generation prompts and metadata](../audit/WEST_COAST_IMAGE_PROMPTS.json) record provenance.
+
+### Assam chapter — 2026-11-22
+
+Eight local `as-*.webp` concepts cover the hero, quiet-centred mural and six objects. Woven red bands, fine gold and bamboo leaves provide regional borders. The initial hero unexpectedly formed a contact sheet and was replaced with a single continuous photograph; the manifest retains both prompts and original sources. These are concepts rather than documentary inventory photos. [Prompts and metadata](../audit/ASSAM_IMAGE_PROMPTS.json) record provenance.
+
+### Meghalaya chapter — 2026-11-23
+
+Eight local `ml-*.webp` concepts cover a single-scene hero, quiet-centred woven mural and six item compositions. Forest-green borders, restrained ochre and bamboo leaves distinguish the chapter. These are concepts, not documentary inventory photographs; the courtyard is unnamed and no named artist or ceremonial composition is reproduced. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/MEGHALAYA_IMAGE_PROMPTS.json) record provenance.
+
+### Arunachal Pradesh chapter — 2026-11-23
+
+Eight local `ar-*.webp` concepts cover a single-scene hero, quiet-centred woven mural and six object compositions. Rust, green and restrained ochre distinguish the borders. These are concepts rather than documentary inventory photographs; the veranda is unnamed, and no named artist or ceremonial composition is reproduced. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/ARUNACHAL_PRADESH_IMAGE_PROMPTS.json) record provenance.
+
+### Nagaland chapter — 2026-11-23
+
+Eight local `nl-*.webp` concepts cover one continuous hero scene, a quiet-centred mural and six object compositions. Deep red, charcoal and restrained ochre distinguish the woven borders. The designs are contemporary concepts rather than attributed ceremonial or status-restricted patterns; no wildlife, antique or coral materials are added. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/NAGALAND_IMAGE_PROMPTS.json) record provenance.
+
+
+### Manipur chapter — 2026-11-23
+
+Eight local `mn-*.webp` concepts cover a continuous unnamed veranda scene, quiet-centred woven mural and six object compositions. Red borders, charcoal and natural reed tones distinguish Manipur. These are conceptual illustrations, not documentary inventory photography. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/MANIPUR_IMAGE_PROMPTS.json) record provenance.
+
+
+### Mizoram chapter — 2026-11-23
+
+Eight local `mz-*.webp` concepts introduce four textile studies and two bamboo forms through a continuous hero scene, quiet-centred woven mural and individual compositions. They are not certified textile reproductions or inventory photographs. Original PNGs and earlier assets remain intact. [Prompts and metadata](../audit/MIZORAM_IMAGE_PROMPTS.json) record provenance.
+
+
+### Tripura and Sikkim — 2026-11-23
+
+Sixteen new local WebP concepts (`tp-*`, `sk-*`) comprise two continuous unnamed hero scenes, two quiet-centred backgrounds and twelve item compositions. Tripura uses red cloth, natural bamboo and green; Sikkim uses striped cloth, blue/red geometric detail, wood and paper. These are not stock photography or certified reproductions. Original PNGs and previous assets are preserved. [Tripura prompts](../audit/TRIPURA_IMAGE_PROMPTS.json) and [Sikkim prompts](../audit/SIKKIM_IMAGE_PROMPTS.json) record provenance.
+
+
+### Account background carousel — 2026-11-23
+
+Login/signup reuse the existing stitching courtyard, Mithila courtyard, Tripura hero, Sikkim hero and Mizoram hero illustrations. No new assets or origins are added. Only the first image is prioritised; one scene preloads ahead and selected scenes become visible after image readiness. Existing illustration credit is visible.

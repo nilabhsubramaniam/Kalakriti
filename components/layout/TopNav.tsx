@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft, ArrowRight, ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown, Menu, X, ArrowUpRight, UserRound } from 'lucide-react';
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -31,6 +31,7 @@ export default function TopNav() {
   const regionalSlug = pathname.startsWith('/state/') ? pathname.split('/')[2] : '';
   const regional = Boolean(regionalJournals[regionalSlug]);
   const regionalRoot = `/state/${regionalSlug}`;
+  const accountPage = pathname === '/login' || pathname === '/signup';
   const links = regional ? [{ href: regionalRoot, label: 'Overview' }, { href: `${regionalRoot}#crafts`, label: 'Crafts' }, { href: `${regionalRoot}#culture`, label: 'The journal' }, { href: `${regionalRoot}#visit`, label: 'Discover' }] : pageLinks;
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
@@ -109,11 +110,11 @@ export default function TopNav() {
           <span className="nav-states-label">States</span><span className="nav-mobile-label">{open ? 'Close' : 'Menu'}</span>
           <ChevronDown className="kk-ui-icon nav-caret" data-open={open} size={16} aria-hidden="true" />
           <span className="nav-mobile-icon" aria-hidden="true">{open ? <X size={17} /> : <Menu size={17} />}</span>
-        </button><CartLink /></div>
+        </button><Link className="kk-account-link" href="/login" aria-label="Sign in or create an account" aria-current={accountPage ? 'page' : undefined}><UserRound size={22} aria-hidden="true" /></Link><CartLink /></div>
 
         {open && (
           <div className="nav-menu" id="state-navigation" aria-label="Pages and states">
-            <div className="nav-menu-primary" aria-label="Explore Kalakriti">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></Link>)}</div>
+            <div className="nav-menu-primary" aria-label="Explore Kalakriti">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></Link>)}<Link className="nav-menu-account" href="/login" aria-current={accountPage ? 'page' : undefined} onClick={() => setOpen(false)}>Sign in<UserRound size={15} aria-hidden="true" /></Link></div>
             <div className="nav-menu-heading"><span><span className="kk-deva" lang="mai">मिथिलाक माटि</span><strong>A country of living traditions</strong></span><span>Choose your next chapter</span></div>
             <Link className="nav-menu-all" href="/explore" onClick={() => choose(null)}><ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> All of India</Link>
 

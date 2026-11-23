@@ -73,7 +73,7 @@ pnpm validate
 pnpm start
 ```
 
-`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **450 static outputs**, including the regional routes and framework outputs.
+`validate` runs TypeScript, lint with zero warnings allowed, and the production build. The build first runs `scripts/build-india-map.mjs`, preparing the 3D meshes and poster from the existing GeoJSON. The current build generates **567 static outputs**, including the regional routes and framework outputs.
 
 To check a production build while keeping a development server's cache separate:
 
@@ -152,6 +152,20 @@ Start with the [documentation index](docs/README.md). It distinguishes implement
 | [Security review](docs/audit/SECURITY_REVIEW.md) | Baseline findings and recorded follow-up work |
 | [Implementation plan](docs/IMPLEMENTATION_PLAN.md) | Future milestones and approval boundaries |
 
+Tripura and Sikkim now have distinct chapters at `/state/tripura` and `/state/sikkim`. Each adds five collections, six item viewers, three reading pages and six visitor entries. Tripura combines red cloth with bamboo/cane work; Sikkim combines striped textiles, carpets, wood, paper and bamboo. See [Tripura](docs/audit/TRIPURA_JOURNAL.md) and [Sikkim](docs/audit/SIKKIM_JOURNAL.md) implementation notes.
+
+Mizoram now has a chapter at `/state/mizoram`, with patterned puans, bamboo/cane forms, five collections, six item viewers, three reading pages and six visitor entries. Red-and-black woven borders and green accents follow the detail pages. See [Mizoram implementation and sources](docs/audit/MIZORAM_JOURNAL.md).
+
+Manipur now has a chapter at `/state/manipur`, with red woven borders, charcoal accents, five craft collections, six item viewers, three reading pages and six visitor entries. Longpi pottery, Moirang Phee, Wangkhei Phee, Kauna reed work and bamboo basketry have separate collection and process notes. See [Manipur implementation and sources](docs/audit/MANIPUR_JOURNAL.md).
+
+Nagaland now has a chapter at `/state/nagaland`, with deep-red and charcoal woven borders, six material collections, six item viewers, three reading pages and six visitor entries. Textile, basketry, wood, bead, clay and nettle-fibre work have separate process notes. See [Nagaland implementation and sources](docs/audit/NAGALAND_JOURNAL.md).
+
+Arunachal Pradesh now has a chapter at `/state/arunachal-pradesh`, with woven terracotta borders, six collections covering Monpa carpets, Adi and Mishmi textiles, basketry, wood carving and handmade paper, six item viewers, three reading pages and six visitor entries. See [Arunachal Pradesh implementation and sources](docs/audit/ARUNACHAL_PRADESH_JOURNAL.md).
+
+Meghalaya continues the Northeast chapters at `/state/meghalaya`, with mist-green surfaces, woven borders and five collections covering Ryndia, Khneng, Dakmanda, basketry and Larnai black pottery. Six item viewers, three reading pages and regional visitor links follow the same theme. See [Meghalaya implementation and sources](docs/audit/MEGHALAYA_JOURNAL.md).
+
+Assam begins the Northeast chapters at `/state/assam`, with woven red borders, golden textiles and forest-green details. Six collections cover Muga, Eri, Gamosa, bamboo/cane work, Sarthebari metalwork and Sitalpati mats, with item viewers, reading pages and visitor links. See [Assam implementation and sources](docs/audit/ASSAM_JOURNAL.md).
+
 Goa, Dadra & Nagar Haveli and Daman & Diu now have distinct regional chapters, with 12 item viewers and eight separate reading pages. Goa covers six material traditions; the inland chapter focuses on Warli and bamboo, while the coastal chapter explores mat weaving. The two latter chapters link across the same current union territory while preserving existing discovery URLs. See [western coastal chapters and sources](docs/audit/WEST_COAST_CHAPTERS.md).
 
 Maharashtra now has its regional chapter at `/state/maharashtra`, with warm earthen geometric borders, six collections covering Warli, Paithani, Himroo, Kolhapuri footwear, Sawantwadi woodwork and Solapur weaving, six item viewers, three reading pages and six visitor entries. See [Maharashtra implementation and sources](docs/audit/MAHARASHTRA_JOURNAL.md).
@@ -196,11 +210,13 @@ Odisha now has its regional chapter at `/state/odisha`, with Odia text, a full-p
 
 West Bengal now has a full illustrated regional chapter at `/state/west-bengal`: six craft collections and product details, three journal articles, six tourism entries, Bengali text, a terracotta/indigo/brass theme and an Alpana/Kantha-inspired page surround. See [West Bengal implementation and source notes](docs/audit/WEST_BENGAL_JOURNAL.md).
 
-Jammu & Kashmir now has its own blue, rose and sage regional chapter at `/state/jammu-and-kashmir`, with six craft collections, six item detail pages, three journal articles, six tourism entries and regional navigation/footer. The shared sample catalogue and basket support Bihar, Jammu & Kashmir, West Bengal, Odisha, Jharkhand, Uttar Pradesh, Uttarakhand, Himachal Pradesh, Madhya Pradesh, Chhattisgarh, Punjab, Haryana, Delhi, Chandigarh, Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Puducherry, Andaman & Nicobar, Lakshadweep, Rajasthan, Gujarat, Maharashtra, Goa, Dadra & Nagar Haveli and Daman & Diu. See [implementation and source notes](docs/audit/JAMMU_KASHMIR_JOURNAL.md).
+Jammu & Kashmir now has its own blue, rose and sage regional chapter at `/state/jammu-and-kashmir`, with six craft collections, six item detail pages, three journal articles, six tourism entries and regional navigation/footer. The shared sample catalogue and basket support Bihar, Jammu & Kashmir, West Bengal, Odisha, Jharkhand, Uttar Pradesh, Uttarakhand, Himachal Pradesh, Madhya Pradesh, Chhattisgarh, Punjab, Haryana, Delhi, Chandigarh, Kerala, Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Puducherry, Andaman & Nicobar, Lakshadweep, Rajasthan, Gujarat, Maharashtra, Goa, Dadra & Nagar Haveli, Daman & Diu, Assam, Meghalaya, Arunachal Pradesh, Nagaland, Manipur, Mizoram, Tripura and Sikkim. See [implementation and source notes](docs/audit/JAMMU_KASHMIR_JOURNAL.md).
 
 All 12 Bihar products across nine craft collections open dedicated detail pages with optional Three.js full/left/right/detail views, rotation and zoom. The shared viewer uses existing images at their original aspect ratios; these are image-backed presentations, not scanned or authored object models. Product details, original images, regional prices and cart remain independent of WebGL. The original Kohbar detail URL is preserved; the other products use `/state/bihar/products/[product]`.
 
 The Bihar collections include a local persistent cart at `/cart`, quantity and removal controls, and selectable INR, EUR, USD and GBP sample prices. Market prices are fixed local fixtures in `lib/commerce/catalog.ts`; they are not live exchange rates. No checkout, payment, inventory reservation or order service is connected. The tourism chapter links Rajgir, Bodh Gaya and Nalanda to official Bihar visitor information.
+
+Login and signup share a full-page craft-image carousel, a quiet Mithila form panel and accessible playback controls. Forms remain a local preview with no authentication service. See [account design and behaviour](docs/audit/ACCOUNT_PAGES.md).
 
 Next product milestones include maker-reviewed regional content, authenticated product photography, a real catalogue, and separately approved commerce and seller workflows. Backend, account, payment, admin and mobile architecture documents describe proposals; they are not implemented features.
 
