@@ -4389,3 +4389,55 @@ body:has(.kk-auth-immersive) .nav { background: color-mix(in srgb, var(--kk-heri
 /* Compact playback control leaves room for five 44px scene selectors on phones. */
 @media (max-width: 640px) { .kk-auth-motion-toggle { min-width: 44px; padding: 0; } .kk-auth-motion-toggle span { display: none; } }
 @media (pointer: coarse) { .kk-auth-slide-selectors button { width: 44px; } }
+
+/* Navbar menu repair: compact region directory and reliable header alignment. */
+.nav .nav-right { position: static; min-width: 0; }
+.nav .nav-menu { position: absolute; top: calc(100% + var(--kk-menu-edge, 1px)); left: max(24px, calc((100vw - 1240px) / 2)); right: max(24px, calc((100vw - 1240px) / 2)); width: auto; max-height: calc(100dvh - 110px); padding: 22px; background: var(--kk-paper); border-color: var(--kk-line); box-shadow: 0 18px 50px color-mix(in srgb, var(--kk-ink) 17%, transparent); scrollbar-gutter: stable; }
+.nav .nav-menu-heading { margin-bottom: 10px; padding-bottom: 14px; border-color: var(--kk-line); }
+.nav .nav-menu-heading strong { color: var(--kk-ink); font-size: 25px; }
+.nav .nav-menu-heading > span:last-child { color: var(--kk-ink); font-size: 12px; }
+.nav .nav-menu-all { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 12px; color: var(--kk-ink); font: 500 12px/1.4 var(--font-sans-stack); }
+.nav .nav-menu-grid { display: block; columns: 2; column-gap: 24px; }
+.nav .nav-menu-group { break-inside: avoid; margin-bottom: 18px; }
+.nav .nav-menu-label { margin-bottom: 6px; color: var(--kk-ink); opacity: 1; font: 500 11px/1.5 var(--font-sans-stack); letter-spacing: .1em; text-transform: uppercase; }
+.nav .nav-menu-item { align-items: center; gap: 9px; min-height: 44px; padding: 8px; color: var(--kk-ink); }
+.nav .nav-menu-name { flex: 1; min-width: 0; font: 400 14px/1.35 var(--font-sans-stack); white-space: normal; }
+.nav .nav-menu-art { display: none; }
+.nav .nav-menu-motif { flex-shrink: 0; }
+.nav .nav-menu-go { flex-shrink: 0; margin-left: auto; opacity: .65; transform: none; }
+.nav .nav-menu-item[aria-current='page'] { background: color-mix(in srgb, var(--kk-primary) 7%, var(--kk-paper)); }
+.nav .nav-menu-region-toggle { display: none; }
+.nav .nav-menu-list[hidden] { display: none; }
+body .nav .kk-craft-search input[type='search'] { font-size: 16px; }
+.nav .nav-menu :is(a, button):focus-visible { outline: 2px solid var(--kk-primary); outline-offset: -2px; }
+.nav .nav-menu-primary { border-color: var(--kk-line); }
+.nav .nav-menu-primary > a { color: var(--kk-ink); background: var(--kk-paper); border-color: var(--kk-line); }
+.nav .nav-menu-primary > a[aria-current] { background: var(--kk-paper-deep); border-color: var(--kk-primary); }
+.nav .nav-menu-primary .nav-menu-account { grid-column: 1 / -1; }
+@media (min-width: 641px) and (max-width: 767px) {
+  .nav .kk-craft-search { min-width: 0; }
+  .nav .kk-craft-search form { width: clamp(110px, calc(100vw - 510px), 154px); }
+}
+@media (min-width: 901px) { .nav .nav-menu-grid { columns: 3; } }
+@media (min-width: 1200px) { .nav .nav-menu-grid { columns: 4; } }
+@media (max-width: 640px) {
+  .nav .nav-menu { left: 0; right: 0; max-height: calc(100dvh - 124px); padding: 16px 16px calc(18px + env(safe-area-inset-bottom, 0px)); }
+  .nav .nav-menu-heading > span:first-child { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  .nav .nav-menu-heading .kk-deva { font-size: 14px; }
+  .nav .nav-menu-heading strong { font-size: 23px; }
+  .nav .nav-menu-primary { gap: 6px; padding-bottom: 14px; margin-bottom: 14px; }
+  .nav .nav-menu-primary > a { padding: 9px 12px; }
+  .nav .nav-menu-all { margin-bottom: 6px; }
+  .nav .nav-menu-grid { columns: auto; }
+  .nav .nav-menu-group { margin-bottom: 0; border-top: 1px solid var(--kk-line); }
+  .nav .nav-menu-label { display: none; }
+  .nav .nav-menu-region-toggle { display: flex; width: 100%; min-height: 48px; padding: 10px 2px; align-items: center; justify-content: space-between; gap: 10px; color: var(--kk-ink); background: transparent; border: 0; cursor: pointer; font: 500 14px/1.4 var(--font-sans-stack); text-align: left; }
+  .nav-menu-region-toggle > span { display: inline-flex; align-items: center; gap: 10px; }
+  .nav-menu-region-toggle small { font-size: 11px; color: var(--kk-ink); }
+  .nav-menu-region-toggle[aria-expanded='true'] > svg { transform: rotate(180deg); }
+  .nav .nav-menu-list { padding: 0 0 8px; }
+}
+@media (hover: hover) { .nav .nav-menu-item:hover { background: color-mix(in srgb, var(--kk-primary) 6%, var(--kk-paper)); } }
+
+/* Bihar uses a three-pixel lower header border rather than the shared one. */
+body:has(.kk-bihar-journal) .nav { --kk-menu-edge: 3px; }

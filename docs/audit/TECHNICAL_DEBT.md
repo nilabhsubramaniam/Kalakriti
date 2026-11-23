@@ -101,3 +101,8 @@ CLAUDE.md was corrected on 2026-11-17 for the points below. Keep it in step:
 - The CSP `img-src` also allows an Atlassian host (see [SECURITY_REVIEW H2](SECURITY_REVIEW.md)).
 
 `README.md` describes an earlier plan (next-auth, framer-motion, a `tokens/` folder) and is not a description of the code.
+
+
+### Navbar repair — 2026-11-23
+
+The state directory now uses compact desktop columns and collapsible phone groups. Focus-based dismissal replaces the wrapper blur handler, with Arrow Down/Escape support. The search width at 641–650px and panel/header alignment are corrected. [Implementation and validation](NAVBAR_MENU.md).

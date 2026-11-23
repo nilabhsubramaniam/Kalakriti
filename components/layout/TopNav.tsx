@@ -25,6 +25,11 @@ const pageLinks = [
   { href: '/#about', label: 'Our idea' },
 ];
 
+function focusFirstMenuControl(panel: HTMLDivElement | null) {
+  const first = Array.from(panel?.querySelectorAll<HTMLElement>('a[href], button') ?? []).find(item => item.getClientRects().length > 0);
+  first?.focus();
+}
+
 export default function TopNav() {
   const pathname = usePathname();
   const routeState = pathname.startsWith('/state/') ? SLUG_TO_STATE[pathname.split('/')[2]] : null;
@@ -35,6 +40,10 @@ export default function TopNav() {
   const links = regional ? [{ href: regionalRoot, label: 'Overview' }, { href: `${regionalRoot}#crafts`, label: 'Crafts' }, { href: `${regionalRoot}#culture`, label: 'The journal' }, { href: `${regionalRoot}#visit`, label: 'Discover' }] : pageLinks;
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
+  const [compactMenu, setCompactMenu] = useState(false);
+  const [expandedRegion, setExpandedRegion] = useState<string | null>(REGIONS[0].label);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const focusOnOpen = useRef(false);
   const [hash, setHash] = useState('');
   const selected = useRegionStore(s => s.selected);
   const select   = useRegionStore(s => s.select);
@@ -51,6 +60,20 @@ export default function TopNav() {
     return () => window.removeEventListener('hashchange', update);
   }, [pathname]);
 
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 640px)');
+    const update = () => setCompactMenu(media.matches);
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
+
+  const showMenu = () => {
+    const activeGroup = REGIONS.find(region => region.states.includes(routeState ?? selected ?? ''));
+    setExpandedRegion(activeGroup?.label ?? REGIONS[0].label);
+    setOpen(true);
+  };
+
   const currentPage = (href: string): 'page' | 'location' | undefined => {
     if (regional) return pathname === regionalRoot && href === `${regionalRoot}${hash}` ? (hash ? 'location' : 'page') : undefined;
     if (pathname !== '/') return undefined;
@@ -59,16 +82,22 @@ export default function TopNav() {
   };
   const followPage = (href: string) => { setOpen(false); setHash(href.includes('#') ? href.slice(href.indexOf('#')) : ''); };
 
-  /* Escape and outside clicks close the menu. */
+  /* Keep interior clicks stable; dismiss when focus or a pointer leaves the disclosure. */
   useEffect(() => {
     if (!open) return;
+    if (focusOnOpen.current) { focusOnOpen.current = false; focusFirstMenuControl(panelRef.current); }
+    const onFocus = (event: FocusEvent) => {
+      if (!panelRef.current?.contains(event.target as Node) && !triggerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { setOpen(false); triggerRef.current?.focus(); } };
     const onDown = (e: PointerEvent) => {
       if (!menuRef.current?.contains(e.target as Node)) setOpen(false);
     };
+    window.addEventListener('focusin', onFocus);
     window.addEventListener('keydown', onKey);
     window.addEventListener('pointerdown', onDown);
     return () => {
+      window.removeEventListener('focusin', onFocus);
       window.removeEventListener('keydown', onKey);
       window.removeEventListener('pointerdown', onDown);
     };
@@ -87,7 +116,7 @@ export default function TopNav() {
       </Link>
 
       <div className="nav-primary-links">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}</Link>)}</div>
-      <div className="nav-right" ref={menuRef} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }} onFocusCapture={event => { if (event.target instanceof Element && event.target.closest('.kk-craft-search')) setOpen(false); }}>
+      <div className="nav-right" ref={menuRef} onFocusCapture={event => { if (event.target instanceof Element && event.target.closest('.kk-craft-search')) setOpen(false); }}>
         <Link className="nav-explore-link" href="/explore" aria-current={pathname === "/explore" ? "page" : undefined} onClick={() => choose(null)}>Explore India <ArrowUpRight size={14} aria-hidden="true" /></Link>
         {/* What is currently open, so the navbar always names the region */}
         {current && visibleRegion && (
@@ -102,27 +131,36 @@ export default function TopNav() {
           ref={triggerRef}
           className="nav-menu-btn"
           type="button"
-          aria-label="Browse navigation and states"
+          aria-label={open ? 'Close navigation and states' : 'Browse navigation and states'}
           aria-controls="state-navigation"
-          onClick={() => setOpen(o => !o)}
+          onClick={() => open ? setOpen(false) : showMenu()}
+          onKeyDown={event => {
+            if (event.key === 'ArrowDown') {
+              event.preventDefault();
+              if (open) focusFirstMenuControl(panelRef.current);
+              else { focusOnOpen.current = true; showMenu(); }
+            }
+          }}
           aria-expanded={open}
         >
           <span className="nav-states-label">States</span><span className="nav-mobile-label">{open ? 'Close' : 'Menu'}</span>
           <ChevronDown className="kk-ui-icon nav-caret" data-open={open} size={16} aria-hidden="true" />
           <span className="nav-mobile-icon" aria-hidden="true">{open ? <X size={17} /> : <Menu size={17} />}</span>
-        </button><Link className="kk-account-link" href="/login" aria-label="Sign in or create an account" aria-current={accountPage ? 'page' : undefined}><UserRound size={22} aria-hidden="true" /></Link><CartLink /></div>
-
+        </button>
         {open && (
-          <div className="nav-menu" id="state-navigation" aria-label="Pages and states">
+          <div ref={panelRef} className="nav-menu" id="state-navigation" aria-label="Pages and states">
             <div className="nav-menu-primary" aria-label="Explore Kalakriti">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></Link>)}<Link className="nav-menu-account" href="/login" aria-current={accountPage ? 'page' : undefined} onClick={() => setOpen(false)}>Sign in<UserRound size={15} aria-hidden="true" /></Link></div>
-            <div className="nav-menu-heading"><span><span className="kk-deva" lang="mai">मिथिलाक माटि</span><strong>A country of living traditions</strong></span><span>Choose your next chapter</span></div>
+            <div className="nav-menu-heading"><span><span className="kk-deva" lang="mai">मिथिलाक माटि</span><strong>Explore by region</strong></span><span>36 regional chapters</span></div>
             <Link className="nav-menu-all" href="/explore" onClick={() => choose(null)}><ArrowLeft className="kk-ui-icon" size={16} aria-hidden="true" /> All of India</Link>
 
             <div className="nav-menu-grid">
-              {REGIONS.map(region => (
+              {REGIONS.map((region, index) => (
                 <section key={region.label} className="nav-menu-group">
                   <p className="nav-menu-label kk-label">{region.label}</p>
-                  <ul className="nav-menu-list">
+                  <button className="nav-menu-region-toggle" type="button" aria-expanded={expandedRegion === region.label} aria-controls={`nav-region-${index}`} onClick={() => setExpandedRegion(current => current === region.label ? null : region.label)}>
+                    <span>{region.label}<small>{region.states.length}</small></span><ChevronDown size={16} aria-hidden="true" />
+                  </button>
+                  <ul className="nav-menu-list" id={`nav-region-${index}`} hidden={compactMenu && expandedRegion !== region.label}>
                     {region.states.map(state => {
                       const t = STATE_THEMES[state];
                       if (!t) return null;
@@ -173,6 +211,8 @@ export default function TopNav() {
             </div>
           </div>
         )}
+        <Link className="kk-account-link" href="/login" aria-label="Sign in or create an account" aria-current={accountPage ? 'page' : undefined}><UserRound size={22} aria-hidden="true" /></Link><CartLink /></div>
+
 
         <CraftSearch />
       </div>

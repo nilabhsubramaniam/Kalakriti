@@ -19,6 +19,7 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment
 - [Tripura chapter](audit/TRIPURA_JOURNAL.md) — Risa, Rignai, bamboo basketry, mat weaving and cane work
 - [Sikkim chapter](audit/SIKKIM_JOURNAL.md) — Lepcha weaving, carpets, wood carving, handmade paper and bamboo
+- [Navbar menu repair](audit/NAVBAR_MENU.md) — responsive directory, mobile region groups and keyboard dismissal
 - [Mizoram chapter](audit/MIZORAM_JOURNAL.md) — Puanchei, Pawndum, Ngotekherh, Hmaram and bamboo/cane work
 - [Manipur chapter](audit/MANIPUR_JOURNAL.md) — Longpi pottery, Moirang Phee, Wangkhei Phee, Kauna reed work and bamboo basketry
 - [Nagaland chapter](audit/NAGALAND_JOURNAL.md) — textiles, basketry, woodwork, beads, pottery and nettle-fibre weaving
