@@ -1,0 +1,94 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Landscape 3:2 single continuous unnamed timber veranda with green bamboo outside. On a low wooden display table: folded deep-red fine woven narrow textile with small ivory geometric band, folded maroon-black patterned wrap textile, low oval bamboo basket, shallow round woven tray, partly rolled fine split-bamboo mat and a small cylindrical cane stool with woven top beside table. All objects completely framed. Natural bamboo and red cloth unify the scene.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-ce8d8f82-b9b4-41d6-9bd6-cb417791be0f.png",
+      "output": "public/images/tp-hero.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 311330
+    },
+    {
+      "key": "risa",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: folded narrow deep-red woven textile with a restrained ivory geometric patterned band, fine handloom texture, simple finished edges, on pale timber. Contemporary study introducing Tripura Risa weaving, do not invent specific named traditional motifs.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-8e0b1104-daa5-4888-b53c-40e79aadbcbd.png",
+      "output": "public/images/tp-risa.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 214174
+    },
+    {
+      "key": "rignai",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: folded maroon-black woven wrap textile with broad red bands and restrained small ivory geometric units. Fine yarn texture on pale timber. Contemporary study introducing Tripura Rignai weaving without an attributed community-specific motif.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-7f08766a-5f23-4197-8e4f-f6ea33755421.png",
+      "output": "public/images/tp-rignai.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 239774
+    },
+    {
+      "key": "basket",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: low oval golden-brown bamboo storage basket, fine split-strip interlacing and rounded bound rim, empty, pale timber surface. No handles or ceremonial form.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-068c5173-5ee4-4456-857e-172cfc240d58.png",
+      "output": "public/images/tp-basket.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 101018
+    },
+    {
+      "key": "tray",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: shallow circular natural golden bamboo tray, tight fine weave and raised cane-bound rim, pale timber surface, empty.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-bc182a73-4a5c-4ab1-b424-982fa8f4f2fa.png",
+      "output": "public/images/tp-tray.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 120264
+    },
+    {
+      "key": "mat",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: fine natural golden split-bamboo table mat with narrow dark-red woven edges, partly rolled at one end to reveal slender flat strips and flexible structure, pale timber surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b4cca936-0448-4e57-b174-41cf0215770f.png",
+      "output": "public/images/tp-mat.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 216178
+    },
+    {
+      "key": "cane",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: small cylindrical natural pale-gold cane stool, woven seat and crisscross bound cane frame, legs integrated in cylindrical structure, plausible small furniture, neutral warm background.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-b98975f3-15bb-4d35-943f-0b8918dbc1e7.png",
+      "output": "public/images/tp-cane.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 92412
+    },
+    {
+      "key": "mural",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Landscape 3:2 quiet website background: central 84 percent near plain pale ivory natural paper with extremely faint fine bamboo weave texture. Extreme left/right outer 8 percent narrow red, green and ivory woven strips with tiny restrained geometric repeats. No medallion or central objects. Flat even light, low contrast in centre, no floral patterns.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-3b609333-656e-41aa-abab-27eace12c3a6.png",
+      "output": "public/images/tp-mural.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 199478
+    }
+  ]
+}

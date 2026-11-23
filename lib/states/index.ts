@@ -29,6 +29,14 @@ import { lakshadweep } from './lakshadweep';
 import { rajasthan } from './rajasthan';
 import { gujarat } from './gujarat';
 import { maharashtra } from './maharashtra';
+import { meghalaya } from './meghalaya';
+import { tripura } from './tripura';
+import { sikkim } from './sikkim';
+import { mizoram } from './mizoram';
+import { manipur } from './manipur';
+import { nagaland } from './nagaland';
+import { arunachalPradesh } from './arunachalPradesh';
+import { assam } from './assam';
 import { damanDiu } from './damanDiu';
 import { dadraNagarHaveli } from './dadraNagarHaveli';
 import { goa } from './goa';
@@ -71,6 +79,14 @@ export const STATE_PAGES: Record<string, StatePage> = {
   [rajasthan.slug]: rajasthan,
   [gujarat.slug]: gujarat,
   [maharashtra.slug]: maharashtra,
+  [meghalaya.slug]: meghalaya,
+  [manipur.slug]: manipur,
+  [mizoram.slug]: mizoram,
+  [sikkim.slug]: sikkim,
+  [tripura.slug]: tripura,
+  [nagaland.slug]: nagaland,
+  [arunachalPradesh.slug]: arunachalPradesh,
+  [assam.slug]: assam,
   [damanDiu.slug]: damanDiu,
   [dadraNagarHaveli.slug]: dadraNagarHaveli,
   [goa.slug]: goa,

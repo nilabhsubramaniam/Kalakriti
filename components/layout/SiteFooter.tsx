@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 export default function SiteFooter() {
   const pathname = usePathname();
+  if (pathname === '/login' || pathname === '/signup') return null;
   const slug = pathname.startsWith('/state/') ? pathname.split('/')[2] : '';
   const regional = regionalJournals[slug];
   const base = regional ? `/state/${slug}` : '/state/bihar';

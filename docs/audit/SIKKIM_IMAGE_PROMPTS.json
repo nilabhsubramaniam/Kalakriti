@@ -1,0 +1,94 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Landscape 3:2 one continuous unnamed timber-and-stone mountain terrace with hazy green Himalayan foothills, no identifiable monastery or religious objects. Wooden table displays folded ivory woven stole with fine red green blue black stripes, narrower folded striped runner, a partly rolled small geometric blue-ivory carpet with rust-red border, small unpainted carved wooden box, stack of blank deckle-edge paper, shallow bamboo tray. All six objects within frame; quiet blue, red and ivory composition.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-71025b60-5c1d-47fb-8d2f-d81937d17ce2.png",
+      "output": "public/images/sk-hero.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 363450
+    },
+    {
+      "key": "lepcha",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: folded ivory woven stole with fine parallel red, green, blue and black stripes, subtle compact geometric bands and small neat fringes. Fine visible handloom texture, pale timber background. A contemporary textile study introducing Lepcha weaving, not an exact traditional garment or named motif.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-a8e50fc1-6401-4ebe-9531-c28969573928.png",
+      "output": "public/images/sk-lepcha.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 288726
+    },
+    {
+      "key": "runner",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: folded narrow ivory woven table runner with fine red, green, blue and black stripes concentrated near edges, neatly finished ends, pale timber background. Contemporary adaptation, no sacred motifs or specific ceremonial garment.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-10bf9a96-9a26-4937-bb95-b0ea9b2dcbee.png",
+      "output": "public/images/sk-runner.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 211180
+    },
+    {
+      "key": "carpet",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: partly rolled small dense-pile rug in muted blue, ivory and restrained rust red, simple stepped geometric border around quiet central field, visible tufted texture, pale timber floor. No dragons, deities, script or sacred symbols.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-da3d976b-dc80-40fa-8277-0f880b9531b1.png",
+      "output": "public/images/sk-carpet.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 287752
+    },
+    {
+      "key": "wood",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: small warm natural brown wooden keepsake box with fitted lid, shallow simple geometric relief carving along outer border, restrained satin finish, pale neutral backdrop. No painted sacred symbols, animals, ceremonial masks or antique claim.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-2cb21c8a-bb4b-4814-93fb-60f0ebaa3209.png",
+      "output": "public/images/sk-wood.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 139496
+    },
+    {
+      "key": "paper",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: small stack of blank warm ivory handmade paper sheets with irregular deckle edges and visible delicate plant fibres, one sheet slightly offset, pale timber surface. No writing, book, tools or logo.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-398be448-b26c-443b-b1f4-f98126ca4d28.png",
+      "output": "public/images/sk-paper.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 153360
+    },
+    {
+      "key": "bamboo",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Square photograph: shallow rectangular natural golden-brown woven bamboo tray with rounded corners and fine bound rim, diagonal interlaced strips, empty, pale timber surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-c4d1ff90-6e94-49b7-897b-fb011d1dd7dd.png",
+      "output": "public/images/sk-bamboo.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "bytes": 173294
+    },
+    {
+      "key": "mural",
+      "prompt": "Create a premium realistic craft product photograph for Kalakriti, natural daylight, physically plausible materials, restrained editorial composition. No text, logos, labels, people, certification marks, food or collage. Contemporary conceptual artwork, not a documentary inventory photograph. Landscape 3:2 quiet website background only: central 84 percent near plain warm ivory handmade paper with extremely subtle plant fibres. Extreme outer left/right 8 percent narrow decorative textile borders in muted blue, rust red and ivory, small simple stepped geometric rectangles. No religious symbols, scripts, mountains, medallion or central objects; low contrast in centre and restrained border scale.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d266a2ce-8d5f-4c63-832d-4ea9f859518a.png",
+      "output": "public/images/sk-mural.webp",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 190812
+    }
+  ]
+}

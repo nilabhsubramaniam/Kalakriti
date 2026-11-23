@@ -12,10 +12,19 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 
 ## Current experience — implemented
 
+- [Account pages](audit/ACCOUNT_PAGES.md) — `/login` and `/signup` design and form logic; no backend yet
 - [Design review](audit/DESIGN_REVIEW.md) — 20 design findings (2026-11-22), what was fixed, what is open and why
 - [Commit review](audit/COMMIT_REVIEW.md) — final validation, review scope and outstanding dependency advisories
 
 - [Heritage homepage](audit/HERITAGE_JOURNAL.md) — editorial homepage, regional carousel and shared visual treatment
+- [Tripura chapter](audit/TRIPURA_JOURNAL.md) — Risa, Rignai, bamboo basketry, mat weaving and cane work
+- [Sikkim chapter](audit/SIKKIM_JOURNAL.md) — Lepcha weaving, carpets, wood carving, handmade paper and bamboo
+- [Mizoram chapter](audit/MIZORAM_JOURNAL.md) — Puanchei, Pawndum, Ngotekherh, Hmaram and bamboo/cane work
+- [Manipur chapter](audit/MANIPUR_JOURNAL.md) — Longpi pottery, Moirang Phee, Wangkhei Phee, Kauna reed work and bamboo basketry
+- [Nagaland chapter](audit/NAGALAND_JOURNAL.md) — textiles, basketry, woodwork, beads, pottery and nettle-fibre weaving
+- [Arunachal Pradesh chapter](audit/ARUNACHAL_PRADESH_JOURNAL.md) — distinct textile traditions, basketry, carved wood and Monpa handmade paper
+- [Meghalaya chapter](audit/MEGHALAYA_JOURNAL.md) — Ryndia, Khneng, Garo weaving, basketry and black pottery
+- [Assam chapter](audit/ASSAM_JOURNAL.md) — woven borders, silk traditions, bamboo, metalwork and mats; first Northeast chapter
 - [Goa, Dadra & Nagar Haveli and Daman & Diu](audit/WEST_COAST_CHAPTERS.md) — distinct coastal and inland material traditions with linked union-territory chapters
 - [Maharashtra chapter](audit/MAHARASHTRA_JOURNAL.md) — earthen painting, patterned cloth, leather footwear, lacquered wood and regional places
 - [Gujarat chapter](audit/GUJARAT_JOURNAL.md) — printed, embroidered, painted and woven textiles, clay relief and regional visitor information

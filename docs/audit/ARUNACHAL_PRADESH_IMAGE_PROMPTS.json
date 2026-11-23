@@ -1,0 +1,78 @@
+{
+  "tool": "Built-in image_gen",
+  "date": "2026-11-23",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. ONE single continuous landscape photograph, 3:2, one camera view, absolutely no collage, no grid, no panels. Unnamed timber veranda overlooking forested eastern Himalayan hills. Arrange on ONE low wooden bench: folded rust and ivory geometric wool-like small carpet, red black ivory striped woven wrap cloth, dark indigo woven stole with fine maroon and ivory geometric bands, natural bamboo/cane round storage basket, small carved wooden lidded box with simple geometric border, neat stack of blank cream handmade paper with deckled edges tied in plain cotton cord. All six complete objects clearly visible, generous framing.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-367edf53-7901-4973-8fbb-f1c52cf4958c.png",
+      "path": "public/images/ar-hero.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 400486
+    },
+    {
+      "key": "mural",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Landscape 3:2 webpage background. Central 84 percent quiet warm ivory handmade-paper texture completely unmarked. Only narrow outer vertical edges: fine rust and dark green geometric woven-strip bands, restrained ochre thread marks, small subtle bamboo leaves. No horizontal frames, no central medallion, no landscape, no sacred patterns.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-416386db-75e0-4d99-88b8-f55a9fa1328c.png",
+      "path": "public/images/ar-mural.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 278548
+    },
+    {
+      "key": "carpet",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph complete small rust terracotta and ivory wool-like carpet with original restrained geometric diamond border and quiet central field, partly folded to show thickness and short fringe, warm ivory timber surface. No dragons, deities or sacred emblems.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-46fa7c99-32db-4b79-99a3-9b24c628d9bf.png",
+      "path": "public/images/ar-carpet.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 368306
+    },
+    {
+      "key": "adi",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph folded red black ivory woven wrap cloth with clear narrow horizontal stripes and modest geometric end bands, visible cotton-like interlacing, original contemporary arrangement, ivory surface. No attributed ceremonial motif.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-e5bc0d04-8e23-4d36-9040-a898707e2e36.png",
+      "path": "public/images/ar-adi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 340232
+    },
+    {
+      "key": "mishmi",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph dark indigo woven stole with fine maroon and ivory repeated narrow geometric bands, softly folded, short fringe, visible yarn texture, original contemporary design, warm ivory stone. No named community ceremonial reproduction.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-55170ece-af67-41ee-8915-78b353598725.png",
+      "path": "public/images/ar-mishmi.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 299192
+    },
+    {
+      "key": "basketry",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph complete round upright natural bamboo and cane storage basket with closely interlaced strips, sturdy bound rim and gently tapering sides, empty, ivory surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-d968acd7-483f-4c2e-9fdb-300c2977b37f.png",
+      "path": "public/images/ar-basketry.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 188628
+    },
+    {
+      "key": "wood",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph complete small walnut-brown wooden lidded box with modest carved geometric border, no figures, no faces, no religious symbols, visible natural grain and softly finished edges, ivory surface.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-20144065-3f6c-4593-91ae-31252ad57de4.png",
+      "path": "public/images/ar-wood.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 155784
+    },
+    {
+      "key": "paper",
+      "prompt": "Original premium Kalakriti Arunachal Pradesh heritage marketplace asset. Realistic hand-worked materials, soft natural mountain daylight, warm ivory, rust terracotta, forest green, muted ochre and deep indigo. No lettering, logos, badges, named makers or workshops, people, vegetables, religious imagery or ceremonial patterns. Square product photograph complete neat stack of blank creamy handmade paper with visible fibres and soft deckled edges, loosely tied with plain cotton cord, one blank sheet beside stack, warm timber surface. No writing, printing or decorative leaves embedded.",
+      "source": "/Users/nilabhsubramaniam/.codex/generated_images/01a1e920-eecf-7780-98cb-15459294baee/exec-0c4f3e2e-1ad4-4300-b93e-e083498e0f00.png",
+      "path": "public/images/ar-paper.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 179560
+    }
+  ]
+}

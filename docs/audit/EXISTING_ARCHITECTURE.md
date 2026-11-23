@@ -142,3 +142,31 @@ Tailwind is installed and its directives sit at the end of `globals.css`. No com
 **22 November 2026 — Maharashtra:** A twenty-fifth detailed chapter adds six collections, six item viewers, three reading routes and six visitor entries. Earthen geometric borders frame `.kk-mh-journal`, with matching navigation/footer and registered brown/ochre tokens. The build produces 421 static outputs. See [implementation and sources](MAHARASHTRA_JOURNAL.md).
 
 **22 November 2026 — western coastal chapters:** Goa, Dadra & Nagar Haveli and Daman & Diu extend the detailed catalogue to 28 discovery regions (not a count of administrative states/UTs). Nine collections, 12 products and eight reading routes add 29 child routes, producing 450 static outputs. The two current union-territory chapters retain existing URLs and link to each other. See [implementation and sources](WEST_COAST_CHAPTERS.md).
+
+**22 November 2026 — Assam:** The first Northeast chapter extends detailed discovery to 29 regions. Six collections, six items and three reading routes add 15 child routes. Together with the concurrent login/signup pages, the build has 467 static outputs. Woven red borders frame `.kk-as-journal`; ink-mixed gold improves text/action contrast without changing registered palette slots. See [implementation and sources](ASSAM_JOURNAL.md).
+
+**23 November 2026 — Meghalaya:** Five collections, six item viewers and three reading routes add 14 child routes, extending detailed discovery to 30 regions. The build has 481 static outputs. Mist-green surfaces and woven borders frame `.kk-ml-journal`, with scoped darker-green text/action treatments. See [implementation and sources](MEGHALAYA_JOURNAL.md).
+
+**23 November 2026 — Arunachal Pradesh:** Six collections, six items and three reading routes add 15 child routes, extending detailed discovery to 31 regions. The build has 496 static outputs. Woven terracotta borders frame `.kk-ar-journal`, with matching footer and scoped ink-mixed text/action colours. Existing GeoJSON key `Arunanchal Pradesh` remains compatible while visible names and URLs use the correct spelling. See [implementation and sources](ARUNACHAL_PRADESH_JOURNAL.md).
+
+**23 November 2026 — Nagaland:** Six collections, six item routes and three reading routes add 15 child routes, extending detailed discovery to 32 regions. The build has 511 static outputs. Deep-red and charcoal borders frame `.kk-nl-journal` with a matching footer and regional navigation. See [implementation and sources](NAGALAND_JOURNAL.md).
+
+
+### Manipur chapter — 2026-11-23
+
+Manipur is now the 33rd detailed regional chapter: five collection routes, six product routes and three articles add 14 child pages. The production build prerenders 522 application routes (525 static outputs including framework outputs). Registry, commerce and journal theme integration are shared; implementation and source notes are in [MANIPUR_JOURNAL.md](MANIPUR_JOURNAL.md).
+
+
+### Mizoram chapter — 2026-11-23
+
+Mizoram is now the 34th detailed regional chapter. Five collection, six product and three article routes add 14 child pages. The production build prerenders 536 application routes / 539 static outputs. See [implementation and sources](MIZORAM_JOURNAL.md).
+
+
+### Tripura and Sikkim — 2026-11-23
+
+Tripura and Sikkim add 28 child routes: each has five collection, six item and three article routes. All 36 registered regions now have detailed chapters (Bihar custom, 35 regional journals). The build has 564 prerendered application routes / 567 static outputs. See [Tripura](TRIPURA_JOURNAL.md) and [Sikkim](SIKKIM_JOURNAL.md) source and implementation notes.
+
+
+### Immersive account design — 2026-11-23
+
+`AccountBackdrop.tsx` adds a five-scene, fixed background carousel to login and signup. `AccountShell.tsx` retains the static form structure, with existing `AccountForm.tsx` behaviour unchanged. The shared footer is omitted only for the two account routes, which use a compact footer. Both routes remain static/noindex; the build stays at 567 static outputs. See [account design](ACCOUNT_PAGES.md).
