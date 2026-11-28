@@ -85,7 +85,6 @@ export default function AccountBackdrop() {
           {paused || reduced ? <Play size={15} aria-hidden="true" /> : <Pause size={15} aria-hidden="true" />}<span>{reduced ? 'Motion off' : paused ? 'Play' : 'Pause'}</span>
         </button>
       </div>
-      <p className="kk-auth-scene-credit">Craft illustrations from our regional chapters</p>
     </aside>
   </>;
 }

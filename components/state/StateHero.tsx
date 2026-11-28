@@ -79,7 +79,7 @@ export default function StateHero({ page }: { page: StatePage }) {
         </p>
       </div>
 
-      {page.hero && <figure className="kk-st-hero-illustration"><Image src={page.hero.src} alt={page.hero.alt} width={page.hero.width} height={page.hero.height} priority sizes="(min-width: 901px) 50vw, 100vw" /><figcaption>{page.hero.credit}</figcaption></figure>}
+      {page.hero && <figure className="kk-st-hero-illustration"><Image src={page.hero.src} alt={page.hero.alt} width={page.hero.width} height={page.hero.height} priority sizes="(min-width: 901px) 50vw, 100vw" /></figure>}
 
       <BorderPatti className="kk-st-patti" height={14} />
     </header>

@@ -58,7 +58,6 @@ export default function Frame({
         </span>
       )}
       {children}
-      {image?.credit && <span className="kk-frame-credit">{image.credit}</span>}
     </div>
   );
 }

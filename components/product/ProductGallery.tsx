@@ -5,7 +5,7 @@ import { Box, ImageIcon, RotateCcw, RotateCw, ZoomIn, ZoomOut, RefreshCcw } from
 import { productViews, type ProductCrop, type ProductView } from '@/lib/commerce/productDetails';
 import type { ProductScene } from '@/lib/three/createProductScene';
 
-export default function ProductGallery({ source, name, crop, imageAspect, detailLabel, credit }: { source: string; name: string; crop: ProductCrop; imageAspect: number; detailLabel: string; credit?: string }) {
+export default function ProductGallery({ source, name, crop, imageAspect, detailLabel }: { source: string; name: string; crop: ProductCrop; imageAspect: number; detailLabel: string }) {
   const host = useRef<HTMLDivElement>(null);
   const controller = useRef<ProductScene | null>(null);
   const [mode, setMode] = useState<'image' | '3d'>('image');
@@ -45,7 +45,6 @@ export default function ProductGallery({ source, name, crop, imageAspect, detail
     {mode === '3d' && <><div className="kk-painting-views" role="group" aria-label="Product viewing angles">{productViews.map(item => <button key={item.id} type="button" aria-pressed={active === item.id} disabled={status !== 'ready'} onClick={() => view(item)}>{item.id === 'detail' ? detailLabel : item.label}</button>)}</div><div className="kk-painting-tools" role="group" aria-label="Close-up controls">
       <button type="button" aria-label="Rotate product left" disabled={status !== 'ready'} onClick={() => controller.current?.rotate(-1)}><RotateCcw size={19} /></button><button type="button" aria-label="Rotate product right" disabled={status !== 'ready'} onClick={() => controller.current?.rotate(1)}><RotateCw size={19} /></button><button type="button" aria-label="Zoom in on product" disabled={status !== 'ready'} onClick={() => controller.current?.zoom(1)}><ZoomIn size={19} /></button><button type="button" aria-label="Zoom out of product" disabled={status !== 'ready'} onClick={() => controller.current?.zoom(-1)}><ZoomOut size={19} /></button><button type="button" aria-label="Reset product view" disabled={status !== 'ready'} onClick={() => view(productViews[0])}><RefreshCcw size={19} /></button>
     </div><p className="kk-painting-help" id={helpId}>Drag to turn. Choose an angle to inspect the work step by step. Keyboard: left/right to turn, +/− to zoom, Home to reset.</p><span className="kk-sr-only" role="status">{status === 'ready' ? `${active === 'detail' ? detailLabel : productViews.find(item => item.id === active)?.label ?? 'Custom angle'}. Close-up view ready.` : ''}</span></>}
-    {credit && <p className="kk-painting-credit">{credit}. Not a photograph of the actual piece.</p>}
     {status === 'failed' && <p className="kk-painting-help" role="status">The close-up view couldn’t open. You can still explore the image and product details.</p>}
   </section>;
 }

@@ -21,7 +21,6 @@ export default function LandingPage() {
       </div>
       <figure className="kk-journal-panorama">
         <Image src="/images/stitching-courtyard.webp" alt="Editorial illustration of women embroidering a shared textile frame in a sunlit stone courtyard" width={1920} height={819} priority sizes="100vw" />
-        <figcaption>Editorial illustration</figcaption>
       </figure>
     </section>
 

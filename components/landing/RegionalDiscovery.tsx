@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowUpRight, ChevronLeft, ChevronRight, Minus, Pause, Play,
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { displayName, STATE_THEMES, TOUR_ORDER, themeFor } from '@/lib/stateThemes';
+import { displayName, REGIONS, STATE_THEMES, TOUR_ORDER, themeFor } from '@/lib/stateThemes';
 import { slugForState } from '@/lib/states/slugs';
 import { stateThemeVars } from '@/lib/states/theme';
 import { useRegionStore } from '@/lib/store/useRegionStore';
@@ -117,7 +117,7 @@ export default function RegionalDiscovery() {
     </header>
     <div className="kk-discovery-workspace">
       <div className="kk-discovery-controls">
-        <div className="kk-region-picker"><label htmlFor="map-region">Choose a state</label><SelectField id="map-region" value={selected ?? ''} onChange={e => e.target.value ? choose(e.target.value) : reset()}><option value="">All of India</option>{Object.keys(STATE_THEMES).sort((a,b) => displayName(a).localeCompare(displayName(b))).map(state => <option key={state} value={state}>{displayName(state)}</option>)}</SelectField></div>
+        <div className="kk-region-picker"><label htmlFor="map-region">Choose a state</label><SelectField aria-label="Choose a state" id="map-region" value={selected ?? ''} onChange={e => e.target.value ? choose(e.target.value) : reset()}><option value="">All of India</option>{REGIONS.map(group => <optgroup key={group.label} label={group.label}>{group.states.map(state => <option key={state} value={state}>{displayName(state)}</option>)}</optgroup>)}</SelectField></div>
         <div className="kk-showcase" data-showcase-control>
           <button type="button" className="kk-showcase-step" aria-label="Previous showcase state" onClick={() => showcase.step(-1)}><ChevronLeft className="kk-ui-icon" size={16} aria-hidden="true" /></button>
           <button type="button" className="kk-showcase-play" onClick={showcase.toggle} aria-pressed={showcase.running}>{showcase.running ? <Pause className="kk-ui-icon" size={16} aria-hidden="true" /> : <Play className="kk-ui-icon" size={16} aria-hidden="true" />}{showcase.running ? 'Pause showcase' : 'Cultural showcase'}</button>

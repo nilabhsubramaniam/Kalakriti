@@ -92,3 +92,7 @@ Manual zoom is tracked separately from hover/tour focus. Hovering no longer rese
 `RegionPreview.tsx` now reuses the lightweight journal-theme metadata to show an existing craft image for every region, with a Bihar fallback. The motif hook used by the map remains available. A consistent image area, identity space, four-line desktop summary and three craft highlights keep hover content orderly. The state-page link is retained and the outdated “catalogue will follow” text is replaced with a description of the available chapters.
 
 The labelled Explore CSS section adds readable labels, a full-width state action, 44px controls, restrained card spacing and a more compact phone introduction. The map remains borderless. The sidebar does not follow the pointer or cover nearby states, and the dropdown remains the keyboard/touch alternative. No dependency, CSP, backend, boundary source or D3 implementation is changed.
+
+### 28 November 2026 — shared selector presentation
+
+Explore's native region picker is now enhanced after hydration with the shared heritage dropdown, grouped choices and filtering. The native select remains the SSR/no-JavaScript fallback and form-value control; map selection still delegates to the same region store. See [shared selector menus](SELECT_MENUS.md) for interaction and validation details.

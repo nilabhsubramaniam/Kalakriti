@@ -117,6 +117,7 @@ export default function TopNav() {
 
       <div className="nav-primary-links">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}</Link>)}</div>
       <div className="nav-right" ref={menuRef} onFocusCapture={event => { if (event.target instanceof Element && event.target.closest('.kk-craft-search')) setOpen(false); }}>
+        <CraftSearch />
         <Link className="nav-explore-link" href="/explore" aria-current={pathname === "/explore" ? "page" : undefined} onClick={() => choose(null)}>Explore India <ArrowUpRight size={14} aria-hidden="true" /></Link>
         {/* What is currently open, so the navbar always names the region */}
         {current && visibleRegion && (
@@ -212,10 +213,7 @@ export default function TopNav() {
             </div>
           </div>
         )}
-        <Link className="kk-account-link" href="/login" aria-label="Sign in or create an account" aria-current={accountPage ? 'page' : undefined}><UserRound size={22} aria-hidden="true" /></Link><CartLink /></div>
-
-
-        <CraftSearch />
+        <CartLink /><Link className="kk-account-link" href="/login" aria-label="Sign in or create an account" aria-current={accountPage ? 'page' : undefined}><UserRound size={22} aria-hidden="true" /></Link></div>
       </div>
     </nav>
   );
