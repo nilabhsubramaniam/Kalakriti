@@ -12,6 +12,8 @@ Baseline: commit `6473826`, audited 2026-11-17. These baseline documents retain 
 
 ## Current experience — implemented
 
+- [All-crafts directory](audit/CRAFT_DIRECTORY.md) — 200 regional craft entries with product images, preview prices, cart actions, zoom and detail links
+
 - [Dropdowns](audit/DROPDOWNS.md) — every select, search and menu dropdown: findings, fixes and checks
 - [Account pages](audit/ACCOUNT_PAGES.md) — `/login` and `/signup` design and form logic; no backend yet
 - [Design review](audit/DESIGN_REVIEW.md) — 20 design findings (2026-11-22), what was fixed, what is open and why

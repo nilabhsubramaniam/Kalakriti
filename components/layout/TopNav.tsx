@@ -76,6 +76,7 @@ export default function TopNav() {
 
   const currentPage = (href: string): 'page' | 'location' | undefined => {
     if (regional) return pathname === regionalRoot && href === `${regionalRoot}${hash}` ? (hash ? 'location' : 'page') : undefined;
+    if (href === '/crafts') return pathname === '/crafts' ? 'page' : undefined;
     if (pathname !== '/') return undefined;
     if (href === '/') return hash ? undefined : 'page';
     return href === `/${hash}` || (href === '/#collections' && hash === '#categories') ? 'location' : undefined;
@@ -117,6 +118,7 @@ export default function TopNav() {
 
       <div className="nav-primary-links">{links.map(item => <Link key={item.href} href={item.href} aria-current={currentPage(item.href)} onClick={() => followPage(item.href)}>{item.label}</Link>)}</div>
       <div className="nav-right" ref={menuRef} onFocusCapture={event => { if (event.target instanceof Element && event.target.closest('.kk-craft-search')) setOpen(false); }}>
+        <Link className="nav-crafts-link" href="/crafts" aria-current={pathname === '/crafts' ? 'page' : undefined} onClick={() => setOpen(false)}>Crafts</Link>
         <CraftSearch />
         <Link className="nav-explore-link" href="/explore" aria-current={pathname === "/explore" ? "page" : undefined} onClick={() => choose(null)}>Explore India <ArrowUpRight size={14} aria-hidden="true" /></Link>
         {/* What is currently open, so the navbar always names the region */}

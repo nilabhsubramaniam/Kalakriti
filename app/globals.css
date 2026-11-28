@@ -4651,3 +4651,191 @@ body .nav .nav-right .kk-search-panel .kk-search-results.kk-search-results { pos
 @media (hover: hover) {
   .nav .kk-search-toggle:hover { background: var(--kk-paper-deep); }
 }
+
+/* All-crafts directory: compact regional indexes, linked to existing collections. */
+.kk-craft-directory { padding: 150px 16px 48px; background: var(--kk-heritage-paper); color: var(--kk-ink); min-height: 70dvh; }
+.kk-craft-directory-intro, .kk-craft-directory-body { max-width: 1240px; margin-inline: auto; }
+.kk-craft-directory-intro { padding-block: 12px 28px; }
+.kk-craft-directory-eyebrow { color: var(--kk-primary); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
+.kk-craft-directory-intro h1 { margin-block: 14px; font: 500 clamp(36px, 5vw, 64px)/1.08 var(--font-classic-stack); }
+.kk-craft-directory-intro h1 em { color: var(--kk-primary); font-weight: 400; }
+.kk-craft-directory-intro > p:last-of-type { max-width: 560px; font-size: 16px; line-height: 1.7; }
+.kk-craft-directory-intro > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 10px; color: var(--kk-primary); font-size: 14px; text-underline-offset: 4px; }
+.kk-craft-directory-filters { display: grid; gap: 16px; padding: 18px; border: 1px solid var(--kk-line); border-radius: 12px; background: var(--kk-paper); }
+.kk-craft-directory-filters > div { min-width: 0; }
+.kk-craft-directory-filters label { display: block; margin-bottom: 8px; font-size: 13px; }
+.kk-craft-directory-filters .kk-select { display: block; width: 100%; }
+.kk-craft-directory-search { display: flex; align-items: center; gap: 10px; min-height: 46px; padding-left: 12px; border: 1px solid var(--kk-line); border-radius: 8px; background: var(--kk-paper); }
+.kk-craft-directory-search > svg { flex-shrink: 0; }
+.kk-craft-directory-search input { width: 100%; min-width: 0; min-height: 44px; padding: 10px 8px 10px 0; border: 0; border-radius: inherit; color: var(--kk-ink); background: transparent; font: 400 16px/1.4 var(--font-sans-stack); }
+.kk-craft-directory-search:focus-within { outline: 2px solid var(--kk-ink); outline-offset: 2px; }
+.kk-craft-directory-search input:focus { outline: none; }
+.kk-craft-directory-search input::-webkit-search-cancel-button { display: none; }
+.kk-craft-directory-search button { display: grid; place-items: center; width: 44px; min-height: 44px; flex-shrink: 0; padding: 0; border: 0; border-radius: 7px; color: var(--kk-ink); background: transparent; cursor: pointer; }
+.kk-craft-directory-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding-block: 16px; font-size: 13px; }
+.kk-craft-directory-status p { margin: 0; }
+.kk-craft-directory-status button, .kk-craft-directory-empty button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--kk-line); border-radius: 8px; color: var(--kk-ink); background: var(--kk-paper); font: inherit; cursor: pointer; }
+.kk-craft-directory-grid { display: grid; gap: 18px; align-items: start; }
+.kk-craft-directory-region { min-width: 0; padding: 18px; border: 1px solid var(--kk-line); border-top: 3px solid color-mix(in srgb, var(--kk-accent) 65%, var(--kk-ink)); border-radius: 10px; background: var(--kk-paper); color: var(--kk-ink); }
+.kk-craft-directory-region > header { padding-bottom: 12px; border-bottom: 1px solid var(--kk-line); }
+.kk-craft-directory-region h2 { margin: 0 0 6px; font: 500 27px/1.2 var(--font-classic-stack); }
+.kk-craft-directory-region h2 a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; color: inherit; text-decoration: none; }
+.kk-craft-directory-region h2 svg { flex-shrink: 0; }
+.kk-craft-directory-region > header > span { font-size: 12px; }
+.kk-craft-directory-region ul { padding: 8px 0 0; margin: 0; list-style: none; }
+.kk-craft-directory-region li a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 10px 4px; border-radius: 6px; color: var(--kk-ink); font-size: 14px; line-height: 1.5; text-decoration: none; }
+.kk-craft-directory-region li a > span { overflow-wrap: anywhere; }
+.kk-craft-directory-region li a > svg { flex-shrink: 0; }
+.kk-craft-directory-region li + li { border-top: 1px solid var(--kk-line); }
+.kk-craft-directory-empty { padding: 32px 18px; border: 1px solid var(--kk-line); border-radius: 12px; background: var(--kk-paper); text-align: center; }
+.kk-craft-directory-empty h2 { font: 500 30px/1.2 var(--font-classic-stack); }
+.kk-craft-directory-empty p { margin-block: 14px; line-height: 1.6; }
+.kk-craft-directory :is(a, button):focus-visible { outline: 2px solid var(--kk-ink); outline-offset: 3px; }
+@media (min-width: 641px) {
+  .kk-craft-directory { padding: 126px 24px 64px; }
+  .kk-craft-directory-filters { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+  .kk-craft-directory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .kk-craft-directory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (hover: hover) {
+  .kk-craft-directory-region li a:hover { background: var(--kk-paper-deep); text-decoration: underline; text-underline-offset: 4px; }
+  .kk-craft-directory-region h2 a:hover { text-decoration: underline; text-underline-offset: 5px; }
+}
+
+/* Craft shop: a visible global entry, regional product cards and artwork inspection. */
+.nav .nav-crafts-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border: 1px solid var(--kk-line); border-radius: 8px; color: var(--kk-primary); background: var(--kk-paper); font-size: 13px; text-decoration: none; }
+.nav .nav-crafts-link[aria-current='page'] { background: var(--kk-paper-deep); border-color: var(--kk-primary); }
+@media (max-width: 640px) {
+  .nav { grid-template-columns: 44px minmax(0, 1fr) auto; }
+  .nav .nav-logo { grid-column: 1 / 3; }
+  .nav .nav-utility-actions { grid-column: 3; }
+  .nav .nav-crafts-link { grid-column: 2; grid-row: 2; padding-inline: 8px; }
+  .nav .nav-explore-link { grid-column: 3; }
+}
+.kk-craft-shop { background: var(--kk-heritage-paper); }
+.kk-craft-shop .kk-craft-directory-intro { display: grid; gap: 24px; align-items: center; padding: 24px 20px; margin-bottom: 24px; border: 1px solid var(--kk-line); border-radius: 16px; background: linear-gradient(110deg, var(--kk-paper), color-mix(in srgb, var(--kk-gold) 14%, var(--kk-paper))); }
+.kk-craft-shop-hero-copy > p:last-of-type { max-width: 600px; margin-block: 16px; line-height: 1.7; font-size: 16px; }
+.kk-craft-shop-hero-copy > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--kk-primary); font-size: 14px; text-underline-offset: 4px; }
+.kk-craft-shop-hero-art { position: relative; aspect-ratio: 4 / 3; max-width: 400px; width: 100%; justify-self: center; overflow: hidden; border: 5px double var(--kk-gold); border-radius: 52% 52% 12px 12px; box-shadow: 0 12px 30px color-mix(in srgb, var(--kk-ink) 12%, transparent); }
+.kk-craft-shop-hero-art img { object-fit: cover; }
+.kk-craft-shop .kk-market { margin-top: 16px; padding: 12px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.kk-craft-shop .kk-market label { margin: 0; }
+.kk-craft-shop .kk-market-note { flex-basis: 100%; margin: 0; }
+.kk-craft-shop-card { min-width: 0; overflow: hidden; border: 1px solid var(--kk-line); border-radius: 14px; background: var(--kk-paper); color: var(--kk-ink); box-shadow: 0 6px 22px color-mix(in srgb, var(--kk-ink) 5%, transparent); }
+.kk-craft-shop-image { position: relative; aspect-ratio: 1.15; overflow: hidden; background: var(--kk-paper-deep); }
+.kk-craft-shop-image > a { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; }
+.kk-craft-shop-image img { object-fit: cover; }
+.kk-craft-shop-image > button { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--kk-line); border-radius: 50%; background: var(--kk-paper); color: var(--kk-ink); cursor: pointer; }
+.kk-craft-shop-copy { padding: 18px; border-top: 3px solid color-mix(in srgb, var(--kk-accent) 60%, var(--kk-ink)); }
+.kk-craft-shop-state { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; color: var(--kk-ink); font-size: 12px; text-decoration: none; }
+.kk-craft-shop-copy h2 { margin: 5px 0; font: 500 27px/1.2 var(--font-classic-stack); }
+.kk-craft-shop-copy h2 a { color: inherit; text-decoration: none; }
+.kk-craft-shop-collection { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--kk-ink); font-size: 13px; text-underline-offset: 4px; }
+.kk-craft-shop-collection svg { flex-shrink: 0; }
+.kk-craft-shop-copy .kk-purchase { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; }
+.kk-craft-shop-copy .kk-price { color: var(--kk-ink); font-size: 20px; }
+.kk-craft-shop-copy .kk-bj-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 10px 14px; border: 1px solid var(--kk-ink); border-radius: 8px; color: var(--kk-paper); background: var(--kk-ink); font: 500 14px/1.4 var(--font-sans-stack); cursor: pointer; }
+.kk-craft-shop-copy .kk-bj-button:disabled { opacity: .6; cursor: not-allowed; }
+.kk-craft-shop-copy .kk-purchase-status { flex-basis: 100%; min-height: 20px; color: var(--kk-ink); font-size: 12px; }
+.kk-craft-shop-details { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--kk-ink); font-size: 14px; text-underline-offset: 4px; }
+.kk-craft-zoom { width: min(1000px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 24px); padding: 16px; border: 1px solid var(--kk-line); border-radius: 14px; background: var(--kk-paper); color: var(--kk-ink); overflow: auto; }
+.kk-craft-zoom::backdrop { background: color-mix(in srgb, var(--kk-ink) 70%, transparent); }
+.kk-craft-zoom > header { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+.kk-craft-zoom h2 { margin: 0; font: 500 26px/1.2 var(--font-classic-stack); }
+.kk-craft-zoom button { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid var(--kk-line); border-radius: 8px; color: var(--kk-ink); background: var(--kk-paper); cursor: pointer; }
+.kk-craft-zoom button:disabled { opacity: .4; cursor: not-allowed; }
+.kk-craft-zoom-viewport { height: min(58dvh, 600px); overflow: auto; background: var(--kk-paper-deep); border-radius: 8px; overscroll-behavior: contain; }
+.kk-craft-zoom-viewport > div { position: relative; }
+.kk-craft-zoom-viewport img { object-fit: contain; }
+.kk-craft-zoom-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.kk-craft-zoom-controls > span { min-width: 48px; text-align: center; font-size: 14px; }
+.kk-craft-zoom-controls > a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: var(--kk-primary); font-size: 14px; text-underline-offset: 4px; }
+.kk-craft-zoom > p { margin: 10px 0 0; font-size: 13px; line-height: 1.5; }
+.kk-craft-zoom :is(button, a, [tabindex]):focus-visible { outline: 2px solid var(--kk-ink); outline-offset: 2px; }
+@media (min-width: 781px) {
+  .kk-craft-shop .kk-craft-directory-intro { grid-template-columns: 1.4fr 1fr; padding: 32px; }
+}
+@media (hover: hover) {
+  .kk-craft-shop-image img { transition: transform 250ms ease; }
+  .kk-craft-shop-image > a:hover img { transform: scale(1.04); }
+  .kk-craft-shop-copy h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+}
+@media (pointer: coarse) { .kk-craft-shop-state { min-height: 44px; } }
+@media (prefers-reduced-motion: reduce) { .kk-craft-shop-image img { transition: none; } }
+.kk-craft-shop .kk-market { justify-content: flex-start; background: var(--kk-paper); border: 1px solid var(--kk-line); border-radius: 12px; padding: 12px 16px; }
+.kk-craft-shop .kk-craft-directory-grid { align-items: stretch; }
+.kk-craft-shop-card { display: flex; flex-direction: column; }
+.kk-craft-shop-copy { display: flex; flex-direction: column; flex: 1; }
+.kk-craft-shop-copy .kk-purchase { margin-top: auto; padding-top: 12px; }
+@media (max-width: 780px) {
+  .kk-craft-shop-hero-art { max-width: 260px; aspect-ratio: 16 / 9; }
+}
+/* Keep the new action readable even in regions with pale gold accents. */
+.nav .nav-crafts-link { color: var(--kk-ink); }
+.nav .nav-crafts-link[aria-current='page'] { border-color: color-mix(in srgb, var(--kk-accent) 60%, var(--kk-ink)); }
+@media (hover: hover) { .nav .nav-crafts-link:hover { background: var(--kk-paper-deep); } }
+/* The global margin reset also affects native dialogs; restore modal centring. */
+.kk-craft-zoom { margin: auto; }
+
+/* Compact craft discovery: a small masthead and filters available on demand. */
+.kk-craft-shop .kk-craft-directory-intro { grid-template-columns: minmax(0, 1fr) 64px; gap: 14px; padding: 16px; margin-bottom: 12px; border-radius: 12px; }
+.kk-craft-shop .kk-craft-directory-eyebrow { margin: 0; font-size: 10px; }
+.kk-craft-shop .kk-craft-directory-intro h1 { margin-block: 7px; font-size: clamp(28px, 3vw, 40px); }
+.kk-craft-shop .kk-craft-shop-hero-copy > p:last-of-type { margin: 0; font-size: 13px; line-height: 1.5; }
+.kk-craft-shop .kk-craft-shop-hero-copy > a { min-height: 44px; margin: 0; font-size: 12px; }
+.kk-craft-shop .kk-craft-shop-hero-art { width: 64px; max-width: none; aspect-ratio: 1; border-width: 3px; border-radius: 50% 50% 8px 8px; }
+.kk-craft-shop-toolbar { position: relative; display: flex; align-items: center; gap: 10px; min-height: 60px; padding-block: 8px; margin-bottom: 8px; }
+.kk-craft-shop-toolbar > p { flex: 1; margin: 0; font-size: 13px; line-height: 1.5; }
+.kk-craft-filter-disclosure > summary { position: relative; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid var(--kk-line); border-radius: 8px; background: var(--kk-paper); color: var(--kk-ink); cursor: pointer; list-style: none; }
+.kk-craft-filter-disclosure > summary::-webkit-details-marker { display: none; }
+.kk-craft-filter-disclosure[open] > summary { border-color: var(--kk-ink); background: var(--kk-paper-deep); }
+.kk-craft-filter-count { position: absolute; right: -3px; top: -3px; display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--kk-ink); color: var(--kk-paper); font-size: 10px; }
+.kk-craft-filter-panel { position: absolute; z-index: 10; top: calc(100% + 2px); right: 0; width: min(600px, 100%); max-height: min(540px, calc(100dvh - 180px)); overflow-y: auto; padding: 16px; border: 1px solid var(--kk-line); border-radius: 12px; background: var(--kk-paper); box-shadow: 0 15px 40px color-mix(in srgb, var(--kk-ink) 15%, transparent); }
+.kk-craft-filter-panel h2 { margin: 0 0 16px; font: 500 24px/1.2 var(--font-classic-stack); }
+.kk-craft-filter-panel .kk-craft-directory-filters { padding: 0; border: 0; border-radius: 0; }
+.kk-craft-shop .kk-craft-filter-panel .kk-market { padding: 14px 0 0; border: 0; border-top: 1px solid var(--kk-line); border-radius: 0; }
+.kk-craft-filter-reset { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 8px; border: 0; border-radius: 8px; color: var(--kk-ink); background: var(--kk-paper); font: inherit; font-size: 13px; cursor: pointer; }
+.kk-craft-filter-disclosure > summary:focus-visible { outline: 2px solid var(--kk-ink); outline-offset: 3px; }
+@media (min-width: 641px) {
+  .kk-craft-shop .kk-craft-directory-intro { grid-template-columns: minmax(0, 1fr) 80px; padding: 18px 22px; }
+  .kk-craft-shop .kk-craft-shop-hero-art { width: 80px; }
+}
+.kk-craft-price-note { font-size: 12px; white-space: nowrap; }
+@media (max-width: 640px) {
+  .kk-craft-filter-panel { position: fixed; top: 136px; left: 16px; right: 16px; width: auto; max-height: calc(100dvh - 152px); }
+}
+
+/* Craft directory heritage surround: reuse the homepage's painted paper artwork. */
+.kk-craft-shop {
+  background-color: var(--kk-heritage-paper);
+  background-image: linear-gradient(color-mix(in srgb, var(--kk-heritage-paper) 42%, transparent), color-mix(in srgb, var(--kk-heritage-paper) 42%, transparent)), url('/images/painted-roots-background.webp');
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+.kk-craft-shop-toolbar {
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border-block: 3px double color-mix(in srgb, var(--kk-primary) 45%, var(--kk-line));
+  border-radius: 8px;
+  background: var(--kk-paper);
+  box-shadow: 0 4px 18px color-mix(in srgb, var(--kk-ink) 6%, transparent);
+}
+.kk-craft-shop-card {
+  border: 3px double color-mix(in srgb, var(--kk-accent) 38%, var(--kk-line));
+  border-radius: 12px;
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--kk-ink) 9%, transparent);
+}
+.kk-craft-shop-copy {
+  background: linear-gradient(135deg, var(--kk-paper), color-mix(in srgb, var(--kk-paper-deep) 55%, var(--kk-paper)));
+  border-top: 3px double color-mix(in srgb, var(--kk-accent) 60%, var(--kk-ink));
+}
+.kk-craft-shop-copy h2 { font-family: var(--kk-font-display, var(--font-classic-stack)); }
+.kk-craft-shop .kk-craft-filter-panel {
+  border: 3px double var(--kk-line);
+  background: linear-gradient(color-mix(in srgb, var(--kk-paper) 95%, transparent), color-mix(in srgb, var(--kk-paper) 95%, transparent)), url('/images/painted-roots-background.webp') center / cover;
+}
+.kk-craft-shop .kk-craft-filter-panel .kk-craft-directory-filters { background: transparent; }
+.kk-craft-zoom { border: 3px double var(--kk-line); }

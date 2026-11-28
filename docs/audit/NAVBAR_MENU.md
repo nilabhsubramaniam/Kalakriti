@@ -46,3 +46,7 @@ Validation: TypeScript and strict ESLint pass. Headless Chrome checks cover home
 A Lucide X button, labelled “Clear search”, appears only when text is present. It clears the whole query, removes stale suggestions and returns focus to the input. The browser's duplicate native cancel icon is hidden. Escape closes the panel and restores trigger focus; outside pointer/focus and route changes also dismiss it. Closing and reopening preserves the query until it is cleared or a result is followed. The panel width is limited to the viewport and its contents scroll on short screens.
 
 TypeScript and strict lint pass. Browser checks cover home, Explore and Bihar at 320, 390, 641, 768, 1024 and 1440px for panel bounds, input focus, filtering, conditional 44px clear controls, complete clearing and Escape focus restoration. The isolated production build remains static.
+
+## Direct craft access — 28 November 2026
+
+A dedicated “Crafts” action now links to `/crafts` on all routes, independently of regional chapter links. It appears before search on desktop and between search and Explore India in the phone header's second row. The mobile grid retains the fixed 124px header and 44px cart/profile/menu controls. “Traditions” returns to `/#collections`, so the homepage section and cross-state craft shop have distinct destinations. Actual viewport checks include 320, 390, 641, 650, 768, 1024, 1281 and 1440px; no action extends beyond the viewport.

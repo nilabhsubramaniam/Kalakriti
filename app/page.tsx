@@ -40,7 +40,7 @@ export default function LandingPage() {
       <div className="kk-journal-section kk-textile-content">
         <header className="kk-journal-section-head" data-home-reveal><p className="kk-journal-kicker">An atlas in cloth</p><h2 id="traditions-title">Stitched, woven, remembered.</h2><p>Explore embroidery and textile traditions across states and union territories.</p></header>
         <div className="kk-journal-tradition-grid" id="categories">{regionalStudies.map(study => <Link href={study.href ?? `/state/${slugForState(study.state)}`} prefetch={false} key={study.state} className="kk-journal-tradition kk-journal-frame" style={{ '--kk-story-pigment': themeFor(study.state).colors.accent } as CSSProperties} data-home-reveal><div className="kk-journal-swatch"><Image src={`/images/${study.image}.webp`} alt={`Illustrative study inspired by ${study.craft} from ${study.state}`} fill sizes="(min-width: 901px) 250px, (min-width: 481px) 45vw, 100vw" /><span>{study.kind}</span></div><div className="kk-journal-tradition-copy"><p>{study.state}</p><h3>{study.craft}</h3><span className="kk-tradition-detail">{study.detail}</span><span className="kk-journal-card-action">Explore the tradition <ArrowUpRight size={14} aria-hidden="true" /></span></div></Link>)}</div>
-        <div className="kk-journal-region-end"><p>Illustrative studies, rather than a catalogue of items for sale.</p><Link href="/explore">Explore every region <ArrowRight size={16} aria-hidden="true" /></Link></div>
+        <div className="kk-journal-region-end"><p>Illustrative studies, rather than a catalogue of items for sale.</p><Link href="/crafts">Browse all crafts <ArrowRight size={16} aria-hidden="true" /></Link></div>
       </div>
     </section>
 
